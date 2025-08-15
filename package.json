@@ -1,0 +1,21 @@
+{
+  "name": "wf-encyclopedia",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite",
+    "build": "vite build --outDir ./dist",
+    "preview": "vite preview",
+    "tool-handleStory": "node tool/handleStory2.js"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "svelte": "^5.22.6",
+    "vite": "^6.2.1"
+  },
+  "dependencies": {
+    "m5api": "https://cdn.miaowm5.com/npm/m5api-3.7.0.tgz",
+    "route-parser": "^0.0.5"
+  }
+}

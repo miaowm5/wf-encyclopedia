@@ -1,0 +1,7474 @@
+{
+  "sound_effect/battle_special/se_dark_skill_chain_attack_large": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_dark_skill_chain_attack_medium": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_dark_skill_chain_attack_small": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_fire_skill_chain_attack_large": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_fire_skill_chain_attack_medium": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_fire_skill_chain_attack_small": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_light_skill_chain_attack_large": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_light_skill_chain_attack_medium": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_light_skill_chain_attack_small": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_skill_chain_attack_all": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_thunder_skill_chain_attack_large": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_thunder_skill_chain_attack_medium": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_thunder_skill_chain_attack_small": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_water_skill_chain_attack_large": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_water_skill_chain_attack_medium": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_water_skill_chain_attack_small": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_wind_skill_chain_attack_large": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_wind_skill_chain_attack_medium": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_special/se_wind_skill_chain_attack_small": [
+    [
+      "0.6",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_air_blast2": [
+    [
+      "0.18",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_arm_swing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_blow_consecutive_aura_thrust": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_crush": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_dash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_heavy_hit": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_heavy_stamp": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_power_flip_fighter_lash_a": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_power_flip_fighter_lash_b": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_power_flip_fighter_lv1": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_power_flip_fighter_lv2": [
+    [
+      "0.36",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_power_flip_fighter_lv3": [
+    [
+      "0.36",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_woodpress": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_bad_soul_wind": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_black_hole_crash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_charge_smash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_hit_shadow": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_violent_spout": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_heavy_glass_break": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_miasma_blast": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_large_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_bit_circle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_break_object": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_effect_skill_fire": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_element_fill_barrier": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_element_plural_energy_impact": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_energy_inhalation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_fire_laser_no_burn": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_charge_big": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_charge_medium": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_laser_long": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_laser_long_30s": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_shot_big": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_shot_medium": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_shot_wind1": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_shot_wind2": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magical_recovery": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_moving_wind": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_multiball_general_effect_ready": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_power_flip_special_lv1_clear": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_power_flip_special_lv1_set": [
+    [
+      "0.37",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_power_flip_special_lv2_clear": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_power_flip_special_lv2_set": [
+    [
+      "0.37",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_power_flip_special_lv3_clear": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_power_flip_special_lv3_set": [
+    [
+      "0.37",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_resistance_quick": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_shooting_star": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_tornado": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_wind_smooth": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_burn_out": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_fire_charge_screw_blast": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_fire_charge_smash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_fire_compressed_blaze": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_fire_continuous_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_fire_spread": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_firework_blast": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_light_fire_breath": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_fire_breath": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_fire_large_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_medium_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_brilliant_cheer": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_bright_shooting_star": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_charge_screw_sparkling": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_charge_smash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_diffuse_laser_storm": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_wide_laser_shower": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_shine": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_lightbullet_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_release": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_charge_laser": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_space_sparkle_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_large_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dark_matter_arm_swing": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dark_matter_hole_close": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dark_matter_hole_open": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_breath": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_flying": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_landing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_large_discharge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_medium_charging": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_medium_discharging": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_roar": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_eyes_flash": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_flap_out": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_flapping": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_guardian_totem_alert": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_guardian_totem_down": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_guardian_totem_start": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_guardian_totem_start_eye": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_heart_tone": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_jump": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_jump_in": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_jump_light": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_magic_charge1": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_body_beam": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_body_charge": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_body_in": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_dark_fire": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_down": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_head_dead": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_head_in": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_resurrection": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_owl_charge": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_physics_charge": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_roar_beast": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_scream1": [
+    [
+      "0.33",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_scream2": [
+    [
+      "0.31",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_spit_out": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_triple_jump": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_warp_in": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_warp_out": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_cannon_bit_charge": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_cannon_bit_shot": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_cannon_bit_shot_once": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_cannon_bit_start": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_gauge_charge": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_laser_bit_charge": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_laser_bit_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_laser_bit_start": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_skill_charge": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_admin_skill_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_effect_skill_attack_laser": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_effect_skill_cure": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_effect_skill_debuff_defense": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_effect_skill_heal": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_effect_skill_resurrection": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_electro_physical_up": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_electro_lucky_up": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_electron_buster_start": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_laser_attack1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_laser_charge1": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_mecha_release1": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_multiball_appear": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_security_armor_breakdown": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_security_armor_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_sf_bootcentral": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_sf_dooropen": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_sf_dooropen_b": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_sf_full_energy": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_sf_gravity": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_sf_machine_breakdown": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_sf_warp": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_siren_alert": [
+    [
+      "0.29",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_siren_normal": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_siren_short": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_waste_heat": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_agree": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_aura_float": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_big_bomb": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_bump": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_camera_shutter": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_comical_throw": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_clapping_hands_type1": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_clapping_hands_type2": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_cute_throw": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_angry": [
+    [
+      "0.26",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_cloudy": [
+    [
+      "0.27",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_fun": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_knockout": [
+    [
+      "0.27",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_notice_v01": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_shy": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_sleep": [
+    [
+      "0.22",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_snore": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_emote_sweat": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_energy_attack_ready": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_energy_attack_strike": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_fall": [
+    [
+      "0.27",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_type1_a": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_type1_b": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_type2_a": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_type2_b": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_type3_a": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_type3_b": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_funny_bomb": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_happening": [
+    [
+      "0.26",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_heavy_fall": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_heavy_landing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_horror": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_hungry": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_bigflap1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_bigflap2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_black_down": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_black_float": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_bouncefish": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_brandishing": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_chackfish": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_clashdish": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_devil_landing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_divesea": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_dragonroar": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_falllong": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_fallshort": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_fluctualflash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_fluctualshake": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_fluctualwarp1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_fluctualwarp2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_grab": [
+    [
+      "0.18",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_landing_a": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_opengrill1": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_opengrill2": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_scatterbubble": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_shakeeen": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_sheep": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_shrinkfishrod": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_smallflap": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_stabsword": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_transceiver_long": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_transceiver_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_transform": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_unlockkey": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_wormhole": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_wraplight": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_japanese_hand_drum_dabble": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_japanese_hand_drum_single": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_panic": [
+    [
+      "0.27",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_pop_bomb": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_position_appearance": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_position_creation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_position_glow": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_push": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_question2": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_rockbreak": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_scary": [
+    [
+      "0.24",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_scary2": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_smokeball_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_surprise": [
+    [
+      "0.27",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sword_clash_long": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sword_clash_normal": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sword_clash_short": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_target": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_weeping": [
+    [
+      "0.27",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_doorclose": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_doorknock01": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_doorknock02": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_dooropen": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_collapse": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_collapse_distant": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_white_tiger_strike_heavy": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_white_tiger_strike_light": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_white_tiger_strike_normal": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_star_point_recover": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_star_point_open": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_star_point_failed": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_star_point_close": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_big_spark_claw": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_consecutive_sparkling_blade": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_line_shot": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_short_sharp_blade": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_short_sharp_claw": [
+    [
+      "0.26",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_slash_long": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_slash_middle": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_aori_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_appear_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_appear_2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_appear_3": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_appear_4": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_appear_5": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_arch_aori": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_chakuchi_big": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_dpri_result": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_dragon_fire_aori": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_elf_arch_swingshot_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_elf_arch_swingshot_2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_fire_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_fire_3": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_fpri_in": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_fpri_last": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_fpri_ribbon_unravels": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_glass_break": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_light_fx_1": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_magic_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_mermaid_aori": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_mermaid_hikari": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_mermaid_last": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_ob_aori": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_ob_last": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_pg_aori": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_poison": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_rec_in": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_rec_result": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_rec_swing1": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_rec_swing2": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_result_1": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_rg_aori": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_rg_delta": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_sk_hikari": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_swing_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_swing_2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_swing_3": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_swing_4": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_thunder_dragon_aori": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_thunder_dragon_last": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_tth_whip": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/special_motion/se_special_wind_fx_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/system/se_ability_board_node_release_1": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_ability_board_node_release_2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_ability_board_node_release_all": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_battle_start": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_blank_ability_board_node_release_1": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_blank_ability_board_node_release_2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_chapter_appearance": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_character_evolution_1": [
+    [
+      "0.27",
+      "0",
+      "0",
+      "9"
+    ]
+  ],
+  "sound_effect/system/se_character_evolution_2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "9"
+    ]
+  ],
+  "sound_effect/system/se_character_evolution_3": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "9"
+    ]
+  ],
+  "sound_effect/system/se_character_exchange": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_character_select": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_character_speech": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_flick": [
+    [
+      "0.17",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_footer_home_long_press": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_go_back_click_2": [
+    [
+      "0.35",
+      "0.04",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_level_uncap_cutin": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_mate_join": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_mate_ready": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_stage_node_appearance": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_stage_node_dotmark": [
+    [
+      "0.27",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_uncap_01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_uncap_02": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_uncap_03": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_expod_charge": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_expod_exp_from_character": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/system/se_expod_exp_to_expod": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/thunder/se_electric_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_electric_beam": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_needle_charge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_needle_discharge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_needle_fire": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_thunder_charge_smash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_thunder_giant_lightning_strike": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_thunder_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_thunder_sonic_slash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_thunder_wide_area_electricity": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_thunder_large_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_arisa": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_arisa_special_flash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_arisa_special_noflash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_cagliostro": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_cagliostro_special": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_clarisse": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_elf_archer": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_fox_scientist_blast": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_fox_scientist_throw": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_ghost_fox_appearance": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_ghost_fox_rotation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_ghost_fox_rotation_fast": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_half_oni_boy_end": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_maou_meteor_brake_1": [
+    [
+      "0.5",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_maou_meteor_brake_2": [
+    [
+      "0.5",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_mask_appearance": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_mask_break": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_mask_dark_fire": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_mask_rapid_move": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_mermaid": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_onmyoji_boy": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_action_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_action_2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_black_light": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_charge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_down": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_eye_long": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_eye_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_flash_whiteout": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_lightning": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_orochi_roar": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_pirates_girl": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_special_white_tiger_jump": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_tiger_treasure_hunter": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_unicorn_lancer": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_white_tiger_hit": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_white_tiger_jump": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_white_tiger_swing_fast": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_white_tiger_swing_slow": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_ice_blade_dissolve": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_ice_blade_spin": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_snap_splash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_center_droplet_splash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_charge_smash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_freeze_break": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_giant_tidal_wave": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_short_splash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_large_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bit_bullet": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bit_bullet_short": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_boar_rider_bomb_multiple": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_boar_rider_bomb_single": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bomb": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bomb_throw": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bullet_continuous_big": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bullet_continuous_small": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bullet_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_deep_slash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_effect_skill_attack_spin_smash_sword": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_flare": [
+    [
+      "0.33",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_flare_rapid_fire": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_grenade": [
+    [
+      "0.33",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_heavy_bomb": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_knife_rotation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_machinegun_large_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_machinegun_oneshot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_machinegun_small_loop": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_shield": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_throw_slow": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_screw_thrust_small": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_single_tornado": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_swift_tornado": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_tornado": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_bang_down": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_charge_smash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_fall_down_tornado": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_generic_squall": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_swell_sharp_tornado": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_large_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_block_break": [
+    [
+      "0.18",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_direct_instant_item_get": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_glass_break": [
+    [
+      "0.18",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_hit_wood": [
+    [
+      "0.18",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_item_coin": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_mana_get": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_one_way_wall": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/yakumono/se_pot_hit": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_puddle_break": [
+    [
+      "0.17",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_stake_hit": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_stake_break": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_tree_break": [
+    [
+      "0.18",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_tree_hit": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_tree_nuts_break": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_tree_nuts_hit": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_warp": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/yakumono/se_wooden_break": [
+    [
+      "0.18",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_wooden_hit": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_yuremono_bubble_hit": [
+    [
+      "0.07",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_yuremono_dead_tree_hit": [
+    [
+      "0.1",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_yuremono_dust_hit": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_yuremono_falling_rock_hit": [
+    [
+      "0.1",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_yuremono_hologram_hit": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_yuremono_puddle_hit": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_01_open": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_01_prem_open": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_02_stampfall": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_03_prem_stamp": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_03_stamp": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_04_light_in": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_05_light_out": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_06_next_board": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_07_08_next_item_both": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_07_next_item": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/loginbonus/se_08_next_itemtext": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_metal_shine_wall": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_shadow_wind_expansion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_heavy_aura_critical": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_beam_blade_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_soul_shot": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_repeat_shine_particle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_holy_shine": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_metal_rotation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_heavy_iron_dig": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_magic_disappearance": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_spin_charge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_heavy_mass_dent": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_fight_gong": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_fight_gong_triple": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_gallery_cheer": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_full_charge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_splash_launch": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_splash_slam": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_01_wind": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_02_footstep": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_03_joy": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_04_jump_first": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_04_jump_second": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_04_jump_third": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_05_pre_explosion": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_05_explosion": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_06_treasure_box_leap": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_07_footstep_short": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_08_joy_best": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_09_treasure_box_landing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_09_treasure_box_landing_single": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_10_treasure_box_hop": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_11_treasure_box_flash": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_ex_01_footstep": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_ex_02_jump": [
+    [
+      "0.2",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_ex_03_pre_explosion": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_ex_04_explosion_begin": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_ex_05_explosion": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_ex_06_post_explosion": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_ex_07_landing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_ex_08_ultra_joy": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_rarity_5": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/gacha_equipment/se_gacha_equipment_rarity_5_unsealing": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_detect_siren": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_energy_suck": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_quake": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_quake_distant": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_spear_thrust_normal": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_spear_thrust_strong": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_aura_emission": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_thunderbolt_single": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_distant": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_near": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_castanets": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_guitar_solo": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_deathvoice": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_light_freeze_a": [
+    [
+      "0.17",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_light_freeze_b": [
+    [
+      "0.17",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_far_thunder_farthest": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_far_thunder_strong": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_far_thunder_weak_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_far_thunder_weak_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_rubble_abundance": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_rubble_heavy": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_rubble_light": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_rubble_middle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sexy1": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sexy2": [
+    [
+      "0.29",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_piano_duet1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_piano_duet2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_piano_roughly_v01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_piano_roughly_v01_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_piano_roughly_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_piano_roughly_v02_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_spout": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_cutin_disappear": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_12boss_overall": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drag_voluntas_01_gateopen": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drag_voluntas_02_awake": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drag_voluntas_03_move": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drag_voluntas_04_fire": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drag_voluntas_05_magiccircle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drag_voluntas_06_takeoff": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_3halfanv_logo": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sampling1_congestion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sampling2_footsteps": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sampling3_glass": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sampling4_electronic": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sampling5_electronic": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sampling6_electronic": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sampling7_electronic": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_samplingmusic1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_samplingmusic2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_cane_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_cane_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_churchbell_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_churchbell_long": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drag_voluntas_alert": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drag_voluntas_gate": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_car_drive": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_hyoushigi": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_minamoto_sakura_hit": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_minamoto_sakura_hit_slow": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_nikaido_saki_bike": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_nikaido_saki_exclamation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_nikaido_saki_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_yugiri_slap": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_logo_impact_v01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_logo_impact_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_logo_quake": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_logo_slide_in": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/tower_dungeon/se_tower_alk_landing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/tower_dungeon/se_tower_alk_jump": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/tower_dungeon/se_tower_alk_walk": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/tower_dungeon/se_tower_complete": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/tower_dungeon/se_tower_flag_shine": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/tower_dungeon/se_tower_logo_fade": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_pyramid_go_up": [
+    [
+      "0.33",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_stamp_rotate": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_stamp_flash_long": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_stamp_flash_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_txt_achieved": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_cutin_praise": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_cutin_txt_flash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_item_arrange": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_item_arrange_add": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/time_attack/se_ranking_cutin_appear": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/unique/se_boss_zegura_roar_a": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_boss_zegura_roar_b": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_boss_zegura_roar_c": [
+    [
+      "0.42",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_boss_zegura_roar_d": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_cute_impact": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_cute_star": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_seagull_barks": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_sea_waves": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_logo_pop_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_logo_pop_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_logo_pop_long": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_logo_pop_finish": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_noise": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_noise_impact": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_noise_impact_starbreak": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_pencil_writing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_koizumi_ituki_invocation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_koizumi_ituki_hit": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_s_collabo_logo": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_school_chime": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_swing_ver1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_swing_ver2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_swing_ver3": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_swing_ver4": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_emilia_charge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_emilia_shot_ver1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_emilia_shot_ver2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_emilia_crystal_ver1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_emilia_crystal_ver2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_rem_chain": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_rem_crash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_ram_wind_ver1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_ram_wind_ver2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_subaru_hand": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_orochi_laugh": [
+    [
+      "0.37",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/system/se_orb_get_light": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/system/se_orb_get_shinestar": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/system/se_orb_get_popup_image": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/system/se_manaboard_extend_01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/system/se_manaboard_extend_02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/system/se_manaboard_extend_03": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/system/se_manaboard_extend_04": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/system/se_manaboard_extend_05": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/system/se_unlock_list_banner": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_common/se_hard_multi_start": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_before_jump": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_jump": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_reward_stamp_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_reward_stamp_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_end_jump": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_landing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_show_score": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_score_rank_stamp": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/high_score_update/se_high_score_update_fanfare_mix": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/haniwa_carnival/se_haniwa_high_score_update_fanfare_former": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/haniwa_carnival/se_haniwa_high_score_update_fanfare_latter": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_beat_kick_v01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_beat_kick_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_syamisen_jingle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_asta_transformation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_asta_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_flight": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_aura": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_beam": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_charge_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_waterdrop": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_single_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_megumin_magic": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_megumin_sparkling": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_aqua_cure": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_special_week_transformation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_gold_ship_skill": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_fast_rotation": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_critical_blow": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_impact_wind": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_deep_bass_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_strike": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_short_snowstorm": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_ice_chill": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_ice_break_echo": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_whistling": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_zeta_end": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_zeta_hit": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_zeta_start": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_beatrix_end": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_beatrix_hit": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_beatrix_incidence": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_beatrix_swing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_whistle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_electronic_whistle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_clock_bell": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_party_popper": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_heart_beat": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_violin_attacking": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_violin_phase": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_in_water_babble": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_wave_splash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_pecorine_special": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_kyaru_special": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_kokkoro_special": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_pecorine_slash_start": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_pecorine_slash_middle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_pecorine_slash_charge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_pecorine_slash_last": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_kyaru_skill": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_kokkoro_skill": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_olivia_special": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_olivia_charge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_olivia_slash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_luna": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_luna_special": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_firework_blast_volume1": [
+    [
+      "0.38",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_heavy_landing_volume1": [
+    [
+      "0.41",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_sink_wamble_volume1": [
+    [
+      "0.41",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_attack_volume1": [
+    [
+      "0.23",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_near_volume1": [
+    [
+      "0.23",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_thunder_sonic_slash_volume1": [
+    [
+      "0.23",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_unsettled_air": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_air": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_awakening": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_barrier": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_effect_skill_attack_laser_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_effect_skill_attack_laser_v03": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_giant_distant_charge": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_laser_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_clink": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_ground_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_ground_big_explosion": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_fire_field_v01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_fire_field_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_desert_commander_special_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_ruin_girl_special_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_alk_special_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_alert_tone": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_hologram_appear": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/sf/se_hologram_disappear": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_arrow_shooting_1": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_arrow_shooting_2": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_crack_in_space": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_gate_bright": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_gate_bright_strong": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_gate_open": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_bright": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_descent_far": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_descent_near": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_land_1": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_land_2": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_slash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_vanishing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_whirlabout": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_saintly_appear": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_saintly_torrent": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_space_distorted": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_wild_bird": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_jump_and_shine": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_run_and_shine": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_shatter": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_hold_weapon": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_jump_movement": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_fury_cutter": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_charge_with_electricity": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bombard_continuance": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_bombard_singly": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_heavy_bombard_continuance": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_heavy_bombard_singly": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_angel_atmosphere": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_angel_landing": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_angel_movement": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_angel_spread_wings": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_gate_crush": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_gate_close": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_gate_crush_singly": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_flash_long": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_flash_short": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_common/se_enemy_damage_damage_resistance_up_normal": [
+    [
+      "0.29",
+      "0",
+      "0",
+      "6"
+    ]
+  ],
+  "sound_effect/battle_common/se_enemy_damage_damage_resistance_up_critical": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "6"
+    ]
+  ],
+  "sound_effect/battle_common/se_enemy_damage_damage_resistance_down_normal": [
+    [
+      "0.29",
+      "0",
+      "0",
+      "6"
+    ]
+  ],
+  "sound_effect/battle_common/se_enemy_damage_damage_resistance_down_critical": [
+    [
+      "0.29",
+      "0",
+      "0",
+      "6"
+    ]
+  ],
+  "sound_effect/main_chapter_10/se_jingle_turned_out": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/main_chapter_10/se_jingle_turned_out_intro": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_blurring_occurs_v01": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_blurring_occurs_v02": [
+    [
+      "0.25",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_shock_v01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_shock_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_shock_v03": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_shock_v04": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_shock_v05": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_unrest_v01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_unrest_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_unrest_v03": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_unrest_v04": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_box_unlock": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_capsule_hit": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_draw": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_gear": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_gear_fast": [
+    [
+      "0.28",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_gear_gear_draw": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_rare": [
+    [
+      "0.36",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_rare_prediction": [
+    [
+      "0.37",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_ready_many": [
+    [
+      "0.37",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_ready_once": [
+    [
+      "0.37",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_result": [
+    [
+      "0.34",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_result_loop": [
+    [
+      "0.34",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_uncommon": [
+    [
+      "0.31",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_vender_close": [
+    [
+      "0.34",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/box_gacha/se_box_gacha_vender_open": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/wind/se_wind_gliding_all": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_gliding": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_gliding_in": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/wind/se_wind_gliding_out": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_baloon_break_a": [
+    [
+      "0.2",
+      "0.05",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/yakumono/se_baloon_break_b": [
+    [
+      "0.2",
+      "0.05",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_live_house_cheer": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_orchestra_zzoop": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_pretty_flash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_ball_plock": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_ball_plock_stroke": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_woman_scream_long": [
+    [
+      "0.38",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_woman_scream_middle": [
+    [
+      "0.38",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_woman_scream_short": [
+    [
+      "0.38",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_orchestral_hit_v01": [
+    [
+      "0.38",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_orchestral_hit_v02": [
+    [
+      "0.38",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_star_light_flash": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_boss_ny20_scream": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_bodysuit_trooper_smash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_bodysuit_trooper_prehit": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_bodysuit_trooper_hit": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_alk_avoid_beam_flying": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_alk_ignis_saber_blast": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_alk_ignis_saber_charge_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_alk_ignis_saber_fire": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_chapter12_distant_dragon_awakening": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_ground_rumbling_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_ground_rumbling_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/main_chapter_12_voice/se_stella_greeting": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_chapter12_boss_roar_mix": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_chapter12_boss_roar_single": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_core_break": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_core_shine": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_chapter12_distant_dragon_chime": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_chapter12_distant_dragon_disappear": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_chapter12_distant_dragon_roar": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_consecutive_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_graphic_take_body": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_hard_surface_reverb_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_hard_surface_reverb_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_hard_surface_reverb_c": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_footstep_hard_surface_reverb_d": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_hit_body": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_hit_body_echo": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_pierce_body_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_pierce_body_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drop_sword_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_drop_sword_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash03": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash04": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash05": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash06": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash07": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash08": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_sword_clash09": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_ninja_running": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_cord_voluntas_awake": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_cord_voluntas_launch": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_cord_voluntas_warp": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_rocket_flight_far": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_rocket_launch": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_grotesque_devour": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_grotesque_hard_devour": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_grotesque_slash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_grotesque_hard_slash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_grotesque_squash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_grotesque_hard_squash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_epuration_boss_dragon_roar": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_epuration_boss_variant_ver_dragon_scream": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_epuration_boss_variant_ver_scream": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_syamisen_single": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_syamisen_double": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_ucollabo_fanfare": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_cheer_and_fireworks": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_races_gate_open": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_blow_laser_shot": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_dragon_eater_meteor_brake": [
+    [
+      "0.5",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_blow_charge_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_dragon_eye_open": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_dragon_eye_falldown": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_dragon_eye_break": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_alk_chapter10_blackhole_attack": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_punch_glass": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_break_glass_long": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_blow_attack_a": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_blow_attack_b": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_blow_attack_c": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_blow_attack_d": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_yuki_freeze_barrier": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/element/se_freeze_stamp": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/blow/se_blow_aura": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_throw_slash": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/slash/se_throw_soft": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_open_blackhole": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_with_tinnitus": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/thunder/se_lightning_with_tinnitus_2": [
+    [
+      "0.32",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_flashlight_on": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/fire/se_fire_big_burn": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_fade_in": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_grotesque_stab": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_grotesque_pulpy": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_epuration_boss_variant_ver_stab": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_cartridge_case_1": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/weapon/se_cartridge_case_2": [
+    [
+      "0.15",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_doorknock03": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_impress_doorknock04": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_spotlight_v01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_spotlight_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_spray_can": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/battle_common/se_boss_down_resist": [
+    [
+      "0.37",
+      "0.05",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_maou_roar_far": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_maou_roar_near": [
+    [
+      "0.45",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_maou_roar_weak": [
+    [
+      "0.4",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_ground_impact": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_liquid_impact": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_wind_v01": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/dark/se_dark_wind_v02": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_continuous_attacks": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_barrier": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/unique/se_barrier_break": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/water/se_water_stamp_heavy": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_fall_damage": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/common/se_attention_recieve_bell_home": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "4"
+    ]
+  ],
+  "sound_effect/common/se_attention_recieve_bell_battle": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "11"
+    ]
+  ],
+  "sound_effect/light/se_deep_light_air": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_kirakira_wind_chime": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/light/se_light_soft_wind": [
+    [
+      "0.35",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_roar_2": [
+    [
+      "0.38",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/monster/se_dragon_roar_3": [
+    [
+      "0.38",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_celebration_gun": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ],
+  "sound_effect/situation/se_bell_ringing": [
+    [
+      "0.3",
+      "0",
+      "0",
+      "12"
+    ]
+  ]
+}

@@ -1,0 +1,9732 @@
+{
+  "1": {
+    "46": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ],
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "123": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "135": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "141": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "147": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "195": [
+      [
+        "sound_effect/unique/se_alk_jump"
+      ]
+    ]
+  },
+  "111003": {
+    "29": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/element/se_magic_wave_start"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/element/se_ghost"
+      ],
+      [
+        "sound_effect/unique/se_onmyoji_boy"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/unique/se_clarisse"
+      ]
+    ]
+  },
+  "111002": {
+    "11": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "27": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ],
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "55": [
+      [
+        "sound_effect/slash/se_short_sharp_blade"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ],
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "99": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "127": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ],
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "151": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "163": [
+      [
+        "sound_effect/situation/se_impress_shakeeen"
+      ]
+    ],
+    "169": [
+      [
+        "sound_effect/situation/se_impress_stabsword_dl"
+      ]
+    ],
+    "205": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ]
+    ],
+    "233": [
+      [
+        "sound_effect/monster/se_flapping"
+      ],
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ],
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ]
+  },
+  "111001": {
+    "35": [
+      [
+        "sound_effect/monster/se_dragon_landing"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/fire/se_burn_out"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/monster/se_dark_matter_hole_open"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ],
+    "147": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/monster/se_warp_out"
+      ]
+    ],
+    "171": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ],
+    "207": [
+      [
+        "sound_effect/blow/se_hit_ground"
+      ]
+    ],
+    "213": [
+      [
+        "sound_effect/fire/se_firework_blast"
+      ]
+    ],
+    "243": [
+      [
+        "sound_effect/fire/se_fire_charge_smash"
+      ]
+    ],
+    "281": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ]
+  },
+  "121001": {
+    "59": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "63": [
+      [
+        "sound_effect/slash/se_slash_swing"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/weapon/se_knife_rotation"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/slash/se_slash_middle"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "159": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "171": [
+      [
+        "sound_effect/weapon/se_knife_rotation"
+      ]
+    ],
+    "195": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "219": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "240": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ]
+  },
+  "121002": {
+    "29": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "48": [
+      [
+        "sound_effect/water/se_snap_splash"
+      ]
+    ],
+    "91": [
+      [
+        "sound_effect/weapon/se_flare"
+      ]
+    ],
+    "109": [
+      [
+        "sound_effect/weapon/se_flare"
+      ]
+    ],
+    "133": [
+      [
+        "sound_effect/weapon/se_flare"
+      ]
+    ],
+    "163": [
+      [
+        "sound_effect/weapon/se_flare"
+      ]
+    ],
+    "181": [
+      [
+        "sound_effect/weapon/se_flare"
+      ]
+    ],
+    "234": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "266": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ]
+  },
+  "131001": {
+    "35": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ],
+      [
+        "sound_effect/thunder/se_electric_attack"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/thunder/se_electric_attack"
+      ]
+    ],
+    "191": [
+      [
+        "sound_effect/wind/se_wind_charge_smash"
+      ]
+    ],
+    "273": [
+      [
+        "sound_effect/thunder/se_thunder_wide_area_electricity"
+      ]
+    ]
+  },
+  "151001": {
+    "35": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "67": [
+      [
+        "sound_effect/wind/se_wind_fall_down_tornado"
+      ]
+    ],
+    "85": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "97": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ],
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "195": [
+      [
+        "sound_effect/light/se_light_wide_laser_shower"
+      ]
+    ],
+    "291": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ]
+  },
+  "141002": {
+    "27": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/element/se_magic_circle_start"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/sf/se_waste_heat"
+      ]
+    ],
+    "165": [
+      [
+        "sound_effect/sf/se_effect_skill_heal_wind_oracle"
+      ]
+    ],
+    "217": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "253": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ]
+  },
+  "211003": {
+    "17": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ]
+    ],
+    "63": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "91": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "123": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ]
+  },
+  "211004": {
+    "29": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "51": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ]
+  },
+  "211001": {
+    "17": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ]
+  },
+  "221003": {
+    "3": [
+      [
+        "sound_effect/yakumono/se_yuremono_bubble_hit"
+      ]
+    ],
+    "6": [
+      [
+        "sound_effect/yakumono/se_stake_break"
+      ]
+    ],
+    "39": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "103": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "105": [
+      [
+        "sound_effect/unique/se_mermaid"
+      ]
+    ],
+    "159": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "189": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ]
+  },
+  "221001": {
+    "27": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "117": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "127": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ]
+  },
+  "261001": {
+    "17": [
+      [
+        "sound_effect/dark/se_concentrate_ominous"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/battle_common/se_enemy_death"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ]
+  },
+  "231002": {
+    "7": [
+      [
+        "sound_effect/sf/se_appearance"
+      ]
+    ],
+    "67": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "85": [
+      [
+        "sound_effect/yakumono/se_stake_break"
+      ]
+    ],
+    "97": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/monster/se_dark_matter_hole_open"
+      ]
+    ],
+    "181": [
+      [
+        "sound_effect/unique/se_arisa"
+      ]
+    ]
+  },
+  "231003": {
+    "3": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "7": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "54": [
+      [
+        "sound_effect/weapon/se_deep_slash"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/weapon/se_deep_slash"
+      ]
+    ],
+    "111": [
+      [
+        "sound_effect/thunder/se_thunder_sonic_slash"
+      ],
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv1"
+      ]
+    ]
+  },
+  "231001": {
+    "11": [
+      [
+        "sound_effect/monster/se_dragon_flying"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/monster/se_scream2"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/thunder/se_thunder_charge_smash"
+      ]
+    ],
+    "159": [
+      [
+        "sound_effect/thunder/se_thunder_wide_area_electricity"
+      ]
+    ]
+  },
+  "241003": {
+    "23": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "63": [
+      [
+        "sound_effect/slash/se_slash_metal_claw"
+      ]
+    ],
+    "105": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ]
+    ]
+  },
+  "241001": {
+    "23": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/unique/se_elf_archer"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/unique/se_elf_archer"
+      ]
+    ]
+  },
+  "241004": {
+    "41": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/unique/se_arisa"
+      ]
+    ],
+    "122": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/unique/se_arisa"
+      ]
+    ],
+    "165": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ],
+    "169": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ]
+  },
+  "10": {
+    "23": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "69": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "105": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "127": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "164": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ]
+  },
+  "231004": {
+    "27": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "43": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "79": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "87": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "99": [
+      [
+        "sound_effect/thunder/se_thunder_charge_smash"
+      ]
+    ],
+    "127": [
+      [
+        "sound_effect/slash/se_slash_metal_claw"
+      ]
+    ]
+  },
+  "221004": {
+    "11": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "39": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/yakumono/se_direct_instant_item_get"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/situation/se_comical_throw"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/element/se_shooting_star"
+      ]
+    ]
+  },
+  "211002": {
+    "45": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/wind/se_wind_fall_down_tornado"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ]
+  },
+  "221002": {
+    "39": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/water/se_snap_splash"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/sf/se_effect_skill_heal"
+      ]
+    ],
+    "135": [
+      [
+        "sound_effect/element/se_shooting_star"
+      ]
+    ]
+  },
+  "241002": {
+    "35": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "43": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/situation/se_impress_turnlance"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ]
+  },
+  "251001": {
+    "5": [
+      [
+        "sound_effect/light/se_brilliant_cheer"
+      ]
+    ]
+  },
+  "251002": {
+    "29": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "43": [
+      [
+        "sound_effect/situation/se_impress_turnlance"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/system/se_slide_close"
+      ]
+    ],
+    "97": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "115": [
+      [
+        "sound_effect/light/se_light_charge_screw_sparkling"
+      ]
+    ]
+  },
+  "131002": {
+    "1": [
+      [
+        "sound_effect/unique/se_cagliostro_special"
+      ]
+    ]
+  },
+  "243001": {
+    "23": [
+      [
+        "sound_effect/unique/se_arisa_special_noflash"
+      ]
+    ]
+  },
+  "161001": {
+    "1": [
+      [
+        "sound_effect/dark/se_dark_violent_spout"
+      ]
+    ],
+    "61": [
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ]
+    ],
+    "85": [
+      [
+        "sound_effect/weapon/se_cannon"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/water/se_ice_blade_spin"
+      ]
+    ],
+    "203": [
+      [
+        "sound_effect/element/se_shooting_star"
+      ]
+    ]
+  },
+  "161002": {
+    "14": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "88": [
+      [
+        "sound_effect/dark/se_shadow_wind_expansion"
+      ]
+    ],
+    "132": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "136": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "140": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ],
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "181": [
+      [
+        "sound_effect/situation/se_impress_unlockkey"
+      ]
+    ],
+    "216": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "263": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "292": [
+      [
+        "sound_effect/slash/se_slash_metal_claw"
+      ]
+    ],
+    "301": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ]
+  },
+  "151002": {
+    "17": [
+      [
+        "sound_effect/wind/se_wind_fall_down_tornado"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/light/se_light_charge_smash"
+      ],
+      [
+        "sound_effect/light/se_beam_blade_shot"
+      ]
+    ],
+    "123": [
+      [
+        "sound_effect/light/se_beam_blade_shot"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/light/se_beam_blade_shot"
+      ]
+    ],
+    "163": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ],
+      [
+        "sound_effect/light/se_metal_shine_wall"
+      ]
+    ],
+    "199": [
+      [
+        "sound_effect/light/se_metal_shine_wall"
+      ]
+    ],
+    "235": [
+      [
+        "sound_effect/light/se_beam_blade_shot"
+      ]
+    ],
+    "247": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ]
+  },
+  "251004": {
+    "29": [
+      [
+        "sound_effect/light/se_beam_blade_shot"
+      ]
+    ],
+    "33": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "111": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "129": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "157": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ],
+    "181": [
+      [
+        "sound_effect/slash/se_fine_superior_blade"
+      ],
+      [
+        "sound_effect/thunder/se_thunder_shot"
+      ]
+    ]
+  },
+  "261005": {
+    "27": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "51": [
+      [
+        "sound_effect/monster/se_warp_out"
+      ]
+    ],
+    "55": [
+      [
+        "sound_effect/slash/se_metal_rotation"
+      ]
+    ],
+    "79": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv3"
+      ]
+    ],
+    "99": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/situation/se_impress_grab"
+      ]
+    ],
+    "159": [
+      [
+        "sound_effect/situation/se_emote_fun"
+      ]
+    ]
+  },
+  "251005": {
+    "31": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "51": [
+      [
+        "sound_effect/slash/se_slash_short_incisure"
+      ]
+    ],
+    "61": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "115": [
+      [
+        "sound_effect/monster/se_warp_out"
+      ]
+    ],
+    "141": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ],
+      [
+        "sound_effect/slash/se_heavy_aura_critical"
+      ]
+    ]
+  },
+  "261004": {
+    "23": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/situation/se_impress_opengrill1"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/situation/se_footstep_type1_b"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/situation/se_footstep_type1_a"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "215": [
+      [
+        "sound_effect/situation/se_impress_dooropen"
+      ]
+    ],
+    "221": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "211005": {
+    "41": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/fire/se_burn_out"
+      ]
+    ],
+    "121": [
+      [
+        "sound_effect/slash/se_power_flip_knight_lv3_smash"
+      ],
+      [
+        "sound_effect/fire/se_fire_breath"
+      ]
+    ],
+    "193": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ]
+    ]
+  },
+  "222001": {
+    "43": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "69": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/situation/se_impress_chackfish"
+      ]
+    ],
+    "111": [
+      [
+        "sound_effect/slash/se_slash_middle"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/situation/se_impress_divesea"
+      ]
+    ],
+    "171": [
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ]
+    ]
+  },
+  "221006": {
+    "53": [
+      [
+        "sound_effect/unique/se_white_tiger_swing_slow"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/unique/se_white_tiger_swing_fast"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ],
+      [
+        "sound_effect/blow/se_hit_ground"
+      ]
+    ],
+    "187": [
+      [
+        "sound_effect/blow/se_heavy_stamp"
+      ]
+    ]
+  },
+  "231005": {
+    "11": [
+      [
+        "sound_effect/element/se_magic_shot_wind2"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/situation/se_footstep_type2_a"
+      ]
+    ]
+  },
+  "251003": {
+    "31": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "63": [
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/sf/se_sf_full_energy"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/situation/se_impress_grab"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "163": [
+      [
+        "sound_effect/situation/se_footstep_type2_a"
+      ]
+    ],
+    "177": [
+      [
+        "sound_effect/sf/se_multiball_appear"
+      ]
+    ]
+  },
+  "261003": {
+    "5": [
+      [
+        "sound_effect/situation/se_impress_turnlance"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "157": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "141003": {
+    "11": [
+      [
+        "sound_effect/slash/se_fine_superior_blade"
+      ]
+    ],
+    "45": [
+      [
+        "sound_effect/element/se_magic_wave_start"
+      ]
+    ],
+    "61": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ],
+      [
+        "sound_effect/slash/se_metal_rotation"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ],
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ],
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "171": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "221": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_dabble"
+      ],
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "225": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ]
+    ],
+    "249": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ]
+  },
+  "141004": {
+    "37": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "90": [
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/wind/se_screw_thrust_small"
+      ]
+    ],
+    "200": [
+      [
+        "sound_effect/wind/se_wind_large_explosion"
+      ]
+    ],
+    "281": [
+      [
+        "sound_effect/slash/se_heavy_iron_dig"
+      ]
+    ]
+  },
+  "261006": {
+    "23": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ],
+      [
+        "sound_effect/blow/se_heavy_mass_dent"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/wind/se_tornado"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/dark/se_miasma_blast"
+      ],
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv1"
+      ]
+    ]
+  },
+  "211007": {
+    "1": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "17": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ],
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ],
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ],
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "135": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/water/se_splash_launch"
+      ],
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ]
+  },
+  "241006": {
+    "23": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ]
+  },
+  "111005": {
+    "23": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ],
+      [
+        "sound_effect/situation/se_live_house_cheer"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/sf/se_waste_heat"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "191": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "227": [
+      [
+        "sound_effect/sf/se_sf_dooropen"
+      ]
+    ],
+    "263": [
+      [
+        "sound_effect/situation/se_question"
+      ]
+    ],
+    "287": [
+      [
+        "sound_effect/situation/se_orchestra_zzoop"
+      ],
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ]
+  },
+  "121003": {
+    "21": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ]
+    ],
+    "79": [
+      [
+        "sound_effect/situation/se_impress_chackfish"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/blow/se_ball_plock"
+      ]
+    ],
+    "135": [
+      [
+        "sound_effect/blow/se_ball_plock"
+      ]
+    ],
+    "175": [
+      [
+        "sound_effect/blow/se_ball_plock_stroke"
+      ],
+      [
+        "sound_effect/situation/se_impress_chackfish"
+      ]
+    ],
+    "211": [
+      [
+        "sound_effect/yakumono/se_yuremono_bubble_hit"
+      ]
+    ],
+    "237": [
+      [
+        "sound_effect/blow/se_ball_plock"
+      ],
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "289": [
+      [
+        "sound_effect/blow/se_ball_plock_stroke"
+      ],
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "319": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_dabble"
+      ]
+    ]
+  },
+  "121004": {
+    "3": [
+      [
+        "sound_effect/water/se_snap_splash"
+      ]
+    ],
+    "11": [
+      [
+        "sound_effect/water/se_water_freeze_break"
+      ]
+    ],
+    "57": [
+      [
+        "sound_effect/water/se_ice_blade_dissolve"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "145": [
+      [
+        "sound_effect/situation/se_impress_shakeeen"
+      ]
+    ],
+    "163": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "183": [
+      [
+        "sound_effect/water/se_ice_blade_spin"
+      ]
+    ],
+    "221": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "247": [
+      [
+        "sound_effect/water/se_snap_splash"
+      ]
+    ],
+    "271": [
+      [
+        "sound_effect/situation/se_impress_clashdish"
+      ]
+    ]
+  },
+  "161004": {
+    "5": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/wind/se_wind_fall_down_tornado"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/sf/se_admin_gauge_finish"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/sf/se_sf_dooropen"
+      ]
+    ],
+    "215": [
+      [
+        "sound_effect/wind/se_screw_thrust_small"
+      ]
+    ],
+    "263": [
+      [
+        "sound_effect/wind/se_tornado"
+      ]
+    ],
+    "299": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ],
+      [
+        "sound_effect/slash/se_line_shot"
+      ]
+    ]
+  },
+  "151015": {
+    "17": [
+      [
+        "sound_effect/light/se_star_light_flash"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ]
+    ]
+  },
+  "161009": {
+    "35": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/blow/se_hit_ground"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/situation/se_rockbreak"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/element/se_magic_shot_big"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/dark/se_dark_charge_smash"
+      ]
+    ]
+  },
+  "231014": {
+    "11": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/thunder/se_lightning_near"
+      ]
+    ],
+    "129": [
+      [
+        "sound_effect/fire/se_burn_out"
+      ]
+    ]
+  },
+  "121009": {
+    "11": [
+      [
+        "sound_effect/water/se_ice_blade_dissolve"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/situation/se_car_drive"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/unique/se_minamoto_sakura_hit_slow"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/situation/se_live_house_cheer"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ]
+  },
+  "141009": {
+    "1": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/light/se_waftage_sparkle"
+      ],
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/unique/se_nikaido_saki_bike"
+      ]
+    ],
+    "181": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "235": [
+      [
+        "sound_effect/unique/se_nikaido_saki_explosion"
+      ]
+    ]
+  },
+  "211014": {
+    "1": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "57": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "87": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "109": [
+      [
+        "sound_effect/unique/se_yugiri_slap"
+      ]
+    ],
+    "169": [
+      [
+        "sound_effect/situation/se_hyoushigi"
+      ]
+    ]
+  },
+  "263003": {
+    "17": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/situation/se_bump"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/situation/se_funny_bomb"
+      ]
+    ]
+  },
+  "243007": {
+    "23": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ]
+  },
+  "121021": {
+    "17": [
+      [
+        "sound_effect/unique/se_emilia_charge"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/water/se_ice_blade_spin"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/unique/se_emilia_shot_ver1"
+      ]
+    ]
+  },
+  "121027": {
+    "5": [
+      [
+        "sound_effect/weapon/se_swing_ver4"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/weapon/se_swing_ver1"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "241021": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "25": [
+      [
+        "sound_effect/unique/se_ram_wind_ver1"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "263009": {
+    "5": [
+      [
+        "sound_effect/dark/se_dark_large_explosion"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "111183": {
+    "5": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/monster/se_dragon_landing"
+      ]
+    ],
+    "109": [
+      [
+        "sound_effect/monster/se_dragon_roar"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "203": [
+      [
+        "sound_effect/monster/se_dark_matter_arm_swing"
+      ]
+    ],
+    "227": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ],
+    "283": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "293": [
+      [
+        "sound_effect/fire/se_single_explosion"
+      ]
+    ]
+  },
+  "121189": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "141189": {
+    "11": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ]
+  },
+  "131176": {
+    "5": [
+      [
+        "sound_effect/sf/se_energy_suck"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/sf/se_sf_full_energy"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/sf/se_admin_skill_shot"
+      ]
+    ],
+    "169": [
+      [
+        "sound_effect/sf/se_admin_laser_bit_start"
+      ]
+    ]
+  },
+  "111177": {
+    "17": [
+      [
+        "sound_effect/sf/se_multiball_appear"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "117": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ]
+    ],
+    "189": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "251": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ]
+  },
+  "121183": {
+    "5": [
+      [
+        "sound_effect/situation/se_cute_throw"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/light/se_light_barrier"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ]
+  },
+  "121177": {
+    "5": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/light/se_light_barrier"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ]
+  },
+  "141183": {
+    "5": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/element/se_power_flip_special_lv3_set"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ]
+  },
+  "131170": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "37": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "111": [
+      [
+        "sound_effect/slash/se_power_flip_knight_lv3_smash"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/thunder/se_thunder_wide_area_electricity"
+      ]
+    ],
+    "179": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ]
+  },
+  "161195": {
+    "5": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_set"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ]
+  },
+  "141177": {
+    "5": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ]
+  },
+  "131164": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/thunder/se_thunder_wide_area_electricity"
+      ]
+    ]
+  },
+  "111171": {
+    "23": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ]
+  },
+  "121171": {
+    "41": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/element/se_power_flip_special_lv3_set"
+      ]
+    ]
+  },
+  "151171": {
+    "5": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "121165": {
+    "5": [
+      [
+        "sound_effect/water/se_ice_blade_dissolve"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/water/se_water_strike"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ]
+  },
+  "121006": {
+    "1": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/water/se_splash_launch"
+      ]
+    ],
+    "227": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ]
+  },
+  "161005": {
+    "1": [
+      [
+        "sound_effect/dark/se_dark_aura_emission"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_clear"
+      ]
+    ],
+    "85": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/slash/se_power_flip_knight_lv3_spin"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "197": [
+      [
+        "sound_effect/situation/se_rockbreak"
+      ]
+    ],
+    "257": [
+      [
+        "sound_effect/situation/se_impress_grab"
+      ]
+    ]
+  },
+  "251006": {
+    "23": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/situation/se_smokeball_explosion"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/situation/se_emote_angry"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/yakumono/se_item_coin"
+      ],
+      [
+        "sound_effect/situation/se_impress_landing_b"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/yakumono/se_item_coin"
+      ],
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/yakumono/se_item_coin"
+      ],
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/situation/se_funny_bomb"
+      ]
+    ],
+    "203": [
+      [
+        "sound_effect/situation/se_impress_smallflap"
+      ]
+    ],
+    "227": [
+      [
+        "sound_effect/situation/se_happening"
+      ]
+    ]
+  },
+  "231009": {
+    "11": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/weapon/se_bullet_short"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/thunder/se_thunder_wide_area_electricity"
+      ]
+    ]
+  },
+  "263002": {
+    "1": [
+      [
+        "sound_effect/sf/se_admin_laser_bit_start"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/element/se_power_flip_special_lv1_set"
+      ]
+    ]
+  },
+  "161189": {
+    "5": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "161183": {
+    "5": [
+      [
+        "sound_effect/sf/se_multiball_appear"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_power_flip_ranged_lv3"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/sf/se_player_recovery"
+      ]
+    ]
+  },
+  "111165": {
+    "5": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ]
+  },
+  "161177": {
+    "5": [
+      [
+        "sound_effect/element/se_power_flip_special_lv3_set"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "153001": {
+    "5": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/sf/se_laser_shot"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/light/se_light_clink"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/light/se_light_shine"
+      ]
+    ]
+  },
+  "151165": {
+    "5": [
+      [
+        "sound_effect/monster/se_eyes_flash"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ]
+  },
+  "121159": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/water/se_water_strike"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/water/se_ice_blade_spin"
+      ]
+    ]
+  },
+  "141171": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ],
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ]
+  },
+  "131158": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/thunder/se_lightning_with_tinnitus"
+      ],
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/thunder/se_thunder_shot"
+      ]
+    ]
+  },
+  "111159": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ],
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv3"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ]
+  },
+  "151159": {
+    "5": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ]
+  },
+  "261089": {
+    "5": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ]
+  },
+  "131152": {
+    "5": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_multiball_appear"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/sf/se_admin_laser_bit_shot"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/sf/se_power_flip_ranged_lv1"
+      ]
+    ]
+  },
+  "141165": {
+    "5": [
+      [
+        "sound_effect/wind/se_impact_wind"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ]
+  },
+  "121153": {
+    "5": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/water/se_water_stamp_heavy"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/water/se_short_snowstorm"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ]
+  },
+  "141159": {
+    "5": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/slash/se_heavy_aura_critical"
+      ]
+    ]
+  },
+  "131146": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/thunder/se_thunder_wide_area_electricity"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/thunder/se_electric_attack"
+      ]
+    ]
+  },
+  "231099": {
+    "23": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/thunder/se_lightning_with_tinnitus"
+      ]
+    ]
+  },
+  "111153": {
+    "5": [
+      [
+        "sound_effect/fire/se_single_explosion"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ]
+  },
+  "141153": {
+    "5": [
+      [
+        "sound_effect/situation/se_impress_unlockkey"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_set"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ]
+  },
+  "161171": {
+    "17": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/weapon/se_swing_ver2"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/weapon/se_swing_ver2"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/element/se_power_flip_special_lv3_set"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ]
+  },
+  "141147": {
+    "5": [
+      [
+        "sound_effect/light/se_light_large_explosion"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/blow/se_blow_attack_b"
+      ]
+    ]
+  },
+  "131140": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/light/se_light_flash_short"
+      ]
+    ]
+  },
+  "221078": {
+    "5": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/situation/se_bump"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_pop_bomb"
+      ],
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ]
+  },
+  "151147": {
+    "5": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/light/se_light_barrier"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ]
+  },
+  "151153": {
+    "17": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/light/se_light_shine"
+      ]
+    ]
+  },
+  "111147": {
+    "5": [
+      [
+        "sound_effect/fire/se_burn_out"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/light/se_light_flash_short"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/situation/se_fall_damage"
+      ]
+    ]
+  },
+  "221008": {
+    "45": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "80": [
+      [
+        "sound_effect/situation/se_story_darkness_aura"
+      ]
+    ],
+    "86": [
+      [
+        "sound_effect/water/se_ice_blade_dissolve"
+      ]
+    ],
+    "170": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ]
+  },
+  "151006": {
+    "17": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "27": [
+      [
+        "sound_effect/weapon/se_bit_bullet_short"
+      ]
+    ],
+    "39": [
+      [
+        "sound_effect/weapon/se_bit_bullet_short"
+      ]
+    ],
+    "61": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "91": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "103": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "109": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "145": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "169": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "175": [
+      [
+        "sound_effect/weapon/se_machinegun_large_shot"
+      ]
+    ],
+    "237": [
+      [
+        "sound_effect/sf/se_effect_skill_enhancing_penetrate_long"
+      ]
+    ],
+    "301": [
+      [
+        "sound_effect/sf/se_admin_gauge_finish"
+      ],
+      [
+        "sound_effect/element/se_power_flip_special_lv3_set"
+      ]
+    ]
+  },
+  "151005": {
+    "35": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ],
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/sf/se_energy_suck"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/slash/se_power_flip_knight_lv3_smash"
+      ],
+      [
+        "sound_effect/thunder/se_thunder_large_explosion"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/slash/se_fine_superior_blade"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/thunder/se_paralysis_umbness"
+      ]
+    ],
+    "209": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "239": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "251": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "257": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "263": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "269": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "287": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "331": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ]
+  },
+  "251007": {
+    "11": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "51": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "105": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "121": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "147": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/sf/se_appearance"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ]
+  },
+  "161165": {
+    "5": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/slash/se_fury_cutter"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/weapon/se_swing_ver2"
+      ]
+    ]
+  },
+  "131134": {
+    "17": [
+      [
+        "sound_effect/thunder/se_thunder_wide_area_electricity"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ]
+  },
+  "211062": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_movement"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ]
+  },
+  "141141": {
+    "5": [
+      [
+        "sound_effect/situation/se_impress_black_injection"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_live_house_cheer"
+      ],
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/blow/se_critical_blow"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/situation/se_spotlight_v02"
+      ]
+    ]
+  },
+  "131128": {
+    "5": [
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "121147": {
+    "5": [
+      [
+        "sound_effect/water/se_short_snowstorm"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/water/se_water_strike"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ]
+  },
+  "151141": {
+    "5": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ]
+  },
+  "111141": {
+    "5": [
+      [
+        "sound_effect/light/se_light_awakening"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "261083": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ]
+  },
+  "253019": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ]
+  },
+  "161159": {
+    "5": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/dark/se_gigantic_darkness_emit"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ]
+  },
+  "151129": {
+    "5": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/slash/se_fury_cutter"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ]
+  },
+  "161153": {
+    "5": [
+      [
+        "sound_effect/sf/se_sf_machine_breakdown"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/sf/se_security_armor_explosion"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_security_armor_explosion"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/blow/se_blow_laser_shot"
+      ]
+    ]
+  },
+  "121141": {
+    "5": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ],
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/situation/se_energy_attack_ready"
+      ]
+    ]
+  },
+  "141135": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ]
+  },
+  "161147": {
+    "5": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ]
+  },
+  "241069": {
+    "11": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "69": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "87": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "121": [
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv1"
+      ]
+    ],
+    "165": [
+      [
+        "sound_effect/wind/se_screw_thrust_small"
+      ]
+    ],
+    "207": [
+      [
+        "sound_effect/situation/se_emote_notice_v01"
+      ]
+    ]
+  },
+  "161141": {
+    "5": [
+      [
+        "sound_effect/weapon/se_swing_ver2"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/unique/se_asta_attack"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/unique/se_asta_transformation"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ]
+  },
+  "123001": {
+    "5": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/water/se_ice_blade_dissolve"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/water/se_water_large_explosion"
+      ],
+      [
+        "sound_effect/water/se_in_water_babble"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ]
+  },
+  "141129": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_generic_squall"
+      ],
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/wind/se_wind_beam"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ]
+  },
+  "161135": {
+    "5": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/dark/se_dark_large_explosion"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "131122": {
+    "5": [
+      [
+        "sound_effect/dark/se_dark_shock_v04"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/element/se_shooting_star"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/blow/se_crush"
+      ]
+    ]
+  },
+  "261077": {
+    "5": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "121135": {
+    "23": [
+      [
+        "sound_effect/slash/se_slash_metal_claw"
+      ]
+    ],
+    "51": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "64": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "87": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "105": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "147": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "165": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "183": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "213": [
+      [
+        "sound_effect/unique/se_white_tiger_jump"
+      ]
+    ],
+    "219": [
+      [
+        "sound_effect/water/se_water_stamp_heavy"
+      ]
+    ],
+    "225": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "237": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "249": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "255": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "273": [
+      [
+        "sound_effect/weapon/se_swing_ver3"
+      ]
+    ]
+  },
+  "141123": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/light/se_angel_movement"
+      ]
+    ]
+  },
+  "111135": {
+    "5": [
+      [
+        "sound_effect/light/se_light_large_explosion"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv3"
+      ]
+    ]
+  },
+  "151123": {
+    "17": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/element/se_power_flip_special_lv3_set"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/element/se_power_flip_special_lv1_set"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ]
+  },
+  "131116": {
+    "11": [
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/element/se_wind_smooth"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/slash/se_fury_cutter"
+      ]
+    ],
+    "165": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_set"
+      ]
+    ]
+  },
+  "231093": {
+    "5": [
+      [
+        "sound_effect/water/se_in_water_babble"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/thunder/se_lightning_attack"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/water/se_in_water_babble"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ]
+  },
+  "111129": {
+    "29": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/weapon/se_swing_ver1"
+      ],
+      [
+        "sound_effect/monster/se_roar_beast"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/situation/se_jump_movement"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "161129": {
+    "5": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ]
+  },
+  "241063": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ]
+  },
+  "111007": {
+    "35": [
+      [
+        "sound_effect/monster/se_orochi_resurrection"
+      ],
+      [
+        "sound_effect/situation/se_impress_bigflap2"
+      ]
+    ],
+    "105": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "135": [
+      [
+        "sound_effect/fire/se_fire_breath"
+      ]
+    ],
+    "141": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ],
+    "177": [
+      [
+        "sound_effect/monster/se_dragon_landing"
+      ],
+      [
+        "sound_effect/situation/se_impress_bigflap2"
+      ]
+    ],
+    "187": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ],
+    "231": [
+      [
+        "sound_effect/situation/se_impress_bigflap2"
+      ]
+    ],
+    "255": [
+      [
+        "sound_effect/blow/se_crush"
+      ]
+    ]
+  },
+  "251008": {
+    "9": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "25": [
+      [
+        "sound_effect/situation/se_orchestra_zzoop"
+      ]
+    ],
+    "61": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "91": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/light/se_light_shine"
+      ]
+    ],
+    "129": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ],
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ]
+  },
+  "241008": {
+    "11": [
+      [
+        "sound_effect/yakumono/se_sf_box_hit"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/situation/se_bump"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ]
+  },
+  "131005": {
+    "29": [
+      [
+        "sound_effect/thunder/se_lightning_near"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/blow/se_air_blast"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "169": [
+      [
+        "sound_effect/monster/se_warp_out"
+      ]
+    ],
+    "193": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "239": [
+      [
+        "sound_effect/thunder/se_thunder_sonic_slash"
+      ]
+    ],
+    "263": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ],
+    "301": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "335": [
+      [
+        "sound_effect/thunder/se_thunderbolt_single"
+      ]
+    ]
+  },
+  "121129": {
+    "5": [
+      [
+        "sound_effect/water/se_waterdrop"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/water/se_splash_launch"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/water/se_short_snowstorm"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ]
+  },
+  "131110": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv2"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ]
+  },
+  "221072": {
+    "5": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/slash/se_fine_superior_blade"
+      ]
+    ],
+    "45": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "69": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/dark/se_dark_shock_v03"
+      ]
+    ],
+    "105": [
+      [
+        "sound_effect/slash/se_fine_superior_blade"
+      ]
+    ],
+    "117": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "233013": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ],
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ],
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ]
+  },
+  "131104": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ]
+  },
+  "161123": {
+    "35": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/element/se_magic_big_wave_shot"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/light/se_light_sharp_reflection"
+      ]
+    ]
+  },
+  "151117": {
+    "5": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/situation/se_impress_shakeeen"
+      ]
+    ]
+  },
+  "141117": {
+    "5": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ]
+  },
+  "111123": {
+    "5": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/light/se_light_clink"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ]
+  },
+  "221066": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/situation/se_impress_chackfish"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/situation/se_impress_turnlance"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/situation/se_cute_throw"
+      ]
+    ]
+  },
+  "251077": {
+    "5": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/yakumono/se_puddle_break"
+      ]
+    ]
+  },
+  "121123": {
+    "5": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/light/se_star_light_flash"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/water/se_water_strike"
+      ]
+    ]
+  },
+  "151111": {
+    "11": [
+      [
+        "sound_effect/slash/se_power_flip_knight_lv3_smash"
+      ],
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/light/se_light_slash"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/slash/se_power_flip_knight_lv3_smash"
+      ]
+    ]
+  },
+  "263015": {
+    "23": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/dark/se_dark_charge_smash"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ]
+    ]
+  },
+  "111117": {
+    "11": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/unique/se_megumin_magic"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/unique/se_megumin_sparkling"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/light/se_light_clink"
+      ]
+    ],
+    "181": [
+      [
+        "sound_effect/fire/se_single_explosion"
+      ]
+    ],
+    "277": [
+      [
+        "sound_effect/situation/se_rubble_light"
+      ]
+    ]
+  },
+  "113001": {
+    "5": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/fire/se_fire_charge_screw_blast"
+      ]
+    ]
+  },
+  "151105": {
+    "17": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "39": [
+      [
+        "sound_effect/situation/se_logo_pop_finish"
+      ],
+      [
+        "sound_effect/light/se_light_descent_far"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/blow/se_critical_blow"
+      ]
+    ],
+    "221": [
+      [
+        "sound_effect/light/se_star_light_flash"
+      ],
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "141111": {
+    "5": [
+      [
+        "sound_effect/wind/se_impact_wind"
+      ],
+      [
+        "sound_effect/wind/se_wind_generic_squall"
+      ]
+    ],
+    "17": [
+      [
+        "sound_effect/blow/se_crush"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/blow/se_crush"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/blow/se_crush"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/blow/se_crush"
+      ]
+    ],
+    "85": [
+      [
+        "sound_effect/blow/se_crush"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/blow/se_critical_blow"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/wind/se_wind_large_explosion"
+      ]
+    ]
+  },
+  "223019": {
+    "23": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "57": [
+      [
+        "sound_effect/water/se_splash_launch"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/water/se_ice_blade_dissolve"
+      ]
+    ]
+  },
+  "121117": {
+    "5": [
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/sf/se_multiball_appear"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ]
+    ]
+  },
+  "111111": {
+    "5": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ]
+  },
+  "161117": {
+    "5": [
+      [
+        "sound_effect/weapon/se_swing_ver4"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/water/se_ice_chill"
+      ],
+      [
+        "sound_effect/water/se_ice_break_echo"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "131098": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_with_tinnitus"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/situation/se_impress_turnlance"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/thunder/se_lightning_attack"
+      ]
+    ],
+    "103": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/thunder/se_thunder_wide_area_electricity"
+      ]
+    ]
+  },
+  "141105": {
+    "5": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/situation/se_impress_stabsword_dl"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/situation/se_sword_clash_normal"
+      ]
+    ]
+  },
+  "221060": {
+    "15": [
+      [
+        "sound_effect/slash/se_fine_superior_blade"
+      ]
+    ],
+    "49": [
+      [
+        "sound_effect/water/se_water_stamp_heavy"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/water/se_water_strike"
+      ]
+    ]
+  },
+  "151099": {
+    "5": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ]
+  },
+  "161111": {
+    "5": [
+      [
+        "sound_effect/dark/se_dark_large_explosion"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ]
+  },
+  "231087": {
+    "11": [
+      [
+        "sound_effect/thunder/se_lightning_with_tinnitus"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ]
+  },
+  "111105": {
+    "17": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/weapon/se_shield"
+      ]
+    ]
+  },
+  "161105": {
+    "5": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ]
+  },
+  "231081": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/slash/se_fine_superior_blade"
+      ]
+    ]
+  },
+  "121111": {
+    "5": [
+      [
+        "sound_effect/blow/se_heavy_mass_dent"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/sf/se_power_flip_ranged_lv3"
+      ]
+    ]
+  },
+  "151093": {
+    "17": [
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/sf/se_sf_gravity"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/sf/se_energy_suck"
+      ]
+    ]
+  },
+  "251071": {
+    "23": [
+      [
+        "sound_effect/sf/se_admin_laser_bit_start"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/sf/se_multiball_appear"
+      ]
+    ]
+  },
+  "221007": {
+    "23": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/situation/se_footstep_type2_a"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/yakumono/se_puddle_break"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/dark/se_shadow_wind_expansion"
+      ]
+    ]
+  },
+  "121005": {
+    "17": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ],
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/dark/se_miasma_blast"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ],
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "209": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "227": [
+      [
+        "sound_effect/water/se_violent_swirling_water"
+      ],
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "233": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ]
+  },
+  "141005": {
+    "5": [
+      [
+        "sound_effect/monster/se_dragon_flying"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/monster/se_orochi_head_in"
+      ]
+    ],
+    "203": [
+      [
+        "sound_effect/water/se_water_large_explosion"
+      ]
+    ],
+    "233": [
+      [
+        "sound_effect/monster/se_dark_matter_arm_swing"
+      ]
+    ],
+    "239": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "161099": {
+    "5": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ]
+  },
+  "141099": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/wind/se_wind_charge_smash"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ]
+  },
+  "251065": {
+    "17": [
+      [
+        "sound_effect/situation/se_impress_turnlance"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_impress_unlockkey"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/weapon/se_bit_bullet_short"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/weapon/se_bit_bullet_short"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/weapon/se_bit_bullet_short"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/situation/se_impress_unlockkey"
+      ]
+    ]
+  },
+  "131092": {
+    "7": [
+      [
+        "sound_effect/blow/se_heavy_mass_dent"
+      ]
+    ],
+    "67": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "115": [
+      [
+        "sound_effect/sf/se_admin_laser_bit_start"
+      ]
+    ],
+    "151": [
+      [
+        "sound_effect/sf/se_admin_skill_shot"
+      ]
+    ],
+    "199": [
+      [
+        "sound_effect/sf/se_energy_suck"
+      ]
+    ]
+  },
+  "141093": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ]
+  },
+  "121105": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/water/se_ice_chill"
+      ],
+      [
+        "sound_effect/wind/se_wind_fall_down_tornado"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/water/se_ice_break_echo"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ]
+  },
+  "243019": {
+    "11": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ]
+    ]
+  },
+  "151087": {
+    "5": [
+      [
+        "sound_effect/situation/se_rubble_light"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/situation/se_rubble_light"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "157": [
+      [
+        "sound_effect/sf/se_player_recovery"
+      ]
+    ],
+    "193": [
+      [
+        "sound_effect/situation/se_cute_throw"
+      ]
+    ],
+    "223": [
+      [
+        "sound_effect/sf/se_effect_skill_enhancing_penetrate_long"
+      ],
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ]
+  },
+  "111099": {
+    "11": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/wind/se_tornado"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ]
+  },
+  "231075": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "90": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "97": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ]
+  },
+  "121099": {
+    "5": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/water/se_water_strike"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/water/se_water_stamp_heavy"
+      ]
+    ]
+  },
+  "111093": {
+    "17": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ]
+  },
+  "141087": {
+    "5": [
+      [
+        "sound_effect/slash/se_fury_cutter"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ]
+  },
+  "121093": {
+    "5": [
+      [
+        "sound_effect/situation/se_logo_pop_a"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/situation/se_heavy_fall"
+      ]
+    ],
+    "57": [
+      [
+        "sound_effect/situation/se_pop_bomb"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ],
+    "123": [
+      [
+        "sound_effect/situation/se_big_bomb"
+      ],
+      [
+        "sound_effect/light/se_light_barrier"
+      ],
+      [
+        "sound_effect/sf/se_appearance"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/light/se_light_bright"
+      ]
+    ],
+    "213": [
+      [
+        "sound_effect/element/se_power_flip_special_lv3_set"
+      ],
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ]
+  },
+  "161093": {
+    "11": [
+      [
+        "sound_effect/water/se_short_snowstorm"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ],
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ]
+  },
+  "151081": {
+    "5": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/situation/se_heavy_fall"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/light/se_light_flash_short"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ]
+  },
+  "211056": {
+    "5": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/slash/se_power_flip_knight_lv3_smash"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ]
+  },
+  "231069": {
+    "17": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ],
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ]
+    ]
+  },
+  "141081": {
+    "5": [
+      [
+        "sound_effect/light/se_light_barrier"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_appearance"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/situation/se_logo_impact_v01"
+      ]
+    ]
+  },
+  "121087": {
+    "5": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/water/se_ice_chill"
+      ]
+    ],
+    "157": [
+      [
+        "sound_effect/water/se_ice_break_echo"
+      ]
+    ],
+    "193": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ]
+  },
+  "251059": {
+    "5": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/situation/se_push"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/situation/se_energy_attack_strike"
+      ]
+    ]
+  },
+  "131086": {
+    "5": [
+      [
+        "sound_effect/weapon/se_swing_ver4"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/thunder/se_lightning_with_tinnitus"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "135": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ]
+  },
+  "121081": {
+    "5": [
+      [
+        "sound_effect/water/se_short_snowstorm"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/water/se_ice_chill"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ]
+  },
+  "211050": {
+    "23": [
+      [
+        "sound_effect/element/se_power_flip_special_lv1_set"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/element/se_power_flip_special_lv1_set"
+      ]
+    ]
+  },
+  "253013": {
+    "5": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/weapon/se_bomb_throw"
+      ]
+    ],
+    "123": [
+      [
+        "sound_effect/fire/se_firework_blast"
+      ]
+    ]
+  },
+  "111087": {
+    "11": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_set"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_set"
+      ]
+    ],
+    "129": [
+      [
+        "sound_effect/slash/se_line_shot"
+      ]
+    ],
+    "147": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/sf/se_power_flip_ranged_lv1"
+      ]
+    ],
+    "191": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "231": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "267": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ]
+  },
+  "161087": {
+    "5": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/monster/se_orochi_down"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ]
+  },
+  "261071": {
+    "5": [
+      [
+        "sound_effect/dark/se_shadow_wind_expansion"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ]
+  },
+  "131080": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ]
+  },
+  "111081": {
+    "5": [
+      [
+        "sound_effect/dark/se_dark_large_explosion"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/dark/se_shadow_wind_expansion"
+      ]
+    ],
+    "97": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "115": [
+      [
+        "sound_effect/dark/se_sink_wamble_volume1"
+      ],
+      [
+        "sound_effect/weapon/se_bombard_singly"
+      ]
+    ]
+  },
+  "121075": {
+    "29": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/weapon/se_boar_rider_bomb_single"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ]
+  },
+  "261065": {
+    "5": [
+      [
+        "sound_effect/dark/se_dark_shock_v04"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/dark/se_dark_unrest_v03"
+      ]
+    ]
+  },
+  "131004": {
+    "12": [
+      [
+        "sound_effect/situation/se_aura_float"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "100": [
+      [
+        "sound_effect/yakumono/se_sf_box_hit"
+      ]
+    ],
+    "124": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/thunder/se_thunder_shot"
+      ]
+    ],
+    "184": [
+      [
+        "sound_effect/thunder/se_thunder_rumbling"
+      ]
+    ],
+    "223": [
+      [
+        "sound_effect/thunder/se_thunderbolt_single"
+      ]
+    ],
+    "252": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ]
+  },
+  "241007": {
+    "13": [
+      [
+        "sound_effect/situation/se_question"
+      ]
+    ],
+    "43": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ],
+      [
+        "sound_effect/wind/se_wind_generic_squall"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ]
+  },
+  "211008": {
+    "25": [
+      [
+        "sound_effect/slash/se_slash_short_incisure"
+      ]
+    ],
+    "45": [
+      [
+        "sound_effect/slash/se_slash_short_incisure"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "109": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ]
+    ]
+  },
+  "111006": {
+    "11": [
+      [
+        "sound_effect/situation/se_impress_smallflap"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv1"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/situation/se_sword_clash_short"
+      ]
+    ],
+    "115": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ],
+      [
+        "sound_effect/slash/se_short_sharp_blade"
+      ]
+    ],
+    "129": [
+      [
+        "sound_effect/slash/se_slash_short_incisure"
+      ]
+    ],
+    "151": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ],
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "171": [
+      [
+        "sound_effect/slash/se_short_sharp_blade"
+      ],
+      [
+        "sound_effect/slash/se_slash_short_incisure"
+      ]
+    ],
+    "195": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ],
+      [
+        "sound_effect/light/se_metal_shine_wall"
+      ]
+    ],
+    "217": [
+      [
+        "sound_effect/situation/se_impress_turnlance"
+      ]
+    ],
+    "251": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ],
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "293": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ]
+    ]
+  },
+  "253001": {
+    "29": [
+      [
+        "sound_effect/situation/se_cute_throw"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ]
+  },
+  "213013": {
+    "17": [
+      [
+        "sound_effect/light/se_light_shine"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/light/se_light_flash_short"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ]
+  },
+  "221054": {
+    "5": [
+      [
+        "sound_effect/sf/se_laser_shot"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/sf/se_hologram_appear"
+      ]
+    ]
+  },
+  "161082": {
+    "5": [
+      [
+        "sound_effect/dark/se_dark_large_explosion"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/blow/se_heavy_mass_dent"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ]
+  },
+  "211044": {
+    "5": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ]
+  },
+  "121070": {
+    "5": [
+      [
+        "sound_effect/water/se_snap_splash"
+      ]
+    ],
+    "25": [
+      [
+        "sound_effect/water/se_water_freeze_break"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/water/se_splash_launch"
+      ]
+    ]
+  },
+  "161081": {
+    "17": [
+      [
+        "sound_effect/slash/se_slash_metal_claw"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/sf/se_hologram_appear"
+      ]
+    ]
+  },
+  "151075": {
+    "5": [
+      [
+        "sound_effect/situation/se_violin_phase"
+      ],
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/situation/se_violin_attacking"
+      ],
+      [
+        "sound_effect/light/se_light_bright"
+      ]
+    ]
+  },
+  "241057": {
+    "5": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "221053": {
+    "5": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/slash/se_slash_swing"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/light/se_cute_star"
+      ]
+    ]
+  },
+  "233007": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_attack"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/thunder/se_lightning_with_tinnitus"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ]
+  },
+  "131074": {
+    "5": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "11": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ]
+  },
+  "121069": {
+    "5": [
+      [
+        "sound_effect/water/se_water_large_explosion"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/blow/se_heavy_mass_dent"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ]
+  },
+  "241051": {
+    "23": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "109": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ],
+      [
+        "sound_effect/element/se_power_flip_special_lv1_set"
+      ]
+    ]
+  },
+  "131062": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/slash/se_line_shot"
+      ]
+    ]
+  },
+  "151069": {
+    "5": [
+      [
+        "sound_effect/slash/se_slash_middle"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ]
+  },
+  "131068": {
+    "5": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "17": [
+      [
+        "sound_effect/slash/se_line_shot"
+      ],
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ],
+      [
+        "sound_effect/thunder/se_thunder_sonic_slash"
+      ]
+    ]
+  },
+  "231063": {
+    "17": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/thunder/se_lightning_with_tinnitus"
+      ]
+    ]
+  },
+  "261059": {
+    "17": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "151063": {
+    "1": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/fire/se_firework_blast"
+      ]
+    ]
+  },
+  "141069": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/light/se_light_flash_short"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ]
+  },
+  "151057": {
+    "5": [
+      [
+        "sound_effect/light/se_light_flash_short"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ]
+    ]
+  },
+  "261053": {
+    "11": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ]
+  },
+  "213007": {
+    "11": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/weapon/se_swing_ver4"
+      ]
+    ]
+  },
+  "121057": {
+    "5": [
+      [
+        "sound_effect/water/se_ice_blade_dissolve"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ]
+  },
+  "111069": {
+    "11": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ]
+  },
+  "253007": {
+    "11": [
+      [
+        "sound_effect/light/se_light_descent_far"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/light/se_light_shine"
+      ]
+    ]
+  },
+  "141063": {
+    "1": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/situation/se_funny_bomb"
+      ]
+    ]
+  },
+  "151051": {
+    "5": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ],
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/light/se_light_flash_short"
+      ]
+    ]
+  },
+  "141057": {
+    "5": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ],
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ]
+  },
+  "221040": {
+    "5": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/situation/se_funny_bomb"
+      ]
+    ]
+  },
+  "111063": {
+    "17": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/light/se_star_light_flash"
+      ]
+    ]
+  },
+  "161069": {
+    "11": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ]
+  },
+  "221034": {
+    "17": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "179": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ]
+    ]
+  },
+  "241045": {
+    "11": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/monster/se_scream2"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/monster/se_flap_out"
+      ]
+    ]
+  },
+  "131056": {
+    "5": [
+      [
+        "sound_effect/sf/se_hologram_disappear"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/water/se_water_stamp_heavy"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/sf/se_sf_warp"
+      ]
+    ]
+  },
+  "151045": {
+    "17": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ]
+  },
+  "121051": {
+    "17": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ]
+  },
+  "211038": {
+    "11": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ]
+  },
+  "111057": {
+    "11": [
+      [
+        "sound_effect/weapon/se_arrow_shooting_1"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/weapon/se_machinegun_small_loop"
+      ],
+      [
+        "sound_effect/weapon/se_cartridge_case_1"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/weapon/se_machinegun_small_loop"
+      ],
+      [
+        "sound_effect/weapon/se_cartridge_case_1"
+      ]
+    ]
+  },
+  "131050": {
+    "35": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/situation/se_sword_clash_short"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "221": [
+      [
+        "sound_effect/situation/se_impress_clashdish"
+      ]
+    ],
+    "245": [
+      [
+        "sound_effect/thunder/se_thunder_shot"
+      ]
+    ]
+  },
+  "251053": {
+    "17": [
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ]
+  },
+  "221028": {
+    "11": [
+      [
+        "sound_effect/water/se_water_large_explosion"
+      ]
+    ]
+  },
+  "121045": {
+    "11": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "55": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ],
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ]
+  },
+  "141051": {
+    "5": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ]
+  },
+  "161063": {
+    "5": [
+      [
+        "sound_effect/dark/se_concentrate_ominous"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/weapon/se_bombard_singly"
+      ],
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ]
+  },
+  "211032": {
+    "17": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ]
+  },
+  "223013": {
+    "5": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/water/se_snap_splash"
+      ]
+    ]
+  },
+  "151039": {
+    "23": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ]
+    ],
+    "57": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ]
+  },
+  "131044": {
+    "11": [
+      [
+        "sound_effect/sf/se_admin_laser_bit_start"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ],
+      [
+        "sound_effect/thunder/se_paralysis_umbness"
+      ]
+    ]
+  },
+  "241039": {
+    "23": [
+      [
+        "sound_effect/situation/se_ask"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/wind/se_tornado"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/element/se_power_flip_special_lv1_set"
+      ]
+    ]
+  },
+  "251047": {
+    "5": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/element/se_power_flip_supporter_lv1"
+      ]
+    ]
+  },
+  "111051": {
+    "5": [
+      [
+        "sound_effect/element/se_magic_circle_start"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/unique/se_zeta_start"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/unique/se_zeta_hit"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/unique/se_zeta_hit"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/unique/se_zeta_end"
+      ]
+    ]
+  },
+  "161057": {
+    "5": [
+      [
+        "sound_effect/unique/se_beatrix_incidence"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/unique/se_beatrix_swing"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/unique/se_beatrix_hit"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/unique/se_beatrix_end"
+      ]
+    ]
+  },
+  "261047": {
+    "17": [
+      [
+        "sound_effect/wind/se_screw_thrust_small"
+      ]
+    ]
+  },
+  "231056": {
+    "11": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/thunder/se_thunder_sonic_slash"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "62": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ]
+  },
+  "141045": {
+    "23": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/light/se_holy_shine"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/blow/se_heavy_mass_dent"
+      ]
+    ]
+  },
+  "131038": {
+    "23": [
+      [
+        "sound_effect/sf/se_sf_gravity"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/sf/se_sf_dooropen_b"
+      ]
+    ]
+  },
+  "111045": {
+    "37": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ]
+    ],
+    "97": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "133": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "205": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "231": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ]
+  },
+  "261041": {
+    "11": [
+      [
+        "sound_effect/dark/se_dark_violent_spout"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "223007": {
+    "17": [
+      [
+        "sound_effect/weapon/se_swing_ver4"
+      ]
+    ],
+    "27": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ],
+      [
+        "sound_effect/water/se_splash_launch"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/weapon/se_swing_ver4"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ]
+  },
+  "141039": {
+    "11": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ]
+  },
+  "161051": {
+    "5": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv3"
+      ]
+    ]
+  },
+  "121039": {
+    "5": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/slash/se_power_flip_knight_lv3_smash"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ]
+  },
+  "231050": {
+    "11": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ]
+  },
+  "151033": {
+    "5": [
+      [
+        "sound_effect/water/se_water_freeze_break"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/element/se_enfeebling_freeze_long"
+      ]
+    ]
+  },
+  "161045": {
+    "5": [
+      [
+        "sound_effect/water/se_water_stamp_heavy"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ]
+  },
+  "111039": {
+    "17": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ]
+  },
+  "121033": {
+    "11": [
+      [
+        "sound_effect/monster/se_orochi_down"
+      ]
+    ],
+    "17": [
+      [
+        "sound_effect/blow/se_hit_ground"
+      ],
+      [
+        "sound_effect/monster/se_guardian_totem_down"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ]
+  },
+  "161039": {
+    "15": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "27": [
+      [
+        "sound_effect/element/se_fire_breath"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/element/se_power_flip_special_lv3_set"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/monster/se_guardian_totem_start_eye"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/blow/se_hit_ground"
+      ],
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ]
+  },
+  "241033": {
+    "11": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_power_flip_ranged_lv3"
+      ],
+      [
+        "sound_effect/element/se_magic_shot_wind2"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ]
+  },
+  "111033": {
+    "23": [
+      [
+        "sound_effect/weapon/se_shield"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "99": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "131032": {
+    "11": [
+      [
+        "sound_effect/sf/se_sf_gravity"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/sf/se_admin_skill_shot"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/situation/se_sword_clash_normal"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/thunder/se_thunder_large_explosion"
+      ]
+    ]
+  },
+  "261035": {
+    "23": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/weapon/se_swing_ver3"
+      ],
+      [
+        "sound_effect/dark/se_bad_soul_wind"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/situation/se_impress_clashdish"
+      ]
+    ]
+  },
+  "231044": {
+    "9": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/thunder/se_thunderbolt_single"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/thunder/se_thunderbolt_single"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ],
+      [
+        "sound_effect/thunder/se_thunderbolt_single"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "165": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ]
+  },
+  "151027": {
+    "11": [
+      [
+        "sound_effect/light/se_star_light_flash"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "251041": {
+    "11": [
+      [
+        "sound_effect/light/se_light_shine"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "111027": {
+    "5": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/fire/se_burn_out"
+      ]
+    ]
+  },
+  "141033": {
+    "29": [
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv3"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/blow/se_heavy_mass_dent"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "241027": {
+    "25": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "57": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "91": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "123": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "141": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "251035": {
+    "11": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_clear"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv1"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "131026": {
+    "17": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "33": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "145": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ]
+  },
+  "141027": {
+    "17": [
+      [
+        "sound_effect/situation/se_japanese_hand_drum_single"
+      ]
+    ],
+    "37": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "85": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "117": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "221022": {
+    "5": [
+      [
+        "sound_effect/situation/se_cute_throw"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/situation/se_hyoushigi"
+      ]
+    ]
+  },
+  "231038": {
+    "11": [
+      [
+        "sound_effect/situation/se_pop_bomb"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/situation/se_heavy_fall"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/situation/se_fall_damage"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/situation/se_impress_brandishing"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/situation/se_logo_impact_v01"
+      ]
+    ]
+  },
+  "111021": {
+    "17": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ]
+  },
+  "161033": {
+    "17": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/situation/se_comical_throw"
+      ]
+    ]
+  },
+  "211026": {
+    "17": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ]
+  },
+  "231032": {
+    "11": [
+      [
+        "sound_effect/thunder/se_lightning_needle_rip"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ]
+  },
+  "243013": {
+    "23": [
+      [
+        "sound_effect/situation/se_impress_stabsword"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/situation/se_impress_grab"
+      ]
+    ]
+  },
+  "121015": {
+    "11": [
+      [
+        "sound_effect/water/se_snap_splash"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/water/se_ice_blade_spin"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "163001": {
+    "29": [
+      [
+        "sound_effect/slash/se_strong_slash_stroke"
+      ]
+    ]
+  },
+  "213001": {
+    "11": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/situation/se_funny_bomb"
+      ]
+    ]
+  },
+  "261029": {
+    "11": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/dark/se_soul_shot"
+      ]
+    ]
+  },
+  "111015": {
+    "17": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ]
+  },
+  "151021": {
+    "11": [
+      [
+        "sound_effect/light/se_light_charge_screw_sparkling"
+      ]
+    ]
+  },
+  "141021": {
+    "11": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/wind/se_screw_thrust_small"
+      ]
+    ]
+  },
+  "251029": {
+    "11": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ]
+  },
+  "131020": {
+    "5": [
+      [
+        "sound_effect/sf/se_admin_cannon_bit_shot_once"
+      ]
+    ],
+    "17": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/sf/se_energy_suck"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ]
+  },
+  "251023": {
+    "17": [
+      [
+        "sound_effect/sf/se_multiball_appear"
+      ]
+    ]
+  },
+  "221017": {
+    "41": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ]
+    ],
+    "69": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "91": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ],
+    "133": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "251017": {
+    "11": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ]
+  },
+  "141015": {
+    "9": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/wind/se_wind_swell_sharp_tornado"
+      ]
+    ],
+    "117": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "187": [
+      [
+        "sound_effect/wind/se_wind_charge_smash"
+      ]
+    ]
+  },
+  "161027": {
+    "27": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/dark/se_dark_charge_smash"
+      ]
+    ],
+    "103": [
+      [
+        "sound_effect/element/se_power_flip_special_lv1_set"
+      ]
+    ],
+    "115": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "163": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ],
+    "197": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "239": [
+      [
+        "sound_effect/fire/se_burn_out"
+      ]
+    ],
+    "263": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_set"
+      ]
+    ]
+  },
+  "161021": {
+    "23": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ],
+      [
+        "sound_effect/dark/se_dark_large_explosion"
+      ]
+    ]
+  },
+  "261023": {
+    "33": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "81": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "123": [
+      [
+        "sound_effect/dark/se_miasma_blast"
+      ]
+    ]
+  },
+  "211020": {
+    "41": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/situation/se_emote_notice_v03"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/situation/se_ask"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "197": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ]
+    ],
+    "251": [
+      [
+        "sound_effect/situation/se_bump"
+      ]
+    ]
+  },
+  "241015": {
+    "51": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "69": [
+      [
+        "sound_effect/slash/se_line_shot"
+      ]
+    ],
+    "87": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "105": [
+      [
+        "sound_effect/slash/se_slash_finish"
+      ]
+    ],
+    "133": [
+      [
+        "sound_effect/monster/se_dragon_roar"
+      ]
+    ]
+  },
+  "161015": {
+    "23": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ],
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ]
+  },
+  "261017": {
+    "23": [
+      [
+        "sound_effect/dark/se_sink_wamble"
+      ],
+      [
+        "sound_effect/light/se_light_aura"
+      ]
+    ]
+  },
+  "231020": {
+    "2": [
+      [
+        "sound_effect/thunder/se_lightning"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ]
+  },
+  "151013": {
+    "25": [
+      [
+        "sound_effect/situation/se_weeping"
+      ]
+    ],
+    "43": [
+      [
+        "sound_effect/light/se_light_shine"
+      ],
+      [
+        "sound_effect/light/se_lightbullet_shot"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/element/se_power_flip_special_lv2_clear"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/light/se_power_flip_supporter_lv3_attack"
+      ]
+    ],
+    "181": [
+      [
+        "sound_effect/element/se_shooting_star"
+      ]
+    ],
+    "209": [
+      [
+        "sound_effect/element/se_power_flip_special_lv3_clear"
+      ]
+    ],
+    "243": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "279": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "151014": {
+    "17": [
+      [
+        "sound_effect/light/se_light_shine"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/element/se_shooting_star"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/sf/se_admin_gauge_finish"
+      ]
+    ],
+    "191": [
+      [
+        "sound_effect/sf/se_effect_skill_heal_wind_oracle"
+      ]
+    ]
+  },
+  "261011": {
+    "1": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/monster/se_dark_matter_arm_swing"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ]
+    ]
+  },
+  "211013": {
+    "5": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "17": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ],
+      [
+        "sound_effect/fire/se_fire_breath"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ]
+  },
+  "121008": {
+    "11": [
+      [
+        "sound_effect/water/se_water_stamp_heavy"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ]
+  },
+  "211012": {
+    "9": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "49": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "67": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "79": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/fire/se_burn_out"
+      ]
+    ],
+    "129": [
+      [
+        "sound_effect/fire/se_flame_collision"
+      ]
+    ]
+  },
+  "261010": {
+    "23": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/monster/se_dark_matter_arm_swing"
+      ]
+    ]
+  },
+  "161008": {
+    "29": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/water/se_splash_launch"
+      ]
+    ]
+  },
+  "261009": {
+    "11": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/situation/se_energy_attack_ready"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ],
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ]
+  },
+  "151012": {
+    "23": [
+      [
+        "sound_effect/light/se_light_charge_smash"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/situation/se_violin_attacking"
+      ],
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "239": [
+      [
+        "sound_effect/situation/se_violin_phase"
+      ],
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "305": [
+      [
+        "sound_effect/light/se_holy_shine"
+      ]
+    ]
+  },
+  "223001": {
+    "23": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/situation/se_funny_bomb"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/situation/se_emote_notice_v03"
+      ]
+    ]
+  },
+  "221011": {
+    "17": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ]
+  },
+  "131014": {
+    "1": [
+      [
+        "sound_effect/dark/se_dark_violent_spout"
+      ]
+    ],
+    "11": [
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/thunder/se_lightning_attack"
+      ]
+    ],
+    "96": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ]
+  },
+  "141008": {
+    "17": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/monster/se_dragon_flying"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/wind/se_wind_charge_smash"
+      ]
+    ]
+  },
+  "231013": {
+    "15": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "31": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "79": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "123": [
+      [
+        "sound_effect/slash/se_heavy_aura_critical"
+      ]
+    ],
+    "133": [
+      [
+        "sound_effect/slash/se_heavy_aura_critical"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "251011": {
+    "23": [
+      [
+        "sound_effect/light/se_repeat_shine_particle"
+      ],
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "251010": {
+    "27": [
+      [
+        "sound_effect/light/se_light_shine"
+      ]
+    ],
+    "43": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "95": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/element/se_shooting_star"
+      ]
+    ],
+    "163": [
+      [
+        "sound_effect/situation/se_emote_fun"
+      ]
+    ]
+  },
+  "231012": {
+    "5": [
+      [
+        "sound_effect/slash/se_metal_rotation"
+      ],
+      [
+        "sound_effect/blow/se_air_blast"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/slash/se_slash_long"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ]
+  },
+  "131013": {
+    "17": [
+      [
+        "sound_effect/water/se_water_large_explosion"
+      ],
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ]
+  },
+  "111009": {
+    "23": [
+      [
+        "sound_effect/water/se_in_water_babble"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/water/se_wave_splash"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "151011": {
+    "1": [
+      [
+        "sound_effect/unique/se_pecorine_special"
+      ]
+    ]
+  },
+  "161007": {
+    "1": [
+      [
+        "sound_effect/unique/se_kyaru_special"
+      ]
+    ]
+  },
+  "141007": {
+    "1": [
+      [
+        "sound_effect/unique/se_kokkoro_special"
+      ]
+    ]
+  },
+  "211011": {
+    "23": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/fire/se_light_fire_breath"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/slash/se_slash_swing"
+      ]
+    ],
+    "143": [
+      [
+        "sound_effect/slash/se_slash_swing"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/situation/se_impress_stabsword_dl"
+      ]
+    ]
+  },
+  "233001": {
+    "25": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "61": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "73": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "177": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/monster/se_eyes_flash"
+      ]
+    ]
+  },
+  "161006": {
+    "1": [
+      [
+        "sound_effect/unique/se_olivia_special"
+      ]
+    ]
+  },
+  "261008": {
+    "1": [
+      [
+        "sound_effect/unique/se_luna_special"
+      ]
+    ]
+  },
+  "131012": {
+    "17": [
+      [
+        "sound_effect/situation/se_impress_stabsword"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/fire/se_firework_blast"
+      ],
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "215": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ],
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "257": [
+      [
+        "sound_effect/situation/se_impress_devil_landing"
+      ]
+    ]
+  },
+  "151009": {
+    "29": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/light/se_brilliant_cheer"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/light/se_pretty_flash"
+      ]
+    ]
+  },
+  "211010": {
+    "35": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/situation/se_impress_stabsword_dl"
+      ]
+    ],
+    "203": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ],
+    "233": [
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ]
+  },
+  "131011": {
+    "1": [
+      [
+        "sound_effect/sf/se_siren_short"
+      ]
+    ],
+    "27": [
+      [
+        "sound_effect/sf/se_sf_dooropen_b"
+      ]
+    ],
+    "45": [
+      [
+        "sound_effect/situation/se_spear_thrust_normal"
+      ]
+    ],
+    "55": [
+      [
+        "sound_effect/situation/se_impress_landing_b"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "103": [
+      [
+        "sound_effect/weapon/se_machinegun_small_loop"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/weapon/se_bullet_continuous_small"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ]
+    ],
+    "199": [
+      [
+        "sound_effect/weapon/se_machinegun_large_shot"
+      ]
+    ],
+    "243": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "253": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "267": [
+      [
+        "sound_effect/fire/se_single_fire"
+      ]
+    ],
+    "275": [
+      [
+        "sound_effect/sf/se_full_charge"
+      ]
+    ]
+  },
+  "211009": {
+    "37": [
+      [
+        "sound_effect/situation/se_weeping"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "109": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "139": [
+      [
+        "sound_effect/situation/se_ask"
+      ]
+    ],
+    "147": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "159": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ],
+      [
+        "sound_effect/situation/se_happening"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "217": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ],
+      [
+        "sound_effect/weapon/se_bit_bullet_short"
+      ]
+    ]
+  },
+  "221010": {
+    "1": [
+      [
+        "sound_effect/dark/se_poison_babble"
+      ]
+    ],
+    "31": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "49": [
+      [
+        "sound_effect/slash/se_slash_short_incisure"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "115": [
+      [
+        "sound_effect/monster/se_scream2"
+      ]
+    ],
+    "153": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "165": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "193": [
+      [
+        "sound_effect/slash/se_slash_swing"
+      ]
+    ]
+  },
+  "221009": {
+    "29": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "45": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/light/se_light_sharp_reflection"
+      ]
+    ],
+    "93": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "147": [
+      [
+        "sound_effect/dark/se_dark_hit_shadow"
+      ]
+    ]
+  },
+  "261007": {
+    "23": [
+      [
+        "sound_effect/dark/se_sink_force_incidence"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "71": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/weapon/se_throw_fast"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/situation/se_camera_shutter"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ],
+      [
+        "sound_effect/fire/se_big_cannon_shot"
+      ]
+    ]
+  },
+  "121007": {
+    "5": [
+      [
+        "sound_effect/yakumono/se_puddle_break"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/light/se_light_release"
+      ],
+      [
+        "sound_effect/water/se_splash_slam"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/water/se_water_short_splash"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/water/se_ice_blade_dissolve"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/water/se_water_center_droplet_splash"
+      ]
+    ],
+    "227": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ]
+  },
+  "151007": {
+    "5": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/sf/se_effect_skill_enhancing_penetrate_long"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ],
+    "117": [
+      [
+        "sound_effect/sf/se_energy_suck"
+      ]
+    ],
+    "127": [
+      [
+        "sound_effect/blow/se_power_flip_fighter_lv1"
+      ]
+    ],
+    "147": [
+      [
+        "sound_effect/sf/se_appearance"
+      ]
+    ],
+    "159": [
+      [
+        "sound_effect/blow/se_aura_clash"
+      ]
+    ],
+    "185": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "215": [
+      [
+        "sound_effect/wind/se_swirling_wind_stick"
+      ]
+    ],
+    "277": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "325": [
+      [
+        "sound_effect/slash/se_heavy_iron_dig"
+      ]
+    ]
+  },
+  "141201": {
+    "17": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "39": [
+      [
+        "sound_effect/slash/se_rapier_slash"
+      ]
+    ],
+    "57": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "87": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "129": [
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ],
+      [
+        "sound_effect/slash/se_heavy_aura_critical"
+      ]
+    ],
+    "195": [
+      [
+        "sound_effect/slash/se_big_spark_claw"
+      ],
+      [
+        "sound_effect/slash/se_heavy_aura_critical"
+      ]
+    ]
+  },
+  "151182": {
+    "5": [
+      [
+        "sound_effect/light/se_light_flash_short"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/light/se_light_slash"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/light/se_light_sharp_reflection"
+      ]
+    ]
+  },
+  "131182": {
+    "5": [
+      [
+        "sound_effect/situation/se_impress_clashdish"
+      ]
+    ],
+    "29": [
+      [
+        "sound_effect/situation/se_impress_clashdish"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_impress_clashdish"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/light/se_light_rising_shine"
+      ]
+    ],
+    "215": [
+      [
+        "sound_effect/thunder/se_thunder_stamp"
+      ]
+    ],
+    "264": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "161201": {
+    "5": [
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/element/se_energy_inhalation"
+      ]
+    ],
+    "77": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/element/se_moving_wind"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ]
+  },
+  "141006": {
+    "17": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/situation/se_impress_shakeeen"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/yakumono/se_puddle_break"
+      ]
+    ],
+    "111": [
+      [
+        "sound_effect/yakumono/se_puddle_break"
+      ]
+    ],
+    "121": [
+      [
+        "sound_effect/yakumono/se_puddle_break"
+      ]
+    ],
+    "131": [
+      [
+        "sound_effect/yakumono/se_puddle_break"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/element/se_resistance_quick"
+      ]
+    ],
+    "227": [
+      [
+        "sound_effect/situation/se_impress_smallflap"
+      ]
+    ]
+  },
+  "241009": {
+    "11": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/situation/se_cute_throw"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "113": [
+      [
+        "sound_effect/situation/se_agree"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/situation/se_agree"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/situation/se_impress_landing_a"
+      ]
+    ],
+    "161": [
+      [
+        "sound_effect/monster/se_warp_in"
+      ]
+    ]
+  },
+  "251009": {
+    "35": [
+      [
+        "sound_effect/yakumono/se_yuremono_bubble_hit"
+      ],
+      [
+        "sound_effect/situation/se_impress_stabsword"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/yakumono/se_yuremono_bubble_hit"
+      ],
+      [
+        "sound_effect/situation/se_smokeball_explosion"
+      ]
+    ]
+  },
+  "263001": {
+    "23": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ],
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "53": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ],
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "107": [
+      [
+        "sound_effect/slash/se_short_sharp_blade"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/slash/se_slash_swing"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/slash/se_heavy_aura_critical"
+      ],
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ]
+  },
+  "231008": {
+    "35": [
+      [
+        "sound_effect/situation/se_impress_turnlance"
+      ]
+    ],
+    "37": [
+      [
+        "sound_effect/thunder/se_thunderbolt_single"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "87": [
+      [
+        "sound_effect/slash/se_short_sharp_claw"
+      ]
+    ],
+    "120": [
+      [
+        "sound_effect/thunder/se_thunder_sonic_slash"
+      ]
+    ]
+  },
+  "211006": {
+    "16": [
+      [
+        "sound_effect/yakumono/se_sf_box_hit"
+      ]
+    ],
+    "51": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ]
+    ],
+    "67": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ]
+    ],
+    "72": [
+      [
+        "sound_effect/weapon/se_machinegun_oneshot"
+      ]
+    ],
+    "88": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "117": [
+      [
+        "sound_effect/weapon/se_grenade"
+      ]
+    ],
+    "169": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ]
+    ],
+    "194": [
+      [
+        "sound_effect/yakumono/se_hit_grass"
+      ]
+    ]
+  },
+  "131003": {
+    "11": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "59": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "125": [
+      [
+        "sound_effect/light/se_light_hard_flash_parry"
+      ]
+    ],
+    "167": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "203": [
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "209": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "239": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ],
+      [
+        "sound_effect/light/se_holy_shine"
+      ]
+    ]
+  },
+  "231007": {
+    "23": [
+      [
+        "sound_effect/situation/se_cute_throw"
+      ]
+    ],
+    "41": [
+      [
+        "sound_effect/yakumono/se_warp"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/water/se_splash_slam"
+      ],
+      [
+        "sound_effect/light/se_light_release"
+      ]
+    ],
+    "89": [
+      [
+        "sound_effect/situation/se_comical_throw"
+      ]
+    ],
+    "119": [
+      [
+        "sound_effect/monster/se_teleportation"
+      ],
+      [
+        "sound_effect/element/se_shooting_star"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/situation/se_funny_bomb"
+      ]
+    ],
+    "179": [
+      [
+        "sound_effect/situation/se_agree"
+      ]
+    ]
+  },
+  "111004": {
+    "11": [
+      [
+        "sound_effect/light/se_light_release"
+      ],
+      [
+        "sound_effect/element/se_magic_disappearance"
+      ]
+    ],
+    "47": [
+      [
+        "sound_effect/fire/se_medium_explosion"
+      ],
+      [
+        "sound_effect/fire/se_fire_spread"
+      ]
+    ],
+    "101": [
+      [
+        "sound_effect/fire/se_flare_up"
+      ]
+    ],
+    "137": [
+      [
+        "sound_effect/battle_common/se_power_flip_shot"
+      ],
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "155": [
+      [
+        "sound_effect/yakumono/se_one_way_wall"
+      ]
+    ],
+    "173": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "195": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "235": [
+      [
+        "sound_effect/blow/se_crush"
+      ]
+    ],
+    "273": [
+      [
+        "sound_effect/yakumono/se_item_coin"
+      ]
+    ],
+    "279": [
+      [
+        "sound_effect/yakumono/se_item_coin"
+      ]
+    ],
+    "285": [
+      [
+        "sound_effect/yakumono/se_item_coin"
+      ]
+    ]
+  },
+  "151004": {
+    "6": [
+      [
+        "sound_effect/light/se_light_bright_shooting_star"
+      ]
+    ],
+    "25": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ],
+    "65": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "112": [
+      [
+        "sound_effect/light/se_light_sharp_reflection"
+      ]
+    ],
+    "165": [
+      [
+        "sound_effect/light/se_metal_shine_wall"
+      ]
+    ],
+    "170": [
+      [
+        "sound_effect/light/se_beam_blade_shot"
+      ]
+    ],
+    "217": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ]
+  },
+  "141001": {
+    "23": [
+      [
+        "sound_effect/wind/se_wind_medium_size_swing"
+      ]
+    ],
+    "49": [
+      [
+        "sound_effect/blow/se_blow_consecutive_aura_thrust"
+      ]
+    ],
+    "91": [
+      [
+        "sound_effect/wind/se_wind_fall_down_tornado"
+      ]
+    ],
+    "152": [
+      [
+        "sound_effect/wind/se_swift_tornado"
+      ]
+    ],
+    "197": [
+      [
+        "sound_effect/battle_common/se_player_guard"
+      ]
+    ],
+    "229": [
+      [
+        "sound_effect/wind/se_single_tornado"
+      ]
+    ]
+  },
+  "151003": {
+    "18": [
+      [
+        "sound_effect/slash/se_slash_short"
+      ]
+    ],
+    "50": [
+      [
+        "sound_effect/slash/se_slash_swing"
+      ]
+    ],
+    "114": [
+      [
+        "sound_effect/light/se_light_sparkling_hard_explosion"
+      ]
+    ],
+    "168": [
+      [
+        "sound_effect/weapon/se_knife_rotation"
+      ]
+    ],
+    "191": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "194": [
+      [
+        "sound_effect/light/se_lightbullet_shot"
+      ]
+    ],
+    "291": [
+      [
+        "sound_effect/fire/se_burn_out"
+      ]
+    ],
+    "326": [
+      [
+        "sound_effect/yakumono/se_sf_box_hit"
+      ]
+    ]
+  },
+  "241005": {
+    "11": [
+      [
+        "sound_effect/situation/se_jump_up"
+      ]
+    ],
+    "23": [
+      [
+        "sound_effect/weapon/se_throw_slow"
+      ]
+    ],
+    "46": [
+      [
+        "sound_effect/wind/se_wind_bang_down"
+      ]
+    ],
+    "75": [
+      [
+        "sound_effect/blow/se_arm_swing"
+      ]
+    ],
+    "102": [
+      [
+        "sound_effect/blow/se_blow_hard_parry"
+      ]
+    ],
+    "149": [
+      [
+        "sound_effect/wind/se_tornado"
+      ]
+    ]
+  },
+  "231006": {
+    "14": [
+      [
+        "sound_effect/slash/se_heavy_iron_dig"
+      ]
+    ],
+    "35": [
+      [
+        "sound_effect/weapon/se_deep_slash"
+      ]
+    ],
+    "46": [
+      [
+        "sound_effect/thunder/se_electric_attack"
+      ]
+    ],
+    "83": [
+      [
+        "sound_effect/thunder/se_lightning_needle_discharge"
+      ]
+    ],
+    "117": [
+      [
+        "sound_effect/thunder/se_thunder_large_explosion"
+      ]
+    ]
+  }
+}
