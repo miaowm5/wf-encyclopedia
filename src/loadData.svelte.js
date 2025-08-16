@@ -36,6 +36,7 @@ const main = ()=>{
       pureData[key] = []
       Object.keys(data[key]).forEach((index)=>{
         pureData[key][index - 1] = data[key][index][0]
+        pureData[key][index - 1][20] = data[key][index][0][20].split('\n')
       })
     })
     return pureData
