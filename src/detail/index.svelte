@@ -17,7 +17,8 @@
   })
 </script>
 
-<div class="main">
+<div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
+  <button class="mobileBack" onclick={()=>{store.setListHide(false)}}>{`<Back`}</button>
   {#if item}{#each item.data as block}
     <div class="item">
       {#each block[20] as line}<p>{line}</p>{/each}
@@ -37,5 +38,25 @@
     margin-bottom: .5em;
     border-radius: 10px;
     padding: .5em 1em;
+  }
+  .mobileBack{
+    display: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1em;
+    padding: .5em;
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    .mobileBack{
+      display: inline;
+    }
+    .mobileHide{
+      display: none;
+    }
   }
 </style>

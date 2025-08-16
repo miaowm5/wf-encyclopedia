@@ -12,7 +12,7 @@
   }
 </script>
 
-<div class="main">
+<div class={`main ${store.state.ui.mobileListHide ? 'mobileHide' : ''}`}>
   {#each list as id}
     <Nav href={`/${id}`} route={store.route}>
       <span class={`item ${store.state.item === id ? 'active' : ''}`}>{getName(database[id][0])}</span>
@@ -40,5 +40,14 @@
   .item.active{
     background-color: #ddd;
     cursor: default;
+  }
+  @media (max-width: 800px) {
+    .main{
+      flex: 1;
+      max-width: 100%;
+    }
+    .mobileHide{
+      display: none;
+    }
   }
 </style>

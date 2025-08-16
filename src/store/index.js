@@ -5,6 +5,9 @@ import state from './initState.svelte.js'
 const setDatabase = (db, data)=>{
   state.database[db] = data
 }
+const setListHide = (hide)=>{
+  state.ui.mobileListHide = hide
+}
 
 const updateRoute = ((data)=>{
   if (data.page === 'category'){
@@ -13,6 +16,7 @@ const updateRoute = ((data)=>{
   }
   if (data.page === 'item'){
     state.item = data.item
+    state.ui.mobileListHide = true
   }
 })
 route.onUpdate(updateRoute)
@@ -22,6 +26,7 @@ const store = {
   get state(){ return state },
   route,
   setDatabase,
+  setListHide,
 }
 
 export default store
