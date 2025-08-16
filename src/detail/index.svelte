@@ -18,8 +18,8 @@
 </script>
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
-  <button class="mobileBack" onclick={()=>{store.setListHide(false)}}>{`<Back`}</button>
   {#if item}
+    <button class="mobileBack" onclick={()=>{store.setListHide(false)}}>{`<Back`}</button>
     {#if item.character}
       <div class="character">
         <p>{item.character[3]}</p>
@@ -42,13 +42,11 @@
         <p class="name">{item.data[0][17]}</p>
       </div>
     {/if}
-
     {#each item.data as block}
       <div class="item">
         {#each block[20] as line}<p>{line}</p>{/each}
       </div>
     {/each}
-
   {/if}
 </div>
 
