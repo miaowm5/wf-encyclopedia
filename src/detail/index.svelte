@@ -1,5 +1,8 @@
 <script>
   import store from '../store'
+  import Related1 from './related1.svelte'
+  import Related2 from './related2.svelte'
+  import Title from './title.svelte'
 
   const database = store.state.database.encyclopedia
   const database2 = store.state.database.character_text
@@ -42,11 +45,14 @@
         <p class="name">{item.data[0][17]}</p>
       </div>
     {/if}
+    <Title>情报</Title>
     {#each item.data as block}
       <div class="item">
         {#each block[20] as line}<p>{line}</p>{/each}
       </div>
     {/each}
+    <Related1 data={item.data[0][19]} />
+    <Related2 data={item.data[0][19]} />
   {/if}
 </div>
 
@@ -75,12 +81,11 @@
     cursor: pointer;
   }
   .character{
-    margin-bottom: 1.5em;
+    margin-bottom: .5em;
   }
   .character>.name{
     font-size: 1.5em;
   }
-
   @media (max-width: 800px) {
     .mobileBack{
       display: inline;
