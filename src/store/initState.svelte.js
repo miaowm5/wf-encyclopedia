@@ -2,6 +2,9 @@
 const initState = {
   item: null,
   category: null,
+  ui: {
+    mobileListHide: false
+  },
   database: {
     encyclopedia: null,
     character: null,
