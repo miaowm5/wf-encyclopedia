@@ -47,16 +47,16 @@ table {
 }
 body{
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
   margin: 0;
-  background-color: white;
-  color: black;
+  background-color: #eaeaea;
+  color: #555555;
 }
 ::-webkit-scrollbar{height:8px;width:6px}
 ::-webkit-scrollbar-button,::-webkit-scrollbar-track{display:none}
-::-webkit-scrollbar-thumb{background:#666;border-radius:3px}
+::-webkit-scrollbar-thumb{background:#aaaaaa;border-radius:3px}
 ::-webkit-scrollbar-corner{display:none}
 @supports not selector(::-webkit-scrollbar) {
-  *{scrollbar-color:#666;scrollbar-width:thin}
+  *{scrollbar-color:#aaaaaa;scrollbar-width:thin}
 }

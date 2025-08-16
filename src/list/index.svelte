@@ -35,17 +35,19 @@
     padding: 1em 1em 10em 1em;
   }
   .item{
-    border: 1px solid #ccc;
+    background: #fafafa;
+    border-top: 1px solid white;
     display: block;
     margin-bottom: .5em;
     border-radius: 10px;
     padding: .5em 1em;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
   }
   .item:hover{
-    background-color: #eee;
+    background-color: #d3efec;
   }
   .item.active{
-    background-color: #ddd;
+    background-color: #d3efec;
     cursor: default;
   }
   .title{

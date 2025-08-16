@@ -11,7 +11,7 @@
     if (!data){ return null }
     let character = null
     if (data[0][4] === '0' || data[0][4] === '1'){
-      character = database2[data[0][5]][0]
+      character = database2[data[0][5]]
     }
     return {data, character}
   })
@@ -19,11 +19,26 @@
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   <button class="mobileBack" onclick={()=>{store.setListHide(false)}}>{`<Back`}</button>
-  {#if item}{#each item.data as block}
-    <div class="item">
-      {#each block[20] as line}<p>{line}</p>{/each}
-    </div>
-  {/each}{/if}
+  {#if item}
+    {#if item.character}
+      <div class="character">
+        <p>{item.character[3]}</p>
+        <p class="name">{item.character[0]}</p>
+        <!-- <p>种族：race</p> -->
+        <!-- <p>性别：gender</p> -->
+        {#if item.character[11] !== '(None)'}
+          <p>CV：{item.character[11]}</p>
+        {/if}
+      </div>
+    {/if}
+
+    {#each item.data as block}
+      <div class="item">
+        {#each block[20] as line}<p>{line}</p>{/each}
+      </div>
+    {/each}
+
+  {/if}
 </div>
 
 <style>
@@ -33,11 +48,11 @@
     overflow: auto;
   }
   .item{
-    border: 1px solid #ccc;
     display: block;
     margin-bottom: .5em;
     border-radius: 10px;
-    padding: .5em 1em;
+    padding: 1em;
+    background-color: white;
   }
   .mobileBack{
     display: none;
@@ -49,6 +64,12 @@
     margin-bottom: 1em;
     padding: .5em;
     cursor: pointer;
+  }
+  .character{
+    margin-bottom: 1.5em;
+  }
+  .character>.name{
+    font-size: 1.5em;
   }
 
   @media (max-width: 800px) {
