@@ -35,8 +35,10 @@ const main = ()=>{
     Object.keys(data).forEach((key)=>{
       pureData[key] = []
       Object.keys(data[key]).forEach((index)=>{
-        pureData[key][index - 1] = data[key][index][0]
-        pureData[key][index - 1][20] = data[key][index][0][20].split('\n')
+        let value = data[key][index][0]
+        value[19] = value[19].split(',')
+        value[20] = value[20].split('\n')
+        pureData[key][index - 1] = value
       })
       pureData[key] = pureData[key].filter((item)=>item)
     })
