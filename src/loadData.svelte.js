@@ -38,6 +38,7 @@ const main = ()=>{
         pureData[key][index - 1] = data[key][index][0]
         pureData[key][index - 1][20] = data[key][index][0][20].split('\n')
       })
+      pureData[key] = pureData[key].filter((item)=>item)
     })
     return pureData
   })
