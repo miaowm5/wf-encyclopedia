@@ -13,10 +13,13 @@ const updateRoute = ((data)=>{
   if (data.page === 'category'){
     state.category = data.category
     state.item = null
-  }
-  if (data.page === 'item'){
+  }else if (data.page === 'item'){
     state.item = data.item
     state.ui.mobileListHide = true
+  }else if (data.page === 'home'){
+    state.category = null
+    state.item = null
+    state.ui.mobileListHide = false
   }
 })
 route.onUpdate(updateRoute)
