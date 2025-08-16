@@ -30,6 +30,17 @@
           <p>CV：{item.character[11]}</p>
         {/if}
       </div>
+    {:else if item.data[0][4] === '2'}
+      <div class="character">
+        <p class="name">{item.data[0][17]}</p>
+        {#if item.data[0][10] !== '(None)'}<p>种族：{item.data[0][10]}</p>{/if}
+        {#if item.data[0][11] !== '(None)'}<p>性别：{item.data[0][11]}</p>{/if}
+        {#if item.data[0][9] !== '(None)'}<p>CV：{item.data[0][9]}</p>{/if}
+      </div>
+    {:else}
+      <div class="character">
+        <p class="name">{item.data[0][17]}</p>
+      </div>
     {/if}
 
     {#each item.data as block}
