@@ -15,7 +15,7 @@
 <div class="main">
   {#each list as id}
     <Nav href={`/${id}`} route={store.route}>
-      <span class="item">{getName(database[id][0])}</span>
+      <span class={`item ${store.state.item === id ? 'active' : ''}`}>{getName(database[id][0])}</span>
     </Nav>
   {/each}
 </div>
@@ -23,13 +23,11 @@
 <style>
   .main{
     flex: 1;
-    height: 100%;
-    max-width: 800px;
+    max-width: 500px;
     overflow: auto;
     padding: 1em 1em 10em 1em;
   }
   .item{
-    font-size: 1.1em;
     border: 1px solid #ccc;
     display: block;
     margin-bottom: .5em;
@@ -41,5 +39,6 @@
   }
   .item.active{
     background-color: #ddd;
+    cursor: default;
   }
 </style>

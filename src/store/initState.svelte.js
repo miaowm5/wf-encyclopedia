@@ -1,8 +1,7 @@
 
-import route from './initRoute'
-
 const initState = {
-  page: route.current,
+  item: null,
+  category: null,
   database: {
     encyclopedia: null,
     character: null,
