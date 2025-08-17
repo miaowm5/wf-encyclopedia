@@ -35,5 +35,6 @@
     display: flex;
     margin: 0 auto;
     max-width: 1280px;
+    gap: .5em;
   }
 </style>

@@ -29,7 +29,7 @@
 
 <style>
   .main{
-    flex: 1;
+    flex: 2;
     max-width: 500px;
     overflow: auto;
     padding: 1em 1em 10em 1em;
