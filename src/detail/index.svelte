@@ -19,7 +19,7 @@
 </script>
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
-  {#if item}
+  {#if item}{#key store.state.item}
     <div class="banner">
       {#if item[0][4] === '0' || item[0][4] === '1'}
         <CharacterTitle data={item} />
@@ -49,12 +49,12 @@
         <button onclick={()=>{store.setListHide(false)}}>返回一览</button>
       </div>
     </div>
-  {/if}
+  {/key}{/if}
 </div>
 
 <style>
   .main{
-    flex: 1;
+    flex: 3;
     position: relative;
     display: flex;
     flex-direction: column;
