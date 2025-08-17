@@ -10,16 +10,13 @@ const setListHide = (hide)=>{
 }
 
 const updateRoute = ((data)=>{
-  if (data.page === 'category'){
-    state.category = data.category
-    state.item = null
-  }else if (data.page === 'item'){
+  if (data.page === 'item'){
     state.item = data.item
     state.ui.mobileListHide = true
   }else if (data.page === 'home'){
-    state.category = null
     state.item = null
     state.ui.mobileListHide = false
+    document.title = import.meta.env.VITE_SITE_NAME
   }
 })
 route.onUpdate(updateRoute)
