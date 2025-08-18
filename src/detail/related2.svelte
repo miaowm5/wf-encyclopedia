@@ -38,7 +38,7 @@
   .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em .5em;
+    gap: .7em .5em;
     justify-content: center;
   }
   .tag {
