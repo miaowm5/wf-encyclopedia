@@ -9,6 +9,6 @@
 <style>
   .title{
     text-align: center;
-    padding: 1em;
+    padding: 1.5em 0 1em;
   }
 </style>
