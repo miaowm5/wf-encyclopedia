@@ -1,7 +1,7 @@
 <script>
   import store from '../store'
   import NpcTitle from './npcTitle.svelte'
-  import { wrapApi } from './common'
+  import { wrapApi } from '../common'
 
   const { data } = $props()
 
