@@ -108,7 +108,7 @@
   .character{
     color: white;
     padding: 2em 2em 3em;
-    background: url(assets/ui/keyword_details_character_background.png);
+    background: url(/resource/ui/keyword_details_character_background.png);
     background-size: cover;
     background-position: center bottom;
     line-height: 0;
@@ -120,7 +120,7 @@
     font-size: 1.5em;
   }
   .header{
-    background: url(assets/ui/keyword_details_keyword_background.png);
+    background: url(/resource/ui/keyword_details_keyword_background.png);
     background-size: cover;
     background-position: center bottom;
     line-height: 0;

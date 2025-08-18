@@ -1,7 +1,7 @@
 <script>
   const { data } = $props()
   const url = $derived.by(()=>{
-    return data.replace('encyclopedia/', '/assets/') + '.png'
+    return data.replace('encyclopedia/', '/resource/') + '.png'
   })
 </script>
 
