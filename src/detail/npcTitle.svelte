@@ -34,9 +34,11 @@
       return item
     })
   })
+
+  const background = import.meta.env.VITE_CDN + 'ui/keyword_details_character_background.png'
 </script>
 
-<div class="character">
+<div class="character" style:background-image={`url(${background})`}>
   <div class="info">
     {#if title !== '(None)'}<p>
       {#if element !== '(None)'}
@@ -56,7 +58,6 @@
     flex: 0;
     color: white;
     padding: 2em 2em 3em;
-    background: url(/resource/ui/keyword_details_character_background.png);
     background-size: cover;
     background-position: center bottom;
     line-height: 0;
