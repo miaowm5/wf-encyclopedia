@@ -61,9 +61,10 @@
     line-height: 0;
   }
   .character>.info{
-    line-height: 2em;
+    line-height: 1.7em;
   }
   .character>.info>.name{
     font-size: 1.5em;
+    line-height: 2em;
   }
 </style>
