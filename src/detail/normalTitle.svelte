@@ -2,15 +2,15 @@
   const { title } = $props()
 
   document.title = title + ' | ' + import.meta.env.VITE_SITE_NAME
+  const background = import.meta.env.VITE_CDN + 'ui/keyword_details_keyword_background.png'
 
 </script>
 
-<div class="header"><p>★ {title}</p></div>
+<div class="header" style:background-image={`url(${background})`}><p>★ {title}</p></div>
 
 <style>
   .header{
     flex: 1;
-    background: url(/resource/ui/keyword_details_keyword_background.png);
     background-size: cover;
     background-position: center bottom;
     color: white;
