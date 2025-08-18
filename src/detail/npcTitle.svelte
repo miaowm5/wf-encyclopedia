@@ -53,6 +53,7 @@
 
 <style>
   .character{
+    flex: 0;
     color: white;
     padding: 2em 2em 3em;
     background: url(/resource/ui/keyword_details_character_background.png);

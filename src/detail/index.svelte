@@ -20,22 +20,20 @@
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   {#if item}{#key store.state.item}
-    <div class="banner">
-      {#if item[0][4] === '0' || item[0][4] === '1'}
-        <CharacterTitle data={item} />
-      {:else if item[0][4] === '2'}
-        <NpcTitle
-          name={item[0][17]}
-          race={item[0][10]}
-          gender={item[0][11]}
-          cv={item[0][9]}
-        />
-      {:else if item[0][4] === '3' || item[0][4] === '4'}
-        <Banner data={item[0][16]} title={item[0][17]} />
-      {:else}
-        <NormalTitle title={item[0][17]} />
-      {/if}
-    </div>
+    {#if item[0][4] === '0' || item[0][4] === '1'}
+      <CharacterTitle data={item} />
+    {:else if item[0][4] === '2'}
+      <NpcTitle
+        name={item[0][17]}
+        race={item[0][10]}
+        gender={item[0][11]}
+        cv={item[0][9]}
+      />
+    {:else if item[0][4] === '3' || item[0][4] === '4'}
+      <Banner data={item[0][16]} title={item[0][17]} />
+    {:else}
+      <NormalTitle title={item[0][17]} />
+    {/if}
     <div class="content">
       <Title>情报</Title>
       {#each item as block}
@@ -58,10 +56,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-  }
-  .banner{
-    flex: 0;
-    line-height: 0;
   }
   .content{
     flex: 1;

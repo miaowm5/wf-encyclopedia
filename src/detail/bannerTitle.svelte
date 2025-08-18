@@ -6,10 +6,14 @@
   document.title = title + ' | ' + import.meta.env.VITE_SITE_NAME
 </script>
 
-<img src="{url}" alt="banner">
+<div class="header" style:background-image={`url(${url})`}></div>
 
 <style>
-  img {
+  .header {
+    flex: 1;
+    background-size: cover;
+    background-position: center center;
     width: 100%;
+    max-height: 20%;
   }
 </style>
