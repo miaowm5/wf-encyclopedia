@@ -6,8 +6,7 @@
     "start": "npm run dev",
     "dev": "vite",
     "build": "vite build --outDir ./dist",
-    "preview": "vite preview",
-    "tool-handleStory": "node tool/handleStory2.js"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
