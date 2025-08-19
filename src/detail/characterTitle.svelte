@@ -43,6 +43,7 @@
     element={characterData[3]}
     race={characterData[4]}
     gender={characterData[7]}
+    banner={characterData[0]}
   />
 {:else}
   <NpcTitle

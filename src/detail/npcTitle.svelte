@@ -1,4 +1,6 @@
 <script>
+  import { spriteSheet } from '../common'
+
   const {
     name = '(None)',
     title = '(None)',
@@ -6,9 +8,14 @@
     race = '(None)',
     gender = '(None)',
     cv = '(None)',
+    banner = '(None)',
   } = $props()
 
   document.title = name + ' | ' + import.meta.env.VITE_SITE_NAME
+
+  let bannerImage = $derived.by(()=>{
+    return spriteSheet('character/banner', banner === '(None)' ? null : banner)
+  })
 
   const genderText = $derived.by(()=>{
     if (gender === 'Female'){ return '女性' }
@@ -39,6 +46,7 @@
 </script>
 
 <div class="character" style:background-image={`url(${background})`}>
+  <img src={bannerImage.src} alt="banner" class="banner">
   <div class="info">
     {#if title !== '(None)'}<p>
       {#if element !== '(None)'}
@@ -61,6 +69,8 @@
     background-size: cover;
     background-position: center bottom;
     line-height: 0;
+    position: relative;
+    font-size: .9em;
   }
   .character>.info{
     line-height: 1.7em;
@@ -68,5 +78,12 @@
   .character>.info>.name{
     font-size: 1.5em;
     line-height: 2em;
+  }
+  .banner{
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    max-height: 215px;
+    position: absolute;
   }
 </style>

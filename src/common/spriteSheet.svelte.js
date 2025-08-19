@@ -3,6 +3,7 @@ import { api } from './m5api'
 
 const cache = {}
 const cacheImage = {}
+const empty = `data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7`
 
 const loadConfig = async (spritesheet)=>{
   if (cache[spritesheet]){ return cache[spritesheet] }
@@ -27,10 +28,10 @@ const loadImage = async (spritesheet, file)=>{
   return image
 }
 
-const wrap = (spritesheet, file)=>{
+const wrap = (spritesheet, file = null)=>{
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
-  let src = $state('')
+  let src = $state(empty)
   const load = async ()=>{
     const sheetConfig = await loadConfig(spritesheet)
     if (cancelFunc){ return }
@@ -51,8 +52,10 @@ const wrap = (spritesheet, file)=>{
     )
     src = canvas.toDataURL("image/png")
   }
-  onMount(()=>{ load() })
-
+  onMount(()=>{
+    if (!file){ return }
+    load()
+  })
   return { get src(){ return src } }
 }
 
