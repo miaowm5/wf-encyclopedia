@@ -28,6 +28,7 @@
         race={item[0][10]}
         gender={item[0][11]}
         cv={item[0][9]}
+        banner={item[0][6]}
       />
     {:else if item[0][4] === '3' || item[0][4] === '4'}
       <Banner data={item[0][16]} title={item[0][17]} />
