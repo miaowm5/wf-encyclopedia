@@ -46,7 +46,7 @@
 </script>
 
 <div class="character" style:background-image={`url(${background})`}>
-  <img src={bannerImage.src} alt="banner" class="banner">
+  <div style:background-image={`url(${bannerImage.src})`} class="banner"></div>
   <div class="info">
     {#if title !== '(None)'}<p>
       {#if element !== '(None)'}
@@ -57,7 +57,7 @@
     <p class="name">{name}</p>
     {#if raceText !== '(None)'}<p>种族：{raceText.join('/')}</p>{/if}
     {#if gender !== '(None)'}<p>性别：{genderText}</p>{/if}
-    {#if cv !== '(None)'}<p>CV：{cv}</p>{/if}
+    {#if cv !== '(None)'}<p class="cv">CV：{cv}</p>{/if}
   </div>
 </div>
 
@@ -65,25 +65,42 @@
   .character{
     flex: 0;
     color: white;
-    padding: 2em 2em 3em;
+    padding: 2em 2em 2.5em;
     background-size: cover;
     background-position: center bottom;
     line-height: 0;
     position: relative;
-    font-size: .9em;
+    font-size: .95em;
   }
   .character>.info{
     line-height: 1.7em;
+    z-index: 10;
+    position: relative;
+    text-shadow: 0 0 10px black;
   }
-  .character>.info>.name{
-    font-size: 1.5em;
-    line-height: 2em;
+  .name{
+    font-size: 2em;
+    line-height: 1.5em;
+    margin-bottom: .3em;
+  }
+  .cv{
+    margin-top: .5em;
   }
   .banner{
+    width: 100%;
     height: 100%;
     right: 0;
     bottom: 0;
+    max-width: 430px;
     max-height: 215px;
     position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  @media (max-width: 430px) {
+    .banner{
+      width: 115%;
+      right: -15%;
+    }
   }
 </style>
