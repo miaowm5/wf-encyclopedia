@@ -65,26 +65,23 @@
   .character{
     flex: 0;
     color: white;
-    padding: 2em 2em 2.5em;
+    padding: 1.7em 2em 2em;
     background-size: cover;
     background-position: center bottom;
-    line-height: 0;
     position: relative;
     font-size: .95em;
   }
   .character>.info{
-    line-height: 1.7em;
     z-index: 10;
     position: relative;
     text-shadow: 0 0 10px black;
   }
   .name{
     font-size: 2em;
-    line-height: 1.5em;
     margin-bottom: .3em;
   }
   .cv{
-    margin-top: .5em;
+    margin-top: .3em;
   }
   .banner{
     width: 100%;
@@ -96,6 +93,7 @@
     position: absolute;
     background-repeat: no-repeat;
     background-position: bottom right;
+    background-size: auto 100%;
   }
   @media (max-width: 430px) {
     .banner{
