@@ -4,26 +4,43 @@ import { api } from './m5api'
 const cache = {}
 const cacheImage = {}
 const empty = `data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7`
+const promiseCache = {}
 
 const loadConfig = async (spritesheet)=>{
   if (cache[spritesheet]){ return cache[spritesheet] }
   const url = `${import.meta.env.VITE_CDN}${spritesheet}.json`
-  const result = await new Promise((resolve)=>{
-    api(url, { success: (data)=>{ resolve(data) } })
-  })
+  let promise = promiseCache[url]
+  if (!promise){
+    promise = new Promise((resolve)=>{
+      api(url, {
+        success: (data)=>{ resolve(data) },
+        fail: (err)=>{ console.error(err), resolve(null) },
+        after: ()=>{ promiseCache[url] = undefined }
+      })
+    })
+    promiseCache[url] = promise
+  }
+  const result = await promise
   if (result){ cache[spritesheet] = result }
   return result
 }
 const loadImage = async (spritesheet, file)=>{
   const key = `${spritesheet}/${file}`
   if (cacheImage[key]){ return cacheImage[key] }
-  const image = await new Promise((resolve)=>{
-    const img = new Image()
-    img.crossOrigin = "anonymous"
-    img.src = `${import.meta.env.VITE_CDN}${key}`
-    img.onload = ()=>{ resolve(img) }
-    img.onerror = ()=>{ resolve(null) }
-  })
+  const url = `${import.meta.env.VITE_CDN}${key}`
+
+  let promise = promiseCache[url]
+  if (!promise){
+    promise = new Promise((resolve)=>{
+      const img = new Image()
+      img.crossOrigin = "anonymous"
+      img.src = `${import.meta.env.VITE_CDN}${key}`
+      img.onload = ()=>{ resolve(img); promiseCache[url] = undefined }
+      img.onerror = ()=>{ resolve(null); promiseCache[url] = undefined }
+    })
+    promiseCache[url] = promise
+  }
+  const image = await promise
   if (image){ cacheImage[key] = image }
   return image
 }
