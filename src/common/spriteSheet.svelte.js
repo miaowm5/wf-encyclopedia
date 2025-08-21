@@ -45,10 +45,10 @@ const loadImage = async (spritesheet, file)=>{
   return image
 }
 
-const wrap = (spritesheet, file = null)=>{
+const wrap = (spritesheet, file = null, type="base64")=>{
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
-  let src = $state(empty)
+  let src = $state(type === "base64" ? empty : null)
   const load = async ()=>{
     const sheetConfig = await loadConfig(spritesheet)
     if (cancelFunc){ return }
@@ -67,7 +67,11 @@ const wrap = (spritesheet, file = null)=>{
       spriteConfig.spriteSourceSize.x, spriteConfig.spriteSourceSize.y,
       spriteConfig.frame.w, spriteConfig.frame.h,
     )
-    src = canvas.toDataURL("image/png")
+    if (type === 'canvas'){
+      src = canvas
+    }else{
+      src = canvas.toDataURL("image/png")
+    }
   }
   onMount(()=>{
     if (!file){ return }
