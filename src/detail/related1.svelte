@@ -18,7 +18,7 @@
       if (item[0][4] === '0' || item[0][4] === '1'){
         character = { name: database2[item[0][5]][0], head: database3[item[0][5]][0] }
       }else if (item[0][4] === '2'){
-        character = { name: item[0][17], head: item[0][6] }
+        character = { name: item[0][17], head: item[0][7] }
       }else{ return }
       result.push({character, id})
     })
