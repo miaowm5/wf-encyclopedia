@@ -44,7 +44,7 @@ const packStory = async ()=>{
       if (pngFiles.length > 0) {
         let images = [];
         pngFiles.forEach(file => {
-          images.push({path: `${subDir}/ui/story/${file}`, contents: path.join(subDirPath, file)});
+          images.push({path: `character/${subDir}/ui/story/${file}`, contents: path.join(subDirPath, file)});
         });
         taskQueue.push({ subDir, images })
       }
@@ -73,11 +73,10 @@ const packStory = async ()=>{
 
   const metaImageData = JSON.parse(fs.readFileSync(metaDataPath).toString())
   const metaImageData2 = JSON.parse(fs.readFileSync(metaDataPath2).toString())
-
-  Object.entries(spritesheetData).forEach(([key, value]) => {
-    const metaData = metaImageData[`character/${key}`]?.[0] || metaImageData2[`character/${key}`]
+  Object.keys(spritesheetData).forEach((key)=>{
+    const metaData = metaImageData[key]?.[0] || metaImageData2[key]
     if (!metaData){
-      console.log(`metadatamissing: character/${key}`);
+      console.log(`metadatamissing: ${key}`);
       return
     }
     spritesheetData[key].spriteSourceSize.x += metaData[0] - 0
