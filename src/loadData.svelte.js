@@ -11,7 +11,7 @@ const main = ()=>{
 
   const refreshProgress = ()=>{
     progress += 1
-    if (progress >= 3){ finish = true }
+    if (progress >= 4){ finish = true }
   }
 
   const loadDB = (tag, url, handle)=>{
@@ -50,6 +50,11 @@ const main = ()=>{
     return pureData
   })
   loadDB('character_text', 'character/character_text.json', (data)=>{
+    const pureData = {}
+    Object.keys(data).forEach((key)=>{ pureData[key] = data[key][0] })
+    return pureData
+  })
+  loadDB('story_character', 'story/story_character.json', (data)=>{
     const pureData = {}
     Object.keys(data).forEach((key)=>{ pureData[key] = data[key][0] })
     return pureData
