@@ -56,7 +56,21 @@ const main = ()=>{
   })
   loadDB('story_character', 'story/story_character.json', (data)=>{
     const pureData = {}
-    Object.keys(data).forEach((key)=>{ pureData[key] = data[key][0] })
+    Object.keys(data).forEach((key)=>{
+      const item = data[key][0]
+      const emoName = item[3].split(',')
+      const emoBack = item[4].split(',')
+      const emoFront = item[5].split(',')
+      const emotion = {}
+      emoName.forEach((name, index)=>{
+        emotion[name] = {
+          back: (emoBack[index] || '(None)') === '(None)' ? null : emoBack[index],
+          front: (emoFront[index] || '(None)') === '(None)' ? null : emoFront[index]
+        }
+      })
+      item[3] = emotion
+      pureData[key] = item
+    })
     return pureData
   })
 
