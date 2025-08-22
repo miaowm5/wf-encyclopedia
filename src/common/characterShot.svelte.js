@@ -1,13 +1,12 @@
-<script>
-  import spriteSheet from './spriteSheet.svelte.js'
+import spriteSheet from './spriteSheet.svelte.js'
 
-  const { back = null, front = null } = $props()
+const wrap = (back, front)=>{
 
   const emptyCanvas = ()=>{
     const canvas = document.createElement("canvas")
     canvas.width = 1
     canvas.height = 1
-    return { get src(){ return emptyCanvas } }
+    return { get src(){ return canvas } }
   }
 
   const backCanvas = $derived.by(()=>{
@@ -31,10 +30,7 @@
     return canvas.toDataURL("image/png")
   })
 
-</script>
+  return { get src(){ return src } }
+}
 
-<img src={src} alt="character" />
-
-<style>
-  img{ width: 100% }
-</style>
+export default wrap

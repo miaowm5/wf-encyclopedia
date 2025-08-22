@@ -1,5 +1,6 @@
 <script>
-  import { spriteSheet } from '../common'
+  import { characterShot } from '../common'
+  import store from '../store'
 
   const {
     name = '(None)',
@@ -11,10 +12,15 @@
     banner = '(None)',
   } = $props()
 
+  const database = store.state.database.story_character
+
   document.title = name + ' | ' + import.meta.env.VITE_SITE_NAME
 
   let bannerImage = $derived.by(()=>{
-    return spriteSheet('character/banner', banner === '(None)' ? null : banner)
+    if (!database[banner]){ return null }
+    let emotion = Object.keys(database[banner][3])
+    if (emotion.length === 0){ return null }
+    return characterShot(database[banner][3][emotion[0]].back, database[banner][3][emotion[0]].front)
   })
 
   const genderText = $derived.by(()=>{
@@ -46,7 +52,9 @@
 </script>
 
 <div class="character" style:background-image={`url(${background})`}>
-  <div style:background-image={`url(${bannerImage.src})`} class="banner"></div>
+  {#if bannerImage.src}
+    <div style:background-image={`url(${bannerImage.src})`} class="banner"></div>
+  {/if}
   <div class="info">
     {#if title !== '(None)'}<p>
       {#if element !== '(None)'}
@@ -84,21 +92,19 @@
     margin-top: .3em;
   }
   .banner{
-    width: 100%;
+    width: 95%;
     height: 100%;
-    right: 0;
-    bottom: 0;
-    max-width: 430px;
-    max-height: 215px;
+    left: 0;
+    top: 0;
     position: absolute;
     background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: auto 100%;
+    background-position: top right;
+    background-size: auto 115%;
   }
   @media (max-width: 430px) {
     .banner{
-      width: 115%;
-      right: -15%;
+      height: 95%;
+      top: 5%;
     }
   }
 </style>

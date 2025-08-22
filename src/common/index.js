@@ -5,8 +5,8 @@ import spriteSheet from './spriteSheet.svelte.js'
 import Nav from './nav.svelte'
 import OnBack from './onBack.svelte'
 import HeadIcon from './headIcon.svelte'
-import CharacterShot from './characterShot.svelte'
+import characterShot from './characterShot.svelte.js'
 
 export {
-  api, wrapApi, spriteSheet, EventEmitter, Route, Nav, OnBack, HeadIcon, CharacterShot
+  api, wrapApi, spriteSheet, characterShot, EventEmitter, Route, Nav, OnBack, HeadIcon,
 }
