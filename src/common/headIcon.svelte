@@ -19,7 +19,7 @@ import spriteSheet from './spriteSheet.svelte.js'
   }
 
   const icon = $derived.by(()=>{
-    return spriteSheet('character/head', file ? file : null, 'canvas')
+    return spriteSheet('character/head2', file ? file : null, 'canvas')
   })
   const src = $derived.by(()=>{
     if (icon.src){
