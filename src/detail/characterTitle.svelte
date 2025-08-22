@@ -39,6 +39,3 @@
     gender='(None)'
   />
 {/if}
-
-<style>
-</style>

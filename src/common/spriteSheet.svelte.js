@@ -52,9 +52,9 @@ const wrap = (spritesheet, file = null, type="base64")=>{
   const load = async ()=>{
     const sheetConfig = await loadConfig(spritesheet)
     if (cancelFunc){ return }
-    const spriteConfig = sheetConfig[file + '.png']
+    const spriteConfig = sheetConfig[file]
     if (!spriteConfig){ return }
-    const image = await loadImage(spritesheet, spriteConfig.image)
+    const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`)
     if (!image){ return }
     if (cancelFunc){ return }
     const canvas = document.createElement("canvas")
