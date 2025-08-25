@@ -74,6 +74,7 @@
     flex: 0;
     color: white;
     padding: 1.7em 2em 2em;
+    background-color: black;
     background-size: cover;
     background-position: center bottom;
     position: relative;
