@@ -4,7 +4,7 @@
   const { name, file } = $props()
 
   const icon = $derived.by(()=>{
-    return headIcon(name, file)
+    return headIcon(file, name)
   })
 
 </script>
