@@ -11,6 +11,7 @@
 <style>
   .header {
     flex: 1;
+    background-color: black;
     background-size: cover;
     background-position: center bottom;
     width: 100%;
