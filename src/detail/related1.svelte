@@ -35,9 +35,7 @@
     {#each list as item}
       <span class="tag">
         <Nav href={`/${item.id}`} route={store.route}>
-          <div class="border1"><div class="border2">
-            <HeadIcon name={item.character.name} file={item.character.head} />
-          </div></div>
+          <HeadIcon name={item.character.name} file={item.character.head} />
         </Nav>
       </span>
     {/each}
@@ -59,12 +57,5 @@
     border: 1px solid #ababab;
     border-radius: 5px;
     overflow: hidden;
-  }
-  .border2{
-    border: 1px solid #ababab;
-    background-color: #232223;
-  }
-  .border1{
-    border: 4px solid white;
   }
 </style>
