@@ -52,7 +52,7 @@
 </script>
 
 <div class="character" style:background-image={`url(${background})`}>
-  {#if bannerImage.src}
+  {#if bannerImage && bannerImage.src}
     <div style:background-image={`url(${bannerImage.src})`} class="banner"></div>
   {/if}
   <div class="info">
