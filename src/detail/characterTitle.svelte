@@ -2,7 +2,7 @@
   import store from '../store'
   import NpcTitle from './npcTitle.svelte'
 
-  const { data } = $props()
+  const { data, tab } = $props()
 
   const database2 = store.state.database.character_text
   const database3 = store.state.database.character
@@ -28,6 +28,7 @@
     race={characterData[4]}
     gender={characterData[7]}
     banner={characterData[0]}
+    tab={tab}
   />
 {:else}
   <NpcTitle
@@ -37,5 +38,6 @@
     element='(None)'
     race='(None)'
     gender='(None)'
+    tab={tab}
   />
 {/if}

@@ -12,18 +12,32 @@
     const data = database[id]
     return data
   })
-  const tab = $derived(store.state.ui.detailTab)
   const itemType = $derived.by(()=>{
     if (item[0][4] === '0' || item[0][4] === '1'){ return 'character' }
     if (item[0][4] === '2'){ return 'npc' }
     if (item[0][4] === '3' || item[0][4] === '4'){ return 'story' }
     return 'normal'
   })
+
+  const tab = $derived.by(()=>{
+    const stateTab = store.state.ui.detailTab
+    if (stateTab === 'story'){
+      if (itemType !== 'character' && itemType !== 'story'){ return 'info' }
+    }
+    if (stateTab === 'gallery'){
+      if (itemType !== 'character' && itemType !== 'npc'){ return 'info' }
+    }
+    if (stateTab === 'voice'){
+      if (itemType !== 'character'){ return 'info' }
+    }
+    return stateTab
+  })
+
 </script>
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   {#if item}{#key store.state.item}
-    <ContentTitle item={item} />
+    <ContentTitle item={item} itemType={itemType} tab={tab} />
     {#if (itemType !== 'character' && itemType !== 'npc') || tab === 'info'}
       <ContentInfo item={item} store={store} />
     {:else if tab === 'gallery'}

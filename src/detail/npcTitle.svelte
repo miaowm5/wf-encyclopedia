@@ -10,6 +10,8 @@
     gender = '(None)',
     cv = '(None)',
     banner = '(None)',
+    itemType = 'npc',
+    tab = 'info',
   } = $props()
 
   const database = store.state.database.story_character
@@ -49,7 +51,23 @@
   })
 
   const background = import.meta.env.VITE_CDN + 'ui/keyword_details_character_background.png'
+
+  const buttonImage = {
+    'info': 'encyclopedia.png?082701',
+    'gallery': 'full_size.png?082701',
+    'voice': 'voice_volume3.png?082701',
+    'story': 'character_story_mini.png?082701',
+  }
 </script>
+
+{#snippet tabButton(type)}
+  <button
+    aria-label={type}
+    style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/icon/' + buttonImage[type]})`}
+    class={tab === type ? 'active' : null}
+    onclick={()=>store.changeTab(type)}>
+  </button>
+{/snippet}
 
 <div class="character" style:background-image={`url(${background})`}>
   {#if bannerImage && bannerImage.src}
@@ -66,6 +84,10 @@
     {#if raceText !== '(None)'}<p>种族：{raceText.join('/')}</p>{/if}
     {#if gender !== '(None)'}<p>性别：{genderText}</p>{/if}
     {#if cv !== '(None)'}<p class="cv">CV：{cv}</p>{/if}
+  </div>
+  <div class="buttonGroup">
+    {@render tabButton('info')}
+    {@render tabButton('gallery')}
   </div>
 </div>
 
@@ -101,6 +123,25 @@
     background-repeat: no-repeat;
     background-position: top right;
     background-size: auto 115%;
+  }
+  .buttonGroup{
+    right: 5%;
+    bottom: .8em;
+    position: absolute;
+    z-index: 10;
+  }
+  .buttonGroup>button{
+    border-radius: 50%;
+    background-position: center center;
+    width: 2em;
+    height: 2em;
+    margin-left: .3em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .buttonGroup>button.active{
+    background-color: #d3efec;
+    cursor: default;
   }
   @media (max-width: 430px) {
     .banner{
