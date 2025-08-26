@@ -1,8 +1,9 @@
 
 const initState = {
   item: null,
-  category: null,
   ui: {
+    listCategory: null,
+    detailTab: 'info',
     mobileListHide: false
   },
   database: {

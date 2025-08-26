@@ -50,6 +50,7 @@ const wrap = (spritesheet, file = null, type="base64")=>{
   onDestroy(()=>{ cancelFunc = true })
   let src = $state(type === "base64" ? empty : null)
   const load = async ()=>{
+    if (!file){ return }
     const sheetConfig = await loadConfig(spritesheet)
     if (cancelFunc){ return }
     const spriteConfig = sheetConfig[file]
@@ -73,10 +74,7 @@ const wrap = (spritesheet, file = null, type="base64")=>{
       src = canvas.toDataURL("image/png")
     }
   }
-  onMount(()=>{
-    if (!file){ return }
-    load()
-  })
+  load()
   return { get src(){ return src } }
 }
 
