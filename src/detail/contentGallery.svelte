@@ -1,6 +1,7 @@
 <script>
   import { characterShot } from '../common'
   import MobileBack from './mobileBack.svelte'
+  import Title from './title.svelte'
 
   const { item, store } = $props()
 
@@ -29,8 +30,10 @@
       if (name.startsWith('tear')){ effect.push(name); return }
       if (name.startsWith('item')){ effect.push(name); return }
       if (name.startsWith('effect')){ effect.push(name); return }
+      if (name.startsWith('shy')){ effect.push(name); return }
       list.push(name)
     })
+    effect.push('noface')
     return { list, effect, data: database2[id][3] }
   })
 
@@ -42,10 +45,12 @@
   })
 
   const useAbleEffect = $derived.by(()=>{
+    if (!emotionList){ return [] }
     return emotionList.effect.filter((name)=>{
+      if (name === 'noface'){ return Boolean(emoData.data.front) }
       let item = emotionList.data[name]
-      if (item.back !== emoData.data.back){ return }
-      return name
+      if (item.back !== emoData.data.back){ return false }
+      return true
     })
   })
 
@@ -53,11 +58,15 @@
     if (!emoData){ return null }
     let effect = []
     selectEffect.forEach((name)=>{
+      if (name === 'noface'){ return }
       let item = emotionList.data[name]
       if (item.back !== emoData.data.back){ return }
       effect.push(item.front)
     })
-    return characterShot(emoData.data.back, emoData.data.front, effect)
+    return characterShot(emoData.data.back,
+      selectEffect.includes('noface') ? null : emoData.data.front,
+      effect
+    )
   })
 
   const changeIndex = (offset)=>{
@@ -76,36 +85,77 @@
 </script>
 
 <div class="content">
-  {#if bannerImage && bannerImage.src}
-    {#if bannerImage.src}
-      <img src={bannerImage.src} alt={emotionList.list[index]} class="img">
+  {#if emoData}
+    <Title>表情</Title>
+    <div class="image1"
+      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/icon/party_thumbnail_tile_bg_old.png'})`}>
+      {#if bannerImage.src}
+        <img src={bannerImage.src} alt={emoData.name} class="img">
+      {/if}
+    </div>
+    <div class="nav">
+      <button onclick={()=>{ changeIndex(-1) }}>last</button>
+      <p>{emoData.name}</p>
+      <button onclick={()=>{ changeIndex(1) }}>next</button>
+    </div>
+    {#if useAbleEffect.length > 0}
+      <div class="effectList">
+        {#each useAbleEffect as effect}
+          <button
+            class={`effect ${selectEffect.includes(effect) ? 'active' : ''}`}
+            onclick={()=>triggerEffect(effect)}>
+            {effect}
+          </button>
+        {/each}
+      </div>
     {/if}
-    <button onclick={()=>{ changeIndex(-1) }}>last</button>
-    <button onclick={()=>{ changeIndex(1) }}>next</button>
-    {#each useAbleEffect as effect}
-      <button
-        class={`effect ${selectEffect.includes(effect) ? 'active' : ''}`}
-        onclick={()=>triggerEffect(effect)}>
-        {effect}
-      </button>
-    {/each}
   {/if}
   <MobileBack />
 </div>
 
 <style>
+  .image1{
+    width: 100%;
+    height: 690px;
+    max-height: 80%;
+    text-align: center;
+  }
   .img{
-    max-width: 200px;
+    max-width: 100%;
+    max-height: 100%;
   }
   .content{
     flex: 1;
     padding: 0 1em 6em 1em;
     overflow: auto;
   }
+  .effectList{
+    margin-top: 1em;
+  }
   .effect{
-    background-color: grey;
+    padding: .3em 1.5em;
+    border-top: 1px solid white;
+    border-radius: 10px;
+    margin-right: .5em;
+    margin-bottom: .5em
   }
   .effect.active{
-    background-color: yellow;
+    background-color: #d3efec;
   }
+  .nav{
+    display: flex;
+    width: 100%;
+    margin-top: .5em;
+  }
+  .nav>p{
+    flex: 1;
+    text-align: center;
+  }
+  .nav>button{
+    padding: .3em 1.5em;
+    border-top: 1px solid white;
+    border-radius: 10px;
+  }
+
+
 </style>

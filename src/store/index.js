@@ -8,6 +8,9 @@ const setDatabase = (db, data)=>{
 const setListHide = (hide)=>{
   state.ui.mobileListHide = hide
 }
+const changeTab = (tab)=>{
+  state.ui.detailTab = tab
+}
 
 const updateRoute = ((data)=>{
   if (data.page === 'item'){
@@ -27,6 +30,7 @@ const store = {
   route,
   setDatabase,
   setListHide,
+  changeTab,
 }
 
 export default store
