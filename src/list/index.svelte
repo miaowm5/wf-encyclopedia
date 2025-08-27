@@ -35,6 +35,9 @@
   {:else if category === 'all'}
     <AllList list={list} select={store.state.item} />
   {/if}
+  {#if category !== null}
+    <button onclick={()=>store.changeCategory(null)} >back</button>
+  {/if}
 </div>
 
 <style>
