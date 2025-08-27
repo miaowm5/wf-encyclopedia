@@ -16,11 +16,14 @@
     padding: 1.5em 0 1em;
     display: flex;
   }
+  .title>p{
+    padding: 0 .5em;
+  }
   .title>div{
     flex: 1;
     background-size: auto 100%;
     background-repeat: no-repeat;
   }
-  .l{ background-position: right auto; }
-  .r{ background-position: left auto; }
+  .l{ background-position: right; }
+  .r{ background-position: left; }
 </style>
