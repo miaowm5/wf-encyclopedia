@@ -3,7 +3,7 @@
   import MobileBack from './mobileBack.svelte'
   import Title from './title.svelte'
 
-  const { item, store } = $props()
+  const { item, store, itemType } = $props()
 
   const database = store.state.database.character
   const database2 = store.state.database.story_character
@@ -13,13 +13,13 @@
 
   const emotionList = $derived.by(()=>{
     let id = null
-    if (item[0][4] === '0' || item[0][4] === '1'){
+    if (itemType === 'character'){
       id = database[item[0][5]][0]
-    }else if (item[0][4] === '2'){
+    }else if (itemType === 'npc'){
       id = item[0][6]
     }
     if (!id){ return null }
-    if (!database2[id]){ return null }
+    if (!database2[id]){ return { id } }
     const list = []
     const effect = []
     Object.keys(database2[id][3]).forEach((name)=>{
@@ -34,7 +34,7 @@
       list.push(name)
     })
     effect.push('noface')
-    return { list, effect, data: database2[id][3] }
+    return { id, list, effect, data: database2[id][3] }
   })
 
   const emoData = $derived.by(()=>{
@@ -110,16 +110,30 @@
       </div>
     {/if}
   {/if}
+  {#if itemType === 'character'}
+    <Title>普通立绘</Title>
+    <div class="image2"
+      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
+      <img src={import.meta.env.VITE_CDN2 + `fullshot/${emotionList.id}_0.png`} alt={emotionList.id} class="img">
+    </div>
+    <Title>觉醒立绘</Title>
+    <div class="image2"
+      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
+      <img src={import.meta.env.VITE_CDN2 + `fullshot/${emotionList.id}_1.png`} alt={emotionList.id} class="img">
+    </div>
+  {/if}
   <MobileBack />
 </div>
 
 <style>
-  .image1{
+  .image1, .image2{
     width: 100%;
-    height: 690px;
-    max-height: 80%;
+    height: 80%;
     text-align: center;
     background-color: #232223;
+  }
+  .image1{
+    max-height: 690px;
   }
   .img{
     max-width: 100%;
