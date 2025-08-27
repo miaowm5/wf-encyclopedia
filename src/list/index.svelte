@@ -1,5 +1,6 @@
 <script>
   import store from '../store'
+  import IndexButton from './indexButton.svelte'
   import CharacterList from './characterList.svelte'
   import StoryList from './storyList.svelte'
   import AllList from './allList.svelte'
@@ -25,9 +26,9 @@
 
 <div class={`main ${store.state.ui.mobileListHide ? 'mobileHide' : ''}`}>
   {#if category === null}
-    <button onclick={()=>store.changeCategory('character')}>character</button>
-    <button onclick={()=>store.changeCategory('story')}>story</button>
-    <button onclick={()=>store.changeCategory('all')}>all</button>
+    <IndexButton onclick={()=>store.changeCategory('character')} id="character_archive" />
+    <IndexButton onclick={()=>store.changeCategory('story')} id="world_archive" />
+    <IndexButton onclick={()=>store.changeCategory('all')} id="all_keyword" />
   {:else if category === 'character'}
     <CharacterList list={list} select={store.state.item} />
   {:else if category === 'story'}
