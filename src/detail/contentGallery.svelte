@@ -135,6 +135,9 @@
   .image1{
     max-height: 690px;
   }
+  .image2{
+    padding: 1em;
+  }
   .img{
     max-width: 100%;
     max-height: 100%;
@@ -171,6 +174,4 @@
     border-top: 1px solid white;
     border-radius: 10px;
   }
-
-
 </style>
