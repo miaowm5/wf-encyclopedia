@@ -3,8 +3,10 @@ const initState = {
   item: null,
   ui: {
     listCategory: null,
+    listSearch: '',
+    listFilter: {},
     detailTab: 'info',
-    mobileListHide: false
+    mobileListHide: false,
   },
   database: {
     encyclopedia: null,

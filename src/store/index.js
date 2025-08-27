@@ -11,6 +11,15 @@ const setListHide = (hide)=>{
 const changeTab = (tab)=>{
   state.ui.detailTab = tab
 }
+const changeCategory = (category)=>{
+  state.ui.listCategory = category
+}
+const changeSearch = (search)=>{
+  state.ui.listCategory = category
+}
+const changeFilter = (filter)=>{
+  state.ui.filter = filter
+}
 
 const updateRoute = ((data)=>{
   if (data.page === 'item'){
@@ -31,6 +40,9 @@ const store = {
   setDatabase,
   setListHide,
   changeTab,
+  changeCategory,
+  changeSearch,
+  changeFilter,
 }
 
 export default store
