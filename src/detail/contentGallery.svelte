@@ -88,7 +88,7 @@
   {#if emoData}
     <Title>表情</Title>
     <div class="image1"
-      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/icon/party_thumbnail_tile_bg_old.png'})`}>
+      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
       {#if bannerImage.src}
         <img src={bannerImage.src} alt={emoData.name} class="img">
       {/if}
@@ -119,6 +119,7 @@
     height: 690px;
     max-height: 80%;
     text-align: center;
+    background-color: #232223;
   }
   .img{
     max-width: 100%;

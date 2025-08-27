@@ -9,7 +9,8 @@
 
 </script>
 
-<div class="border1"><div class="border2">
+<div class="border1"><div class="border2"
+  style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
   <img src={icon.src} alt={name} />
 </div></div>
 
