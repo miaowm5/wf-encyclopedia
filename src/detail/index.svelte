@@ -41,7 +41,7 @@
     {#if (itemType !== 'character' && itemType !== 'npc') || tab === 'info'}
       <ContentInfo item={item} store={store} />
     {:else if tab === 'gallery'}
-      <ContentGallery item={item} store={store} />
+      <ContentGallery item={item} store={store} itemType={itemType} />
     {/if}
   {/key}{/if}
 </div>
