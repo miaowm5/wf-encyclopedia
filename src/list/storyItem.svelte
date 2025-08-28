@@ -2,7 +2,7 @@
   import imageButtonSrc from './imageButtonSrc.svelte.js'
   const { data, active } = $props()
   const image = $derived.by(()=>{
-    return imageButtonSrc(`banner/${data.item[1]}`, data.item[1]+data.name[0], 1000, 184)
+    return imageButtonSrc(`banner/${data.item[1]}`, data.name[0], 1000, 184)
   })
 </script>
 
