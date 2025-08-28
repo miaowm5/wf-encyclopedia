@@ -38,14 +38,14 @@
   })
 
   const emoData = $derived.by(()=>{
-    if (!emotionList){ return null }
+    if (!emotionList || !emotionList.list){ return null }
     let emoName = emotionList.list[index]
     let emoData = emotionList.data[emoName]
     return { name: emoName, data: emoData }
   })
 
   const useAbleEffect = $derived.by(()=>{
-    if (!emotionList){ return [] }
+    if (!emotionList || !emotionList.list){ return [] }
     return emotionList.effect.filter((name)=>{
       if (name === 'noface'){ return Boolean(emoData.data.front) }
       let item = emotionList.data[name]
