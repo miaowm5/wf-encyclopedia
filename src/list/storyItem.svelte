@@ -1,32 +1,12 @@
 <script>
-  import { onDestroy } from "svelte"
-  import { textImage } from "../common"
+  import imageButtonSrc from './imageButtonSrc.svelte.js'
   const { data, active } = $props()
-
-  let destory = false
-  let src = $state(null)
-
-  $effect(()=>{
-    src = textImage(data.name[0], 1000, 184).toDataURL("image/png")
-    const img = new Image()
-    img.crossOrigin = "anonymous"
-    img.src = `${import.meta.env.VITE_CDN}banner/${data.item[1]}.png`
-    img.onload = ()=>{
-      if (destory){ return }
-      const canvas = document.createElement("canvas")
-      const ctx = canvas.getContext("2d")
-      canvas.width = 1000
-      canvas.height = 184
-      ctx.drawImage(img, 0, 0)
-      src = canvas.toDataURL("image/png")
-    }
+  const image = $derived.by(()=>{
+    return imageButtonSrc(`banner/${data.item[1]}`, data.item[1]+data.name[0], 1000, 184)
   })
-  onDestroy(()=>destory = true)
 </script>
 
-{#if src}
-  <div class={`item ${active ? 'active' : ''}`}><img src={src} alt={data.name[0]}></div>
-{/if}
+<div class={`item ${active ? 'active' : ''}`}><img src={image.src} alt={data.name[0]}></div>
 
 <style>
   .item{

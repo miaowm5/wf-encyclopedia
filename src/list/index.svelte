@@ -37,7 +37,7 @@
     <AllList list={list} select={store.state.item} />
   {/if}
   {#if category !== null}
-    <button onclick={()=>store.changeCategory(null)} >back</button>
+    <button onclick={()=>store.changeCategory(null)} class="back">back</button>
   {/if}
 </div>
 
@@ -47,6 +47,15 @@
     max-width: 500px;
     overflow: auto;
     padding: 1em 1em 10em 1em;
+  }
+  .back{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    padding: 1.5em;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,.2);
   }
   @media (max-width: 800px) {
     .main{
