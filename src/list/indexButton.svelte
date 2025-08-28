@@ -1,31 +1,25 @@
 <script>
-  import { onDestroy } from "svelte"
-  import { textImage } from "../common"
-
+  import imageButtonSrc from './imageButtonSrc.svelte.js'
   const {id, onclick} = $props()
-
-  let destory = false
-  let src = $state(null)
-
-  $effect(()=>{
-    src = textImage(id, 992, 352).toDataURL("image/png")
-    const img = new Image()
-    img.crossOrigin = "anonymous"
-    img.src = `${import.meta.env.VITE_CDN}ui/${id}_btn.png`
-    img.onload = ()=>{
-      if (destory){ return }
-      const canvas = document.createElement("canvas")
-      const ctx = canvas.getContext("2d")
-      canvas.width = 992
-      canvas.height = 352
-      ctx.drawImage(img, 0, 0)
-      src = canvas.toDataURL("image/png")
-    }
+  const image = $derived.by(()=>{
+    return imageButtonSrc(`ui/${id}_btn`, id, 992, 352)
   })
-  onDestroy(()=>destory = true)
 </script>
 
 <button
   onclick={onclick}
   aria-label={id}
-></button>
+><img src={image.src} alt={id}></button>
+
+<style>
+  button{
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+  }
+  img{
+    max-width: 100%;
+  }
+</style>

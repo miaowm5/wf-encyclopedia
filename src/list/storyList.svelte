@@ -4,7 +4,7 @@
   import StoryItem from './storyItem.svelte'
   const { list, select } = $props()
   const showList = $derived.by(()=>{
-    return list.filter((data)=>data.item[4] === '3' || data.item[4] === '4')
+    return list.filter((data)=>data.item[4] === '3' || data.item[4] === '4' || data.item[4] === '5')
   })
 </script>
 
