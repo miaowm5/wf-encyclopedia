@@ -31,6 +31,8 @@
       if (name.startsWith('item')){ effect.push(name); return }
       if (name.startsWith('effect')){ effect.push(name); return }
       if (name.startsWith('shy')){ effect.push(name); return }
+      if (name.startsWith('sunglass')){ effect.push(name); return }
+      if (name.startsWith('megane')){ effect.push(name); return }
       list.push(name)
     })
     effect.push('noface')
