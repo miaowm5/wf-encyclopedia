@@ -17,6 +17,13 @@
     return database3[data[0][5]]
   })
 
+  const bannerID = $derived.by(()=>{
+    if (!characterData){ return null }
+    const id = characterData[0]
+    if (id === 'stella_2anv'){ return 'stella' }
+    return id
+  })
+
 </script>
 
 {#if characterData}
@@ -27,7 +34,7 @@
     element={characterData[3]}
     race={characterData[4]}
     gender={characterData[7]}
-    banner={characterData[0]}
+    banner={bannerID}
     tab={tab}
   />
 {:else}
