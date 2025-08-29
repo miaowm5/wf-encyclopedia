@@ -1,4 +1,4 @@
-import { onDestroy, onMount } from "svelte"
+import { onDestroy } from "svelte"
 import { api } from './m5api'
 
 const cache = {}
@@ -6,9 +6,9 @@ const cacheImage = {}
 const empty = `data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7`
 const promiseCache = {}
 
-const loadConfig = async (spritesheet)=>{
+const loadConfig = async (spritesheet, cdn)=>{
   if (cache[spritesheet]){ return cache[spritesheet] }
-  const url = `${import.meta.env.VITE_CDN}${spritesheet}.json`
+  const url = `${cdn}${spritesheet}.json`
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
@@ -24,17 +24,17 @@ const loadConfig = async (spritesheet)=>{
   if (result){ cache[spritesheet] = result }
   return result
 }
-const loadImage = async (spritesheet, file)=>{
+const loadImage = async (spritesheet, file, cdn)=>{
   const key = `${spritesheet}/${file}`
   if (cacheImage[key]){ return cacheImage[key] }
-  const url = `${import.meta.env.VITE_CDN}${key}`
+  const url = `${cdn}${key}`
 
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
       const img = new Image()
       img.crossOrigin = "anonymous"
-      img.src = `${import.meta.env.VITE_CDN}${key}`
+      img.src = url
       img.onload = ()=>{ resolve(img); promiseCache[url] = undefined }
       img.onerror = ()=>{ resolve(null); promiseCache[url] = undefined }
     })
@@ -45,17 +45,21 @@ const loadImage = async (spritesheet, file)=>{
   return image
 }
 
-const wrap = (spritesheet, file = null, type="base64")=>{
+const wrap = (spritesheet, file = null, type="base64", cdn='cdn')=>{
+  const cdn = {
+    "cdn": import.meta.env.VITE_CDN,
+    "cdn2": import.meta.env.VITE_CDN2,
+  }[cdn] || import.meta.env.VITE_CDN
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
   let src = $state(type === "base64" ? empty : null)
   const load = async ()=>{
     if (!file){ return }
-    const sheetConfig = await loadConfig(spritesheet)
+    const sheetConfig = await loadConfig(spritesheet, cdn)
     if (cancelFunc){ return }
     const spriteConfig = sheetConfig[file]
     if (!spriteConfig){ return }
-    const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`)
+    const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`, cdn)
     if (!image){ return }
     if (cancelFunc){ return }
     const canvas = document.createElement("canvas")
