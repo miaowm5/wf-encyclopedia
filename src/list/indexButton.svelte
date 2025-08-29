@@ -1,8 +1,8 @@
 <script>
   import imageButtonSrc from './imageButtonSrc.svelte.js'
-  const {id, onclick} = $props()
+  const {id, text, onclick} = $props()
   const image = $derived.by(()=>{
-    return imageButtonSrc(`ui/${id}_btn`, id, 992, 352)
+    return imageButtonSrc(`ui/${id}_btn`, text, 992, 352)
   })
 </script>
 
