@@ -1,0 +1,17 @@
+{
+  "_common": [
+    "shame",
+    "sweat",
+    "cheek",
+    "blood",
+    "tear",
+    "item",
+    "effect",
+    "shy",
+    "sunglass",
+    "megane"
+  ],
+  "elf_princess": {
+    "exclude": ["tear"]
+  }
+}

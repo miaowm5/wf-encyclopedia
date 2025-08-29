@@ -2,6 +2,7 @@
   import { characterShot } from '../common'
   import MobileBack from './mobileBack.svelte'
   import Title from './title.svelte'
+  import galleryEffectRule from './galleryEffectRule.json'
 
   const { item, store, itemType } = $props()
 
@@ -22,17 +23,16 @@
     if (!database2[id]){ return { id } }
     const list = []
     const effect = []
+    let rule = galleryEffectRule._common
+    if (galleryEffectRule[id]){
+      const include = galleryEffectRule[id].include || []
+      const exclude = galleryEffectRule[id].exclude || []
+      rule = rule.concat(...include)
+      rule = rule.filter((name)=>!exclude.includes(name))
+    }
     Object.keys(database2[id][3]).forEach((name)=>{
-      if (name.startsWith('shame')){ effect.push(name); return }
-      if (name.startsWith('sweat')){ effect.push(name); return }
-      if (name.startsWith('cheek')){ effect.push(name); return }
-      if (name.startsWith('blood')){ effect.push(name); return }
-      if (name.startsWith('tear')){ effect.push(name); return }
-      if (name.startsWith('item')){ effect.push(name); return }
-      if (name.startsWith('effect')){ effect.push(name); return }
-      if (name.startsWith('shy')){ effect.push(name); return }
-      if (name.startsWith('sunglass')){ effect.push(name); return }
-      if (name.startsWith('megane')){ effect.push(name); return }
+      const isEffect = rule.some((prefix)=>name.startsWith(prefix))
+      if (isEffect){ effect.push(name); return }
       list.push(name)
     })
     effect.push('noface')
