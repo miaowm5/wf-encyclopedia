@@ -95,11 +95,13 @@
         <img src={bannerImage.src} alt={emoData.name} class="img">
       {/if}
     </div>
-    <div class="nav">
-      <button onclick={()=>{ changeIndex(-1) }}>last</button>
-      <p>{emoData.name}</p>
-      <button onclick={()=>{ changeIndex(1) }}>next</button>
-    </div>
+    {#if emotionList.list.length > 1}
+      <div class="nav">
+        <button onclick={()=>{ changeIndex(-1) }}>last</button>
+        <p>{emoData.name}</p>
+        <button onclick={()=>{ changeIndex(1) }}>next</button>
+      </div>
+    {/if}
     {#if useAbleEffect.length > 0}
       <div class="effectList">
         {#each useAbleEffect as effect}
