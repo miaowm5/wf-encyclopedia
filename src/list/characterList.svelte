@@ -4,7 +4,37 @@
   import ListBanner from './listBanner.svelte'
   const { list, select } = $props()
   const showList = $derived.by(()=>{
-    return list.filter((data)=>data.item[4] === '0' || data.item[4] === '1' || data.item[4] === '2')
+    let result = list.filter((data)=>data.item[4] === '0' || data.item[4] === '1' || data.item[4] === '2')
+    const filter = store.state.ui.listFilter
+    Object.keys(filter).forEach((type)=>{
+      let filterInfo = filter[type]
+      if (!filterInfo) return true
+      if (type === 'rarity'){
+        result = result.filter((data)=>{
+          if (data.item[4] === '2'){ return filterInfo.has('0') }
+          return filterInfo.has(data.extra[2])
+        })
+      }else if (type === 'element'){
+        result = result.filter((data)=>{
+          if (data.item[4] === '2'){ return filterInfo.has('-1') }
+          return filterInfo.has(data.extra[3])
+        })
+      }else if (type === 'sex'){
+        result = result.filter((data)=>{
+          let gender = ''
+          if (data.item[4] === '2'){ gender = data.item[11] }
+          else{ gender = data.extra[7] }
+          if (gender !== 'Male' && gender !== 'Female'){ return filterInfo.has('Other') }
+          return filterInfo.has(gender)
+        })
+      }else if (type === 'race'){
+        result = result.filter((data)=>{
+          if (data.item[4] === '2'){ return filterInfo.has(data.item[10]) }
+          return filterInfo.has(data.extra[4])
+        })
+      }
+    })
+    return result
   })
 </script>
 

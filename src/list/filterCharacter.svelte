@@ -2,7 +2,17 @@
   import store from '../store'
   import { SvelteSet } from 'svelte/reactivity'
 
-  const currentFilter = $state(store.state.ui.listFilter)
+  const getInitValue = ()=>{
+    let f = store.state.ui.listFilter
+    let result = {}
+    Object.keys(f).forEach((name)=>{
+      result[name] = new SvelteSet(f[name])
+    })
+    return result
+  }
+
+  let currentFilter = $state(getInitValue())
+
   const closeFilter = ()=>{
     store.triggerFilter(false)
   }
@@ -22,7 +32,6 @@
     }else{
       currentFilter[group].add(id)
     }
-    currentFilter[group] = currentFilter[group]
   }
   store.route.onBack(closeFilter)
 </script>
@@ -53,19 +62,19 @@
   </div>
   {@render title('属性')}
   <div class="group">
-    {@render textButton('element', '1', '火')}
-    {@render textButton('element', '2', '水')}
-    {@render textButton('element', '3', '雷')}
-    {@render textButton('element', '4', '风')}
-    {@render textButton('element', '5', '光')}
-    {@render textButton('element', '6', '暗')}
-    {@render textButton('element', '0', '其他')}
+    {@render textButton('element', '0', '火')}
+    {@render textButton('element', '1', '水')}
+    {@render textButton('element', '2', '雷')}
+    {@render textButton('element', '3', '风')}
+    {@render textButton('element', '4', '光')}
+    {@render textButton('element', '5', '暗')}
+    {@render textButton('element', '-1', '其他')}
   </div>
   {@render title('性别')}
   <div class="group">
-    {@render textButton('sex', '1', '女')}
-    {@render textButton('sex', '2', '男')}
-    {@render textButton('sex', '0', '其他')}
+    {@render textButton('sex', 'Female', '女')}
+    {@render textButton('sex', 'Male', '男')}
+    {@render textButton('sex', 'Other', '其他')}
   </div>
   {@render title('种族')}
   <div class="group">
