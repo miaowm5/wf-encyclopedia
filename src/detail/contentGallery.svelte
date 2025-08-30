@@ -162,7 +162,8 @@
     margin-bottom: .5em
   }
   .effect.active{
-    background-color: #d3efec;
+    border-top: none;
+    background-color: #ffcf8f;
   }
   .nav{
     display: flex;
