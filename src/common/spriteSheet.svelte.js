@@ -45,11 +45,11 @@ const loadImage = async (spritesheet, file, cdn)=>{
   return image
 }
 
-const wrap = (spritesheet, file = null, type="base64", cdn='cdn')=>{
+const wrap = (spritesheet, file = null, type="base64", cdnType='cdn')=>{
   const cdn = {
     "cdn": import.meta.env.VITE_CDN,
     "cdn2": import.meta.env.VITE_CDN2,
-  }[cdn] || import.meta.env.VITE_CDN
+  }[cdnType] || import.meta.env.VITE_CDN
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
   let src = $state(type === "base64" ? empty : null)
