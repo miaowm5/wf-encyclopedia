@@ -5,6 +5,7 @@ const initState = {
     listCategory: null,
     listSearch: '',
     listFilter: {},
+    listFilterOpen: false,
     detailTab: 'info',
     mobileListHide: false,
   },
