@@ -7,20 +7,19 @@
     "tear",
     "item",
     "effect",
-    "shy",
     "sunglass",
     "megane"
   ],
-  "elf_princess": {
-    "exclude": ["tear"]
+  "elf_princess": { "exclude": ["tear"] },
+  "wirfled_playable":{ "include": ["visor"] },
+  "desert_commander":{ "include": ["earring"] },
+  "ruin_lady": {
+    "exclude": ["tear","tear_b","tear_c"],
+    "include": ["earring"]
   },
-  "lady_android":{
-    "exclude": ["shy"]
-  },
-  "hidden_blader": {
-    "exclude": ["shy"]
-  },
-  "white_tiger": {
-    "exclude": ["shy"]
-  }
+  "waterdragon_kunfu_proud": { "include": ["costume"] },
+  "rec_android_1anv": { "include": ["drone"] },
+  "gentle_barten": { "include": ["shy"] },
+  "nikaido_saki": { "include": ["interrobang"] },
+  "blindfold_agent":{ "include": ["laugh"] }
 }
