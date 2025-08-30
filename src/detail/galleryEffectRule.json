@@ -13,5 +13,14 @@
   ],
   "elf_princess": {
     "exclude": ["tear"]
+  },
+  "lady_android":{
+    "exclude": ["shy"]
+  },
+  "hidden_blader": {
+    "exclude": ["shy"]
+  },
+  "white_tiger": {
+    "exclude": ["shy"]
   }
 }

@@ -92,7 +92,7 @@
     <div class="image1"
       style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
       {#if bannerImage.src}
-        <img src={bannerImage.src} alt={emoData.name} class="img">
+        <img src={bannerImage.src} alt={`${emotionList.id}-${emoData.name}`} class="img">
       {/if}
     </div>
     {#if emotionList.list.length > 1}
