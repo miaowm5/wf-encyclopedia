@@ -1,9 +1,16 @@
 <script>
   import { Nav } from '../common'
   import store from '../store'
+  import ListBanner from './listBanner.svelte'
 
   const { list, select } = $props()
 </script>
+
+<ListBanner
+  back="keyword_list_all_header_background"
+  title=""
+  >
+</ListBanner>
 
 {#each list as data}
   <Nav href={`/${data.id}`} route={store.route}>
