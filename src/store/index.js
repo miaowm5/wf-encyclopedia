@@ -15,10 +15,13 @@ const changeCategory = (category)=>{
   state.ui.listCategory = category
 }
 const changeSearch = (search)=>{
-  state.ui.listCategory = category
+  state.ui.listSearch = search
+}
+const triggerFilter = (value)=>{
+  state.ui.listFilterOpen = value
 }
 const changeFilter = (filter)=>{
-  state.ui.filter = filter
+  state.ui.listFilter = filter
 }
 
 const updateRoute = ((data)=>{
@@ -42,6 +45,7 @@ const store = {
   changeTab,
   changeCategory,
   changeSearch,
+  triggerFilter,
   changeFilter,
 }
 

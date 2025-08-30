@@ -12,7 +12,7 @@
   back="keyword_list_character_header_background"
   title="keyword_list_character_title"
   >
-  <button class="filter">
+  <button class="filter" onclick={()=>store.triggerFilter(true)}>
     <p>筛选</p>
   </button>
 </ListBanner>
