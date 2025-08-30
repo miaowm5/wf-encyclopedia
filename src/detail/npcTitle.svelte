@@ -140,7 +140,7 @@
     background-size: 100% 100%;
   }
   .buttonGroup>button.active{
-    background-color: #d3efec;
+    background-color: #ffcf8f;
     cursor: default;
   }
   @media (max-width: 430px) {
