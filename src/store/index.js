@@ -26,8 +26,10 @@ const changeFilter = (filter)=>{
 
 const updateRoute = ((data)=>{
   if (data.page === 'item'){
+    if (state.item !== data.item){
+      state.ui.mobileListHide = true
+    }
     state.item = data.item
-    state.ui.mobileListHide = true
   }else if (data.page === 'home'){
     state.item = null
     state.ui.mobileListHide = false
