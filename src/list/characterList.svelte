@@ -29,8 +29,10 @@
         })
       }else if (type === 'race'){
         result = result.filter((data)=>{
-          if (data.item[4] === '2'){ return filterInfo.has(data.item[10]) }
-          return filterInfo.has(data.extra[4])
+          let race = ''
+          if (data.item[4] === '2'){ race = data.item[10] }
+          else{ race = data.extra[4] }
+          return race.split(',').some((r)=>filterInfo.has(r))
         })
       }
     })
