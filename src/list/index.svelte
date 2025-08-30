@@ -6,6 +6,7 @@
   import AllList from './allList.svelte'
   const database = store.state.database.encyclopedia
   const database2 = store.state.database.character_text
+  const database3 = store.state.database.character
 
   const list = $derived.by(()=>{
     return Object.keys(database).map((id)=>{
@@ -13,8 +14,8 @@
       let extra = {}
       let name = [item[17]]
       if (item[4] === '0' || item[4] === '1'){
-        extra = database2[item[5]]
-        name = [extra[0], extra[3]]
+        extra = database3[item[5]]
+        name = [database2[item[5]][0], database2[item[5]][3]]
       }
       return { id, name, item, extra }
     })
