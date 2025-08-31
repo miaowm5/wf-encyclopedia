@@ -17,7 +17,12 @@
     store.triggerFilter(false)
   }
   const applyFilter = ()=>{
-    store.changeFilter(currentFilter)
+    const targetFilter = {}
+    Object.keys(currentFilter).forEach((name)=>{
+      if (currentFilter[name].size === 0){ return }
+      targetFilter[name] = currentFilter[name]
+    })
+    store.changeFilter(targetFilter)
     closeFilter()
   }
   const isFilter = (group, id)=>{
@@ -28,7 +33,6 @@
     if (!currentFilter[group]){ currentFilter[group] = new SvelteSet() }
     if (currentFilter[group].has(id)){
       currentFilter[group].delete(id)
-      if (currentFilter[group].size === 0){ currentFilter[group] = undefined }
     }else{
       currentFilter[group].add(id)
     }
