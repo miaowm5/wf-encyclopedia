@@ -35,19 +35,23 @@
 
   const raceText = $derived.by(()=>{
     if (race === '(None)'){ return race }
-    return race.split(',').map((item)=>{
-      if (item === 'Human'){ return '人' }
-      if (item === 'Element'){ return '精灵' }
-      if (item === 'Devil'){ return '魔' }
-      if (item === 'Beast'){ return '兽' }
-      if (item === 'Machine'){ return '机械' }
-      if (item === 'Mystery'){ return '妖' }
-      if (item === 'Dragon'){ return '龙' }
-      if (item === 'Undead'){ return '不死' }
-      if (item === 'Aquatic'){ return '水棲' }
-      if (item === 'Plants'){ return '植物' }
-      return item
+    let list = race.split(',').map((item)=>{
+      if (item === 'Human'){ return ['人', 'race_human_medium'] }
+      if (item === 'Element'){ return ['精灵', 'race_element_medium'] }
+      if (item === 'Devil'){ return ['魔', 'race_devil_medium'] }
+      if (item === 'Beast'){ return ['兽', 'race_beast_medium'] }
+      if (item === 'Machine'){ return ['机械', 'race_machine_medium'] }
+      if (item === 'Mystery'){ return ['妖', 'race_mystery_medium'] }
+      if (item === 'Dragon'){ return ['龙', 'race_dragon_medium'] }
+      if (item === 'Undead'){ return ['不死', 'race_undead_medium'] }
+      if (item === 'Aquatic'){ return ['水棲', 'race_aquatic_medium'] }
+      if (item === 'Plants'){ return ['植物', 'race_plants_medium'] }
+      return [item, 'race_human_medium2']
     })
+    list.forEach((item)=>{
+      item[1] = `${import.meta.env.VITE_CDN}ui/icon/${item[1]}.png`
+    })
+    return list
   })
 
   const background = import.meta.env.VITE_CDN + 'ui/keyword_details_character_background.png'
@@ -58,6 +62,20 @@
     'voice': 'voice_volume3.png?082701',
     'story': 'character_story_mini.png?082701',
   }
+
+  const elementImage = $derived.by(()=>{
+    if (element === '(None)'){ return null }
+    const value = {
+      '0': 'element_red_medium',
+      '1': 'element_blue_medium',
+      '2': 'element_yellow_medium',
+      '3': 'element_green_medium',
+      '4': 'element_white_medium',
+      '5': 'element_black_medium',
+    }[element]
+    if (!value){ return null }
+    return `${import.meta.env.VITE_CDN}ui/icon/${value}.png`
+  })
 </script>
 
 {#snippet tabButton(type)}
@@ -75,13 +93,22 @@
   {/if}
   <div class="info">
     {#if title !== '(None)'}<p>
-      {#if element !== '(None)'}
-        <!-- element icon -->
+      {#if elementImage}
+        <img src={elementImage} alt={element} class="element">
       {/if}
       {title}
     </p>{/if}
     <p class="name">{name}</p>
-    {#if raceText !== '(None)'}<p>种族：{raceText.join('/')}</p>{/if}
+    {#if raceText !== '(None)'}
+      <p>种族：
+        {#each raceText as item}
+          <span class="race">
+            {item[0]}
+            <img src={item[1]} alt={item[0]}>
+          </span>
+        {/each}
+      </p>
+    {/if}
     {#if gender !== '(None)'}<p>性别：{genderText}</p>{/if}
     {#if cv !== '(None)'}<p class="cv">CV：{cv}</p>{/if}
   </div>
@@ -107,9 +134,24 @@
     position: relative;
     text-shadow: 0 0 10px black;
   }
+  .element{
+    height: 1.2em;
+    margin-bottom: -.2em;
+    margin-right: .2em;
+  }
   .name{
     font-size: 2em;
     margin-bottom: .3em;
+  }
+  .race>img{
+    height: 1em;
+    margin-left: .2em;
+    margin-bottom: -.1em;
+  }
+  .race:not(:last-child):after{
+    content: '/';
+    margin-left: .8em;
+    margin-right: .4em;
   }
   .cv{
     margin-top: .3em;
