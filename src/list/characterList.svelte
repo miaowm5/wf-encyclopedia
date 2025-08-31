@@ -44,19 +44,22 @@
   back="keyword_list_character_header_background"
   title="keyword_list_character_title"
   >
-  <button class="filter" onclick={()=>store.triggerFilter(true)}>
-    <p>筛选</p>
-  </button>
+  {#snippet banner()}
+    <button class="filter" onclick={()=>store.triggerFilter(true)}>
+      <p>筛选</p>
+    </button>
+  {/snippet}
+  {#snippet content()}
+    {#each showList as data}
+      <Nav href={`/${data.id}`} route={store.route}>
+        <div class={`item ${select === data.id ? 'active' : ''}`}>
+          <p>{data.name[0]}</p>
+          {#if data.name[1]}<p class="title">{data.name[1]}</p>{/if}
+        </div>
+      </Nav>
+    {/each}
+  {/snippet}
 </ListBanner>
-
-{#each showList as data}
-  <Nav href={`/${data.id}`} route={store.route}>
-    <div class={`item ${select === data.id ? 'active' : ''}`}>
-      <p>{data.name[0]}</p>
-      {#if data.name[1]}<p class="title">{data.name[1]}</p>{/if}
-    </div>
-  </Nav>
-{/each}
 
 <style>
   .filter{

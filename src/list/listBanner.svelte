@@ -1,22 +1,34 @@
 <script>
-  const { back, title, children, } = $props()
+  const { back, title, banner, content } = $props()
   const urlBack = `url(${import.meta.env.VITE_CDN}ui/${back}.png)`
   const urlTitle = `url(${import.meta.env.VITE_CDN}ui/${title}.png)`
 </script>
 
-<div class="header" style:background-image={urlBack}>
-  {#if title}<div class="title" style:background-image={urlTitle}></div>{/if}
-  {@render children?.()}
+<div class="main">
+  <div class="header" style:background-image={urlBack}>
+    {#if title}<div class="title" style:background-image={urlTitle}></div>{/if}
+    {@render banner?.()}
+  </div>
+  <div class="content">{@render content?.()}</div>
 </div>
 
 <style>
+  .main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content{
+    flex: 7;
+    overflow: auto;
+    padding: 1.5em .5em 8em .5em;
+  }
   .header{
-    height: 556px;
-    max-height: 30%;
+    flex: 3;
+    max-height: 556px;
     background-size: cover;
     background-position: center;
     position: relative;
-    margin-bottom: 2em;
   }
   .title{
     position: absolute;

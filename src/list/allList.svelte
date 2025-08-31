@@ -10,16 +10,17 @@
   back="keyword_list_all_header_background"
   title=""
   >
+  {#snippet content()}
+    {#each list as data}
+      <Nav href={`/${data.id}`} route={store.route}>
+        <div class={`item ${select === data.id ? 'active' : ''}`}>
+          <p>{data.name[0]}</p>
+          {#if data.name[1]}<p class="title">{data.name[1]}</p>{/if}
+        </div>
+      </Nav>
+    {/each}
+  {/snippet}
 </ListBanner>
-
-{#each list as data}
-  <Nav href={`/${data.id}`} route={store.route}>
-    <div class={`item ${select === data.id ? 'active' : ''}`}>
-      <p>{data.name[0]}</p>
-      {#if data.name[1]}<p class="title">{data.name[1]}</p>{/if}
-    </div>
-  </Nav>
-{/each}
 
 <style>
   .item{

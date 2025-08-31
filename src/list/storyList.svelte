@@ -14,10 +14,11 @@
   back="keyword_list_world_header_background"
   title="keyword_list_world_title"
   >
+  {#snippet content()}
+    {#each showList as data}{#key data.id}
+      <Nav href={`/${data.id}`} route={store.route}>
+        <StoryItem data={data} active={select === data.id} />
+      </Nav>
+    {/key}{/each}
+  {/snippet}
 </ListBanner>
-
-{#each showList as data}{#key data.id}
-  <Nav href={`/${data.id}`} route={store.route}>
-    <StoryItem data={data} active={select === data.id} />
-  </Nav>
-{/key}{/each}
