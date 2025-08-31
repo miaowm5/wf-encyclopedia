@@ -68,3 +68,8 @@ button{
   font-size: 1em;
   color: #444444;
 }
+@media (max-width: 600px) {
+  body{
+    font-size: 14px;
+  }
+}
