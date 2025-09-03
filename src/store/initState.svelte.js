@@ -1,4 +1,6 @@
 
+import customTag from "./customTag"
+
 const initState = {
   item: null,
   ui: {
@@ -14,7 +16,8 @@ const initState = {
     character: null,
     character_text: null,
     story_character: null,
-  }
+  },
+  customTag: customTag.load()
 }
 
 let state = $state(initState)
