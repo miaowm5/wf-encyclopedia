@@ -4,6 +4,14 @@
   import ListBanner from './listBanner.svelte'
 
   const { list, select } = $props()
+
+  const showList = $derived.by(()=>{
+    const filter = store.state.ui.allListFilter
+    return list.filter((data)=>{
+      const text = data.name[0] + data.name[1] || ''
+      return text.includes(filter)
+    })
+  })
 </script>
 
 <ListBanner
@@ -11,7 +19,7 @@
   title=""
   >
   {#snippet content()}
-    {#each list as data}
+    {#each showList as data}
       <Nav href={`/${data.id}`} route={store.route}>
         <div class={`item ${select === data.id ? 'active' : ''}`}>
           <p>{data.name[0]}</p>
@@ -19,6 +27,11 @@
         </div>
       </Nav>
     {/each}
+  {/snippet}
+  {#snippet banner()}
+    <input class="filter" type="text" value={store.state.ui.allListFilter} onchange={(e)=>{
+      store.setAllFilter(e.target.value)
+    }}>
   {/snippet}
 </ListBanner>
 

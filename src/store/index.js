@@ -24,6 +24,9 @@ const triggerFilter = (value)=>{
 const changeFilter = (filter)=>{
   state.ui.listFilter = filter
 }
+const setAllFilter = (text)=>{
+  state.ui.allListFilter = text
+}
 
 const updateRoute = ((data)=>{
   if (data.page === 'item'){
@@ -50,6 +53,7 @@ const store = {
   changeSearch,
   triggerFilter,
   changeFilter,
+  setAllFilter,
   tag: customTag.init(state),
 }
 

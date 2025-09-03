@@ -7,6 +7,7 @@ const initState = {
     listCategory: null,
     listSearch: '',
     listFilter: {},
+    allListFilter: '',
     listFilterOpen: false,
     detailTab: 'info',
     mobileListHide: false,
