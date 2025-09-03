@@ -115,16 +115,20 @@
     {/if}
   {/if}
   {#if itemType === 'character'}
-    <Title>普通立绘</Title>
-    <div class="image2"
-      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
-      <img src={import.meta.env.VITE_CDN2 + `fullshot/${emotionList.id}_0.png`} alt={emotionList.id} class="img">
-    </div>
-    <Title>觉醒立绘</Title>
-    <div class="image2"
-      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
-      <img src={import.meta.env.VITE_CDN2 + `fullshot/${emotionList.id}_1.png`} alt={emotionList.id} class="img">
-    </div>
+    {#snippet image(title, image)}
+      <Title>{title}</Title>
+      <div class="image2"
+        style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
+        <img src={import.meta.env.VITE_CDN2 + `fullshot/${image}.png`} alt={image} class="img">
+        <a
+          class="openImage" aria-label="Open In New Window"
+          href={import.meta.env.VITE_CDN2 + `fullshot/${image}.png`} target="_blank"
+          style:background-image={`url(${import.meta.env.VITE_CDN}ui/icon/full_size.png?082701`}>
+        </a>
+      </div>
+    {/snippet}
+    {@render image('普通立绘', `${emotionList.id}_0`)}
+    {@render image('觉醒立绘', `${emotionList.id}_1`)}
   {/if}
   <MobileBack />
 </div>
@@ -178,5 +182,17 @@
     padding: .3em 1.5em;
     border-top: 1px solid white;
     border-radius: 10px;
+  }
+  .openImage{
+    border-radius: 50%;
+    background-position: center center;
+    width: 2em;
+    height: 2em;
+    margin-left: .3em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
   }
 </style>
