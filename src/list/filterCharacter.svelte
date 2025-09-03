@@ -1,6 +1,7 @@
 <script>
-  import store from '../store'
   import { SvelteSet } from 'svelte/reactivity'
+  import store from '../store'
+  import { Title } from '../ui'
 
   const getInitValue = ()=>{
     let f = store.state.ui.listFilter
@@ -42,14 +43,6 @@
   const vite_cdn = import.meta.env.VITE_CDN
 </script>
 
-{#snippet title(text)}
-  <div class="title">
-    <div class="l" style:background-image={`url(${vite_cdn}ui/flipper_border_left.png)`}></div>
-    <p>{text}</p>
-    <div class="r" style:background-image={`url(${vite_cdn}ui/flipper_border.png)`}></div>
-  </div>
-{/snippet}
-
 {#snippet textButton(group, id, text, image = '')}
   <button
     class={`${isFilter(group, id) ? "active" : ""} choice`}
@@ -66,7 +59,7 @@
 <div class="main"><div class="dialog">
   <div class="header">筛选</div>
   <div class="content">
-    {@render title('稀有度')}
+    <Title padding="1em 0">稀有度</Title>
     <div class="group">
       {@render textButton('rarity', '5', '五', 'rarity_five')}
       {@render textButton('rarity', '4', '四', 'rarity_four')}
@@ -75,7 +68,7 @@
       {@render textButton('rarity', '1', '一', 'rarity_one')}
       {@render textButton('rarity', '0', '其他')}
     </div>
-    {@render title('属性')}
+    <Title padding="1em 0">属性</Title>
     <div class="group">
       {@render textButton('element', '0', '火', 'element_red_medium')}
       {@render textButton('element', '1', '水', 'element_blue_medium')}
@@ -85,13 +78,13 @@
       {@render textButton('element', '5', '暗', 'element_black_medium')}
       {@render textButton('element', '-1', '其他')}
     </div>
-    {@render title('性别')}
+    <Title padding="1em 0">性别</Title>
     <div class="group">
       {@render textButton('sex', 'Female', '女')}
       {@render textButton('sex', 'Male', '男')}
       {@render textButton('sex', 'Other', '其他')}
     </div>
-    {@render title('种族')}
+    <Title padding="1em 0">种族</Title>
     <div class="group">
       {@render textButton('race', 'Human', '人', 'race_human_medium2')}
       {@render textButton('race', 'Element', '精灵', 'race_element_medium2')}
@@ -147,21 +140,6 @@
     padding: 0 0 .8em;
     border-bottom: 2px solid #dedede;
   }
-  .title{
-    text-align: center;
-    padding: 1em 0;
-    display: flex;
-  }
-  .title>p{
-    padding: 0 .5em;
-  }
-  .title>div{
-    flex: 1;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-  }
-  .l{ background-position: right; }
-  .r{ background-position: left; }
   .group, .submit{
     display: flex;
     flex-wrap: wrap;

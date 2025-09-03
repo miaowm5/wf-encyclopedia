@@ -1,7 +1,7 @@
 <script>
   import store from '../store'
   import { Nav } from '../common'
-  import Title from './title.svelte'
+  import { Title } from '../ui'
 
   const { data } = $props()
 

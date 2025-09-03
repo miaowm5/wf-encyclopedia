@@ -1,7 +1,7 @@
 <script>
   import { characterShot } from '../common'
+  import { Title } from '../ui'
   import MobileBack from './mobileBack.svelte'
-  import Title from './title.svelte'
   import galleryEffectRule from './galleryEffectRule.json'
 
   const { item, store, itemType } = $props()

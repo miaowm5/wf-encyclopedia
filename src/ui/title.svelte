@@ -1,10 +1,11 @@
 <script>
   let {
     children,
+    padding = '1.5em 0 1em',
   } = $props()
 </script>
 
-<div class="title">
+<div class="title" style:padding={padding}>
   <div class="l" style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/flipper_border_left.png'})`}></div>
   <p>{@render children?.()}</p>
   <div class="r" style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/flipper_border.png'})`}></div>
@@ -13,7 +14,6 @@
 <style>
   .title{
     text-align: center;
-    padding: 1.5em 0 1em;
     display: flex;
   }
   .title>p{

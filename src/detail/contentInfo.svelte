@@ -1,7 +1,7 @@
 <script>
   import Related1 from './related1.svelte'
   import Related2 from './related2.svelte'
-  import Title from './title.svelte'
+  import { Title } from '../ui'
   import MobileBack from './mobileBack.svelte'
 
   const { item, store } = $props()
