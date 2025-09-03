@@ -59,7 +59,7 @@
 <div class="main"><div class="dialog">
   <div class="header">筛选</div>
   <div class="content">
-    <Title padding="1em 0">稀有度</Title>
+    <Title>稀有度</Title>
     <div class="group">
       {@render textButton('rarity', '5', '五', 'rarity_five')}
       {@render textButton('rarity', '4', '四', 'rarity_four')}
@@ -68,7 +68,7 @@
       {@render textButton('rarity', '1', '一', 'rarity_one')}
       {@render textButton('rarity', '0', '其他')}
     </div>
-    <Title padding="1em 0">属性</Title>
+    <Title>属性</Title>
     <div class="group">
       {@render textButton('element', '0', '火', 'element_red_medium')}
       {@render textButton('element', '1', '水', 'element_blue_medium')}
@@ -78,13 +78,13 @@
       {@render textButton('element', '5', '暗', 'element_black_medium')}
       {@render textButton('element', '-1', '其他')}
     </div>
-    <Title padding="1em 0">性别</Title>
+    <Title>性别</Title>
     <div class="group">
       {@render textButton('sex', 'Female', '女')}
       {@render textButton('sex', 'Male', '男')}
       {@render textButton('sex', 'Other', '其他')}
     </div>
-    <Title padding="1em 0">种族</Title>
+    <Title>种族</Title>
     <div class="group">
       {@render textButton('race', 'Human', '人', 'race_human_medium2')}
       {@render textButton('race', 'Element', '精灵', 'race_element_medium2')}

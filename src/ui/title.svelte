@@ -1,8 +1,5 @@
 <script>
-  let {
-    children,
-    padding = '1.5em 0 1em',
-  } = $props()
+  let { children } = $props()
 </script>
 
 <div class="title" style:padding={padding}>
@@ -15,6 +12,7 @@
   .title{
     text-align: center;
     display: flex;
+    padding: 1em 0;
   }
   .title>p{
     padding: 0 .5em;
