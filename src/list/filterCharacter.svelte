@@ -7,6 +7,10 @@
     let f = store.state.ui.listFilter
     let result = {}
     Object.keys(f).forEach((name)=>{
+      if (name === 'text'){
+        result.text = f[name]
+        return
+      }
       result[name] = new SvelteSet(f[name])
     })
     return result
@@ -20,7 +24,11 @@
   const applyFilter = ()=>{
     const targetFilter = {}
     Object.keys(currentFilter).forEach((name)=>{
-      if (currentFilter[name].size === 0){ return }
+      if (name === 'text'){
+        if (!currentFilter[name]){ return }
+      }else{
+        if (currentFilter[name].size === 0){ return }
+      }
       targetFilter[name] = currentFilter[name]
     })
     store.changeFilter(targetFilter)
@@ -59,6 +67,10 @@
 <div class="main"><div class="dialog">
   <div class="header">筛选</div>
   <div class="content">
+    <Title>角色名</Title>
+    <input class="filterName" type="text" value={currentFilter.text} oninput={(e)=>{
+      currentFilter.text = e.target.value
+    }}>
     <Title>稀有度</Title>
     <div class="group">
       {@render textButton('rarity', '5', '五', 'rarity_five')}
