@@ -1,5 +1,4 @@
 
-import './reset.css'
 import store from './store'
 import { wrapApi } from './common'
 
