@@ -50,7 +50,7 @@
   title="keyword_list_character_title"
   >
   {#snippet banner()}
-    <button class="filter" onclick={()=>store.triggerFilter(true)}>
+    <button class="filter" onclick={()=>store.setDialog('filterCharacter')}>
       <p>筛选</p>
     </button>
   {/snippet}

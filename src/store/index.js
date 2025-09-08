@@ -18,14 +18,14 @@ const changeCategory = (category)=>{
 const changeSearch = (search)=>{
   state.ui.listSearch = search
 }
-const triggerFilter = (value)=>{
-  state.ui.listFilterOpen = value
-}
 const changeFilter = (filter)=>{
   state.ui.listFilter = filter
 }
 const setAllFilter = (text)=>{
   state.ui.allListFilter = text
+}
+const setDialog = (type, data = null, closeable = true)=>{
+  state.dialog = { type, data, closeable }
 }
 
 const updateRoute = ((data)=>{
@@ -51,9 +51,9 @@ const store = {
   changeTab,
   changeCategory,
   changeSearch,
-  triggerFilter,
   changeFilter,
   setAllFilter,
+  setDialog,
   tag: customTag.init(state),
 }
 

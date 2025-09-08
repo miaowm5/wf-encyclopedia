@@ -1,9 +1,8 @@
 <script>
   import './reset.css'
   import loadData from './loadData.svelte.js'
-  import store from './store'
   import List from './list/index.svelte'
-  import FilterCharacter from './list/filterCharacter.svelte'
+  import Dialog from './dialog/index.svelte'
   import Detail from './detail/index.svelte'
 
   const loadState = loadData()
@@ -16,9 +15,7 @@
       <List />
       <Detail />
     </div>
-    {#if store.state.ui.listFilterOpen}
-      <FilterCharacter />
-    {/if}
+    <Dialog />
   {:else if loadState.error.length > 0}
     <p>Error loading data: {loadState.error.join(', ')}</p>
   {:else}

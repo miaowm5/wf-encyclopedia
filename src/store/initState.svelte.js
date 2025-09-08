@@ -8,9 +8,13 @@ const initState = {
     listSearch: '',
     listFilter: {},
     allListFilter: '',
-    listFilterOpen: false,
     detailTab: 'info',
     mobileListHide: false,
+  },
+  dialog: {
+    type: null,
+    data: null,
+    closeable: true,
   },
   database: {
     encyclopedia: null,
