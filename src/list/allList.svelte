@@ -29,9 +29,13 @@
     {/each}
   {/snippet}
   {#snippet banner()}
-    <input class="filter" type="text" value={store.state.ui.allListFilter} onchange={(e)=>{
-      store.setAllFilter(e.target.value)
-    }}>
+    <div class="filter">
+      <input type="text"
+        value={store.state.ui.allListFilter}
+        placeholder="关键字"
+        onchange={(e)=>{ store.setAllFilter(e.target.value) }}
+      >
+    </div>
   {/snippet}
 </ListBanner>
 
@@ -54,5 +58,22 @@
   }
   .title{
     font-size: .85em;
+  }
+  .filter{
+    position: absolute;
+    padding: 1em;
+    bottom: .5em;
+  }
+  .filter>input{
+    width: 14em;
+    background-color: #eaeaea;
+    border-radius: 3em;
+    padding: .5em 1em;
+    border: none;
+    border-top: 1px solid #a2a2a1;
+    border-bottom: 1px solid white;
+  }
+  .filter>input::placeholder {
+    color: #999;
   }
 </style>
