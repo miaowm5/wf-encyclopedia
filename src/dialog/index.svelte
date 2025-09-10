@@ -9,13 +9,13 @@
 
 </script>
 
-{#if store.dialog.type}
+{#if store.state.dialog.type}
   <div class="main"><div class="dialog">
-    {#if store.dialog.type === 'filterCharacter'}
+    {#if store.state.dialog.type === 'filterCharacter'}
       <FilterCharacter />
     {/if}
   </div></div>
-  {#if store.dialog.closeable}
+  {#if store.state.dialog.closeable}
     <OnBack route={store.route} func={closeDialog} />
   {/if}
 {/if}

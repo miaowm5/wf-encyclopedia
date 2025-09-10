@@ -9,18 +9,23 @@
 </script>
 
 <div class="content">
-  <Title>情报</Title>
-  {#each item as block}
-    <div class="item">
-      {#each block[20] as line}<p>{line}</p>{/each}
-    </div>
-  {/each}
-  <Related1 data={item[0][19]} />
-  <Related2 data={item[0][19]} />
+  <section>
+    <Title>情报</Title>
+    {#each item as block}
+      <div class="item">
+        {#each block[20] as line}<p>{line}</p>{/each}
+      </div>
+    {/each}
+  </section>
+  <section><Related1 data={item[0][19]} /></section>
+  <section><Related2 data={item[0][19]} /></section>
   <MobileBack />
 </div>
 
 <style>
+  section{
+    margin-top: .5em;
+  }
   .content{
     flex: 1;
     padding: 0 1em 6em 1em;

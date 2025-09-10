@@ -2,7 +2,7 @@
   let { children } = $props()
 </script>
 
-<div class="title" style:padding={padding}>
+<div class="title">
   <div class="l" style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/flipper_border_left.png'})`}></div>
   <p>{@render children?.()}</p>
   <div class="r" style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/flipper_border.png'})`}></div>
