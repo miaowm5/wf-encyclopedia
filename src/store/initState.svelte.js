@@ -20,6 +20,7 @@ const initState = {
     encyclopedia: null,
     character: null,
     character_text: null,
+    character_speech: null,
     story_character: null,
   },
   customTag: customTag.load()

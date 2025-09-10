@@ -21,13 +21,11 @@
 
   const tab = $derived.by(()=>{
     const stateTab = store.state.ui.detailTab
+    if (itemType !== 'character' && itemType !== 'npc'){ return 'info' }
     if (stateTab === 'story'){
       if (itemType !== 'character' && itemType !== 'story'){ return 'info' }
     }
-    if (stateTab === 'gallery'){
-      if (itemType !== 'character' && itemType !== 'npc'){ return 'info' }
-    }
-    if (stateTab === 'voice'){
+    if (stateTab === 'voice' || stateTab === 'story'){
       if (itemType !== 'character'){ return 'info' }
     }
     return stateTab
@@ -38,9 +36,13 @@
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   {#if item}{#key store.state.item}
     <ContentTitle item={item} itemType={itemType} tab={tab} />
-    {#if (itemType !== 'character' && itemType !== 'npc') || tab === 'info'}
+    {#if tab === 'info'}
       <ContentInfo item={item} store={store} />
     {:else if tab === 'gallery'}
+      <ContentGallery item={item} store={store} itemType={itemType} />
+    {:else if tab === 'voice'}
+      <ContentGallery item={item} store={store} itemType={itemType} />
+    {:else if tab === 'story'}
       <ContentGallery item={item} store={store} itemType={itemType} />
     {/if}
   {/key}{/if}
