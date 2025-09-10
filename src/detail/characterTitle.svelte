@@ -36,6 +36,7 @@
     gender={characterData[7]}
     banner={bannerID}
     tab={tab}
+    itemType='character'
   />
 {:else}
   <NpcTitle
@@ -46,5 +47,6 @@
     race='(None)'
     gender='(None)'
     tab={tab}
+    itemType='character'
   />
 {/if}

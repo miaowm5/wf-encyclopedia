@@ -34,7 +34,8 @@
           else{ race = data.extra[4] }
           return race.split(',').some((r)=>filterInfo.has(r))
         })
-      }else if (type === 'name'){
+      }else if (type === 'text'){
+        console.log(filterInfo)
         result = result.filter((data)=>{
           const text = data.name[0] + data.name[1] || ''
           return text.includes(filterInfo)
