@@ -139,6 +139,7 @@
     height: 80%;
     text-align: center;
     background-color: #232223;
+    position: relative;
   }
   .image1{
     max-height: 690px;
@@ -192,7 +193,9 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: absolute;
-    right: 5%;
-    bottom: 5%;
+    right: 1em;
+    bottom: 1em;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
   }
 </style>
