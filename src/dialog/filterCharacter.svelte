@@ -66,9 +66,11 @@
 <div class="header">筛选</div>
 <div class="content">
   <Title>角色名</Title>
-  <input class="filterName" type="text" value={currentFilter.text} oninput={(e)=>{
-    currentFilter.text = e.target.value
-  }}>
+  <div class="filterName">
+    <input type="text" placeholder="通过角色名搜索" value={currentFilter.text} oninput={(e)=>{
+      currentFilter.text = e.target.value
+    }}>
+  </div>
   <Title>稀有度</Title>
   <div class="group">
     {@render textButton('rarity', '5', '五', 'rarity_five')}
@@ -123,6 +125,20 @@
     text-align: center;
     padding: 0 0 .8em;
     border-bottom: 2px solid #dedede;
+  }
+  .filterName{
+    text-align: center;
+  }
+  .filterName>input{
+    width: 60%;
+    border: 2px solid #dcdcdc;
+    padding: .5em;
+    background: #fafafa;
+    margin: 0 auto;
+    font-size: 1em;
+  }
+  .filterName>input::placeholder{
+    color: #bbb;
   }
   .group, .submit{
     display: flex;

@@ -63,15 +63,18 @@
     position: absolute;
     padding: 1em;
     bottom: .5em;
+    width: 100%;
   }
   .filter>input{
-    width: 14em;
+    width: 50%;
+    min-width: 14em;
     background-color: #eaeaea;
     border-radius: 3em;
     padding: .5em 1em;
     border: none;
     border-top: 1px solid #a2a2a1;
     border-bottom: 1px solid white;
+    font-size: 1em;
   }
   .filter>input::placeholder {
     color: #999;
