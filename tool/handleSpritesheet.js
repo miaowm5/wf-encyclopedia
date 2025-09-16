@@ -6,6 +6,7 @@ const texturePacker = require("free-tex-packer-core");
 
 const storyDir = path.join(__dirname, 'output', 'story');
 const headDir = path.join(__dirname, 'output', 'head');
+const uiDir = path.join(__dirname, 'output', 'ui');
 const packDir = path.join(__dirname, 'output/pack');
 const metaDataPath = path.join(__dirname, 'orderedmap/generated', 'trimmed_image.json');
 const metaDataPath2 = path.join(__dirname, 'orderedmap/generated', 'trimmed_image_iosbundled.json');
@@ -14,6 +15,7 @@ const metaDataPath2 = path.join(__dirname, 'orderedmap/generated', 'trimmed_imag
 if (!fs.existsSync(packDir)) fs.mkdirSync(packDir, { recursive: true });
 if (!fs.existsSync(path.join(packDir, 'story'))) fs.mkdirSync(path.join(packDir, 'story'), { recursive: true });
 if (!fs.existsSync(path.join(packDir, 'head'))) fs.mkdirSync(path.join(packDir, 'head'), { recursive: true });
+if (!fs.existsSync(path.join(packDir, 'ui'))) fs.mkdirSync(path.join(packDir, 'ui'), { recursive: true });
 
 const packOtions = {
   textureName: "my-texture",
@@ -117,9 +119,48 @@ const packHead = async ()=>{
   fs.writeFileSync(path.join(packDir, 'head.json'), JSON.stringify(spritesheetData));
 }
 
+const packUI = async ()=>{
+  const subUIDir = []
+  fs.readdirSync(uiDir, { withFileTypes: true }).forEach(dirent => {
+    if (!dirent.isDirectory()) return;
+    const subDirName = dirent.name;
+    subUIDir.push(subDirName)
+  })
+  for(let subDirName of subUIDir){
+    const packResDir = path.join(packDir, 'ui', subDirName)
+    if (!fs.existsSync(packResDir)){ fs.mkdirSync(packResDir, { recursive: true }) }
+    let spritesheetData = {}
+    const images = [];
+    const rootDir = path.join(uiDir, subDirName)
+    const pngFiles = fs.readdirSync(rootDir).filter(file => file.endsWith('.png'));
+    if (pngFiles.length === 0) { return }
+    pngFiles.forEach(file => {
+      images.push({path: `${file}`, contents: fs.readFileSync(path.join(rootDir, file)) });
+    });
+    try{
+      const files =await texturePacker.packAsync(images, {...packOtions, textureName: subDirName})
+      for(let item of files){
+        if (item.name.endsWith('.json')){
+          const jsonStr = item.buffer.toString('utf8');
+          const jsonObj = JSON.parse(jsonStr);
+          spritesheetData = { ...spritesheetData, ...jsonObj }
+        }else{
+          fs.writeFileSync(path.join(packResDir, item.name), item.buffer);
+          console.log('已保存:', item.name);
+        }
+      }
+    }catch(e){
+      console.error('Packaging failed', e);
+    }
+    spritesheetData.timestamp = Date.now();
+    fs.writeFileSync(path.join(packDir, 'ui', `${subDirName}.json`), JSON.stringify(spritesheetData));
+  }
+}
+
 const main = async ()=>{
   await packStory()
   await packHead()
+  await packUI()
 }
 
 main()
