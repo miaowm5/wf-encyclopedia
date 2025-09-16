@@ -116,7 +116,7 @@
     {@render tabButton('info')}
     {@render tabButton('gallery')}
     {#if itemType === 'character'}
-      <!-- {@render tabButton('voice')} -->
+      {@render tabButton('voice')}
       <!-- {@render tabButton('story')} -->
     {/if}
   </div>

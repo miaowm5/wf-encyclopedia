@@ -1,13 +1,13 @@
 
-import store from './store'
-import { wrapApi } from './common'
+import store from '../store'
+import { wrapApi } from '../common'
 
 const main = ()=>{
 
   let finish = $state(false)
   let error = $state([])
 
-  wrapApi(`/orderedmap/character/character_speech`, {
+  wrapApi(`/orderedmap/character/character_speech.json`, {
     before: ()=>{
       if (store.state.database.character_speech){
         finish = true
@@ -18,7 +18,7 @@ const main = ()=>{
       store.setDatabase('character_speech', data)
       finish = true
     },
-    fail: (err)=>{ error.push(`${tag} load failed`) }
+    fail: (err)=>{ error.push(`voice load failed`) }
   }, true)
 
   return {

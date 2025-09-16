@@ -3,6 +3,7 @@
   import ContentTitle from './contentTitle.svelte'
   import ContentInfo from './contentInfo.svelte'
   import ContentGallery from './contentGallery.svelte'
+  import ContentVoice from './contentVoice.svelte'
 
   const database = store.state.database.encyclopedia
 
@@ -41,7 +42,7 @@
     {:else if tab === 'gallery'}
       <ContentGallery item={item} store={store} itemType={itemType} />
     {:else if tab === 'voice'}
-      <ContentGallery item={item} store={store} itemType={itemType} />
+      <ContentVoice item={item} store={store} itemType={itemType} />
     {:else if tab === 'story'}
       <ContentGallery item={item} store={store} itemType={itemType} />
     {/if}
