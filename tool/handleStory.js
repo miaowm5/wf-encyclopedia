@@ -7,7 +7,7 @@ const path = require('path');
 
 // 输入和输出的基础路径
 const inputBase = path.join(__dirname, 'orderedmap/story');
-const outputBase = path.join(__dirname, 'output/story');
+const outputBase = path.join(__dirname, 'output/scenario');
 
 // 保证目录存在
 function ensureDirSync(dir) {
@@ -18,12 +18,12 @@ function ensureDirSync(dir) {
 function mergeJsonFiles(files) {
   let result = {};
   for (const file of files) {
-    const scenarioPath = join(file, 'scenario.json');
     try {
-      const data = readFileSync(scenarioPath, 'utf-8');
+      const data = fs.readFileSync(file, 'utf-8');
       const json = JSON.parse(data);
-      Object.assign(result, json);
+      result = { ...result, ...json }
     } catch (err) {
+      console.log(err)
       // 跳过不存在或解析失败的文件
     }
   }
