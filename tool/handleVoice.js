@@ -2,9 +2,9 @@ const path = require("path");
 const fs = require("fs");
 const { makeAudiosprite } = require("./audiosprite");
 
-const outputDir = path.join(__dirname, 'output');
+const outputDir = path.join(__dirname, 'output', 'pack');
 const voiceDir = path.join(outputDir, 'voice');
-const packDir = path.join(outputDir, 'pack_voice');
+const packDir = path.join(outputDir, 'voice');
 if (!fs.existsSync(packDir)) fs.mkdirSync(packDir, { recursive: true });
 
 function findAudioFiles(dir, result = []) {

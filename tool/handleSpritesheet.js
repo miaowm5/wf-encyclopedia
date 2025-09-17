@@ -40,10 +40,9 @@ const packOtions = {
  * @param {Array} images 图片对象数组 [{path, contents}]
  * @param {String} textureName 图集名称
  * @param {String} outDir 输出目录
- * @param {String} jsonPath 输出 json 路径
  * @param {Function} metaProcess 元数据处理函数（可选）
  */
-async function packImages(imagePaths, textureName, outDir, jsonPath, metaProcess) {
+async function packImages(imagePaths, textureName, outDir, metaProcess) {
   let spritesheetData = {};
   try {
     // 按需读取图片内容，避免一次性全部加载
@@ -64,7 +63,7 @@ async function packImages(imagePaths, textureName, outDir, jsonPath, metaProcess
     }
     if (metaProcess) metaProcess(spritesheetData);
     spritesheetData.timestamp = Date.now();
-    fs.writeFileSync(jsonPath, JSON.stringify(spritesheetData));
+    return spritesheetData
   } catch (e) {
     console.error('Packaging failed', e);
   }
@@ -72,8 +71,10 @@ async function packImages(imagePaths, textureName, outDir, jsonPath, metaProcess
 
 // 打包 story 图集
 async function packStory() {
-  const metaImageData = JSON.parse(fs.readFileSync(metaDataPath).toString());
-  const metaImageData2 = JSON.parse(fs.readFileSync(metaDataPath2).toString());
+  const metaImageData = {
+    ...JSON.parse(fs.readFileSync(metaDataPath).toString()),
+    ...JSON.parse(fs.readFileSync(metaDataPath2).toString())
+  }
   const taskQueue = [];
 
   // 遍历 story 子目录
@@ -92,15 +93,15 @@ async function packStory() {
       }
     });
 
+  let spritesheetData = {}
   for (const item of taskQueue) {
-    await packImages(
+    const json = await packImages(
       item.imagePaths,
       item.subDir,
       path.join(packDir, 'story'),
-      path.join(packDir, 'story.json'),
       (spritesheetData) => {
         Object.keys(spritesheetData).forEach((key) => {
-          const metaData = metaImageData[key]?.[0] || metaImageData2[key];
+          const metaData = metaImageData[key];
           if (!metaData) {
             console.log(`metadatamissing: ${key}`);
             return;
@@ -112,7 +113,10 @@ async function packStory() {
         });
       }
     );
+    spritesheetData = { ...spritesheetData, ...json };
   }
+  spritesheetData.timestamp = Date.now();
+  fs.writeFileSync(path.join(packDir, 'story.json'), JSON.stringify(spritesheetData));
 }
 
 // 打包 head 图集
@@ -123,12 +127,13 @@ async function packHead() {
     virtualPath: `${file}`,
     realPath: path.join(headDir, file)
   }));
-  await packImages(
+  let spritesheetData = await packImages(
     imagePaths,
     'head',
     path.join(packDir, 'head'),
-    path.join(packDir, 'head.json')
   );
+  spritesheetData.timestamp = Date.now();
+  fs.writeFileSync(path.join(packDir, 'head.json'), JSON.stringify(spritesheetData));
 }
 
 // 打包 ui 图集
@@ -147,12 +152,13 @@ async function packUI() {
       virtualPath: `${file}`,
       realPath: path.join(rootDir, file)
     }));
-    await packImages(
+    let spritesheetData = await packImages(
       imagePaths,
       subDirName,
       packResDir,
-      path.join(packDir, 'ui', `${subDirName}.json`)
     );
+    spritesheetData.timestamp = Date.now();
+    fs.writeFileSync(path.join(packDir, 'ui', `${subDirName}.json`), JSON.stringify(spritesheetData));
   }
 }
 
