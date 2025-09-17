@@ -36,6 +36,7 @@ function probeDuration(ffprobePath, ffmpegPath, file) {
     ]);
     const n = parseFloat(out.trim());
     if (Number.isFinite(n)) return n;
+    // console.log(out)
   } catch {
     // fallback: ffmpeg -i
     const out = spawnSync(ffmpegPath, ["-i", file], {
@@ -49,7 +50,9 @@ function probeDuration(ffprobePath, ffmpegPath, file) {
       const parts = m[1].split(":").map(parseFloat);
       return parts[0] * 3600 + parts[1] * 60 + parts[2];
     }
+    // console.log(txt)
   }
+  console.error("Unable to probe duration: " + file)
   throw new Error("Unable to probe duration: " + file);
 }
 
@@ -88,15 +91,21 @@ async function makeAudiosprite({
     haveFFprobe = false;
   }
 
-  const absInputs = inputs.map((p) => path.resolve(p));
+  let absInputs = inputs.map((p) => path.resolve(p));
   for (const f of absInputs) {
     if (!fs.existsSync(f)) throw new Error("Input not found: " + f);
   }
 
   const tmp = await makeTempDir();
-  const durations = absInputs.map((f) =>
-    probeDuration(haveFFprobe ? ffprobe : ffmpeg, ffmpeg, f)
-  );
+  let durations = absInputs.map((f) =>{
+    try{
+      return probeDuration(haveFFprobe ? ffprobe : ffmpeg, ffmpeg, f)
+    }catch(e){
+      return 0
+    }
+  });
+  absInputs = absInputs.filter((f, i) => durations[i] > 0);
+  durations = durations.filter((d) => d > 0);
 
   // silence
   let silenceFile = null;
