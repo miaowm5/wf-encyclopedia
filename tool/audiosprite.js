@@ -68,7 +68,6 @@ async function makeTempDir(prefix = "audiosprite-") {
  * @param {string} [options.ffmpeg="ffmpeg"] - ffmpeg 路径
  * @param {string} [options.ffprobe="ffprobe"] - ffprobe 路径
  * @param {string} [options.out="sprite"] - 输出文件前缀
- * @param {number} [options.gap=0.5] - 每段之间的静音间隔秒数
  *
  * @returns {Promise<{ audioFile: string, jsonFile: string, map: any }>}
  */
@@ -77,7 +76,6 @@ async function makeAudiosprite({
   ffmpeg = "ffmpeg",
   ffprobe = "ffprobe",
   out = "sprite",
-  gap = 0.5,
 } = {}) {
   if (!inputs || !inputs.length) {
     throw new Error("No input files provided.");
@@ -107,35 +105,11 @@ async function makeAudiosprite({
   absInputs = absInputs.filter((f, i) => durations[i] > 0);
   durations = durations.filter((d) => d > 0);
 
-  // silence
-  let silenceFile = null;
-  if (gap > 0) {
-    silenceFile = path.join(tmp, "silence.wav");
-    runSync(ffmpeg, [
-      "-f",
-      "lavfi",
-      "-i",
-      "anullsrc=channel_layout=stereo:sample_rate=44100",
-      "-t",
-      String(gap),
-      "-ar",
-      "44100",
-      "-ac",
-      "2",
-      "-c:a",
-      "pcm_s16le",
-      silenceFile,
-    ]);
-  }
-
   // concat list
   const listFile = path.join(tmp, "list.txt");
   const lines = [];
   absInputs.forEach((f, i) => {
     lines.push(`file '${f.replace(/'/g, "'\\''")}'`);
-    if (gap > 0 && i !== absInputs.length - 1) {
-      lines.push(`file '${silenceFile.replace(/'/g, "'\\''")}'`);
-    }
   });
   await fsp.writeFile(listFile, lines.join("\n"));
 
@@ -167,18 +141,12 @@ async function makeAudiosprite({
   let cursor = 0;
   const spritemap = {};
   absInputs.forEach((f, i) => {
-    // const name = path.parse(f).name;
-    // const key = spritemap[name] ? `${name}_${i}` : name;
     spritemap[f] = [
       Number((cursor * 1000).toFixed()),
       Number((durations[i] * 1000).toFixed()),
     ]
     cursor += durations[i];
-    if (gap > 0 && i !== absInputs.length - 1) cursor += gap;
   });
-  // const map = { src: [path.basename(outFile)], sprite: spritemap };
-  // const jsonFile = path.resolve(`${out}.json`);
-  // await fsp.writeFile(jsonFile, JSON.stringify(map, null, 2), "utf8");
   return { audioFile: outFile, map: spritemap };
 }
 

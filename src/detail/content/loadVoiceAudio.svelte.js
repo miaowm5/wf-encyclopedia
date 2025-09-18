@@ -82,7 +82,7 @@ const main = (character)=>{
       if (!voiceData[key]){ return }
       sound.stop()
       sound.play(key)
-      playing = [name, ...voiceData[key]]
+      setTimeout(()=>{ playing = [name, ...voiceData[key]] }, 1)
     },
     destory(){ cleanupSound() },
   }

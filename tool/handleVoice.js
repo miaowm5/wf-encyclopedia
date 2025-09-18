@@ -2,9 +2,9 @@ const path = require("path");
 const fs = require("fs");
 const { makeAudiosprite } = require("./audiosprite");
 
-const outputDir = path.join(__dirname, 'output');
-const voiceDir = path.join(outputDir, 'voice');
-const packDir = path.join(outputDir, 'pack/voice');
+const outputDir = path.join(__dirname, 'output', 'pack');
+const voiceDir = path.join(__dirname, 'output', 'voice');
+const packDir = path.join(outputDir, 'voice');
 if (!fs.existsSync(packDir)) fs.mkdirSync(packDir, { recursive: true });
 
 function findAudioFiles(dir, result = []) {
@@ -40,7 +40,6 @@ async function packVoice(){
       ffmpeg: "./ffmpeg.exe",
       ffprobe: "./ffprobe.exe",
       out: path.join(packDir, item.out),
-      gap: 1,
     });
     let simpleMap = {}
     Object.keys(map).forEach((key)=>{
@@ -52,8 +51,7 @@ async function packVoice(){
     config[item.out] = simpleMap;
     console.log("输出文件:", audioFile);
   }
-  config.timestamp = Date.now()
-  fs.writeFileSync(path.join(outputDir, 'pack/voice.json'), JSON.stringify(config), 'utf8');
+  fs.writeFileSync(path.join(outputDir, 'voice.json'), JSON.stringify(config, null, 2), 'utf8');
 }
 
 packVoice();
