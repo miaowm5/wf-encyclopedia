@@ -3,6 +3,7 @@
   import { Title } from '../../ui'
   import MobileBack from './mobileBack.svelte'
   import loadData from './loadVoice.svelte.js'
+  import loadVoice from './loadVoiceAudio.svelte.js'
 
   const { item } = $props()
 
@@ -20,10 +21,17 @@
       evolution: info.filter((item)=>item[0] === '1')[0],
     }
   })
+  let voicePlayer = null
+  $effect(()=>{
+    if (voicePlayer){ voicePlayer.destory() }
+    voicePlayer = loadVoice(item[0][6])
+  })
 </script>
 
 {#snippet voice(item)}
-  <div class="voice">{item[3]}</div>
+  <button class="voice" onclick={()=>{
+    voicePlayer.play(item[4])
+  }}>{item[3]}</button>
 {/snippet}
 
 <div class="content">
@@ -53,6 +61,9 @@
     overflow: auto;
   }
   .voice{
+    display: inline;
+    border: none;
+    background: white;
     margin-bottom: 1em;
   }
 </style>
