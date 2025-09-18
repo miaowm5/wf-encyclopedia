@@ -1,5 +1,5 @@
 <script>
-  import { headIcon } from '../common'
+  import { headIcon } from '../../common'
 
   const { name, file } = $props()
 

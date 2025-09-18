@@ -1,6 +1,6 @@
 
-import store from '../store'
-import { wrapApi } from '../common'
+import store from '../../store'
+import { wrapApi } from '../../common'
 
 const main = ()=>{
 

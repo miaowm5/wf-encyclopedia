@@ -1,9 +1,10 @@
 <script>
-  import { Title } from '../ui'
+  import store from '../../store'
+  import { Title } from '../../ui'
   import MobileBack from './mobileBack.svelte'
   import loadData from './loadVoice.svelte.js'
 
-  const { item, store } = $props()
+  const { item } = $props()
 
   const loadState = loadData()
   const data = $derived.by(()=>{

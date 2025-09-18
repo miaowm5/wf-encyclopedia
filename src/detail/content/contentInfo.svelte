@@ -1,10 +1,10 @@
 <script>
   import Related1 from './related1.svelte'
   import Related2 from './related2.svelte'
-  import { Title } from '../ui'
+  import { Title } from '../../ui'
   import MobileBack from './mobileBack.svelte'
 
-  const { item, store } = $props()
+  const { item } = $props()
 
 </script>
 

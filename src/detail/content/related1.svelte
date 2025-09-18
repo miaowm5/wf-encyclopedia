@@ -1,7 +1,7 @@
 <script>
-  import store from '../store'
-  import { Nav } from '../common'
-  import { Title } from '../ui'
+  import store from '../../store'
+  import { Nav } from '../../common'
+  import { Title } from '../../ui'
   import HeadIcon from './relatedHead.svelte'
 
   const { data } = $props()

@@ -1,10 +1,11 @@
 <script>
-  import { characterShot } from '../common'
-  import { Title } from '../ui'
+  import store from '../../store'
+  import { characterShot } from '../../common'
+  import { Title } from '../../ui'
   import MobileBack from './mobileBack.svelte'
   import galleryEffectRule from './galleryEffectRule.json'
 
-  const { item, store, itemType } = $props()
+  const { item, itemType } = $props()
 
   const database = store.state.database.character
   const database2 = store.state.database.story_character

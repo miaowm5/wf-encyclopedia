@@ -1,9 +1,7 @@
 <script>
   import store from '../store'
-  import ContentTitle from './title/index.svelte'
-  import ContentInfo from './contentInfo.svelte'
-  import ContentGallery from './contentGallery.svelte'
-  import ContentVoice from './contentVoice.svelte'
+  import Title from './title/index.svelte'
+  import Content from './content/index.svelte'
 
   const database = store.state.database.encyclopedia
 
@@ -36,16 +34,8 @@
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   {#if item}{#key store.state.item}
-    <ContentTitle item={item} itemType={itemType} tab={tab} />
-    {#if tab === 'info'}
-      <ContentInfo item={item} store={store} />
-    {:else if tab === 'gallery'}
-      <ContentGallery item={item} store={store} itemType={itemType} />
-    {:else if tab === 'voice'}
-      <ContentVoice item={item} store={store} itemType={itemType} />
-    {:else if tab === 'story'}
-      <ContentGallery item={item} store={store} itemType={itemType} />
-    {/if}
+    <Title item={item} itemType={itemType} tab={tab} />
+    <Content item={item} itemType={itemType} tab={tab} />
   {/key}{/if}
 </div>
 

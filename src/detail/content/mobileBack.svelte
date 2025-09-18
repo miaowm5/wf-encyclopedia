@@ -1,5 +1,5 @@
 <script>
-  import store from '../store'
+  import store from '../../store'
 </script>
 
 <div class="mobileBack">

@@ -1,7 +1,7 @@
 <script>
-  import store from '../store'
-  import { Nav } from '../common'
-  import { Title } from '../ui'
+  import store from '../../store'
+  import { Nav } from '../../common'
+  import { Title } from '../../ui'
 
   const { data } = $props()
 
