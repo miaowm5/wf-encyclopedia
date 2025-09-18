@@ -2,9 +2,9 @@ const path = require("path");
 const fs = require("fs");
 const { makeAudiosprite } = require("./audiosprite");
 
-const outputDir = path.join(__dirname, 'output', 'pack');
+const outputDir = path.join(__dirname, 'output');
 const voiceDir = path.join(outputDir, 'voice');
-const packDir = path.join(outputDir, 'voice');
+const packDir = path.join(outputDir, 'pack/voice');
 if (!fs.existsSync(packDir)) fs.mkdirSync(packDir, { recursive: true });
 
 function findAudioFiles(dir, result = []) {
@@ -52,7 +52,8 @@ async function packVoice(){
     config[item.out] = simpleMap;
     console.log("输出文件:", audioFile);
   }
-  fs.writeFileSync(path.join(outputDir, 'voice.json'), JSON.stringify(config), 'utf8');
+  config.timestamp = Date.now()
+  fs.writeFileSync(path.join(outputDir, 'pack/voice.json'), JSON.stringify(config), 'utf8');
 }
 
 packVoice();
