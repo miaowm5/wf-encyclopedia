@@ -1,6 +1,6 @@
 <script>
   import store from '../store'
-  import ContentTitle from './contentTitle.svelte'
+  import ContentTitle from './title/index.svelte'
   import ContentInfo from './contentInfo.svelte'
   import ContentGallery from './contentGallery.svelte'
   import ContentVoice from './contentVoice.svelte'

@@ -1,5 +1,5 @@
 <script>
-  import store from '../store'
+  import store from '../../store'
   import NpcTitle from './npcTitle.svelte'
 
   const { data, tab } = $props()

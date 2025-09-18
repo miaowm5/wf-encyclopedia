@@ -1,6 +1,6 @@
 <script>
-  import { characterShot } from '../common'
-  import store from '../store'
+  import { characterShot } from '../../common'
+  import store from '../../store'
 
   const {
     name = '(None)',
