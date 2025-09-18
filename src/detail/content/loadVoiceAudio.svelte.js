@@ -1,5 +1,6 @@
 
 import { Howl } from 'howler'
+import { onDestroy } from 'svelte'
 import { api } from '../../common'
 
 let configCache = null
@@ -7,7 +8,7 @@ const promiseCache = {}
 
 const loadConfig = async ()=>{
   if (configCache){ return configCache }
-  const url = `${import.meta.env.VITE_CDN2}voice.json`
+  const url = `${import.meta.env.VITE_CDN}voice.json`
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
@@ -26,7 +27,7 @@ const loadConfig = async ()=>{
 const loadHowl = async (character, config)=>{
   let promise = new Promise((resolve)=>{
     const sound = new Howl({
-      src: [`${import.meta.env.VITE_CDN2}voice/${character}.ogg`],
+      src: [`${import.meta.env.VITE_CDN2}voice/${character}`],
       sprite: config
     })
     sound.on('load', ()=>{ resolve(sound) })
@@ -53,9 +54,10 @@ const main = (character)=>{
     if (!character){ return }
     const config = await loadConfig()
     if (cancelFunc){ return }
+    if (!config){ return }
     voiceData = config[character]
     if (!voiceData){ return }
-    const sound = await loadHowl(`${character}?${config.timestamp || ''}`, voiceData)
+    sound = await loadHowl(`${character}.ogg?${config.timestamp || ''}`, voiceData)
     if (!sound){ return }
     if (cancelFunc){ return }
     sound.on('end', ()=>{ playing = null })

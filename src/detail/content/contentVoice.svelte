@@ -43,8 +43,8 @@
     {/if}
   {:else if data}
     <Title>加入/进化</Title>
-    {@render voice(data.join)}
-    {@render voice(data.evolution)}
+    {@render voice(data.join[3], data.join[4])}
+    {@render voice(data.evolution[3], data.evolution[4])}
     <Title>主界面</Title>
     {#each data.home as item}
       {@render voice(item[3], item[4])}
@@ -72,9 +72,14 @@
     overflow: auto;
   }
   .voice{
-    display: inline;
+    display: inline-block;
     border: none;
     background: white;
     margin-bottom: 1em;
+    text-align: left;
+    padding: 1em 1em;
+    border-radius: .3em;
+    box-shadow: none;
+    width: 100%;
   }
 </style>
