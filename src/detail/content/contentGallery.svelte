@@ -129,7 +129,7 @@
       </div>
     {/snippet}
     {@render image('普通立绘', `${emotionList.id}_0`)}
-    {@render image('觉醒立绘', `${emotionList.id}_1`)}
+    {@render image('进化立绘', `${emotionList.id}_1`)}
   {/if}
   <MobileBack />
 </div>

@@ -10,6 +10,7 @@
     gender = '(None)',
     cv = '(None)',
     banner = '(None)',
+    rarity = '(None)',
     itemType = 'npc',
     tab = 'info',
   } = $props()
@@ -115,7 +116,7 @@
   <div class="buttonGroup">
     {@render tabButton('info')}
     {@render tabButton('gallery')}
-    {#if itemType === 'character'}
+    {#if itemType === 'character' && (rarity === '3' || rarity === '4' || rarity === '5') }
       {@render tabButton('voice')}
       <!-- {@render tabButton('story')} -->
     {/if}

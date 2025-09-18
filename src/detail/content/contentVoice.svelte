@@ -28,10 +28,10 @@
   })
 </script>
 
-{#snippet voice(item)}
+{#snippet voice(text, audio)}
   <button class="voice" onclick={()=>{
-    voicePlayer.play(item[4])
-  }}>{item[3]}</button>
+    voicePlayer.play(audio)
+  }}>{text}</button>
 {/snippet}
 
 <div class="content">
@@ -42,14 +42,25 @@
       <p>loading...</p>
     {/if}
   {:else if data}
-    <Title>加入/觉醒</Title>
+    <Title>加入/进化</Title>
     {@render voice(data.join)}
     {@render voice(data.evolution)}
     <Title>主界面</Title>
     {#each data.home as item}
-      {@render voice(item)}
+      {@render voice(item[3], item[4])}
     {/each}
-    <!-- <Title>其他</Title> -->
+    <Title>其他</Title>
+    {@render voice('技能准备完成', 'battle/skill_ready')}
+    {@render voice('技能发动1', 'battle/skill_0')}
+    {@render voice('技能发动2', 'battle/skill_1')}
+    {@render voice('战斗开始1', 'battle/battle_start_0')}
+    {@render voice('战斗开始2', 'battle/battle_start_1')}
+    {@render voice('胜利1', 'battle/win_0')}
+    {@render voice('胜利2', 'battle/win_1')}
+    {@render voice('强力弹射1', 'battle/power_flip_0')}
+    {@render voice('强力弹射2', 'battle/power_flip_1')}
+    {@render voice('落下1', 'battle/outhole_0')}
+    {@render voice('落下2', 'battle/outhole_1')}
   {/if}
   <MobileBack />
 </div>

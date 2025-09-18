@@ -66,11 +66,12 @@ const main = (character)=>{
 
   return {
     get loadOver(){ return loadOver },
+    get playing(){ return playing },
     get seek(){
       if (!sound || !playing){ return 0 }
       let current = sound.seek() || 0
-      let offset = voiceData[0]
-      let duration = voiceData[1]
+      let offset = voiceData[1]
+      let duration = voiceData[2]
       return ((current - offset / 1000) / duration) * 100
     },
     play(name){
@@ -79,7 +80,7 @@ const main = (character)=>{
       if (!voiceData[key]){ return }
       sound.stop()
       sound.play(key)
-      playing = voiceData[key]
+      playing = [name, ...voiceData[key]]
     },
     destory(){ cleanupSound() },
   }

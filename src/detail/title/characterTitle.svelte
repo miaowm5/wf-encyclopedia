@@ -36,6 +36,7 @@
     gender={characterData[7]}
     banner={bannerID}
     tab={tab}
+    rarity={characterData[2]}
     itemType='character'
   />
 {:else}
@@ -47,6 +48,7 @@
     race='(None)'
     gender='(None)'
     tab={tab}
+    rarity='(None)'
     itemType='character'
   />
 {/if}
