@@ -72,11 +72,15 @@ async function packVoice(){
         .replace(/\\/g, "/")
       if (key.startsWith('ally/')){ continue }
       if (key.startsWith('home/')){ continue }
-      const tag = await getMp3Tag("./ffprobe.exe", file, "title")
-      config[item.out][key] = tag
+      try{
+        const tag = await getMp3Tag("./ffprobe.exe", file, "title")
+        config[item.out][key] = tag
+      }catch(e){
+        console.error("Unable to probe title: " + file)
+      }
     }
   }
-  fs.writeFileSync(path.join(packDir, 'voiceLine.json'), JSON.stringify(config), 'utf8');
+  fs.writeFileSync(path.join(packDir, 'voiceLine.json'), JSON.stringify(config, null, 2), 'utf8');
 }
 
 packVoice();

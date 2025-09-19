@@ -34,24 +34,49 @@ async function packVoice(){
       }
     });
   const config = {}
+  const config2 = {}
   for (const item of taskQueue){
-    const { audioFile, map } = await makeAudiosprite({
-      inputs: item.inputs,
-      ffmpeg: "./ffmpeg.exe",
-      ffprobe: "./ffprobe.exe",
-      out: path.join(packDir, item.out),
-    });
-    let simpleMap = {}
-    Object.keys(map).forEach((key)=>{
-      const simpleKey = key
-        .slice(path.join(voiceDir, item.out).length + 1, key.length)
+    const normalAudio = []
+    const wordAudio = []
+    const simpleKey = (file)=>{
+      return file
+        .slice(path.join(voiceDir, item.out).length + 1, file.length - 4)
         .replace(/\\/g, "/")
-      simpleMap[simpleKey] = map[key]
+    }
+    item.inputs.forEach((file)=>{
+      const key = simpleKey(file)
+      if (key.startsWith('ally/')){ normalAudio.push(file); return }
+      if (key.startsWith('home/')){ normalAudio.push(file); return }
+      if (key.startsWith('battle/')){ normalAudio.push(file); return }
+      wordAudio.push(file)
     })
-    config[item.out] = simpleMap;
-    console.log("输出文件:", audioFile);
+    if (normalAudio.length > 0){
+      const { audioFile, map } = await makeAudiosprite({
+        inputs: normalAudio,
+        ffmpeg: "./ffmpeg.exe",
+        ffprobe: "./ffprobe.exe",
+        out: path.join(packDir, item.out),
+      });
+      console.log("输出文件:", audioFile);
+      config[item.out] = {};
+      Object.keys(map).forEach((key)=>{ config[item.out][simpleKey(key)] = map[key] })
+    }
+    if (wordAudio.length > 0){
+      const { audioFile, map } = await makeAudiosprite({
+        inputs: wordAudio,
+        ffmpeg: "./ffmpeg.exe",
+        ffprobe: "./ffprobe.exe",
+        out: path.join(packDir, `${item.out}-word`),
+      });
+      console.log("输出文件:", audioFile);
+      config2[item.out] = {};
+      Object.keys(map).forEach((key)=>{ config2[item.out][simpleKey(key)] = map[key] })
+    }
   }
-  fs.writeFileSync(path.join(outputDir, 'voice.json'), JSON.stringify(config, null, 2), 'utf8');
+  config.timestamp = Date.now();
+  config2.timestamp = Date.now();
+  fs.writeFileSync(path.join(outputDir, 'voice.json'), JSON.stringify(config), 'utf8');
+  fs.writeFileSync(path.join(outputDir, 'voice-word.json'), JSON.stringify(config2), 'utf8');
 }
 
 packVoice();
