@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "howler": "^2.2.4",
-    "m5api": "https://cdn.miaowm5.com/npm/m5api-3.7.0.tgz",
+    "m5api": "https://cdn.miaowm5.com/npm/m5api-3.7.1.tgz",
     "route-parser": "^0.0.5"
   }
 }

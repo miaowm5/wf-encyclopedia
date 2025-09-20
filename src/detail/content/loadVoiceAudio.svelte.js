@@ -8,14 +8,15 @@ const promiseCache = {}
 
 const loadConfig = async ()=>{
   if (configCache){ return configCache }
-  const url = `${import.meta.env.VITE_CDN}voice.json`
+  const url = `${import.meta.env.VITE_CDN2}voice.json`
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
       api(url, {
         success: (data)=>{ resolve(data) },
         fail: (err)=>{ console.error(err), resolve(null) },
-        after: ()=>{ promiseCache[url] = undefined }
+        after: ()=>{ promiseCache[url] = undefined },
+        cors: true,
       })
     })
     promiseCache[url] = promise
@@ -41,14 +42,37 @@ const main = (character)=>{
   let sound = null
   let voiceData = null
   let cancelFunc = false
-  let loadOver = $state(false)
   let playing = $state(null)
+  let seek = $state(0)
 
+  let updateSeekTimer = null
+  const updateSeek = ()=>{
+    if (playing){
+      let current = sound.seek() || 0
+      let offset = playing[1]
+      let duration = playing[2]
+      seek = Math.max(0, Math.min(100, ((current * 1000 - offset) / duration ) * 100))
+      updateSeekTimer = setTimeout(updateSeek, 10)
+    }else{
+      seek = 0
+    }
+  }
   const cleanupSound = ()=>{
     if (sound){ sound.unload() }
+    if (updateSeekTimer){ clearTimeout(updateSeekTimer) }
     cancelFunc = true
   }
   onDestroy(cleanupSound)
+
+  const play = (name)=>{
+    if (!voiceData[name]){ return }
+    sound.stop()
+    sound.play(name)
+    setTimeout(()=>{
+      playing = [name, ...voiceData[name]]
+      updateSeek()
+    }, 1)
+  }
 
   const load = async ()=>{
     if (!character){ return }
@@ -56,35 +80,27 @@ const main = (character)=>{
     if (cancelFunc){ return }
     if (!config){ return }
     voiceData = config[character]
-    if (!voiceData){ return }
+    if (!voiceData){
+      console.log(character)
+      return
+    }
     sound = await loadHowl(`${character}.ogg?${config.timestamp || ''}`, voiceData)
     if (!sound){ return }
     if (cancelFunc){ return }
-    sound.on('end', ()=>{ playing = null })
-    sound.on('stop', ()=>{ playing = null })
-    loadOver = true
+    sound.on('end', ()=>{ playing = null; seek = 0 })
+    sound.on('stop', ()=>{ playing = null; seek = 0 })
+    if (playing){ play(playing[0]) }
   }
   load()
 
   return {
-    get loadOver(){ return loadOver },
     get playing(){ return playing },
-    get seek(){
-      if (!sound || !playing){ return 0 }
-      let current = sound.seek() || 0
-      let offset = voiceData[1]
-      let duration = voiceData[2]
-      return ((current - offset / 1000) / duration) * 100
-    },
+    get seek(){ return seek },
     play(name){
-      if (!sound){ return }
-      const key = `${name}.mp3`
-      if (!voiceData[key]){ return }
-      sound.stop()
-      sound.play(key)
-      setTimeout(()=>{ playing = [name, ...voiceData[key]] }, 1)
+      if (!sound){ playing = [name]; return }
+      play(name)
     },
-    destory(){ cleanupSound() },
+    destory: cleanupSound,
   }
 }
 

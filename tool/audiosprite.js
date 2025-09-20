@@ -105,36 +105,54 @@ async function makeAudiosprite({
   absInputs = absInputs.filter((f, i) => durations[i] > 0);
   durations = durations.filter((d) => d > 0);
 
-  // concat list
-  const listFile = path.join(tmp, "list.txt");
-  const lines = [];
-  absInputs.forEach((f, i) => {
-    lines.push(`file '${f.replace(/'/g, "'\\''")}'`);
-  });
-  await fsp.writeFile(listFile, lines.join("\n"));
+  const tmpInputs = [];
+  for (let i = 0; i < absInputs.length; i++) {
+    const src = absInputs[i];
+    const dst = path.join(tmp, `input_${i}.wav`);
+    runSync(ffmpeg, [
+      '-y',
+      '-i', src,
+      '-ar', '44100', // 采样率
+      '-ac', '2',     // 双声道
+      '-f', 'wav',
+      dst
+    ]);
+    tmpInputs.push(dst);
+  }
+
+  // 生成 1 秒静音 wav 文件
+  const silencePath = path.join(tmp, "silence.wav");
+  runSync(ffmpeg, [
+    '-y',
+    '-f', 'lavfi',
+    '-i', 'anullsrc=r=44100:cl=stereo',
+    '-t', '1',
+    '-ar', '44100',
+    '-ac', '2',
+    '-f', 'wav',
+    silencePath
+  ]);
+
+  // 生成 concat 文件列表，插入静音
+  const concatListPath = path.join(tmp, "inputs.txt");
+  const concatFiles = [];
+  for (let i = 0; i < tmpInputs.length; i++) {
+    concatFiles.push(`file '${tmpInputs[i].replace(/'/g, "'\\''")}'`);
+    if (i < tmpInputs.length - 1) {
+      concatFiles.push(`file '${silencePath.replace(/'/g, "'\\''")}'`);
+    }
+  }
+  fs.writeFileSync(concatListPath, concatFiles.join("\n"), "utf8");
 
   const outFile = path.resolve(`${out}.ogg`);
-  const codecArgs = [
-    "-ar",
-    "44100",
-    "-ac",
-    "2",
-    "-c:a",
-    "libvorbis",
-    "-q:a",
-    "5",
-  ];
 
+  // 合并音频，避免 ENAMETOOLONG
   runSync(ffmpeg, [
-    "-f",
-    "concat",
-    "-safe",
-    "0",
-    "-i",
-    listFile,
-    ...codecArgs,
-    "-y",
-    outFile,
+    "-f", "concat",
+    "-safe", "0",
+    "-i", concatListPath,
+    "-acodec", "libvorbis",
+    outFile
   ]);
 
   // build JSON map
@@ -146,6 +164,7 @@ async function makeAudiosprite({
       Number((durations[i] * 1000).toFixed()),
     ]
     cursor += durations[i];
+    cursor += 1;
   });
   return { audioFile: outFile, map: spritemap };
 }

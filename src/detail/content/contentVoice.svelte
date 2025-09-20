@@ -1,4 +1,5 @@
 <script>
+  import { fade } from 'svelte/transition'
   import store from '../../store'
   import { Title } from '../../ui'
   import MobileBack from './mobileBack.svelte'
@@ -21,17 +22,27 @@
       evolution: info.filter((item)=>item[0] === '1')[0],
     }
   })
-  let voicePlayer = null
-  $effect(()=>{
-    if (voicePlayer){ voicePlayer.destory() }
-    voicePlayer = loadVoice(item[0][6])
+
+  let voicePlayerItem = null
+  let voicePlayer = $derived.by(()=>{
+    if (voicePlayerItem){ voicePlayerItem.destory() }
+    let newPlayer = loadVoice(item[0][6])
+    voicePlayerItem = newPlayer
+    return newPlayer
   })
 </script>
 
 {#snippet voice(text, audio)}
-  <button class="voice" onclick={()=>{
-    voicePlayer.play(audio)
-  }}>{text}</button>
+  <button class="voice" onclick={()=>{ voicePlayer.play(audio) }}>
+    {#if voicePlayer.playing && voicePlayer.playing[0] === audio}
+      <span class="progress" style:width={`${voicePlayer.seek}%`} out:fade={{ duration: 500 }}></span>
+      <span
+        class="mark" out:fade={{ duration: 200 }}
+        style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/icon/voice_volume3.png?082701'})`}
+      ></span>
+    {/if}
+    <span class="text">{text}</span>
+  </button>
 {/snippet}
 
 <div class="content">
@@ -81,5 +92,31 @@
     border-radius: .3em;
     box-shadow: none;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .voice>.mark{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2em;
+    height: 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
+  .voice>.progress{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #ffcf8f;
+    z-index: 0;
+  }
+  .voice>.text{
+    position: relative;
+    z-index: 1;
   }
 </style>
