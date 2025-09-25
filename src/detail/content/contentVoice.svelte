@@ -44,7 +44,11 @@
         style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/icon/voice_volume3.png?082701'})`}
       ></span>
     {/if}
-    <p class="text">{text}</p>
+    <div class="text">
+      {#each text.split('\n') as line}
+        <p>{line}</p>
+      {/each}
+    </div>
     {#if commentText && data.text[audio]}
       <p class="comment">{data.text[audio]}</p>
     {/if}
