@@ -116,9 +116,11 @@
   <div class="buttonGroup">
     {@render tabButton('info')}
     {@render tabButton('gallery')}
-    {#if itemType === 'character' && (rarity === '3' || rarity === '4' || rarity === '5') }
+    {#if itemType === 'character' }
       {@render tabButton('voice')}
-      <!-- {@render tabButton('story')} -->
+      {#if (rarity === '3' || rarity === '4' || rarity === '5')}
+        {@render tabButton('story')}
+      {/if}
     {/if}
   </div>
 </div>

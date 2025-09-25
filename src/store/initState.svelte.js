@@ -23,6 +23,7 @@ const initState = {
     character_speech: null,
     character_speech_text: null,
     story_character: null,
+    character_quest: null,
   },
   customTag: customTag.load()
 }
