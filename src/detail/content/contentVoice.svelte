@@ -14,12 +14,15 @@
     if (loadState.error.length > 0){ return null }
     if (!store.state.database.character_speech){ return null }
     const database = store.state.database.character_speech
+    const database2 = store.state.database.character_speech_text
     const info = database[item[0][5]]
+    const text = database2[item[0][6]] || {}
     if (!info){ return null }
     return {
       home: info.filter((item)=>item[0] === '0'),
       join: info.filter((item)=>item[0] === '2')[0],
       evolution: info.filter((item)=>item[0] === '1')[0],
+      text,
     }
   })
 
@@ -32,7 +35,7 @@
   })
 </script>
 
-{#snippet voice(text, audio)}
+{#snippet voice(text, audio, commentText=false)}
   <button class="voice" onclick={()=>{ voicePlayer.play(audio) }}>
     {#if voicePlayer.playing && voicePlayer.playing[0] === audio}
       <span class="progress" style:width={`${voicePlayer.seek}%`} out:fade={{ duration: 500 }}></span>
@@ -41,7 +44,10 @@
         style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/icon/voice_volume3.png?082701'})`}
       ></span>
     {/if}
-    <span class="text">{text}</span>
+    <p class="text">{text}</p>
+    {#if commentText && data.text[audio]}
+      <p class="comment">{data.text[audio]}</p>
+    {/if}
   </button>
 {/snippet}
 
@@ -61,17 +67,17 @@
       {@render voice(item[3], item[4])}
     {/each}
     <Title>其他</Title>
-    {@render voice('技能准备完成', 'battle/skill_ready')}
-    {@render voice('技能发动1', 'battle/skill_0')}
-    {@render voice('技能发动2', 'battle/skill_1')}
-    {@render voice('战斗开始1', 'battle/battle_start_0')}
-    {@render voice('战斗开始2', 'battle/battle_start_1')}
-    {@render voice('胜利1', 'battle/win_0')}
-    {@render voice('胜利2', 'battle/win_1')}
-    {@render voice('强力弹射1', 'battle/power_flip_0')}
-    {@render voice('强力弹射2', 'battle/power_flip_1')}
-    {@render voice('落下1', 'battle/outhole_0')}
-    {@render voice('落下2', 'battle/outhole_1')}
+    {@render voice('技能准备完成', 'battle/skill_ready', true)}
+    {@render voice('技能发动1', 'battle/skill_0', true)}
+    {@render voice('技能发动2', 'battle/skill_1', true)}
+    {@render voice('战斗开始1', 'battle/battle_start_0', true)}
+    {@render voice('战斗开始2', 'battle/battle_start_1', true)}
+    {@render voice('胜利1', 'battle/win_0', true)}
+    {@render voice('胜利2', 'battle/win_1', true)}
+    {@render voice('强力弹射1', 'battle/power_flip_0', true)}
+    {@render voice('强力弹射2', 'battle/power_flip_1', true)}
+    {@render voice('落下1', 'battle/outhole_0', true)}
+    {@render voice('落下2', 'battle/outhole_1', true)}
   {/if}
   <MobileBack />
 </div>
@@ -115,8 +121,12 @@
     background: #ffcf8f;
     z-index: 0;
   }
-  .voice>.text{
+  .voice>.text, .voice>.comment{
     position: relative;
     z-index: 1;
+  }
+  .voice>.comment{
+    color: #888;
+    font-size: .9em;
   }
 </style>

@@ -21,6 +21,7 @@ const initState = {
     character: null,
     character_text: null,
     character_speech: null,
+    character_speech_text: null,
     story_character: null,
   },
   customTag: customTag.load()
