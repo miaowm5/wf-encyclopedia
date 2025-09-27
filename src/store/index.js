@@ -7,6 +7,7 @@ const setDatabase = (db, data)=>{
   state.database[db] = data
 }
 const setListHide = (hide)=>{
+  state.item = null
   state.ui.mobileListHide = hide
 }
 const changeTab = (tab)=>{
