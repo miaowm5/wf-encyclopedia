@@ -44,6 +44,7 @@ const main = (character)=>{
   let cancelFunc = false
   let playing = $state(null)
   let seek = $state(0)
+  let loadOver = $state(false)
 
   let updateSeekTimer = null
   const updateSeek = ()=>{
@@ -65,7 +66,7 @@ const main = (character)=>{
   onDestroy(cleanupSound)
 
   const play = (name)=>{
-    if (!voiceData[name]){ return }
+    if (!sound || !voiceData[name]){ return }
     sound.stop()
     sound.play(name)
     setTimeout(()=>{
@@ -83,11 +84,12 @@ const main = (character)=>{
     if (!voiceData){
       console.log(character)
       playing = null
+      loadOver = true
       return
     }
     sound = await loadHowl(`${character}.ogg?${config.timestamp || ''}`, voiceData)
     if (cancelFunc){ return }
-    if (!sound){ playing = null; return }
+    if (!sound){ playing = null; loadOver = true; return }
     sound.on('end', ()=>{ playing = null; seek = 0 })
     sound.on('stop', ()=>{ playing = null; seek = 0 })
     if (playing){ play(playing[0]) }
@@ -98,7 +100,7 @@ const main = (character)=>{
     get playing(){ return playing },
     get seek(){ return seek },
     play(name){
-      if (!sound){ playing = [name]; return }
+      if (!loadOver){ playing = [name]; return }
       play(name)
     },
     destory: cleanupSound,
