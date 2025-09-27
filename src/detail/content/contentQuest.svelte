@@ -46,10 +46,10 @@
       {#each scenarioData as item}
         {#if item.command === "dialog"}
           <div class="dialog">
-            <div class="name" style:background-color={getCharacteColor(item.param[0])}>
+            <div class="dialogName" style:background-color={getCharacteColor(item.param[0])}>
               {getCharacteName(item.param[0])}
             </div>
-            <div class="content">
+            <div class="dialogContent">
               {#each item.param[1].split('\\n') as lines}
                 {#each lines.split('\n') as line}
                   <p>{line}</p>
@@ -59,6 +59,7 @@
           </div>
         {/if}
       {/each}
+      <button class="scenarioBack last" onclick={()=>{ selectScenario = null }}>返回列表</button>
     {:else}
       <p>loading...</p>
     {/if}
@@ -114,15 +115,25 @@
     width: 100%;
     font-size: .9em;
   }
-  .dialog>.name{
+  .scenarioBack.last{
+    margin-top: 2em;
+  }
+  .dialog{
+    margin: .5em 0 1em;
+    overflow: hidden;
+    background: #fafafa;
+    border-top: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  }
+  .dialog>.dialogName{
     color: white;
     padding: .3em .5em;
     font-size: .9em;
+    max-width: 10em;
+    margin-top: .8em;
   }
-  .dialog>.content{
-    background: white;
-    margin: .5em 0 1em;
-    padding: 1em 1em;
-    border-radius: .3em;
+  .dialog>.dialogContent{
+    padding: .8em 1em 1em;
   }
 </style>
