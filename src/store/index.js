@@ -6,9 +6,13 @@ import customTag from './customTag.js'
 const setDatabase = (db, data)=>{
   state.database[db] = data
 }
-const setListHide = (hide)=>{
-  state.item = null
-  state.ui.mobileListHide = hide
+const setListHide = (show)=>{
+  state.ui.mobileListHide = show
+  if (!show){
+    document.title = import.meta.env.VITE_SITE_NAME
+    route.push('/')
+    state.item = null
+  }
 }
 const changeTab = (tab)=>{
   state.ui.detailTab = tab
