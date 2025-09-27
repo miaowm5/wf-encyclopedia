@@ -52,7 +52,8 @@ const main = (character)=>{
       let current = sound.seek() || 0
       let offset = playing[1]
       let duration = playing[2]
-      seek = Math.max(0, Math.min(100, ((current * 1000 - offset) / duration ) * 100))
+      let value = Math.max(0, Math.min(100, ((current * 1000 - offset) / duration ) * 100))
+      if (value < 100){ seek = value }
       updateSeekTimer = requestAnimationFrame(updateSeek, 10)
     }else{
       seek = 0
