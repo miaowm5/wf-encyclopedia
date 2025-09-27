@@ -2,9 +2,11 @@
   import store from '../../store'
   import MobileBack from './mobileBack.svelte'
   import loadData from './loadQuest.svelte.js'
+  import loadScenario from './loadQuestScenario.svelte'
 
   const { item } = $props()
 
+  let selectScenario = $state(null)
   const loadState = loadData()
   const data = $derived.by(()=>{
     if (!loadState.finish){ return null }
@@ -13,9 +15,24 @@
     const database = store.state.database.character_quest
     return database[item[0][5]]
   })
+  const scenario = $derived.by(()=>{ return loadScenario(item[0][6]) })
+  const scenarioData = $derived.by(()=>{
+    if (!selectScenario){ return null }
+    return scenario.get(selectScenario)
+  })
 
+  const database = store.state.database.story_character
+  const getCharacteName = (character)=>{
+    if (!database[character]){ return character }
+    return database[character][0]
+  }
+  const getCharacteColor = (character)=>{
+    if (!database[character]){ return '#7c8574' }
+    return `#${database[character][1].slice(2)}`
+  }
 </script>
 
+{#key selectScenario || ''}
 <div class="content">
   {#if !loadState.finish}
     {#if loadState.error.length > 0}
@@ -23,9 +40,31 @@
     {:else}
       <p>loading...</p>
     {/if}
+  {:else if selectScenario}
+    <button class="scenarioBack" onclick={()=>{ selectScenario = null }}>返回列表</button>
+    {#if scenarioData}
+      {#each scenarioData as item}
+        {#if item.command === "dialog"}
+          <div class="dialog">
+            <div class="name" style:background-color={getCharacteColor(item.param[0])}>
+              {getCharacteName(item.param[0])}
+            </div>
+            <div class="content">
+              {#each item.param[1].split('\\n') as lines}
+                {#each lines.split('\n') as line}
+                  <p>{line}</p>
+                {/each}
+              {/each}
+            </div>
+          </div>
+        {/if}
+      {/each}
+    {:else}
+      <p>loading...</p>
+    {/if}
   {:else if data}
     {#each data as story}
-      <button class="story" onclick={()=>{ console.log(story.path) }}>
+      <button class="story" onclick={()=>{ selectScenario = story.path }}>
         <p>{story.title}</p>
         <div class="comment">
           {#each story.desc.split('\n') as line}
@@ -37,6 +76,7 @@
   {/if}
   <MobileBack />
 </div>
+{/key}
 
 <style>
   .content{
@@ -62,5 +102,27 @@
     font-size: .9em;
     margin-top: .3em;
   }
-
+  .scenarioBack{
+    display: inline-block;
+    border: none;
+    background: white;
+    margin-bottom: 1em;
+    text-align: left;
+    padding: 1em 1em;
+    border-radius: .3em;
+    box-shadow: none;
+    width: 100%;
+    font-size: .9em;
+  }
+  .dialog>.name{
+    color: white;
+    padding: .3em .5em;
+    font-size: .9em;
+  }
+  .dialog>.content{
+    background: white;
+    margin: .5em 0 1em;
+    padding: 1em 1em;
+    border-radius: .3em;
+  }
 </style>
