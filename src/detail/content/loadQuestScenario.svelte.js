@@ -18,8 +18,13 @@ const parse = (data)=>{
         }else if (type === '1'){
           command = 'bgm'
           param = [item[36]]
+        }else if (type === '2'){
+          command = 'bgm-mute'
+        }else if (type === '3'){
+          command = 'bgm2'
+          param = [item[39], item[40]]
         }else if (type === '4'){
-          command = 'shake'
+          command = 'silent'
           param = [item[41], item[42]]
         }else if (type === '5'){
           command = 'scene'
@@ -31,8 +36,7 @@ const parse = (data)=>{
           command = 'face-hide'
           param = [item[16]]
         }else if (type === '8'){
-          command = 'clean'
-          param = []
+          command = 'face-clean'
         }else if (type === '9'){
           command = 'face-focus'
           param = [item[9]]
@@ -48,14 +52,26 @@ const parse = (data)=>{
         }else if (type === '13'){
           command = 'face-effect'
           param = [item[21],item[22]]
+        }else if (type === '14'){
+          command = 'shake-start'
+          param = [item[27],item[28]]
+        }else if (type === '15'){
+          command = 'shake-over'
+        }else if (type === '18'){
+          command = 'screen-grey'
+        }else if (type === '19'){
+          command = 'screen-hue'
+          param = [item[31],item[32]]
+        }else if (type === '20'){
+          command = 'screen-normal'
         }else if (type === '22'){
-          return
+          command = 'start'
         }else{
           console.log(JSON.stringify(item))
           command = 'unknown'
           param = [JSON.stringify(item)]
         }
-        result[file].push({ command, param })
+        result[file].push({ command, param: param.length > 0 ? param : undefined })
       })
     })
   })

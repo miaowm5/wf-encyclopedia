@@ -57,6 +57,8 @@
               {/each}
             </div>
           </div>
+        {:else}
+          <!-- <div style:word-break="break-all">{JSON.stringify(item)}</div> -->
         {/if}
       {/each}
       <button class="scenarioBack last" onclick={()=>{ selectScenario = null }}>返回列表</button>
