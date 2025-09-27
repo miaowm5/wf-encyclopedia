@@ -128,10 +128,22 @@
   }
   .dialog>.dialogName{
     color: white;
-    padding: .3em .5em;
+    padding: .2em .5em;
     font-size: .9em;
-    max-width: 10em;
+    max-width: 11em;
     margin-top: .8em;
+    position: relative;
+  }
+  .dialog>.dialogName::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    border-right: 7px solid #fafafa;
   }
   .dialog>.dialogContent{
     padding: .8em 1em 1em;
