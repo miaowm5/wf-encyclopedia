@@ -182,14 +182,18 @@
   .buttonGroup>button{
     border-radius: 50%;
     background-position: center center;
-    width: 2em;
-    height: 2em;
+    width: 2.3em;
+    height: 2.3em;
     margin-left: .3em;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    border: 3px solid #fafafa;
   }
   .buttonGroup>button.active{
-    background-color: #ffcf8f;
+    border: 3px solid #fdff00;
+    box-shadow:
+      0 0 5px 0px rgba(0,0,0,0.5),
+      0 0 8px 3px #fdff00;
     cursor: default;
   }
   @media (max-width: 430px) {
