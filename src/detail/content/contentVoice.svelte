@@ -98,7 +98,7 @@
     background: white;
     margin-bottom: 1em;
     text-align: left;
-    padding: 1em 1em;
+    padding: 1em 1.5em 1em 1em;
     border-radius: .3em;
     box-shadow: none;
     width: 100%;

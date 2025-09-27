@@ -52,14 +52,14 @@ const main = (character)=>{
       let offset = playing[1]
       let duration = playing[2]
       seek = Math.max(0, Math.min(100, ((current * 1000 - offset) / duration ) * 100))
-      updateSeekTimer = setTimeout(updateSeek, 10)
+      updateSeekTimer = requestAnimationFrame(updateSeek, 10)
     }else{
       seek = 0
     }
   }
   const cleanupSound = ()=>{
     if (sound){ sound.unload() }
-    if (updateSeekTimer){ clearTimeout(updateSeekTimer) }
+    if (updateSeekTimer){ cancelAnimationFrame(updateSeekTimer) }
     cancelFunc = true
   }
   onDestroy(cleanupSound)
@@ -82,11 +82,12 @@ const main = (character)=>{
     voiceData = config[character]
     if (!voiceData){
       console.log(character)
+      playing = null
       return
     }
     sound = await loadHowl(`${character}.ogg?${config.timestamp || ''}`, voiceData)
-    if (!sound){ return }
     if (cancelFunc){ return }
+    if (!sound){ playing = null; return }
     sound.on('end', ()=>{ playing = null; seek = 0 })
     sound.on('stop', ()=>{ playing = null; seek = 0 })
     if (playing){ play(playing[0]) }
