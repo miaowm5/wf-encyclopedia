@@ -93,6 +93,7 @@ const main = (character)=>{
     sound.on('end', ()=>{ playing = null; seek = 0 })
     sound.on('stop', ()=>{ playing = null; seek = 0 })
     if (playing){ play(playing[0]) }
+    loadOver = true
   }
   load()
 
