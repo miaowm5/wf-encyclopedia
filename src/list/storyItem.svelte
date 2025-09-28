@@ -1,12 +1,12 @@
 <script>
-  import { ImageLoader, TextImage } from '../ui'
+  import { SpriteLoader, TextImage } from '../ui'
   const { data, active } = $props()
 </script>
 
 <div class={`item ${active ? 'active' : ''}`}>
-  <ImageLoader src={`${import.meta.env.VITE_CDN}ui/banner/${data.item[1]}.png`} alt={data.name[0]}>
+  <SpriteLoader file={data.item[1]} spritesheet="res/banner" alt={data.name[0]}>
     <TextImage text={data.name[0]} width={1000} height={184} />
-  </ImageLoader>
+  </SpriteLoader>
 </div>
 
 <style>

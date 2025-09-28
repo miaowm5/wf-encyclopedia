@@ -1,6 +1,7 @@
 <script>
   import { characterShot } from '../../common'
   import store from '../../store'
+  import { SpriteLoader } from '../../ui'
 
   const {
     name = '(None)',
@@ -58,10 +59,10 @@
   const background = import.meta.env.VITE_CDN + 'ui/keyword_details_character_background.png'
 
   const buttonImage = {
-    'info': 'encyclopedia.png?082701',
-    'gallery': 'full_size.png?082701',
-    'voice': 'voice_volume3.png?082701',
-    'story': 'character_story_mini.png?082701',
+    'info': 'encyclopedia',
+    'gallery': 'full_size',
+    'voice': 'voice_volume3',
+    'story': 'character_story_mini',
   }
 
   const elementImage = $derived.by(()=>{
@@ -82,7 +83,7 @@
 {#snippet tabButton(type)}
   <button
     aria-label={type}
-    style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/icon/' + buttonImage[type]})`}
+    style:background-image={`url(${import.meta.env.VITE_CDN}ui/icon/${buttonImage[type]}.png?082701)`}
     class={tab === type ? 'active' : null}
     onclick={()=>store.changeTab(type)}>
   </button>
@@ -95,7 +96,9 @@
   <div class="info">
     {#if title !== '(None)'}<p>
       {#if elementImage}
-        <img src={elementImage} alt={element} class="element">
+        <span class="element">
+          <SpriteLoader spritesheet="res/icon" file={elementImage} alt={element} />
+        </span>
       {/if}
       {title}
     </p>{/if}
@@ -105,7 +108,7 @@
         {#each raceText as item}
           <span class="race">
             {item[0]}
-            <img src={item[1]} alt={item[0]}>
+            <SpriteLoader spritesheet="res/icon" file={item[1]} alt={item[0]} />
           </span>
         {/each}
       </p>
@@ -141,7 +144,7 @@
     position: relative;
     text-shadow: 0 0 10px black;
   }
-  .element{
+  .element :global > img{
     height: 1.2em;
     margin-bottom: -.2em;
     margin-right: .2em;
@@ -150,7 +153,7 @@
     font-size: 2em;
     margin-bottom: .3em;
   }
-  .race>img{
+  .race :global >img{
     height: 1em;
     margin-left: .2em;
     margin-bottom: -.1em;
