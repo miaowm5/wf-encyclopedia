@@ -32,7 +32,7 @@
     <div class="filter">
       <input type="text"
         value={store.state.ui.allListFilter}
-        placeholder="关键字"
+        placeholder={store.i18n("list.allSearchHint")}
         onchange={(e)=>{ store.setAllFilter(e.target.value) }}
       >
     </div>

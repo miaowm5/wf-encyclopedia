@@ -51,7 +51,7 @@
   >
   {#snippet banner()}
     <button class="filter" onclick={()=>store.setDialog('filterCharacter')}>
-      <p>筛选</p>
+      <p>{store.i18n("list.characterFilterButton")}</p>
     </button>
   {/snippet}
   {#snippet content()}

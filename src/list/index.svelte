@@ -27,9 +27,9 @@
 
 <div class={`main ${store.state.ui.mobileListHide ? 'mobileHide' : ''}`}>
   {#if category === null}
-    <IndexButton onclick={()=>store.changeCategory('character')} id="character_archive" text="角色名鉴" />
-    <IndexButton onclick={()=>store.changeCategory('story')} id="world_archive" text="世界名鉴" />
-    <IndexButton onclick={()=>store.changeCategory('all')} id="all_keyword" text="全部关键词" />
+    <IndexButton onclick={()=>store.changeCategory('character')} id="character_archive" text={store.i18n("list.category1")} />
+    <IndexButton onclick={()=>store.changeCategory('story')} id="world_archive" text={store.i18n("list.category2")} />
+    <IndexButton onclick={()=>store.changeCategory('all')} id="all_keyword" text={store.i18n("list.category3")} />
   {:else if category === 'character'}
     <CharacterList list={list} select={store.state.item} />
   {:else if category === 'story'}
@@ -38,7 +38,7 @@
     <AllList list={list} select={store.state.item} />
   {/if}
   {#if category !== null}
-    <button onclick={()=>store.changeCategory(null)} class="back">back</button>
+    <button onclick={()=>store.changeCategory(null)} class="back">{store.i18n("list.categoryBack")}</button>
   {/if}
 </div>
 

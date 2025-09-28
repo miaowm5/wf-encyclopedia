@@ -63,25 +63,25 @@
       <p>loading...</p>
     {/if}
   {:else if data}
-    <Title>加入/进化</Title>
+    <Title>{store.i18n("detail.content.title5")}</Title>
     {@render voice(data.join[3], data.join[4])}
     {@render voice(data.evolution[3], data.evolution[4])}
-    <Title>主界面</Title>
+    <Title>{store.i18n("detail.content.title6")}</Title>
     {#each data.home as item}
       {@render voice(item[3], item[4])}
     {/each}
-    <Title>其他</Title>
-    {@render voice('技能准备完成', 'battle/skill_ready', true)}
-    {@render voice('技能发动1', 'battle/skill_0', true)}
-    {@render voice('技能发动2', 'battle/skill_1', true)}
-    {@render voice('战斗开始1', 'battle/battle_start_0', true)}
-    {@render voice('战斗开始2', 'battle/battle_start_1', true)}
-    {@render voice('胜利1', 'battle/win_0', true)}
-    {@render voice('胜利2', 'battle/win_1', true)}
-    {@render voice('强力弹射1', 'battle/power_flip_0', true)}
-    {@render voice('强力弹射2', 'battle/power_flip_1', true)}
-    {@render voice('落下1', 'battle/outhole_0', true)}
-    {@render voice('落下2', 'battle/outhole_1', true)}
+    <Title>{store.i18n("detail.content.title7")}</Title>
+    {@render voice(store.i18n("detail.content.voice1"), 'battle/skill_ready', true)}
+    {@render voice(store.i18n("detail.content.voice2"), 'battle/skill_0', true)}
+    {@render voice(store.i18n("detail.content.voice3"), 'battle/skill_1', true)}
+    {@render voice(store.i18n("detail.content.voice4"), 'battle/battle_start_0', true)}
+    {@render voice(store.i18n("detail.content.voice5"), 'battle/battle_start_1', true)}
+    {@render voice(store.i18n("detail.content.voice6"), 'battle/win_0', true)}
+    {@render voice(store.i18n("detail.content.voice7"), 'battle/win_1', true)}
+    {@render voice(store.i18n("detail.content.voice8"), 'battle/power_flip_0', true)}
+    {@render voice(store.i18n("detail.content.voice9"), 'battle/power_flip_1', true)}
+    {@render voice(store.i18n("detail.content.voice10"), 'battle/outhole_0', true)}
+    {@render voice(store.i18n("detail.content.voice11"), 'battle/outhole_1', true)}
   {/if}
   <MobileBack />
 </div>

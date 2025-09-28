@@ -3,7 +3,9 @@
 </script>
 
 <div class="mobileBack">
-  <button onclick={()=>{store.setListHide(false)}}>返回一览</button>
+  <button onclick={()=>{store.setListHide(false)}}>
+    {store.i18n("detail.content.back")}
+  </button>
 </div>
 
 <style>

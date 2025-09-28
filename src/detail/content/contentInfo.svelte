@@ -10,7 +10,7 @@
 
 <div class="content">
   <section>
-    <Title>情报</Title>
+    <Title>{store.i18n("detail.content.title1")}</Title>
     {#each item as block}
       <div class="item">
         {#each block[20] as line}<p>{line}</p>{/each}

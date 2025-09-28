@@ -89,7 +89,7 @@
 
 <div class="content">
   {#if emoData}
-    <Title>表情</Title>
+    <Title>{store.i18n("detail.content.title2")}</Title>
     <div class="image1"
       style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
       {#if bannerImage.src}
@@ -128,8 +128,8 @@
         </a>
       </div>
     {/snippet}
-    {@render image('普通立绘', `${emotionList.id}_0`)}
-    {@render image('进化立绘', `${emotionList.id}_1`)}
+    {@render image(store.i18n("detail.content.title3"), `${emotionList.id}_0`)}
+    {@render image(store.i18n("detail.content.title4"), `${emotionList.id}_1`)}
   {/if}
   <MobileBack />
 </div>

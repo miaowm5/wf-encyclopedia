@@ -29,7 +29,7 @@
 
 {#if list.length > 0}
 
-  <Title>关联角色</Title>
+  <Title>{store.i18n("detail.content.related1")}</Title>
 
   <div class="tags">
     {#each list as item}

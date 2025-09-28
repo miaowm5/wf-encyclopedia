@@ -41,7 +41,9 @@
       <p>loading...</p>
     {/if}
   {:else if selectScenario}
-    <button class="scenarioBack" onclick={()=>{ selectScenario = null }}>返回列表</button>
+    <button class="scenarioBack" onclick={()=>{ selectScenario = null }}>
+      {store.i18n("detail.content.storyBack")}
+    </button>
     {#if scenarioData}
       {#each scenarioData as item}
         {#if item.command === "dialog"}
@@ -61,7 +63,9 @@
           <!-- <div style:word-break="break-all">{JSON.stringify(item)}</div> -->
         {/if}
       {/each}
-      <button class="scenarioBack last" onclick={()=>{ selectScenario = null }}>返回列表</button>
+      <button class="scenarioBack last" onclick={()=>{ selectScenario = null }}>
+        {store.i18n("detail.content.storyBack")}
+      </button>
     {:else}
       <p>loading...</p>
     {/if}

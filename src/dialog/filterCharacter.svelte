@@ -46,8 +46,6 @@
       currentFilter[group].add(id)
     }
   }
-
-  const vite_cdn = import.meta.env.VITE_CDN
 </script>
 
 {#snippet textButton(group, id, text, image = '')}
@@ -67,56 +65,58 @@
   </button>
 {/snippet}
 
-<div class="header">筛选</div>
+<div class="header">{store.i18n("dialog.filterCharacter.title")}</div>
 <div class="content">
-  <Title>角色名</Title>
+  <Title>{store.i18n("dialog.filterCharacter.titleName")}</Title>
   <div class="filterName">
-    <input type="text" placeholder="通过角色名搜索" value={currentFilter.text} oninput={(e)=>{
-      currentFilter.text = e.target.value
-    }}>
+    <input type="text"
+      placeholder={store.i18n("dialog.filterCharacter.nameHint")}
+      value={currentFilter.text}
+      oninput={(e)=>{ currentFilter.text = e.target.value }}
+    >
   </div>
-  <Title>稀有度</Title>
+  <Title>{store.i18n("dialog.filterCharacter.titleRarity")}</Title>
   <div class="group">
-    {@render textButton('rarity', '5', '五', 'rarity_five')}
-    {@render textButton('rarity', '4', '四', 'rarity_four')}
-    {@render textButton('rarity', '3', '三', 'rarity_three')}
-    {@render textButton('rarity', '2', '二', 'rarity_two')}
-    {@render textButton('rarity', '1', '一', 'rarity_one')}
-    {@render textButton('rarity', '0', '其他')}
+    {@render textButton('rarity', '5', store.i18n("dialog.filterCharacter.rarity1"), 'rarity_five')}
+    {@render textButton('rarity', '4', store.i18n("dialog.filterCharacter.rarity2"), 'rarity_four')}
+    {@render textButton('rarity', '3', store.i18n("dialog.filterCharacter.rarity3"), 'rarity_three')}
+    {@render textButton('rarity', '2', store.i18n("dialog.filterCharacter.rarity4"), 'rarity_two')}
+    {@render textButton('rarity', '1', store.i18n("dialog.filterCharacter.rarity5"), 'rarity_one')}
+    {@render textButton('rarity', '0', store.i18n("dialog.filterCharacter.rarity6"))}
   </div>
-  <Title>属性</Title>
+  <Title>{store.i18n("dialog.filterCharacter.titleElement")}</Title>
   <div class="group">
-    {@render textButton('element', '0', '火', 'element_red_medium')}
-    {@render textButton('element', '1', '水', 'element_blue_medium')}
-    {@render textButton('element', '2', '雷', 'element_yellow_medium')}
-    {@render textButton('element', '3', '风', 'element_green_medium')}
-    {@render textButton('element', '4', '光', 'element_white_medium')}
-    {@render textButton('element', '5', '暗', 'element_black_medium')}
-    {@render textButton('element', '-1', '其他')}
+    {@render textButton('element', '0', store.i18n("dialog.filterCharacter.element1"), 'element_red_medium')}
+    {@render textButton('element', '1', store.i18n("dialog.filterCharacter.element2"), 'element_blue_medium')}
+    {@render textButton('element', '2', store.i18n("dialog.filterCharacter.element3"), 'element_yellow_medium')}
+    {@render textButton('element', '3', store.i18n("dialog.filterCharacter.element4"), 'element_green_medium')}
+    {@render textButton('element', '4', store.i18n("dialog.filterCharacter.element5"), 'element_white_medium')}
+    {@render textButton('element', '5', store.i18n("dialog.filterCharacter.element6"), 'element_black_medium')}
+    {@render textButton('element', '-1', store.i18n("dialog.filterCharacter.element7"))}
   </div>
-  <Title>性别</Title>
+  <Title>{store.i18n("dialog.filterCharacter.titleSex")}</Title>
   <div class="group">
-    {@render textButton('sex', 'Female', '女')}
-    {@render textButton('sex', 'Male', '男')}
-    {@render textButton('sex', 'Other', '其他')}
+    {@render textButton('sex', 'Female', store.i18n("dialog.filterCharacter.sex1"))}
+    {@render textButton('sex', 'Male', store.i18n("dialog.filterCharacter.sex2"))}
+    {@render textButton('sex', 'Other', store.i18n("dialog.filterCharacter.sex3"))}
   </div>
-  <Title>种族</Title>
+  <Title>{store.i18n("dialog.filterCharacter.titleRace")}</Title>
   <div class="group">
-    {@render textButton('race', 'Human', '人', 'race_human_medium2')}
-    {@render textButton('race', 'Element', '精灵', 'race_element_medium2')}
-    {@render textButton('race', 'Devil', '魔', 'race_devil_medium2')}
-    {@render textButton('race', 'Beast', '兽', 'race_beast_medium2')}
-    {@render textButton('race', 'Machine', '机械', 'race_machine_medium2')}
-    {@render textButton('race', 'Mystery', '妖', 'race_mystery_medium2')}
-    {@render textButton('race', 'Dragon', '龙', 'race_dragon_medium2')}
-    {@render textButton('race', 'Undead', '不死', 'race_undead_medium2')}
-    {@render textButton('race', 'Aquatic', '水棲', 'race_aquatic_medium2')}
-    {@render textButton('race', 'Plants', '植物', 'race_plants_medium2')}
+    {@render textButton('race', 'Human', store.i18n("dialog.filterCharacter.race1"), 'race_human_medium2')}
+    {@render textButton('race', 'Element', store.i18n("dialog.filterCharacter.race2"), 'race_element_medium2')}
+    {@render textButton('race', 'Devil', store.i18n("dialog.filterCharacter.race3"), 'race_devil_medium2')}
+    {@render textButton('race', 'Beast', store.i18n("dialog.filterCharacter.race4"), 'race_beast_medium2')}
+    {@render textButton('race', 'Machine', store.i18n("dialog.filterCharacter.race5"), 'race_machine_medium2')}
+    {@render textButton('race', 'Mystery', store.i18n("dialog.filterCharacter.race6"), 'race_mystery_medium2')}
+    {@render textButton('race', 'Dragon', store.i18n("dialog.filterCharacter.race7"), 'race_dragon_medium2')}
+    {@render textButton('race', 'Undead', store.i18n("dialog.filterCharacter.race8"), 'race_undead_medium2')}
+    {@render textButton('race', 'Aquatic', store.i18n("dialog.filterCharacter.race9"), 'race_aquatic_medium2')}
+    {@render textButton('race', 'Plants', store.i18n("dialog.filterCharacter.race10"), 'race_plants_medium2')}
   </div>
 </div>
 <div class="submit">
-  <button onclick={closeFilter}>取消</button>
-  <button onclick={applyFilter}>确定</button>
+  <button onclick={closeFilter}>{store.i18n("dialog.filterCharacter.cancel")}</button>
+  <button onclick={applyFilter}>{store.i18n("dialog.filterCharacter.ok")}</button>
 </div>
 
 <style>

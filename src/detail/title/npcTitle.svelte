@@ -28,26 +28,26 @@
   })
 
   const genderText = $derived.by(()=>{
-    if (gender === 'Female'){ return '女性' }
-    if (gender === 'Male'){ return '男性' }
-    if (gender === 'Ririi'){ return '莉莉' }
-    if (gender === 'Unknown'){ return '不明' }
+    if (gender === 'Female'){ return store.i18n("detail.title.sex1") }
+    if (gender === 'Male'){ return store.i18n("detail.title.sex2") }
+    if (gender === 'Ririi'){ return store.i18n("detail.title.sex3") }
+    if (gender === 'Unknown'){ return store.i18n("detail.title.sex4") }
     return '(None)'
   })
 
   const raceText = $derived.by(()=>{
     if (race === '(None)'){ return race }
     let list = race.split(',').map((item)=>{
-      if (item === 'Human'){ return ['人', 'race_human_medium'] }
-      if (item === 'Element'){ return ['精灵', 'race_element_medium'] }
-      if (item === 'Devil'){ return ['魔', 'race_devil_medium'] }
-      if (item === 'Beast'){ return ['兽', 'race_beast_medium'] }
-      if (item === 'Machine'){ return ['机械', 'race_machine_medium'] }
-      if (item === 'Mystery'){ return ['妖', 'race_mystery_medium'] }
-      if (item === 'Dragon'){ return ['龙', 'race_dragon_medium'] }
-      if (item === 'Undead'){ return ['不死', 'race_undead_medium'] }
-      if (item === 'Aquatic'){ return ['水棲', 'race_aquatic_medium'] }
-      if (item === 'Plants'){ return ['植物', 'race_plants_medium'] }
+      if (item === 'Human'){ return [store.i18n("detail.title.race1"), 'race_human_medium'] }
+      if (item === 'Element'){ return [store.i18n("detail.title.race2"), 'race_element_medium'] }
+      if (item === 'Devil'){ return [store.i18n("detail.title.race3"), 'race_devil_medium'] }
+      if (item === 'Beast'){ return [store.i18n("detail.title.race4"), 'race_beast_medium'] }
+      if (item === 'Machine'){ return [store.i18n("detail.title.race5"), 'race_machine_medium'] }
+      if (item === 'Mystery'){ return [store.i18n("detail.title.race6"), 'race_mystery_medium'] }
+      if (item === 'Dragon'){ return [store.i18n("detail.title.race7"), 'race_dragon_medium'] }
+      if (item === 'Undead'){ return [store.i18n("detail.title.race8"), 'race_undead_medium'] }
+      if (item === 'Aquatic'){ return [store.i18n("detail.title.race9"), 'race_aquatic_medium'] }
+      if (item === 'Plants'){ return [store.i18n("detail.title.race10"), 'race_plants_medium'] }
       return [item, 'race_human_medium2']
     })
     list.forEach((item)=>{
@@ -104,7 +104,7 @@
     </p>{/if}
     <p class="name">{name}</p>
     {#if raceText !== '(None)'}
-      <p>种族：
+      <p>{store.i18n("detail.title.raceTitle")}
         {#each raceText as item}
           <span class="race">
             {item[0]}
@@ -113,8 +113,8 @@
         {/each}
       </p>
     {/if}
-    {#if gender !== '(None)'}<p>性别：{genderText}</p>{/if}
-    {#if cv !== '(None)'}<p class="cv">CV：{cv}</p>{/if}
+    {#if gender !== '(None)'}<p>{store.i18n("detail.title.sexTitle")}{genderText}</p>{/if}
+    {#if cv !== '(None)'}<p class="cv">{store.i18n("detail.title.cvTitle")}{cv}</p>{/if}
   </div>
   <div class="buttonGroup">
     {@render tabButton('info')}
