@@ -1,5 +1,4 @@
 
-
 const main = (text, width, height, style = {})=>{
   const {
     color = 'white',

@@ -1,7 +1,7 @@
 <script>
   import { SvelteSet } from 'svelte/reactivity'
   import store from '../store'
-  import { Title } from '../ui'
+  import { Title, ImageLoader } from '../ui'
 
   const getInitValue = ()=>{
     let f = store.state.ui.listFilter
@@ -58,7 +58,11 @@
     {#if !image}
       <p>{text}</p>
     {:else}
-      <img src={`${vite_cdn}ui/icon/${image}.png`} alt={text} />
+      <span class="img">
+        <ImageLoader src={`${vite_cdn}ui/icon/${image}.png`} alt={text}>
+          <p>{text}</p>
+        </ImageLoader>
+      </span>
     {/if}
   </button>
 {/snippet}
@@ -165,7 +169,7 @@
   .choice>p{
     padding: 0 .5em;
   }
-  .choice>img{
+  .choice>.img{
     height: 1em;
   }
   .choice.active{

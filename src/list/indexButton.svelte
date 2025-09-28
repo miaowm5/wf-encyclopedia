@@ -1,15 +1,13 @@
 <script>
-  import imageButtonSrc from './imageButtonSrc.svelte.js'
+  import { ImageLoader, TextImage } from '../ui'
   const {id, text, onclick} = $props()
-  const image = $derived.by(()=>{
-    return imageButtonSrc(`ui/${id}_btn`, text, 992, 352)
-  })
 </script>
 
-<button
-  onclick={onclick}
-  aria-label={id}
-><img src={image.src} alt={id}></button>
+<button onclick={onclick} aria-label={text}>
+  <ImageLoader src={`${import.meta.env.VITE_CDN}ui/${id}_btn.png`} alt={text}>
+    <TextImage text={text} width={992} height={352} />
+  </ImageLoader>
+</button>
 
 <style>
   button{
@@ -18,8 +16,5 @@
     border-radius: 0;
     box-shadow: none;
     background: none;
-  }
-  img{
-    max-width: 100%;
   }
 </style>

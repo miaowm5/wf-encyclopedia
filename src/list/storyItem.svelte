@@ -1,19 +1,20 @@
 <script>
-  import imageButtonSrc from './imageButtonSrc.svelte.js'
+  import { ImageLoader, TextImage } from '../ui'
   const { data, active } = $props()
-  const image = $derived.by(()=>{
-    return imageButtonSrc(`banner/${data.item[1]}`, data.name[0], 1000, 184)
-  })
 </script>
 
-<div class={`item ${active ? 'active' : ''}`}><img src={image.src} alt={data.name[0]}></div>
+<div class={`item ${active ? 'active' : ''}`}>
+  <ImageLoader src={`${import.meta.env.VITE_CDN}ui/banner/${data.item[1]}.png`} alt={data.name[0]}>
+    <TextImage text={data.name[0]} width={1000} height={184} />
+  </ImageLoader>
+</div>
 
 <style>
   .item{
     width: 100%;
     position: relative;
   }
-  .item>img{
+  .item :global > img {
     width: 100%;
   }
 </style>
