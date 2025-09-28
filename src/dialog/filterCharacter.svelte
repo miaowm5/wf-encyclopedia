@@ -56,11 +56,9 @@
     {#if !image}
       <p>{text}</p>
     {:else}
-      <span class="img">
-        <SpriteLoader spritesheet="res/icon" file={image} alt={text} >
-          <p>{text}</p>
-        </SpriteLoader>
-      </span>
+      <SpriteLoader spritesheet="res/icon" file={image} alt={text} >
+        <p>{text}</p>
+      </SpriteLoader>
     {/if}
   </button>
 {/snippet}
@@ -169,7 +167,7 @@
   .choice>p{
     padding: 0 .5em;
   }
-  .choice>.img{
+  .choice :global > img{
     height: 1em;
   }
   .choice.active{

@@ -50,9 +50,6 @@
       if (item === 'Plants'){ return [store.i18n("detail.title.race10"), 'race_plants_medium'] }
       return [item, 'race_human_medium2']
     })
-    list.forEach((item)=>{
-      item[1] = `${import.meta.env.VITE_CDN}ui/icon/${item[1]}.png`
-    })
     return list
   })
 
@@ -76,7 +73,7 @@
       '5': 'element_black_medium',
     }[element]
     if (!value){ return null }
-    return `${import.meta.env.VITE_CDN}ui/icon/${value}.png`
+    return value
   })
 </script>
 

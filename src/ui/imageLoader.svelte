@@ -11,8 +11,8 @@
       if (destory){ return }
       const canvas = document.createElement("canvas")
       const ctx = canvas.getContext("2d")
-      canvas.width = width
-      canvas.height = height
+      canvas.width = img.naturalWidth
+      canvas.height = img.naturalHeight
       ctx.drawImage(img, 0, 0)
       realSrc = canvas.toDataURL("image/png")
     }

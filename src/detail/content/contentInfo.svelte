@@ -1,4 +1,5 @@
 <script>
+  import store from '../../store'
   import Related1 from './related1.svelte'
   import Related2 from './related2.svelte'
   import { Title } from '../../ui'
