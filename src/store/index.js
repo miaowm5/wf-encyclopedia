@@ -2,6 +2,7 @@
 import route from './initRoute'
 import state from './initState.svelte.js'
 import customTag from './customTag.js'
+import i18n from './i18n.json'
 
 const setDatabase = (db, data)=>{
   state.database[db] = data
@@ -9,7 +10,7 @@ const setDatabase = (db, data)=>{
 const setListHide = (show)=>{
   state.ui.mobileListHide = show
   if (!show){
-    document.title = import.meta.env.VITE_SITE_NAME
+    document.title = getI18n('main.sitename')
     route.push('/')
     state.item = null
   }
@@ -32,6 +33,16 @@ const setAllFilter = (text)=>{
 const setDialog = (type, data = null, closeable = true)=>{
   state.dialog = { type, data, closeable }
 }
+const getI18n = (path)=>{
+  const p = path.split('.')
+  let result = i18n
+  p.forEach((key)=>{
+    if (!result){ return }
+    result = result[key]
+  })
+  if (!result){ return path }
+  return result[0]
+}
 
 const updateRoute = ((data)=>{
   if (data.page === 'item'){
@@ -42,7 +53,7 @@ const updateRoute = ((data)=>{
   }else if (data.page === 'home'){
     state.item = null
     state.ui.mobileListHide = false
-    document.title = import.meta.env.VITE_SITE_NAME
+    document.title = getI18n('main.sitename')
   }
 })
 route.onUpdate(updateRoute)
@@ -51,6 +62,7 @@ updateRoute(route.current)
 const store = {
   get state(){ return state },
   route,
+  i18n: getI18n,
   setDatabase,
   setListHide,
   changeTab,

@@ -9,7 +9,7 @@
 
   const character = $derived.by(()=>{
     const character = database2[data[0][5]]
-    document.title = character[0] + ' | ' + import.meta.env.VITE_SITE_NAME
+    document.title = character[0] + ' | ' + store.i18n('main.sitename')
     return character
   })
 

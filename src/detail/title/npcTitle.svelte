@@ -18,7 +18,7 @@
 
   const database = store.state.database.story_character
 
-  document.title = name + ' | ' + import.meta.env.VITE_SITE_NAME
+  document.title = name + ' | ' + store.i18n('main.sitename')
 
   let bannerImage = $derived.by(()=>{
     if (!database[banner]){ return null }

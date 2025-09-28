@@ -1,7 +1,8 @@
 <script>
+  import store from '../../store'
   const { title } = $props()
 
-  document.title = title + ' | ' + import.meta.env.VITE_SITE_NAME
+  document.title = title + ' | ' + store.i18n('main.sitename')
   const background = import.meta.env.VITE_CDN + 'ui/keyword_details_keyword_background.png'
 
 </script>
