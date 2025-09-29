@@ -5,7 +5,7 @@ const key = 'customTag'
 const load = ()=>{
   try{
     let data = JSON.parse(
-      localStorage.getItem(key) || `{ "version": ${version}, tag: [] }`
+      localStorage.getItem(key) || `{ "version": ${version}, "tag": [] }`
     )
     if (data.version !== version){
       // PUT UPDATE OLD DATA LOGIC HERE
