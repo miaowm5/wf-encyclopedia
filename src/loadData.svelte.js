@@ -14,7 +14,7 @@ const main = ()=>{
   }
 
   const loadDB = (tag, url, handle)=>{
-    wrapApi(`/orderedmap/${url}`, {
+    wrapApi(`${import.meta.env.VITE_CDN3}/orderedmap/${url}`, {
       before: ()=>{
         if (store.state.database[tag]){
           refreshProgress()
@@ -25,7 +25,8 @@ const main = ()=>{
         store.setDatabase(tag, handle(data))
         refreshProgress()
       },
-      fail: (err)=>{ error.push(`${tag} load failed`) }
+      fail: (err)=>{ error.push(`${tag} load failed`) },
+      cors: true
     }, true)
   }
 

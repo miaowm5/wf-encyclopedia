@@ -13,7 +13,7 @@ const main = ()=>{
     if (progress >= 2){ finish = true }
   }
 
-  wrapApi(`/orderedmap/character/character_speech.json`, {
+  wrapApi(`${import.meta.env.VITE_CDN3}/orderedmap/character/character_speech.json`, {
     before: ()=>{
       if (store.state.database.character_speech){
         addProgress()
@@ -24,10 +24,11 @@ const main = ()=>{
       store.setDatabase('character_speech', data)
       addProgress()
     },
-    fail: (err)=>{ error.push(`voice load failed`) }
+    fail: (err)=>{ error.push(`voice load failed`) },
+    cors: true
   }, true)
 
-  wrapApi(`/orderedmap/character/voiceLine.json`, {
+  wrapApi(`${import.meta.env.VITE_CDN3}/orderedmap/character/voiceLine.json`, {
     before: ()=>{
       if (store.state.database.character_speech_text){
         addProgress()
@@ -38,7 +39,8 @@ const main = ()=>{
       store.setDatabase('character_speech_text', data)
       addProgress()
     },
-    fail: (err)=>{ error.push(`voice line load failed`) }
+    fail: (err)=>{ error.push(`voice line load failed`) },
+    cors: true
   }, true)
 
   return {

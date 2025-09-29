@@ -78,7 +78,7 @@ const parse = (data)=>{
   return result
 }
 const loadConfig = async (id)=>{
-  const url = `/orderedmap/story/character_story_quest/${id}.json`
+  const url = `${import.meta.env.VITE_CDN3}/orderedmap/story/character_story_quest/${id}.json`
   let promise = new Promise((resolve)=>{
     api(url, {
       success: (data)=>{ resolve(parse(data)) },

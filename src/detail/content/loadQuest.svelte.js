@@ -7,7 +7,7 @@ const main = ()=>{
   let finish = $state(false)
   let error = $state([])
 
-  wrapApi(`/orderedmap/quest/character_quest.json`, {
+  wrapApi(`${import.meta.env.VITE_CDN3}/orderedmap/quest/character_quest.json`, {
     before: ()=>{
       if (store.state.database.character_quest){
         finish = true
@@ -28,7 +28,8 @@ const main = ()=>{
       store.setDatabase('character_quest', result)
       finish = true
     },
-    fail: (err)=>{ error.push(`quest load failed`) }
+    fail: (err)=>{ error.push(`quest load failed`) },
+    cors: true
   }, true)
 
   return {

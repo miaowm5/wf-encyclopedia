@@ -15,7 +15,8 @@ const loadConfig = async (spritesheet, cdn)=>{
       api(url, {
         success: (data)=>{ resolve(data) },
         fail: (err)=>{ console.error(err), resolve(null) },
-        after: ()=>{ promiseCache[url] = undefined }
+        after: ()=>{ promiseCache[url] = undefined },
+        cors: true
       })
     })
     promiseCache[url] = promise
@@ -49,6 +50,7 @@ const wrap = (spritesheet, file = null, type="base64", cdnType='cdn')=>{
   const cdn = {
     "cdn": import.meta.env.VITE_CDN,
     "cdn2": import.meta.env.VITE_CDN2,
+    "cdn3": import.meta.env.VITE_CDN3,
   }[cdnType] || import.meta.env.VITE_CDN
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
