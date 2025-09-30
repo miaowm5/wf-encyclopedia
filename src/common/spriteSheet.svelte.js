@@ -79,7 +79,7 @@ const createCanvas = async (image, spriteConfig)=>{
   return canvas
 }
 
-const wrap = (spritesheet, file = null, type="base64", cdnType='cdn')=>{
+const wrap = (spritesheet, file = null, cdnType='cdn')=>{
   const cdn = {
     "cdn": import.meta.env.VITE_CDN,
     "cdn2": import.meta.env.VITE_CDN2,
@@ -87,7 +87,10 @@ const wrap = (spritesheet, file = null, type="base64", cdnType='cdn')=>{
   }[cdnType] || import.meta.env.VITE_CDN
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
-  let src = $state(type === "base64" ? empty : null)
+
+  let src = $state(empty)
+  let canvas = $state(null)
+
   const load = async ()=>{
     if (!file){ return }
     const sheetConfig = await loadConfig(spritesheet, cdn)
@@ -97,16 +100,16 @@ const wrap = (spritesheet, file = null, type="base64", cdnType='cdn')=>{
     const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`, cdn)
     if (!image){ return }
     if (cancelFunc){ return }
-    const canvas = await createCanvas(image, spriteConfig)
+    const finalCanvas = await createCanvas(image, spriteConfig)
     if (cancelFunc){ return }
-    if (type === 'canvas'){
-      src = canvas
-    }else{
-      src = canvas.toDataURL("image/png")
-    }
+    canvas = finalCanvas
+    src = finalCanvas.toDataURL("image/png")
   }
   load()
-  return { get src(){ return src } }
+  return {
+    get src(){ return src },
+    get canvas(){ return canvas }
+  }
 }
 
 export default wrap

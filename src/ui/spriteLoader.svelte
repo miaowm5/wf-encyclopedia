@@ -16,12 +16,12 @@
 
   const sprite = $derived.by(()=>{
     if (!lazyLoadStatus.load){ return null }
-    return spriteSheet(spritesheet, file, 'canvas', cdn)
+    return spriteSheet(spritesheet, file, cdn)
   })
 </script>
 
-{#if sprite && sprite.src}
-  <img src={sprite.src.toDataURL("image/png")} alt={alt ? alt : file}>
+{#if sprite && sprite.canvas}
+  <img src={sprite.src} alt={alt ? alt : file}>
 {:else}
   {#if lazyLoad}<span bind:this={node}></span>{/if}
   {@render children?.()}
