@@ -46,6 +46,39 @@ const loadImage = async (spritesheet, file, cdn)=>{
   return image
 }
 
+let canvasQueueStatus = 'idle'
+let canvasQueue = []
+const createImageQueue = ()=>{
+  if (canvasQueue.length === 0){
+    canvasQueueStatus = 'idle'
+    return
+  }
+  const [image, spriteConfig, callback] = canvasQueue.shift()
+  const canvas = document.createElement("canvas")
+  const ctx = canvas.getContext("2d")
+  canvas.width = spriteConfig.sourceSize.w
+  canvas.height = spriteConfig.sourceSize.h
+  ctx.drawImage(image,
+    spriteConfig.frame.x, spriteConfig.frame.y,
+    spriteConfig.frame.w, spriteConfig.frame.h,
+    spriteConfig.spriteSourceSize.x, spriteConfig.spriteSourceSize.y,
+    spriteConfig.frame.w, spriteConfig.frame.h,
+  )
+  callback(canvas)
+  requestAnimationFrame(createImageQueue)
+}
+const createCanvas = async (image, spriteConfig)=>{
+  const canvas = await new Promise((resolve)=>{
+    const callback = (canvas)=>{ resolve(canvas) }
+    canvasQueue.push([image, spriteConfig, callback])
+    if (canvasQueueStatus === 'idle'){
+      canvasQueueStatus = 'pending'
+      requestAnimationFrame(createImageQueue)
+    }
+  })
+  return canvas
+}
+
 const wrap = (spritesheet, file = null, type="base64", cdnType='cdn')=>{
   const cdn = {
     "cdn": import.meta.env.VITE_CDN,
@@ -64,16 +97,8 @@ const wrap = (spritesheet, file = null, type="base64", cdnType='cdn')=>{
     const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`, cdn)
     if (!image){ return }
     if (cancelFunc){ return }
-    const canvas = document.createElement("canvas")
-    const ctx = canvas.getContext("2d")
-    canvas.width = spriteConfig.sourceSize.w
-    canvas.height = spriteConfig.sourceSize.h
-    ctx.drawImage(image,
-      spriteConfig.frame.x, spriteConfig.frame.y,
-      spriteConfig.frame.w, spriteConfig.frame.h,
-      spriteConfig.spriteSourceSize.x, spriteConfig.spriteSourceSize.y,
-      spriteConfig.frame.w, spriteConfig.frame.h,
-    )
+    const canvas = await createCanvas(image, spriteConfig)
+    if (cancelFunc){ return }
     if (type === 'canvas'){
       src = canvas
     }else{
