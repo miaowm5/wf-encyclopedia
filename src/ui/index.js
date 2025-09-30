@@ -4,6 +4,7 @@ import TextImage from './textImage.svelte'
 import ImageLoader from './imageLoader.svelte'
 import SpriteLoader from './spriteLoader.svelte'
 import HeadIcon from './headIcon.svelte'
+import Loading from './loading.svelte'
 
 export {
   Title,
@@ -11,4 +12,5 @@ export {
   ImageLoader,
   SpriteLoader,
   HeadIcon,
+  Loading,
 }

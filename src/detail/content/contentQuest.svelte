@@ -1,5 +1,6 @@
 <script>
   import store from '../../store'
+  import { Loading } from '../../ui'
   import MobileBack from './mobileBack.svelte'
   import loadData from './loadQuest.svelte.js'
   import loadScenario from './loadQuestScenario.svelte'
@@ -38,7 +39,7 @@
     {#if loadState.error.length > 0}
       <p>{loadState.error[0]}</p>
     {:else}
-      <p>loading...</p>
+      <Loading />
     {/if}
   {:else if selectScenario}
     <button class="scenarioBack" onclick={()=>{ selectScenario = null }}>
@@ -67,7 +68,7 @@
         {store.i18n("detail.content.storyBack")}
       </button>
     {:else}
-      <p>loading...</p>
+      <Loading />
     {/if}
   {:else if data}
     {#each data as story}

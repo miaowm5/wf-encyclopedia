@@ -1,7 +1,7 @@
 <script>
   import { fade } from 'svelte/transition'
   import store from '../../store'
-  import { Title } from '../../ui'
+  import { Title, Loading } from '../../ui'
   import MobileBack from './mobileBack.svelte'
   import loadData from './loadVoice.svelte.js'
   import loadVoice from './loadVoiceAudio.svelte.js'
@@ -60,7 +60,7 @@
     {#if loadState.error.length > 0}
       <p>{loadState.error[0]}</p>
     {:else}
-      <p>loading...</p>
+      <Loading />
     {/if}
   {:else if data}
     <Title>{store.i18n("detail.content.title5")}</Title>

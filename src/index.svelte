@@ -1,5 +1,6 @@
 <script>
   import './reset.css'
+  import { Loading } from './ui'
   import loadData from './loadData.svelte.js'
   import List from './list/index.svelte'
   import Dialog from './dialog/index.svelte'
@@ -19,7 +20,7 @@
   {:else if loadState.error.length > 0}
     <p>Error loading data: {loadState.error.join(', ')}</p>
   {:else}
-    <p>Loading...</p>
+    <Loading />
   {/if}
 </div>
 
