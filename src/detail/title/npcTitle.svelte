@@ -81,7 +81,7 @@
   <button
     aria-label={type}
     style:background-image={`url(${import.meta.env.VITE_CDN}ui/icon/${buttonImage[type]}.png?082701)`}
-    class={tab === type ? 'active' : null}
+    class={[tab === type && 'active']}
     onclick={()=>store.changeTab(type)}>
   </button>
 {/snippet}

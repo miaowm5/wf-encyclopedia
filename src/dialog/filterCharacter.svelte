@@ -50,7 +50,7 @@
 
 {#snippet textButton(group, id, text, image = '')}
   <button
-    class={`${isFilter(group, id) ? "active" : ""} choice`}
+    class={['choice', isFilter(group, id) && 'active']}
     onclick={()=>triggerFilter(group, id)}
   >
     {#if !image}

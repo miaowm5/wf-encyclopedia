@@ -107,7 +107,7 @@
       <div class="effectList">
         {#each useAbleEffect as effect}
           <button
-            class={`effect ${selectEffect.includes(effect) ? 'active' : ''}`}
+            class={['effect', selectEffect.includes(effect) && 'active']}
             onclick={()=>triggerEffect(effect)}>
             {effect}
           </button>
