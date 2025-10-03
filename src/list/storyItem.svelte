@@ -13,6 +13,12 @@
   .item{
     width: 100%;
     position: relative;
+    border: 4px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: .5em;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
   }
   .item :global > img {
     width: 100%;
