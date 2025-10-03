@@ -85,10 +85,11 @@
 </script>
 
 {#if !lazyLoadStatus}
-  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}></LazyLoad>
-  <img class="frame" alt={name}
-    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-    style:aspect-ratio={showName ? "212/252" : "1/1"} />
+  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}>
+    <img class="frame" alt={name}
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      style:aspect-ratio={showName ? "212/252" : "1/1"} />
+  </LazyLoad>
 {:else}
 <div class="main"
   style:background-image={`url(${import.meta.env.VITE_CDN}ui/party_thumbnail_tile_bg_old.png)`}>
@@ -116,17 +117,19 @@
 {/if}
 
 <style>
+  .main, .frame{
+    background-color: #232223;
+    border-radius: 5px;
+    line-height: 0;
+  }
   .frame{
     width: 212px;
     max-width: 100%;
     border: 1px solid #aaa;
   }
   .main{
-    background-color: #232223;
-    border-radius: 5px;
     overflow: hidden;
     max-width: 212px;
-    line-height: 0;
   }
   .main :global img{ width: 100% }
 </style>

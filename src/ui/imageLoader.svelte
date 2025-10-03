@@ -35,8 +35,9 @@
 {#if realSrc}
   <img src={realSrc} alt={alt ? alt : src}>
 {:else}
-  <LazyLoad lazy={lazyLoad} load={()=>lazyLoadStatus = true} />
-  {@render children?.()}
+  <LazyLoad lazy={lazyLoad} load={()=>lazyLoadStatus = true}>
+    {@render children?.()}
+  </LazyLoad>
 {/if}
 
 <style>

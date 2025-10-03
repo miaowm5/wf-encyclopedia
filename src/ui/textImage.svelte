@@ -19,8 +19,9 @@
   })
 </script>
 
-<LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}/>
-<img src={src} alt={text} style:width={width} style:aspect-ratio={`${width}/${height}`} />
+<LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}>
+  <img src={src} alt={text} style:width={width} style:aspect-ratio={`${width}/${height}`} />
+</LazyLoad>
 
 <style>
   img{

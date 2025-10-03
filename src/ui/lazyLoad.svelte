@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
 
-  const { load: loadFunc, lazy } = $props()
+  const { load: loadFunc, lazy, children } = $props()
 
   let node = $state(null)
   let load = $state(!lazy)
@@ -44,6 +44,10 @@
 
 {#if !load}
   <span bind:this={node}></span>
+  {@render children?.()}
+  <span bind:this={node}></span>
+{:else}
+  {@render children?.()}
 {/if}
 
 <style>

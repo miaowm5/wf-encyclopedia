@@ -22,8 +22,9 @@
 {#if sprite && sprite.canvas}
   <img src={sprite.src} alt={alt ? alt : file}>
 {:else}
-  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }} />
-  {@render children?.()}
+  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}>
+    {@render children?.()}
+  </LazyLoad>
 {/if}
 
 <style>
