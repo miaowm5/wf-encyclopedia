@@ -58,6 +58,8 @@
     flex-wrap: wrap;
     gap: .7em .5em;
     justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .tag{
     max-width: 80px;
