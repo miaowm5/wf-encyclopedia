@@ -63,6 +63,7 @@
   }
   .tag{
     max-width: 80px;
+    max-width: min(80px, 17%);
     position: relative;
     line-height: 0;
   }
