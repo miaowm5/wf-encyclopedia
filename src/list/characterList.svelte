@@ -1,6 +1,7 @@
 <script>
   import { Nav } from '../common'
   import store from '../store'
+  import { HeadIcon } from '../ui'
   import ListBanner from './listBanner.svelte'
   const { list, select } = $props()
   const showList = $derived.by(()=>{
@@ -54,15 +55,20 @@
       <p>{store.i18n("list.characterFilterButton")}</p>
     </button>
   {/snippet}
-  {#snippet content()}
+  {#snippet content()}<div class="list">
     {#each showList as data}
-      <Nav href={`/${data.id}`} route={store.route}>
-        <div class={['item', select === data.id && 'active']}>
-          <p>{data.name[0]}</p>
-          {#if data.name[1]}<p class="title">{data.name[1]}</p>{/if}
-        </div>
-      </Nav>
-    {/each}
+      <span class="item">
+        <Nav href={`/${data.id}`} route={store.route}>
+          <HeadIcon
+            file={data.item[4] === '2' ? data.item[7] : data.extra[0]}
+            name={data.name[0]}
+            rarity={data.extra[2]}
+            element={data.extra[3]}
+            showName={true}
+          />
+        </Nav>
+      </span>
+    {/each}</div>
   {/snippet}
 </ListBanner>
 
@@ -78,23 +84,13 @@
   .filter>p{
     font-size: .9em;
   }
+  .list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7em 4%;
+  }
   .item{
-    background: #fafafa;
-    border-top: 1px solid white;
-    display: block;
-    margin-bottom: .5em;
-    border-radius: 10px;
-    padding: .5em 1em;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-  }
-  .item:hover{
-    background-color: #d3efec;
-  }
-  .item.active{
-    background-color: #d3efec;
-    cursor: default;
-  }
-  .item>.title{
-    font-size: .85em;
+    display: inline-block;
+    width: 22%;
   }
 </style>
