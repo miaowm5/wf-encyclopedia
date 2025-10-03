@@ -151,13 +151,12 @@
     margin-bottom: .3em;
   }
   .race :global >img{
-    height: 1em;
-    margin-left: .2em;
-    margin-bottom: -.1em;
+    height: 1.2em;
+    margin-bottom: -.2em;
   }
   .race:not(:last-child):after{
     content: '/';
-    margin-left: .8em;
+    margin-left: .3em;
     margin-right: .4em;
   }
   .cv{
