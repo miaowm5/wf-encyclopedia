@@ -27,9 +27,11 @@
 
 <div class={`main ${store.state.ui.mobileListHide ? 'mobileHide' : ''}`}>
   {#if category === null}
-    <IndexButton onclick={()=>store.changeCategory('character')} id="character_archive" text={store.i18n("list.category1")} />
-    <IndexButton onclick={()=>store.changeCategory('story')} id="world_archive" text={store.i18n("list.category2")} />
-    <IndexButton onclick={()=>store.changeCategory('all')} id="all_keyword" text={store.i18n("list.category3")} />
+    <div class="titleButton">
+      <IndexButton onclick={()=>store.changeCategory('character')} id="character_archive" text={store.i18n("list.category1")} />
+      <IndexButton onclick={()=>store.changeCategory('story')} id="world_archive" text={store.i18n("list.category2")} />
+      <IndexButton onclick={()=>store.changeCategory('all')} id="all_keyword" text={store.i18n("list.category3")} />
+    </div>
   {:else if category === 'character'}
     <CharacterList list={list} select={store.state.item} />
   {:else if category === 'story'}
@@ -55,6 +57,10 @@
     border-top-right-radius: 1em;
     padding: 1.5em;
     box-shadow: 0 0 3px 1px rgba(0,0,0,.2);
+  }
+  .titleButton{
+    height: 100%;
+    overflow: auto;
   }
   @media (max-width: 800px) {
     .main{

@@ -1,8 +1,10 @@
+<script>
+  import { onMount } from "svelte"
 
-import { onMount } from "svelte"
+  const { load: loadFunc, lazy } = $props()
 
-const wrap = (dom, lazyLoad)=>{
-  let load = $state(!lazyLoad)
+  let node = $state(null)
+  let load = $state(!lazy)
   let observer = null
 
   const clear = ()=>{
@@ -11,13 +13,20 @@ const wrap = (dom, lazyLoad)=>{
     observer = null
   }
   onMount(()=>{
-    if (!lazyLoad){ return }
+    if (!lazy){
+      loadFunc()
+      return
+    }
     observer = new IntersectionObserver((entries)=>{
       entries.forEach((entry)=>{
         if (!entry.isIntersecting){ return }
         load = true
+        loadFunc()
         clear()
       })
+    }, {
+      root: null,
+      threshold: 0,
     })
     return clear
   })
@@ -25,17 +34,21 @@ const wrap = (dom, lazyLoad)=>{
   let lastNode = null
   $effect(()=>{
     if (!observer){ return }
-    if (!dom){ return }
-    let node = dom()
     if (!node){ return }
     observer.observe(node)
     if (lastNode){ observer.unobserve(lastNode) }
     lastNode = node
   })
 
-  return {
-    get load(){ return load }
-  }
-}
+</script>
 
-export default wrap
+{#if !load}
+  <span bind:this={node}></span>
+{/if}
+
+<style>
+  span{
+    display: block;
+    height: 1px;
+  }
+</style>

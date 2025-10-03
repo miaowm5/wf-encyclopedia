@@ -1,11 +1,10 @@
 <script>
-  import lazyLoadWrap from './lazyLoad.svelte.js'
+  import LazyLoad from './lazyLoad.svelte'
 
   let { src, alt, children, lazyLoad = true } = $props()
 
   let realSrc = $state(null)
-  let node = $state(null)
-  let lazyLoadStatus = lazyLoadWrap(()=>node, lazyLoad)
+  let lazyLoadStatus = $state(false)
 
   const load = (src)=>{
     if (!src){ return }
@@ -28,7 +27,7 @@
 
   $effect(()=>{
     if (clearFunc){ clearFunc() }
-    if (!lazyLoadStatus.load){ return }
+    if (!lazyLoadStatus){ return }
     clearFunc = load(src)
   })
 </script>
@@ -36,7 +35,7 @@
 {#if realSrc}
   <img src={realSrc} alt={alt ? alt : src}>
 {:else}
-  {#if lazyLoad}<span bind:this={node}></span>{/if}
+  <LazyLoad lazy={lazyLoad} load={()=>lazyLoadStatus = true} />
   {@render children?.()}
 {/if}
 

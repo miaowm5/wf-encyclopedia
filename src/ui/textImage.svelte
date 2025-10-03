@@ -1,6 +1,6 @@
 <script>
   import { textImage } from "../common"
-  import lazyLoadWrap from './lazyLoad.svelte.js'
+  import LazyLoad from './lazyLoad.svelte'
 
   let {
     text,
@@ -10,22 +10,21 @@
     style = {},
   } = $props()
 
-  let node = $state(null)
-  let lazyLoadStatus = lazyLoadWrap(()=>node, lazyLoad)
+  let lazyLoadStatus = $state(false)
   const src = $derived.by(()=>{
-    if (!lazyLoadStatus.load){
+    if (!lazyLoadStatus){
       return `data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7`
     }
     return textImage(text, width, height, style).toDataURL("image/png")
   })
 </script>
 
-{#if !lazyLoadStatus.load}<span bind:this={node}></span>{/if}
-<img src={src} alt={text} width={width} height={height}>
+<LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}/>
+<img src={src} alt={text} style:aspect-ratio={`${width}/${height}`}>
 
 <style>
   img{
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
   }
 </style>

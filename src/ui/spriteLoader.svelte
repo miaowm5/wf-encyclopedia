@@ -1,6 +1,6 @@
 <script>
   import { spriteSheet } from '../common'
-  import lazyLoadWrap from './lazyLoad.svelte.js'
+  import LazyLoad from './lazyLoad.svelte'
 
   let {
     spritesheet,
@@ -11,11 +11,10 @@
     cdn = 'cdn',
   } = $props()
 
-  let node = $state(null)
-  let lazyLoadStatus = lazyLoadWrap(()=>node, lazyLoad)
+  let lazyLoadStatus = $state(false)
 
   const sprite = $derived.by(()=>{
-    if (!lazyLoadStatus.load){ return null }
+    if (!lazyLoadStatus){ return null }
     return spriteSheet(spritesheet, file, cdn)
   })
 </script>
@@ -23,7 +22,7 @@
 {#if sprite && sprite.canvas}
   <img src={sprite.src} alt={alt ? alt : file}>
 {:else}
-  {#if lazyLoad}<span bind:this={node}></span>{/if}
+  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }} />
   {@render children?.()}
 {/if}
 
