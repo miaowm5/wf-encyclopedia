@@ -122,8 +122,10 @@
   }
   .main{
     background-color: #232223;
-    border-radius: 6px;
+    border-radius: 5px;
+    overflow: hidden;
     max-width: 212px;
+    line-height: 0;
   }
   .main :global img{ width: 100% }
 </style>

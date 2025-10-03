@@ -6,7 +6,7 @@ const wrap = (back, front, effect=[])=>{
     const canvas = document.createElement("canvas")
     canvas.width = 1
     canvas.height = 1
-    return { get src(){ return canvas } }
+    return { get canvas(){ return canvas } }
   }
 
   const backCanvas = $derived.by(()=>{
