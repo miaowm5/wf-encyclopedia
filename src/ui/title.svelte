@@ -1,11 +1,14 @@
 <script>
+  import { spriteSheet } from '../common'
   let { children } = $props()
+  const left = spriteSheet('res/icon', 'wf_ui_flipper_border_left')
+  const right = spriteSheet('res/icon', 'wf_ui_flipper_border')
 </script>
 
 <div class="title">
-  <div class="l" style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/flipper_border_left.png'})`}></div>
+  <div class="l" style:background-image={`url(${left.src})`}></div>
   <p>{@render children?.()}</p>
-  <div class="r" style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/flipper_border.png'})`}></div>
+  <div class="r" style:background-image={`url(${right.src})`}></div>
 </div>
 
 <style>
