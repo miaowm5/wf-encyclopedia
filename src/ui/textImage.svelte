@@ -20,11 +20,11 @@
 </script>
 
 <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}/>
-<img src={src} alt={text} style:aspect-ratio={`${width}/${height}`}>
+<img src={src} alt={text} style:width={width} style:aspect-ratio={`${width}/${height}`} />
 
 <style>
   img{
-    width: 100%;
+    max-width: 100%;
     max-height: 100%;
   }
 </style>

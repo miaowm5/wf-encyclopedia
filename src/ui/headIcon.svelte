@@ -84,7 +84,12 @@
   })
 </script>
 
-<LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}></LazyLoad>
+{#if !lazyLoadStatus}
+  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}></LazyLoad>
+  <img class="frame" alt={name}
+    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+    style:aspect-ratio={showName ? "212/252" : "1/1"} />
+{:else}
 <div class="main"
   style:background-image={`url(${import.meta.env.VITE_CDN}ui/party_thumbnail_tile_bg_old.png)`}>
   {#if finalHead}
@@ -108,11 +113,17 @@
     />
   {/if}
 </div>
+{/if}
 
 <style>
+  .frame{
+    width: 212px;
+    max-width: 100%;
+  }
   .main{
     background-color: #232223;
     border-radius: 6px;
+    max-width: 212px;
   }
   .main :global img{ width: 100% }
 </style>

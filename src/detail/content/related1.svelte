@@ -60,11 +60,8 @@
     justify-content: center;
   }
   .tag{
-    max-width: 17%;
+    max-width: 80px;
     position: relative;
     line-height: 0;
-    border: 1px solid #ababab;
-    border-radius: 5px;
-    overflow: hidden;
   }
 </style>
