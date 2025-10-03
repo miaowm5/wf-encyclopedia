@@ -39,13 +39,12 @@
     if (lastNode){ observer.unobserve(lastNode) }
     lastNode = node
   })
-
 </script>
 
 {#if !load}
-  <span bind:this={node}></span>
-  {@render children?.()}
-  <span bind:this={node}></span>
+  <span bind:this={node}>
+    {@render children?.()}
+  </span>
 {:else}
   {@render children?.()}
 {/if}
@@ -53,6 +52,6 @@
 <style>
   span{
     display: block;
-    height: 1px;
+    min-height: 1px;
   }
 </style>
