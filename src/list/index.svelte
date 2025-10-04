@@ -1,5 +1,6 @@
 <script>
   import store from '../store'
+  import { spriteSheet } from '../common'
   import IndexButton from './indexButton.svelte'
   import CharacterList from './characterList.svelte'
   import StoryList from './storyList.svelte'
@@ -23,6 +24,7 @@
 
   const category = $derived(store.state.ui.listCategory)
 
+  const backSprite = spriteSheet('res/icon', 'return')
 </script>
 
 <div class={`main ${store.state.ui.mobileListHide ? 'mobileHide' : ''}`}>
@@ -48,7 +50,11 @@
     <AllList list={list} select={store.state.item} />
   {/if}
   {#if category !== null}
-    <button onclick={()=>store.changeCategory(null)} class="back">{store.i18n("list.categoryBack")}</button>
+    {@const text = store.i18n("list.categoryBack")}
+    <button onclick={()=>store.changeCategory(null)} class="back">
+      <img src={backSprite.src} alt={text}>
+      {text}
+    </button>
   {/if}
 </div>
 
@@ -63,8 +69,14 @@
     left: 0;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    padding: 1.5em;
+    padding: .5em 1.3em .4em;
     box-shadow: 0 0 3px 1px rgba(0,0,0,.2);
+    display: flex;
+    flex-direction: column;
+    font-size: .75em;
+  }
+  .back > img{
+    width: 2.5em;
   }
   .titleButton{
     height: 100%;
