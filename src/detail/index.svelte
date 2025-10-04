@@ -4,6 +4,7 @@
   import Content from './content/index.svelte'
 
   const database = store.state.database.encyclopedia
+  const database2 = store.state.database.character
 
   const item = $derived.by(()=>{
     const id = store.state.item
@@ -17,14 +18,26 @@
     if (item[0][4] === '3' || item[0][4] === '4'){ return 'story' }
     return 'normal'
   })
+  const character = $derived.by(()=>{
+    if (itemType !== 'character'){ return null }
+    return database2[item[0][5]]
+  })
 
   const tab = $derived.by(()=>{
     const stateTab = store.state.ui.detailTab
     if (itemType !== 'character' && itemType !== 'npc'){ return 'info' }
     if (stateTab === 'story'){
-      if (itemType !== 'character' && itemType !== 'story'){ return 'info' }
+      if (itemType === 'character'){
+        if (!character){ return 'info' }
+        const rarity = character[2]
+        if (rarity !== '3' && rarity !== '4' && rarity !== '5'){
+          return 'info'
+        }
+      }else if(itemType !== 'story'){
+        return 'info'
+      }
     }
-    if (stateTab === 'voice' || stateTab === 'story'){
+    if (stateTab === 'voice'){
       if (itemType !== 'character'){ return 'info' }
     }
     return stateTab
