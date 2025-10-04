@@ -1,7 +1,7 @@
 <script>
   import { Nav } from '../common'
   import store from '../store'
-  import { HeadIcon } from '../ui'
+  import { HeadIcon, RoundButton } from '../ui'
   import ListBanner from './listBanner.svelte'
   const { list, select } = $props()
   const showList = $derived.by(()=>{
@@ -51,9 +51,13 @@
   title="keyword_list_character_title"
   >
   {#snippet banner()}
-    <button class="filter" onclick={()=>store.setDialog('filterCharacter')}>
-      <p>{store.i18n("list.characterFilterButton")}</p>
-    </button>
+    <span class="filter">
+      <RoundButton
+        icon="sort"
+        onclick={()=>store.setDialog('filterCharacter')}
+        title={store.i18n("list.characterFilterButton")}
+      />
+    </span>
   {/snippet}
   {#snippet content()}<div class="list">
     {#each showList as data}
@@ -74,15 +78,9 @@
 
 <style>
   .filter{
-    border-radius: 100%;
-    width: 3em;
-    height: 3em;
     position: absolute;
     left: .5em;
     bottom: 1em
-  }
-  .filter>p{
-    font-size: .9em;
   }
   .list{
     display: flex;

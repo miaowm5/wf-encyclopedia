@@ -1,7 +1,7 @@
 <script>
   import { characterShot } from '../../common'
   import store from '../../store'
-  import { SpriteLoader } from '../../ui'
+  import { SpriteLoader, RoundButton } from '../../ui'
 
   const {
     name = '(None)',
@@ -57,7 +57,7 @@
 
   const buttonImage = {
     'info': 'encyclopedia',
-    'gallery': 'full_size',
+    'gallery': 'user_account_center',
     'voice': 'voice_volume3',
     'story': 'character_story_mini',
   }
@@ -76,15 +76,6 @@
     return value
   })
 </script>
-
-{#snippet tabButton(type)}
-  <button
-    aria-label={type}
-    style:background-image={`url(${import.meta.env.VITE_CDN}ui/icon/${buttonImage[type]}.png?082701)`}
-    class={[tab === type && 'active']}
-    onclick={()=>store.changeTab(type)}>
-  </button>
-{/snippet}
 
 <div class="character" style:background-image={`url(${background})`}>
   {#if bannerImage && bannerImage.src}
@@ -114,6 +105,14 @@
     {#if cv !== '(None)'}<p class="cv">{store.i18n("detail.title.cvTitle")}{cv}</p>{/if}
   </div>
   <div class="buttonGroup">
+    {#snippet tabButton(type)}
+      <RoundButton
+        icon={buttonImage[type]}
+        alt={type}
+        onclick={()=>store.changeTab(type)}
+        active={tab === type}
+      />
+    {/snippet}
     {@render tabButton('info')}
     {@render tabButton('gallery')}
     {#if itemType === 'character' }
@@ -174,26 +173,11 @@
   }
   .buttonGroup{
     right: 5%;
-    bottom: .8em;
+    bottom: .9em;
     position: absolute;
     z-index: 10;
-  }
-  .buttonGroup>button{
-    border-radius: 50%;
-    background-position: center center;
-    width: 2.3em;
-    height: 2.3em;
-    margin-left: .3em;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    border: 3px solid #fafafa;
-  }
-  .buttonGroup>button.active{
-    border: 3px solid #fdff00;
-    box-shadow:
-      0 0 5px 0px rgba(0,0,0,0.5),
-      0 0 8px 3px #fdff00;
-    cursor: default;
+    display: flex;
+    gap: 0 .2em;
   }
   @media (max-width: 430px) {
     .banner{

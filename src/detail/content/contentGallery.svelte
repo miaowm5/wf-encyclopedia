@@ -1,7 +1,7 @@
 <script>
   import store from '../../store'
   import { characterShot } from '../../common'
-  import { Title } from '../../ui'
+  import { Title, RoundButton } from '../../ui'
   import MobileBack from './mobileBack.svelte'
   import galleryEffectRule from './galleryEffectRule.json'
 
@@ -117,15 +117,12 @@
   {/if}
   {#if itemType === 'character'}
     {#snippet image(title, image)}
+      {@const url = import.meta.env.VITE_CDN2 + `fullshot/${image}.png`}
       <Title>{title}</Title>
       <div class="image2"
         style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
-        <img src={import.meta.env.VITE_CDN2 + `fullshot/${image}.png`} alt={image} class="img">
-        <a
-          class="openImage" aria-label="Open In New Window"
-          href={import.meta.env.VITE_CDN2 + `fullshot/${image}.png`} target="_blank"
-          style:background-image={`url(${import.meta.env.VITE_CDN}ui/icon/full_size.png?082701`}>
-        </a>
+        <img src={url} alt={image} class="img">
+        <RoundButton icon="full_size" onclick={()=>window.open(url)} />
       </div>
     {/snippet}
     {@render image(store.i18n("detail.content.title3"), `${emotionList.id}_0`)}
@@ -185,7 +182,7 @@
     border-top: 1px solid white;
     border-radius: 10px;
   }
-  .openImage{
+  .image2 :global button{
     border-radius: 50%;
     background-position: center center;
     width: 2em;
