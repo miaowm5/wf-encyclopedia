@@ -3,6 +3,7 @@ import customTag from "./customTag"
 
 const initState = {
   item: null,
+  scenario: null,
   ui: {
     listCategory: null,
     listSearch: '',
@@ -24,6 +25,7 @@ const initState = {
     character_speech_text: null,
     story_character: null,
     character_quest: null,
+    normal_quest: null,
   },
   customTag: customTag.load()
 }

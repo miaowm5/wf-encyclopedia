@@ -7,6 +7,9 @@ import i18n from './i18n.json'
 const setDatabase = (db, data)=>{
   state.database[db] = data
 }
+const setScenario = (scenario)=>{
+  state.scenario = scenario
+}
 const setListHide = (show)=>{
   state.ui.mobileListHide = show
   if (!show){
@@ -48,10 +51,12 @@ const updateRoute = ((data)=>{
   if (data.page === 'item'){
     if (state.item !== data.item){
       state.ui.mobileListHide = true
+      state.scenario = null
+      state.item = data.item
     }
-    state.item = data.item
   }else if (data.page === 'home'){
     state.item = null
+    state.scenario = null
     state.ui.mobileListHide = false
     document.title = getI18n('main.sitename')
   }
@@ -64,6 +69,7 @@ const store = {
   route,
   i18n: getI18n,
   setDatabase,
+  setScenario,
   setListHide,
   changeTab,
   changeCategory,

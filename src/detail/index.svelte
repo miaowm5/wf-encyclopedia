@@ -2,6 +2,7 @@
   import store from '../store'
   import Title from './title/index.svelte'
   import Content from './content/index.svelte'
+  import Scenario from './scenario/index.svelte'
 
   const database = store.state.database.encyclopedia
   const database2 = store.state.database.character
@@ -46,7 +47,9 @@
 </script>
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
-  {#if item}{#key store.state.item}
+  {#if store.state.scenario}
+    <Scenario scenario={store.state.scenario} />
+  {:else if item}{#key store.state.item}
     <Title item={item} itemType={itemType} tab={tab} />
     <Content item={item} itemType={itemType} tab={tab} />
   {/key}{/if}
