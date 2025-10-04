@@ -16,5 +16,6 @@
     border-radius: 0;
     box-shadow: none;
     background: none;
+    margin-bottom: .5em;
   }
 </style>

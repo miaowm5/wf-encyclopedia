@@ -25,7 +25,7 @@
     style:margin={title ? '.4em 0 -.5em 0' : 0}
   />
   {#if title}
-    <span class="label">{title}</span>
+    <span class="label" data-title={title}>{title}</span>
   {/if}
 </button>
 
@@ -54,14 +54,16 @@
   .label {
     font-size: .8em;
     white-space: nowrap;
-    text-shadow:
-      -1px -1px 0 white,
-      1px -1px 0 white,
-      -1px  1px 0 white,
-      1px  1px 0 white,
-      0px  2px 0 white,
-      2px  0px 0 white,
-      -2px  0px 0 white,
-      0px -2px 0 white;
+    position: relative;
+    z-index: 0;
+  }
+  .label::after{
+    content: attr(data-title);
+    -webkit-text-stroke: 3px white;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
   }
 </style>

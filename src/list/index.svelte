@@ -73,7 +73,7 @@
     box-shadow: 0 0 3px 1px rgba(0,0,0,.2);
     display: flex;
     flex-direction: column;
-    font-size: .75em;
+    font-size: .8em;
   }
   .back > img{
     width: 2.5em;
@@ -102,10 +102,10 @@
     right: 0;
     bottom: 0
   }
-
   .titleButton>div:nth-child(2){
     overflow: auto;
     flex: 1;
+    padding: 1em .5em 5em;
   }
   @media (max-width: 800px) {
     .main{
