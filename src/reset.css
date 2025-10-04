@@ -73,3 +73,8 @@ button{
     font-size: 15px;
   }
 }
+@media (max-width: 400px) {
+  body{
+    font-size: 13px;
+  }
+}

@@ -28,9 +28,17 @@
 <div class={`main ${store.state.ui.mobileListHide ? 'mobileHide' : ''}`}>
   {#if category === null}
     <div class="titleButton">
-      <IndexButton onclick={()=>store.changeCategory('character')} id="character_archive" text={store.i18n("list.category1")} />
-      <IndexButton onclick={()=>store.changeCategory('story')} id="world_archive" text={store.i18n("list.category2")} />
-      <IndexButton onclick={()=>store.changeCategory('all')} id="all_keyword" text={store.i18n("list.category3")} />
+      <div
+        style:background-image={`url(${import.meta.env.VITE_CDN}ui/top_background.png)`}>
+        <div
+          style:background-image={`url(${import.meta.env.VITE_CDN}ui/encyclopedia_title.png)`}>
+        </div>
+      </div>
+      <div>
+        <IndexButton onclick={()=>store.changeCategory('character')} id="character_archive" text={store.i18n("list.category1")} />
+        <IndexButton onclick={()=>store.changeCategory('story')} id="world_archive" text={store.i18n("list.category2")} />
+        <IndexButton onclick={()=>store.changeCategory('all')} id="all_keyword" text={store.i18n("list.category3")} />
+      </div>
     </div>
   {:else if category === 'character'}
     <CharacterList list={list} select={store.state.item} />
@@ -60,7 +68,32 @@
   }
   .titleButton{
     height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .titleButton>div:nth-child(1){
+    width: 100%;
+    aspect-ratio: 2/1;
+    max-height: 30%;
+    background-size: 130%;
+    background-position: center;
+    flex: 0;
+    position: relative;
+  }
+  .titleButton>div:nth-child(1)>div{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: right bottom;
+    height: 50%;
+    width: 50%;
+    right: 0;
+    bottom: 0
+  }
+
+  .titleButton>div:nth-child(2){
     overflow: auto;
+    flex: 1;
   }
   @media (max-width: 800px) {
     .main{
