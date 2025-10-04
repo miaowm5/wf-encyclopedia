@@ -87,10 +87,11 @@
   .list{
     display: flex;
     flex-wrap: wrap;
-    gap: .7em 4%;
+    gap: .7em 8%;
+    padding: 0 8%;
   }
   .item{
     display: inline-block;
-    width: 22%;
+    width: 19%;
   }
 </style>
