@@ -4,15 +4,34 @@
   import MobileBack from './mobileBack.svelte'
   import loadData from './loadQuest.svelte.js'
 
-  const { item } = $props()
+  const { item, itemType } = $props()
 
-  const loadState = loadData()
+  const loadState = loadData(itemType)
   const data = $derived.by(()=>{
     if (!loadState.finish){ return null }
     if (loadState.error.length > 0){ return null }
-    if (!store.state.database.character_quest){ return null }
-    const database = store.state.database.character_quest
-    return database[item[0][5]]
+    if (itemType === 'story'){
+      if (!store.state.database.normal_quest){ return null }
+      const database = store.state.database.normal_quest
+      let storyType = item[0][4]
+      if (storyType === '3'){
+        return database.main_quest[item[0][12]]
+      }else if (storyType === '4'){
+        let storyType2 = item[0][13]
+        if (storyType2 === '6'){
+          return database['event/world_story_event_quest'][item[0][14]]
+        }else if (storyType2 === '2'){
+          return database['event/story_event_single_quest'][item[0][14]]
+        }else if (storyType2 === '0'){
+          return database['event/advent_event_quest'][item[0][14]]
+        }
+      }
+      return null
+    }else{
+      if (!store.state.database.character_quest){ return null }
+      const database = store.state.database.character_quest
+      return database[item[0][5]]
+    }
   })
 </script>
 

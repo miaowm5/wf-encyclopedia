@@ -80,9 +80,19 @@ const loadConfig = async (path)=>{
     let character = path.split('/')[2]
     character = character.slice(0, character.length - 4)
     url = `character_story_quest/${character}`
+  }else if (path.startsWith('story/story_quest/')){
+    let chapter = path.split('/')[2]
+    url = `story_quest/${chapter}`
+  }else if (path.startsWith('story/story_event_quest/')){
+    let chapter = path.split('/')[2]
+    url = `story_event_quest/${chapter}`
+  }else if (path.startsWith('story/advent_event/')){
+    let chapter = path.split('/')[2]
+    url = `advent_event/${chapter}`
   }
+  "story/advent_event/boss_epuration/boss_epuration_event_001/scenario"
   let promise = new Promise((resolve)=>{
-    api(`${import.meta.env.VITE_CDN3}/orderedmap/story/${url}.json`, {
+    api(`${import.meta.env.VITE_CDN3}orderedmap/story/${url}.json`, {
       success: (data)=>{ resolve(data) },
       fail: (err)=>{ console.error(err), resolve(null) },
       cors: true,

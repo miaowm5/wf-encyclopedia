@@ -33,7 +33,7 @@ let result = {}
     Object.keys(file[id]).forEach((item)=>{
       let odata = file[id][item]
       if (!odata[127]){ return }
-      let data = [odata[2], odata[127], odata[128], odata[130]]
+      let data = [odata[2], odata[127], odata[128], odata[129], odata[130]]
       story.push(data)
     })
     if (story.length > 0){ result[key][id] = story }
