@@ -51,9 +51,12 @@
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   {#if store.state.scenario}
     <Scenario scenario={store.state.scenario} />
-  {:else if item}{#key store.state.item}
-    <Title item={item} itemType={itemType} tab={tab} />
-    <Content item={item} itemType={itemType} tab={tab} />
+  {/if}
+  {#if item}{#key store.state.item}
+    <span class={[store.state.scenario && 'hide', 'body']}>
+      <Title item={item} itemType={itemType} tab={tab} />
+      <Content item={item} itemType={itemType} tab={tab} />
+    </span>
   {/key}{/if}
 </div>
 
@@ -61,8 +64,15 @@
   .main{
     flex: 3;
     position: relative;
+  }
+  .hide{
+    display: none;
+  }
+  .body{
+    height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   @media (max-width: 800px) {
     .mobileHide{
