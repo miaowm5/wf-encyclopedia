@@ -92,6 +92,11 @@
     flex: 0;
     position: relative;
   }
+  @supports not (aspect-ratio: 2/1){
+    .titleButton>div:nth-child(1){
+      height: 10em;
+    }
+  }
   .titleButton>div:nth-child(1)>div{
     position: absolute;
     background-repeat: no-repeat;
