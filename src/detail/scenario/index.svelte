@@ -23,14 +23,16 @@
 <div class="list">
   {#each scenarioData.data as item}
     {#if item.command === "dialog"}
-      <div class="dialog">
-        <Name character={item.param[0]} />
-        <div class="dialogContent">
-          {#each item.param[1].split('\\n') as lines}
-            {#each lines.split('\n') as line}
-              <p>{line}</p>
+      <div class={[item.param[4] === '1' && 'leftDialog', item.param[4] === '3' && 'rightDialog']}>
+        <div class="dialog">
+          <Name character={item.param[0]} />
+          <div class="dialogContent">
+            {#each item.param[1].split('\\n') as lines}
+              {#each lines.split('\n') as line}
+                <p>{line}</p>
+              {/each}
             {/each}
-          {/each}
+          </div>
         </div>
       </div>
     {:else}
@@ -80,4 +82,6 @@
   .dialog>.dialogContent{
     padding: .8em 1em 1em;
   }
+  .leftDialog{ padding-right: 4%; }
+  .rightDialog{ padding-left: 4%; }
 </style>
