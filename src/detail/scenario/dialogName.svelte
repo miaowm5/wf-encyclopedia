@@ -21,11 +21,12 @@
 <style>
   .dialogName{
     color: white;
-    padding: .2em .5em;
+    padding: .2em 1em .2em .5em;
     font-size: .9em;
-    max-width: 11em;
+    min-width: 11em;
     margin-top: .8em;
     position: relative;
+    display: inline-block;
   }
   .dialogName::after {
     content: "";
