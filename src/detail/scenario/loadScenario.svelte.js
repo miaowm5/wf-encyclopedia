@@ -89,8 +89,10 @@ const loadConfig = async (path)=>{
   }else if (path.startsWith('story/advent_event/')){
     let chapter = path.split('/')[2]
     url = `advent_event/${chapter}`
+  }else if (path.startsWith('story/system_quest/')){
+    let chapter = path.split('/')[2]
+    url = `system_quest/${chapter}/scenario`
   }
-  "story/advent_event/boss_epuration/boss_epuration_event_001/scenario"
   let promise = new Promise((resolve)=>{
     api(`${import.meta.env.VITE_CDN3}orderedmap/story/${url}.json`, {
       success: (data)=>{ resolve(data) },

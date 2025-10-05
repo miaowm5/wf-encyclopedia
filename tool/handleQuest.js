@@ -3,6 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 const inputBase = path.join(__dirname, 'orderedmap/quest');
+const tutorialPath = path.join(__dirname, 'orderedmap/tutorial/triggered_tutorial.json');
 const outputBase = path.join(__dirname, 'output/normal_quest.json');
 
 let result = {}
@@ -22,6 +23,16 @@ let result = {}
       })
     })
   })
+
+  const file2 = JSON.parse(fs.readFileSync(path.join(tutorialPath)).toString())
+  const addQuest = (id, chapter)=>{
+    let item = file2[id][1]
+    let data = [item[22], item[23], item[24], item[25], item[26]]
+    result[key][chapter].push(data)
+  }
+  addQuest(2, 2)
+  addQuest(17, 1)
+  addQuest(20, 4)
 }
 
 {

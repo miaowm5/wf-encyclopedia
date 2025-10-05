@@ -19,6 +19,8 @@ const setScenario = (scenario)=>{
       url = `event/${path.split('/')[2]}-${path.split('/')[3]}`
     }else if (path.startsWith('story/advent_event/')){
       url = `advent/${path.split('/')[2]}-${path.split('/')[3]}`
+    }else if (path.startsWith('story/system_quest/')){
+      url = `system/${path.split('/')[2]}`
     }
     if (url){ route.push(`/scenario/${url}`) }
   }else{
@@ -92,6 +94,7 @@ const updateRoute = ((data)=>{
       main: 'story/story_quest/',
       event: 'story/story_event_quest/',
       advent: 'story/advent_event/',
+      system: 'story/system_quest/',
     }[data.type] || ''
     if (data.type === 'character'){
       url += data.item
@@ -102,6 +105,8 @@ const updateRoute = ((data)=>{
       url += data.item.split('-').join('/')
     }else if (data.type === 'advent'){
       url += data.item.split('-').join('/')
+    }else if (data.type === 'system'){
+      url += data.item
     }
     url += '/scenario'
     state.scenario = { path: url }
