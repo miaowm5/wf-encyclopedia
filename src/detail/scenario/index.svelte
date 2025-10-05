@@ -3,6 +3,7 @@
   import { spriteSheet } from '../../common'
   import { Loading } from '../../ui'
   import loadScenario from './loadScenario.svelte'
+  import Name from './dialogName.svelte'
 
   const { scenario } = $props()
 
@@ -10,15 +11,6 @@
     return loadScenario(scenario.path)
   })
 
-  const database = store.state.database.story_character
-  const getCharacteName = (character)=>{
-    if (!database[character]){ return character }
-    return database[character][0]
-  }
-  const getCharacteColor = (character)=>{
-    if (!database[character]){ return '#7c8574' }
-    return `#${database[character][1].slice(2)}`
-  }
   const backSprite = spriteSheet('res/icon', 'return')
 </script>
 
@@ -32,9 +24,7 @@
   {#each scenarioData.data as item}
     {#if item.command === "dialog"}
       <div class="dialog">
-        <div class="dialogName" style:background-color={getCharacteColor(item.param[0])}>
-          {getCharacteName(item.param[0])}
-        </div>
+        <Name character={item.param[0]} />
         <div class="dialogContent">
           {#each item.param[1].split('\\n') as lines}
             {#each lines.split('\n') as line}
@@ -86,25 +76,6 @@
     border-top: 1px solid white;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-  }
-  .dialog>.dialogName{
-    color: white;
-    padding: .2em .5em;
-    font-size: .9em;
-    max-width: 11em;
-    margin-top: .8em;
-    position: relative;
-  }
-  .dialog>.dialogName::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-top: 1em solid transparent;
-    border-bottom: 1em solid transparent;
-    border-right: 7px solid #fafafa;
   }
   .dialog>.dialogContent{
     padding: .8em 1em 1em;
