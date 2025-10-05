@@ -13,16 +13,21 @@ const setScenario = (scenario)=>{
 const setListHide = (show)=>{
   state.ui.mobileListHide = show
   if (!show){
-    document.title = getI18n('main.sitename')
-    route.push('/')
     state.item = null
+    let category = state.ui.listCategory
+    if (category === 'character'){
+      route.push('/character')
+    }else if (category === 'story'){
+      route.push('/story')
+    }else if (category === 'all'){
+      route.push('/all')
+    }else{
+      route.push('/')
+    }
   }
 }
 const changeTab = (tab)=>{
   state.ui.detailTab = tab
-}
-const changeCategory = (category)=>{
-  state.ui.listCategory = category
 }
 const changeSearch = (search)=>{
   state.ui.listSearch = search
@@ -59,6 +64,7 @@ const updateRoute = ((data)=>{
     state.scenario = null
     state.ui.mobileListHide = false
     document.title = getI18n('main.sitename')
+    state.ui.listCategory = data.category
   }
 })
 route.onUpdate(updateRoute)
@@ -72,7 +78,6 @@ const store = {
   setScenario,
   setListHide,
   changeTab,
-  changeCategory,
   changeSearch,
   changeFilter,
   setAllFilter,
