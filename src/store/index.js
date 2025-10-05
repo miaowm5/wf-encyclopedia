@@ -8,6 +8,26 @@ const setDatabase = (db, data)=>{
   state.database[db] = data
 }
 const setScenario = (scenario)=>{
+  if (scenario){
+    let path = scenario.path
+    let url = ''
+    if (path.startsWith('story/character_story_quest/')){
+      url = `character/${path.split('/')[2]}`
+    }else if (path.startsWith('story/story_quest/')){
+      url = `main/${path.split('/')[3]}`
+    }else if (path.startsWith('story/story_event_quest/')){
+      url = `event/${path.split('/')[2]}-${path.split('/')[3]}`
+    }else if (path.startsWith('story/advent_event/')){
+      url = `advent/${path.split('/')[2]}-${path.split('/')[3]}`
+    }
+    if (url){ route.push(`/scenario/${url}`) }
+  }else{
+    if (state.item){ history.go(-1) }
+    else{
+      state.ui.mobileListHide = false
+      route.push(`/`)
+    }
+  }
   state.scenario = scenario
 }
 const setListHide = (show)=>{
@@ -56,15 +76,36 @@ const updateRoute = ((data)=>{
   if (data.page === 'item'){
     if (state.item !== data.item){
       state.ui.mobileListHide = true
-      state.scenario = null
       state.item = data.item
     }
+    state.scenario = null
   }else if (data.page === 'home'){
     state.item = null
     state.scenario = null
     state.ui.mobileListHide = false
     document.title = getI18n('main.sitename')
     state.ui.listCategory = data.category
+  }else if (data.page === 'scenario'){
+    if (state.scenario){ return }
+    let url = {
+      character: 'story/character_story_quest/',
+      main: 'story/story_quest/',
+      event: 'story/story_event_quest/',
+      advent: 'story/advent_event/',
+    }[data.type] || ''
+    if (data.type === 'character'){
+      url += data.item
+    }else if (data.type === 'main'){
+      url += data.item.slice(0, data.item.length - 3)
+      url += `/${data.item}`
+    }else if (data.type === 'event'){
+      url += data.item.split('-').join('/')
+    }else if (data.type === 'advent'){
+      url += data.item.split('-').join('/')
+    }
+    url += '/scenario'
+    state.scenario = { path: url }
+    state.ui.mobileListHide = true
   }
 })
 route.onUpdate(updateRoute)
