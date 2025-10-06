@@ -65,9 +65,9 @@
   </div>
   {#if emotionList.list.length > 1}
     <div class="nav">
-      <button onclick={()=>{ changeIndex(-1) }}>last</button>
+      <button onclick={()=>{ changeIndex(-1) }}>{store.i18n("detail.content.galleyCharacter1")}</button>
       <p>{emoData.name}</p>
-      <button onclick={()=>{ changeIndex(1) }}>next</button>
+      <button onclick={()=>{ changeIndex(1) }}>{store.i18n("detail.content.galleyCharacter2")}</button>
     </div>
   {/if}
   {#if useAbleEffect.length > 0}
