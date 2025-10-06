@@ -85,16 +85,17 @@
   }
   .titleButton>div:nth-child(1){
     width: 100%;
-    aspect-ratio: 2/1;
+    height: 10em;
     max-height: 30%;
     background-size: 130%;
     background-position: center;
     flex: 0;
     position: relative;
   }
-  @supports not (aspect-ratio: 2/1){
+  @supports (aspect-ratio: 2/1){
     .titleButton>div:nth-child(1){
-      height: 10em;
+      aspect-ratio: 2/1;
+      height: auto;
     }
   }
   .titleButton>div:nth-child(1)>div{
