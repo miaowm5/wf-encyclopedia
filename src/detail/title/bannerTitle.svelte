@@ -30,9 +30,9 @@
     flex: 1;
     background-color: black;
     background-size: cover;
-    background-position: center 80%;
+    background-position: center 100%;
     width: 100%;
-    max-height: 20%;
+    max-height: 25%;
     position: relative;
   }
   .buttonGroup{

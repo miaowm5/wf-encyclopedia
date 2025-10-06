@@ -16,7 +16,7 @@
   const itemType = $derived.by(()=>{
     if (item[0][4] === '0' || item[0][4] === '1'){ return 'character' }
     if (item[0][4] === '2'){ return 'npc' }
-    if (item[0][4] === '3' || item[0][4] === '4'){ return 'story' }
+    if (item[0][4] === '3' || item[0][4] === '4' || item[0][4] === '5'){ return 'story' }
     return 'normal'
   })
   const character = $derived.by(()=>{

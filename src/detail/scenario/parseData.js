@@ -1,8 +1,9 @@
 
-const parse = (data)=>{
+const parse = (data, special)=>{
   const result = []
   Object.keys(data).forEach((index)=>{
     let items = data[index]
+    if (special){ items = [items] }
     items.forEach((item)=>{
       let type = item[0]
       let command = ''

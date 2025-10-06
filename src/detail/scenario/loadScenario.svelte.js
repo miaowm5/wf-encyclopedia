@@ -14,7 +14,7 @@ const main = (path)=>{
     if (cancelFunc){ return }
     if (!config){ return }
     if (!config[path]){ return }
-    data = parse(config[path])
+    data = parse(config[path], path.includes('main_chapter_00'))
   }
   load()
   return {

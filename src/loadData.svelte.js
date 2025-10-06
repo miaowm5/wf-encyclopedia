@@ -25,7 +25,10 @@ const main = ()=>{
         store.setDatabase(tag, handle(data))
         refreshProgress()
       },
-      fail: (err)=>{ error.push(`${tag} load failed`) },
+      fail: (err)=>{
+        console.error(err)
+        error.push(`${tag} load failed`)
+      },
       cors: true
     }, true)
   }

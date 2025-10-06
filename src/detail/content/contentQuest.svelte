@@ -25,6 +25,8 @@
         }else if (storyType2 === '0'){
           return database['event/advent_event_quest'][item[0][14]]
         }
+      }else if (storyType === '5'){
+        return database.main_quest[0]
       }
       return null
     }else{
