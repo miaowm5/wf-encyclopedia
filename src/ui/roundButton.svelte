@@ -18,12 +18,14 @@
   aria-label={alt || title || icon}
   class={[active && 'active']}
   onclick={onclick}>
-  <img
-    src={spriteIcon.src}
-    alt={alt || title || icon}
-    class="icon"
-    style:margin={title ? '.4em 0 -.5em 0' : 0}
-  />
+  {#if icon}
+    <img
+      src={spriteIcon.src}
+      alt={alt || title || icon}
+      class="icon"
+      style:margin={title ? '.4em 0 -.5em 0' : 0}
+    />
+  {/if}
   {#if title}
     <span class="label" data-title={title}>{title}</span>
   {/if}

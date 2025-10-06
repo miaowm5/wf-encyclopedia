@@ -21,5 +21,12 @@
   "rec_android_1anv": { "include": ["drone"] },
   "gentle_barten": { "include": ["shy"] },
   "nikaido_saki": { "include": ["interrobang"] },
-  "blindfold_agent":{ "include": ["laugh"] }
+  "blindfold_agent":{ "include": ["laugh"] },
+  "world_trader": { "fullshot": 2 },
+  "stella": { "fullshot": 1 },
+  "light": { "fullshot": 1 },
+  "light_origin": { "fullshot": 1 },
+  "tutorial_priest": { "fullshot": 1 },
+  "tutorial_witch": { "fullshot": 1 },
+  "guild_front_girl": { "fullshot": 1 }
 }

@@ -16,7 +16,7 @@
 
   const spriteHead = $derived.by(()=>{
     if (!lazyLoadStatus){ return null }
-    return spriteSheet('character/head', file)
+    return spriteSheet('head', file, 'cdn2')
   })
   const spriteRarity = $derived.by(()=>{
     if (!rarity || !lazyLoadStatus){ return null }
