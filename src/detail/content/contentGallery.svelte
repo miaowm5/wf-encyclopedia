@@ -2,6 +2,7 @@
   import store from '../../store'
   import { Title, RoundButton } from '../../ui'
   import GalleryCharacter from './galleryCharacter.svelte'
+  import GalleryPixel from './galleryPixel.svelte'
   import MobileBack from './mobileBack.svelte'
   import galleryEffectRule from './galleryEffectRule.json'
 
@@ -12,8 +13,10 @@
 
   const emotionList = $derived.by(()=>{
     let id = null
+    let hasPixel = false
     if (itemType === 'character'){
       id = database[item[0][5]][0]
+      if (database[item[0][5]][2] === '5' || database[item[0][5]][2] === '4'){ hasPixel = true }
     }else if (itemType === 'npc'){
       id = item[0][6]
     }
@@ -36,19 +39,19 @@
       list.push(name)
     })
     effect.push('noface')
-    return { id, list, effect, data: database2[id][3], fullshot }
+    return { id, list, effect, data: database2[id][3], fullshot, hasPixel }
   })
 
 </script>
 
 <div class="content">
-  <GalleryCharacter item={item} itemType={itemType} emotionList={emotionList} />
+  <GalleryCharacter emotionList={emotionList} />
   {#snippet image(title, image)}
     {@const url = import.meta.env.VITE_CDN2 + `fullshot/${image}.png`}
     <Title>{title}</Title>
-    <div class="image2"
+    <div class="image"
       style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
-      <img src={url} alt={image} class="img">
+      <img src={url} alt={image} />
       <RoundButton icon="full_size" onclick={()=>window.open(url)} />
     </div>
   {/snippet}
@@ -63,41 +66,39 @@
       {@render image(store.i18n("detail.content.title9"), `${emotionList.id}_1`)}
     {/if}
   {/if}
+  {#if emotionList.hasPixel}<GalleryPixel emotionList={emotionList} />{/if}
   <MobileBack />
 </div>
 
 <style>
-  .image2{
+  .image{
     width: 100%;
-    height: 80%;
-    text-align: center;
+    height: 50vh;
     background-color: #232223;
     position: relative;
-  }
-  .image2{
     padding: 1em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .img{
+  .image img{
     max-width: 100%;
     max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
   }
   .content{
     flex: 1;
     padding: 0 1em 6em 1em;
     overflow: auto;
+    overflow-x: hidden;
+    position: relative;
   }
-  .image2 :global button{
-    border-radius: 50%;
-    background-position: center center;
-    width: 2em;
-    height: 2em;
-    margin-left: .3em;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+  .image :global button{
     position: absolute;
     right: 1em;
     bottom: 1em;
-    background-color: #fafafa;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
   }
 </style>

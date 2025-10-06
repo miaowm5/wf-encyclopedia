@@ -90,8 +90,6 @@
     text-align: center;
     background-color: #232223;
     position: relative;
-  }
-  .image1{
     max-height: 690px;
   }
   .img{
