@@ -21,12 +21,14 @@
     if (!database2[id]){ return { id } }
     const list = []
     const effect = []
+    let fullshot = 0
     let rule = galleryEffectRule._common
     if (galleryEffectRule[id]){
       const include = galleryEffectRule[id].include || []
       const exclude = galleryEffectRule[id].exclude || []
       rule = rule.concat(...include)
       rule = rule.filter((name)=>!exclude.includes(name))
+      if (galleryEffectRule[id].fullshot){ fullshot = galleryEffectRule[id].fullshot }
     }
     Object.keys(database2[id][3]).forEach((name)=>{
       const isEffect = rule.some((prefix)=>name.startsWith(prefix))
@@ -34,25 +36,32 @@
       list.push(name)
     })
     effect.push('noface')
-    return { id, list, effect, data: database2[id][3] }
+    return { id, list, effect, data: database2[id][3], fullshot }
   })
 
 </script>
 
 <div class="content">
   <GalleryCharacter item={item} itemType={itemType} emotionList={emotionList} />
+  {#snippet image(title, image)}
+    {@const url = import.meta.env.VITE_CDN2 + `fullshot/${image}.png`}
+    <Title>{title}</Title>
+    <div class="image2"
+      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
+      <img src={url} alt={image} class="img">
+      <RoundButton icon="full_size" onclick={()=>window.open(url)} />
+    </div>
+  {/snippet}
   {#if itemType === 'character'}
-    {#snippet image(title, image)}
-      {@const url = import.meta.env.VITE_CDN2 + `fullshot/${image}.png`}
-      <Title>{title}</Title>
-      <div class="image2"
-        style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
-        <img src={url} alt={image} class="img">
-        <RoundButton icon="full_size" onclick={()=>window.open(url)} />
-      </div>
-    {/snippet}
     {@render image(store.i18n("detail.content.title3"), `${emotionList.id}_0`)}
     {@render image(store.i18n("detail.content.title4"), `${emotionList.id}_1`)}
+  {:else if emotionList.fullshot > 0}
+    {#if emotionList.fullshot >= 1}
+      {@render image(store.i18n("detail.content.title8"), `${emotionList.id}_0`)}
+    {/if}
+    {#if emotionList.fullshot >= 2}
+      {@render image(store.i18n("detail.content.title9"), `${emotionList.id}_1`)}
+    {/if}
   {/if}
   <MobileBack />
 </div>
