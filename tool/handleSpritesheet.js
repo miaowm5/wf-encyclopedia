@@ -6,6 +6,7 @@ const texturePacker = require("free-tex-packer-core");
 
 const storyDir = path.join(__dirname, 'output', 'story');
 const headDir = path.join(__dirname, 'output', 'head');
+const pixelDir = path.join(__dirname, 'output', 'pixel');
 const uiDir = path.join(__dirname, 'output', 'ui');
 const packDir = path.join(__dirname, 'output', 'pack');
 const metaDataPath = path.join(__dirname, 'orderedmap/generated', 'trimmed_image.json');
@@ -19,15 +20,17 @@ ensureDir(packDir);
 ensureDir(path.join(packDir, 'story'));
 ensureDir(path.join(packDir, 'head'));
 ensureDir(path.join(packDir, 'ui'));
+ensureDir(path.join(packDir, 'pixel_special'));
+ensureDir(path.join(packDir, 'pixel_normal'));
 
 const packOtions = {
   textureName: "my-texture",
   width: 1280,
   height: 1280,
   padding: 1,
-  allowRotation: false,
+  allowRotation: true,
   detectIdentical: true,
-  allowTrim: false,
+  allowTrim: true,
   removeFileExtension: true,
   exporter: {
     fileExt: "json",
@@ -136,6 +139,65 @@ async function packHead() {
   fs.writeFileSync(path.join(packDir, 'head.json'), JSON.stringify(spritesheetData));
 }
 
+// 打包 pixel 图集
+async function packPixel() {
+  const packSpritesheet = async (prefix)=>{
+    const specialDir = path.join(pixelDir, prefix)
+    const pngFiles = fs.readdirSync(specialDir).filter(file => file.endsWith('.png'));
+    if (pngFiles.length === 0) return;
+    const imagePaths = pngFiles.map(file => ({
+      virtualPath: `${file}`,
+      realPath: path.join(specialDir, file)
+    }));
+    let spritesheetData = await packImages(
+      imagePaths,
+      `pixel_${prefix}`,
+      path.join(packDir, `pixel_${prefix}`),
+    );
+    spritesheetData.timestamp = Date.now();
+    fs.writeFileSync(path.join(packDir, `pixel_${prefix}.json`), JSON.stringify(spritesheetData));
+  }
+  await packSpritesheet('normal')
+  await packSpritesheet('special')
+  let result ={}
+
+  const specialDir = path.join(pixelDir, 'special')
+  const jsonFiles = fs.readdirSync(specialDir).filter(file => file.endsWith('.json'));
+  jsonFiles.forEach((file)=>{
+    let data = JSON.parse(fs.readFileSync(path.join(specialDir, file)).toString())
+    data.forEach(item=>{
+      item.n = item.n.slice(item.n.length - 4, item.n.length) - 0
+      item.fw = undefined
+      item.fh = undefined
+    })
+    result[file.slice(0, file.length - 5)] = {
+      special: data
+    }
+  })
+  const normalDir = path.join(pixelDir, 'normal')
+  const jsonFiles2 = fs.readdirSync(normalDir).filter(file => file.endsWith('.json'));
+  jsonFiles2.forEach((file)=>{
+    let data = JSON.parse(fs.readFileSync(path.join(normalDir, file)).toString())
+    if (file.endsWith('timeline.json')){
+      data = data.sequences
+      data.forEach((action)=>{ action.kind = undefined })
+      let id = file.slice(0, file.length - 14)
+      result[id] = result[id] || {}
+      result[id].timeline = data
+    }else{
+      data.forEach(item=>{
+        item.n = item.n.slice(item.n.length - 4, item.n.length) - 0
+        item.fw = undefined
+        item.fh = undefined
+      })
+      let id = file.slice(0, file.length - 5)
+      result[id] = result[id] || {}
+      result[id].normal = data
+    }
+  })
+  fs.writeFileSync(path.join(packDir, 'pixel.json'), JSON.stringify(result));
+}
+
 // 打包 ui 图集
 async function packUI() {
   const subUIDir = fs.readdirSync(uiDir, { withFileTypes: true })
@@ -165,6 +227,7 @@ async function packUI() {
 const main = async ()=>{
   await packStory()
   await packHead()
+  await packPixel()
   await packUI()
 }
 

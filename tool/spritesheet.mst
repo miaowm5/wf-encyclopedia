@@ -7,6 +7,7 @@
       "w": {{frame.w}},
       "h": {{frame.h}}
     },
+    "rotated": {{rotated}},
     "spriteSourceSize": {
       "x": {{spriteSourceSize.x}},
       "y": {{spriteSourceSize.y}}
