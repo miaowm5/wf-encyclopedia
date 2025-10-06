@@ -56,18 +56,36 @@ const createImageQueue = ()=>{
   const task = canvasQueue.splice(0, 20)
   task.forEach(([image, spriteConfig, key, callback])=>{
     if (cacheCanvas[key]){ callback(cacheCanvas[key]); return }
-    const canvas = document.createElement("canvas")
-    const ctx = canvas.getContext("2d")
-    canvas.width = spriteConfig.sourceSize.w
-    canvas.height = spriteConfig.sourceSize.h
+    let srcCanvas = document.createElement("canvas")
+    let ctx = srcCanvas.getContext("2d")
+    srcCanvas.width = spriteConfig.frame.w
+    srcCanvas.height = spriteConfig.frame.h
     ctx.drawImage(image,
       spriteConfig.frame.x, spriteConfig.frame.y,
       spriteConfig.frame.w, spriteConfig.frame.h,
-      spriteConfig.spriteSourceSize.x, spriteConfig.spriteSourceSize.y,
+      0, 0,
       spriteConfig.frame.w, spriteConfig.frame.h,
     )
-    cacheCanvas[key] = canvas
-    callback(canvas)
+    if (spriteConfig.rotated){
+      const dstCanvas = document.createElement('canvas')
+      const dstCtx = dstCanvas.getContext('2d')
+      dstCanvas.width = spriteConfig.frame.h
+      dstCanvas.height = spriteConfig.frame.w
+      dstCtx.imageSmoothingEnabled = false
+      dstCtx.save()
+      dstCtx.translate(0, dstCanvas.height)
+      dstCtx.rotate(-Math.PI / 2)
+      dstCtx.drawImage(srcCanvas, 0, 0)
+      dstCtx.restore()
+      srcCanvas = dstCanvas
+    }
+    let dstCanvas = document.createElement("canvas")
+    let dstCtx = dstCanvas.getContext("2d")
+    dstCanvas.width = spriteConfig.sourceSize.w
+    dstCanvas.height = spriteConfig.sourceSize.h
+    dstCtx.drawImage(srcCanvas, spriteConfig.spriteSourceSize.x, spriteConfig.spriteSourceSize.y)
+    cacheCanvas[key] = dstCanvas
+    callback(dstCanvas)
   })
   requestAnimationFrame(createImageQueue)
 }
