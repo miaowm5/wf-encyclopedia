@@ -7,7 +7,7 @@ const promiseCache = {}
 
 const loadConfig = async ()=>{
   if (configCache){ return configCache }
-  const url = `${import.meta.env.VITE_CDN2}pixelFrame.json`
+  const url = `${import.meta.env.VITE_CDN}character/pixel.json`
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
@@ -25,15 +25,80 @@ const loadConfig = async ()=>{
   return configCache
 }
 
-const main = (character)=>{
+const createFrame = (frames, image, offset = 0)=>{
+  let imageList = []
+  frames.forEach((frame)=>{
+    let canvas = document.createElement("canvas")
+    const ctx = canvas.getContext("2d")
+    canvas.width = frame.w
+    canvas.height = frame.h
+    ctx.drawImage(image.canvas,
+      frame.x, frame.y, frame.w, frame.h, 0, 0, frame.w, frame.h,
+    )
+    if (frame.r){
+      const dstCanvas = document.createElement('canvas')
+      const dstCtx = dstCanvas.getContext('2d')
+      dstCanvas.width = frame.h
+      dstCanvas.height = frame.w
+      dstCtx.imageSmoothingEnabled = false
+      dstCtx.save()
+      dstCtx.translate(0, dstCanvas.height)
+      dstCtx.rotate(-Math.PI / 2)
+      dstCtx.drawImage(canvas, 0, 0)
+      dstCtx.restore()
+      canvas = dstCanvas
+    }
+    let name = frame.n + offset
+    let width = frame.r ? frame.h : frame.w
+    let height = frame.r ? frame.w : frame.h
+    imageList.push([name, canvas, -frame.fx, -frame.fy, width, height])
+  })
+  return imageList
+}
+const createTimeline = (config, imageList)=>{
+  let [begin, end] = [config.begin, config.end]
+  let list = imageList.filter((item)=>item[0] >= begin && item[0] <= end)
+  let size = [256,256,0,0]
+  let timeline = []
+  list.forEach((frame)=>{
+    let name = frame[0]
+    while (timeline.length < name - begin){ timeline.push(name) }
+    let [x, y, width, height] = [frame[2], frame[3], frame[4], frame[5]]
+    if (x < size[0]){ size[0] = x }
+    if (y < size[1]){ size[1] = y }
+    if (x + width > size[2]){ size[2] = x + width }
+    if (y + height > size[3]){ size[3] = y + height }
+  })
+  size[2] = size[2] - size[0]
+  size[3] = size[3] - size[1]
+  let result = {}
+  list.forEach(([name, canvas, x, y])=>{
+    const finalCanvas = document.createElement("canvas")
+    const finalCtx = finalCanvas.getContext("2d")
+    finalCanvas.width = size[2]
+    finalCanvas.height = size[3]
+    finalCtx.imageSmoothingEnabled = false
+    finalCtx.drawImage(canvas, x - size[0], y - size[1])
+    result[name] = finalCanvas
+  })
+  return {
+    movie: {
+      name: config.name, timeline, frame: timeline.length,
+      width: size[2], height: size[3],
+    },
+    frame: result
+  }
+}
+
+const main = (character, hasSpecial = true)=>{
   let cancelFunc = false
   let pixelData = $state(null)
-  let src = $state(null)
 
   let image = $derived.by(()=>{
-    return spriteSheet('pixel', character, 'cdn2')
+    if (!hasSpecial){ return null }
+    return spriteSheet('character/pixel_special', character)
   })
-
+  let image2 = $derived.by(()=>{ return spriteSheet('character/pixel_normal', character) })
   const load = async ()=>{
     if (!character){ return }
     const config = await loadConfig()
@@ -45,95 +110,70 @@ const main = (character)=>{
 
   let config = $derived.by(()=>{
     if (!character || !pixelData || !pixelData[character]){ return null }
-    if (!image.canvas){ return null }
-    let frames = pixelData[character]
-    let result = {}
-    let timeline = []
+    if (hasSpecial && !image.canvas){ return null }
+    if (!image2.canvas){ return null }
+    let config = pixelData[character]
+    if (!config){ return null }
+
+    let timeline = [...config.timeline]
+
     let imageList = []
-    let size = [256,256,0,0]
-    frames.forEach((frame)=>{
-      let canvas = document.createElement("canvas")
-      const ctx = canvas.getContext("2d")
-      canvas.width = frame.w
-      canvas.height = frame.h
-      ctx.drawImage(image.canvas,
-        frame.x, frame.y, frame.w, frame.h, 0, 0, frame.w, frame.h,
-      )
-      if (frame.r){
-        const dstCanvas = document.createElement('canvas')
-        const dstCtx = dstCanvas.getContext('2d')
-        dstCanvas.width = frame.h
-        dstCanvas.height = frame.w
-        dstCtx.imageSmoothingEnabled = false
-        dstCtx.save()
-        dstCtx.translate(0, dstCanvas.height)
-        dstCtx.rotate(-Math.PI / 2)
-        dstCtx.drawImage(canvas, 0, 0)
-        dstCtx.restore()
-        canvas = dstCanvas
-      }
-      let name = frame.n.slice(frame.n.length - 4, frame.n.length) - 0
-      while (timeline.length < name){ timeline.push(name) }
-      if (-frame.fx < size[0]){ size[0] = -frame.fx }
-      if (-frame.fy < size[1]){ size[1] = -frame.fy }
-      let width = frame.r ? frame.h : frame.w
-      let height = frame.r ? frame.w : frame.h
-      if (-frame.fx + width > size[2]){ size[2] = -frame.fx + width }
-      if (-frame.fy + height > size[3]){ size[3] = -frame.fy + height }
-      imageList.push([name, canvas, -frame.fx, -frame.fy])
-    })
-    size[2] = size[2] - size[0]
-    size[3] = size[3] - size[1]
-    imageList.forEach(([name, canvas, x, y])=>{
-      const finalCanvas = document.createElement("canvas")
-      const finalCtx = finalCanvas.getContext("2d")
-      finalCanvas.width = size[2]
-      finalCanvas.height = size[3]
-      finalCtx.imageSmoothingEnabled = false
-      finalCtx.drawImage(canvas, x - size[0], y - size[1])
-      result[name] = finalCanvas
-    })
-    return {
-      timeline,
-      frame: timeline.length,
-      width: size[2],
-      height: size[3],
-      image: result,
+    imageList = imageList.concat(createFrame(config.normal, image2, 0))
+    if (hasSpecial){
+      let specialList = createFrame(config.special, image, 10000)
+      timeline.push({
+        name: "special",
+        begin: 10000,
+        end: specialList[specialList.length - 1][0]
+      })
+      imageList = imageList.concat(specialList)
     }
+    const movie = {}
+    let frame = {}
+    timeline.forEach((config)=>{
+      const result = createTimeline(config, imageList)
+      movie[config.name] = result.movie
+      frame = { ...frame, ...result.frame }
+    })
+    return { movie, frame, list: Object.keys(movie) }
   })
 
+  let src = $state(null)
   let play = $state(true)
+  let action = $state(hasSpecial ? 'special' : 'skill_ready')
   let scale = $state(2)
   let speed = $state(20)
+  let currentFrame = 0
 
   let imageCache = {}
-  const getImage = (id)=>{
+  const refreshImage = ()=>{
+    const movie = config.movie[action]
+    const id = movie.timeline[currentFrame]
     if (!imageCache[id]){
-      let origin = config.image[id]
+      let origin = config.frame[id]
       const finalCanvas = document.createElement("canvas")
       const finalCtx = finalCanvas.getContext("2d")
-      const dw = config.width * scale
-      const dh = config.height * scale
+      const dw = movie.width * scale
+      const dh = movie.height * scale
       finalCanvas.width = dw
       finalCanvas.height = dh
       finalCtx.imageSmoothingEnabled = false
       finalCtx.drawImage(origin,
-        0, 0, config.width, config.height,
+        0, 0, movie.width, movie.height,
         0, 0, dw, dh
       )
       imageCache[id] = finalCanvas.toDataURL("image/png")
     }
-    return imageCache[id]
+    src = imageCache[id]
   }
-  let currentFrame = 0
+
   let timer = null
   const updateFrame = ()=>{
     timer = setTimeout(()=>{
       if (config && play){
         currentFrame += 1
-        if (currentFrame >= config.frame){ currentFrame = 0 }
-        let id = config.timeline[currentFrame]
-        src = getImage(id)
+        if (currentFrame >= config.movie[action].frame){ currentFrame = 0 }
+        refreshImage()
       }
       updateFrame()
     }, speed)
@@ -146,17 +186,31 @@ const main = (character)=>{
   })
 
   return {
-    get src(){ return src },
-    get config(){ return config },
+    get src(){
+      if (!config){ return null }
+      return src
+    },
+    get list(){
+      if (!config){ return null }
+      return config.list
+    },
+    get config(){
+      if (!config){ return {} }
+      return config.movie[action]
+    },
     get playing(){ return play },
     get scaleRate(){ return scale },
     get speedRate(){ return speed },
     play(){ play = true },
     pause(){ play = false },
+    action(name){
+      action = name
+      play = true
+    },
     scale(rate){
       scale = rate
       imageCache = {}
-      if (!play){ src = getImage(config.timeline[currentFrame]) }
+      if (!play){ refreshImage() }
     },
     speed(rate){
       play = true
@@ -164,15 +218,25 @@ const main = (character)=>{
     },
     changeFrame(offset){
       play = false
-      let currentID = config.timeline[currentFrame]
+      let findBreak = false
+      let movie = config.movie[action]
+      let currentID = movie.timeline[currentFrame]
       let nextID = currentID
       while (nextID === currentID){
         currentFrame += offset
-        if (currentFrame >= config.frame){ currentFrame = 0 }
-        if (currentFrame < 0){ currentFrame = config.frame - 1 }
-        nextID = config.timeline[currentFrame]
+        if (currentFrame >= movie.frame){
+          if (findBreak){ break }
+          currentFrame = 0
+          findBreak = true
+        }
+        if (currentFrame < 0){
+          if (findBreak){ break }
+          currentFrame = config.frame - 1
+          findBreak = true
+        }
+        nextID = movie.timeline[currentFrame]
       }
-      src = getImage(config.timeline[currentFrame])
+      refreshImage()
     },
   }
 }

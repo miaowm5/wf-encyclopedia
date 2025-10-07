@@ -7,7 +7,7 @@
 
   const pixel = $derived.by(()=>{
     if (!emotionList.id){ return null }
-    return loadPixel(emotionList.id)
+    return loadPixel(emotionList.id, emotionList.hasPixel)
   })
 
 </script>
@@ -42,6 +42,17 @@
   </div>
   <button class="frameBtn" onclick={()=>{ pixel.changeFrame(1) }}>{store.i18n("detail.content.galleyPixel8")}</button>
 </div>
+{#if pixel && pixel.list}
+  <div class="actionList">
+    {#each pixel.list as action}
+      <button
+        class={['action', pixel.config.name === action && 'active']}
+        onclick={()=>pixel.action(action)}>
+        {action}
+      </button>
+    {/each}
+  </div>
+{/if}
 
 <style>
   .image{
@@ -83,5 +94,19 @@
     padding: .3em 1.5em;
     border-top: 1px solid white;
     border-radius: 10px;
+  }
+  .actionList{
+    margin-top: 1em;
+  }
+  .action{
+    padding: .3em 1.5em;
+    border-top: 1px solid white;
+    border-radius: 10px;
+    margin-right: .5em;
+    margin-bottom: .5em
+  }
+  .action.active{
+    border-top: none;
+    background-color: #ffcf8f;
   }
 </style>
