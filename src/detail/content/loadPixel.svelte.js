@@ -58,6 +58,14 @@ const createFrame = (frames, image, offset = 0)=>{
 const createTimeline = (config, imageList)=>{
   let [begin, end] = [config.begin, config.end]
   let list = imageList.filter((item)=>item[0] >= begin && item[0] <= end)
+  if (list.length === 0){
+    const index = imageList.findIndex((item)=>item[0] > end)
+    if (index >= 0){
+      let item = [...imageList[index]]
+      item[0] = end
+      list = [item]
+    }
+  }
   let size = [256,256,0,0]
   let timeline = []
   list.forEach((frame)=>{
