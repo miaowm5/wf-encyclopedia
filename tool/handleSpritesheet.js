@@ -44,8 +44,9 @@ const packOtions = {
  * @param {String} textureName 图集名称
  * @param {String} outDir 输出目录
  * @param {Function} metaProcess 元数据处理函数（可选）
+ * @param {Object} option 额外打包选项（可选）
  */
-async function packImages(imagePaths, textureName, outDir, metaProcess) {
+async function packImages(imagePaths, textureName, outDir, metaProcess, option={}) {
   let spritesheetData = {};
   try {
     // 按需读取图片内容，避免一次性全部加载
@@ -53,7 +54,7 @@ async function packImages(imagePaths, textureName, outDir, metaProcess) {
       path: img.virtualPath,
       contents: fs.readFileSync(img.realPath)
     }));
-    const files = await texturePacker.packAsync(images, { ...packOtions, textureName });
+    const files = await texturePacker.packAsync(images, { ...packOtions, textureName, ...option });
     for (let item of files) {
       if (item.name.endsWith('.json')) {
         const jsonStr = item.buffer.toString('utf8');
@@ -64,6 +65,11 @@ async function packImages(imagePaths, textureName, outDir, metaProcess) {
         console.log('已保存:', item.name);
       }
     }
+    Object.keys(spritesheetData).forEach((key) => {
+      if (!spritesheetData[key].rotated){
+        spritesheetData[key].rotated = undefined
+      }
+    })
     if (metaProcess) metaProcess(spritesheetData);
     spritesheetData.timestamp = Date.now();
     return spritesheetData
@@ -114,11 +120,11 @@ async function packStory() {
           spritesheetData[key].sourceSize.w = metaData[2] - 0;
           spritesheetData[key].sourceSize.h = metaData[3] - 0;
         });
-      }
+      },
+      { width: 2048, height: 2048 }
     );
     spritesheetData = { ...spritesheetData, ...json };
   }
-  spritesheetData.timestamp = Date.now();
   fs.writeFileSync(path.join(packDir, 'story.json'), JSON.stringify(spritesheetData));
 }
 
@@ -135,7 +141,6 @@ async function packHead() {
     'head',
     path.join(packDir, 'head'),
   );
-  spritesheetData.timestamp = Date.now();
   fs.writeFileSync(path.join(packDir, 'head.json'), JSON.stringify(spritesheetData));
 }
 
@@ -154,7 +159,6 @@ async function packPixel() {
       `pixel_${prefix}`,
       path.join(packDir, `pixel_${prefix}`),
     );
-    spritesheetData.timestamp = Date.now();
     fs.writeFileSync(path.join(packDir, `pixel_${prefix}.json`), JSON.stringify(spritesheetData));
   }
   await packSpritesheet('normal')
@@ -219,7 +223,6 @@ async function packUI() {
       subDirName,
       packResDir,
     );
-    spritesheetData.timestamp = Date.now();
     fs.writeFileSync(path.join(packDir, 'ui', `${subDirName}.json`), JSON.stringify(spritesheetData));
   }
 }
