@@ -66,7 +66,9 @@
       {@render image(store.i18n("detail.content.title9"), `${emotionList.id}_1`)}
     {/if}
   {/if}
-  <GalleryPixel emotionList={emotionList} />
+  {#if itemType === 'character'}
+    <GalleryPixel emotionList={emotionList} />
+  {/if}
   <MobileBack />
 </div>
 
