@@ -62,12 +62,14 @@ const createTimeline = (config, imageList)=>{
   let timeline = []
   list.forEach((frame)=>{
     let name = frame[0]
-    while (timeline.length < name - begin){ timeline.push(name) }
+    while (timeline.length <= name - begin){ timeline.push(name) }
     let [x, y, width, height] = [frame[2], frame[3], frame[4], frame[5]]
-    if (x < size[0]){ size[0] = x }
-    if (y < size[1]){ size[1] = y }
-    if (x + width > size[2]){ size[2] = x + width }
-    if (y + height > size[3]){ size[3] = y + height }
+    if (width !== 1 && height !== 1){
+      if (x < size[0]){ size[0] = x }
+      if (y < size[1]){ size[1] = y }
+      if (x + width > size[2]){ size[2] = x + width }
+      if (y + height > size[3]){ size[3] = y + height }
+    }else{ console.log('need check pixel size') }
   })
   size[2] = size[2] - size[0]
   size[3] = size[3] - size[1]
@@ -151,6 +153,10 @@ const main = (character, hasSpecial = true)=>{
     const id = movie.timeline[currentFrame]
     if (!imageCache[id]){
       let origin = config.frame[id]
+      if (!origin){
+        console.log(config)
+        return
+      }
       const finalCanvas = document.createElement("canvas")
       const finalCtx = finalCanvas.getContext("2d")
       const dw = movie.width * scale
@@ -206,6 +212,7 @@ const main = (character, hasSpecial = true)=>{
     action(name){
       action = name
       play = true
+      currentFrame = 0
     },
     scale(rate){
       scale = rate
@@ -231,7 +238,7 @@ const main = (character, hasSpecial = true)=>{
         }
         if (currentFrame < 0){
           if (findBreak){ break }
-          currentFrame = config.frame - 1
+          currentFrame = movie.frame - 1
           findBreak = true
         }
         nextID = movie.timeline[currentFrame]
