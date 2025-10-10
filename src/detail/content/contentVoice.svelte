@@ -1,6 +1,7 @@
 <script>
   import { fade } from 'svelte/transition'
   import store from '../../store'
+  import { spriteSheet } from '../../common'
   import { Title, Loading } from '../../ui'
   import MobileBack from './mobileBack.svelte'
   import loadData from './loadVoice.svelte.js'
@@ -33,6 +34,8 @@
     voicePlayerItem = newPlayer
     return newPlayer
   })
+
+  const voiceMarker = spriteSheet('res/icon', 'voice_volume3')
 </script>
 
 {#snippet voice(text, audio, commentText=false)}
@@ -41,7 +44,7 @@
       <span class="progress" style:width={`${voicePlayer.seek}%`} out:fade={{ duration: 500 }}></span>
       <span
         class="mark" out:fade={{ duration: 200 }}
-        style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/icon/voice_volume3.png?082701'})`}
+        style:background-image={`url(${voiceMarker.src})`}
       ></span>
     {/if}
     <div class="text">
