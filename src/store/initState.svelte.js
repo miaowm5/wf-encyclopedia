@@ -26,6 +26,7 @@ const initState = {
     story_character: null,
     character_quest: null,
     normal_quest: null,
+    equipment: null,
   },
   customTag: customTag.load()
 }

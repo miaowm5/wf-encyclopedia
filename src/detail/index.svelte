@@ -27,7 +27,11 @@
   const tab = $derived.by(()=>{
     const stateTab = store.state.ui.detailTab
     if (stateTab === 'gallery'){
-      if (itemType !== 'character' && itemType !== 'npc'){ return 'info' }
+      if (itemType === 'story'){
+        if (item[0][4] !== '3'){ return 'info' }
+      }else if (itemType !== 'character' && itemType !== 'npc'){
+        return 'info'
+      }
     }
     if (stateTab === 'story'){
       if (itemType === 'character'){

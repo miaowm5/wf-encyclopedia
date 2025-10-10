@@ -1,7 +1,7 @@
 <script>
   import store from '../../store'
   import { RoundButton } from '../../ui'
-  const { data, title, tab } = $props()
+  const { data, title, tab, gallery = false } = $props()
   const url = $derived.by(()=>{
     return data.replace('encyclopedia/', import.meta.env.VITE_CDN) + '.png'
   })
@@ -10,18 +10,17 @@
 
 <div class="header" style:background-image={`url(${url})`}>
   <div class="buttonGroup">
-    <RoundButton
-      icon="encyclopedia"
-      alt="info"
-      onclick={()=>store.changeTab('info')}
-      active={tab === 'info'}
-    />
-    <RoundButton
-      icon="character_story_mini"
-      alt="story"
-      onclick={()=>store.changeTab('story')}
-      active={tab === 'story'}
-    />
+    {#snippet tabButton(type, icon)}
+      <RoundButton
+        icon={icon}
+        alt={type}
+        onclick={()=>store.changeTab(type)}
+        active={tab === type}
+      />
+    {/snippet}
+    {@render tabButton('info', 'encyclopedia')}
+    {@render tabButton('story', 'character_story_mini')}
+    {#if gallery}{@render tabButton('gallery', 'user_account_center')}{/if}
   </div>
 </div>
 

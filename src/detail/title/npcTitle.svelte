@@ -55,13 +55,6 @@
 
   const background = import.meta.env.VITE_CDN + 'ui/keyword_details_character_background.png'
 
-  const buttonImage = {
-    'info': 'encyclopedia',
-    'gallery': 'user_account_center',
-    'voice': 'voice_volume3',
-    'story': 'character_story_mini',
-  }
-
   const elementImage = $derived.by(()=>{
     if (element === '(None)'){ return null }
     const value = {
@@ -105,20 +98,20 @@
     {#if cv !== '(None)'}<p class="cv">{store.i18n("detail.title.cvTitle")}{cv}</p>{/if}
   </div>
   <div class="buttonGroup">
-    {#snippet tabButton(type)}
+    {#snippet tabButton(type, icon)}
       <RoundButton
-        icon={buttonImage[type]}
+        icon={icon}
         alt={type}
         onclick={()=>store.changeTab(type)}
         active={tab === type}
       />
     {/snippet}
-    {@render tabButton('info')}
-    {@render tabButton('gallery')}
+    {@render tabButton('info', 'encyclopedia')}
+    {@render tabButton('gallery', 'user_account_center')}
     {#if itemType === 'character' }
-      {@render tabButton('voice')}
+      {@render tabButton('voice', 'voice_volume3')}
       {#if (rarity === '3' || rarity === '4' || rarity === '5')}
-        {@render tabButton('story')}
+        {@render tabButton('story', 'character_story_mini')}
       {/if}
     {/if}
   </div>

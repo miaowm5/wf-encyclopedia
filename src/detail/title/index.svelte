@@ -21,7 +21,7 @@
     tab={tab}
   />
 {:else if itemType === 'story'}
-  <BannerTitle data={item[0][16]} title={item[0][17]} tab={tab} />
+  <BannerTitle data={item[0][16]} title={item[0][17]} tab={tab} gallery={item[0][4] === '3'} />
 {:else}
   <NormalTitle title={item[0][17]} />
 {/if}
