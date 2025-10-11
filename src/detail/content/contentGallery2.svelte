@@ -6,7 +6,7 @@
 
   const { item } = $props()
 
-  const database = store.state.database.equipment
+  const database = $derived.by(()=>{ return store.state.database.equipment })
   const loadState = loadData()
 
   const data = $derived.by(()=>{
