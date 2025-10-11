@@ -6,7 +6,7 @@
   import Dialog from './dialog/index.svelte'
   import Detail from './detail/index.svelte'
 
-  const loadState = store.database('encyclopedia', 'character', 'character_text', 'story_character')
+  const loadState = store.database('encyclopedia', 'character', 'character_text')
 
 </script>
 

@@ -46,8 +46,14 @@
 
 </script>
 
-{#if !emotionList}
-  <div class="content"><Loading /></div>
+{#if !loadDB.finish}
+  <div class="content">
+    {#if loadDB.error.length > 0}
+      <p>{loadDB.error[0]}</p>
+    {:else}
+      <Loading />
+    {/if}
+  </div>
 {:else}
 <div class="content">
   <GalleryCharacter emotionList={emotionList} />
