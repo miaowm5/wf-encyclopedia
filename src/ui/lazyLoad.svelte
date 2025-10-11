@@ -12,11 +12,9 @@
     observer.disconnect()
     observer = null
   }
+  if (!lazy){ loadFunc() }
   onMount(()=>{
-    if (!lazy){
-      loadFunc()
-      return
-    }
+    if (!lazy){ return }
     observer = new IntersectionObserver((entries)=>{
       entries.forEach((entry)=>{
         if (!entry.isIntersecting){ return }
