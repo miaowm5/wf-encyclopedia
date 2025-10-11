@@ -35,7 +35,12 @@ const config = {
     path: 'quest/extra_quest',
     handler: (data)=>{
       const pureData = {}
-      Object.keys(data).forEach((key)=>{ pureData[key] = data[key][0] })
+      Object.keys(data).forEach((key)=>{
+        pureData[key] = {}
+        Object.keys(data[key]).forEach((id)=>{
+          pureData[key][id] = data[key][id][0]
+        })
+      })
       return pureData
     }
   },

@@ -22,7 +22,7 @@
         let url = ''
         if (type === 'advent_event_quest'){ url = 'ex-adv-quest' }
         else if (type === 'story_event_single_quest'){ url = 'ex-single-quest' }
-        list.push({ id, name: event[0], item: [0, `event_${event[0]}`], extra: { url } })
+        list.push({ id, name: [event[2]], item: [0, `event_${event[0]}`], extra: { url } })
       })
     })
     return list
