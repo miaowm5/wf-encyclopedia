@@ -13,6 +13,7 @@
     return list.filter((data)=>data.item[4] === '3' || data.item[4] === '4' || data.item[4] === '5')
   })
   const extraList = $derived.by(()=>{
+    return []
     if (loadDB.finish === false){ return [] }
     const extraStory = loadDB.db.extra_quest
     const list = []
