@@ -1,6 +1,6 @@
 <script>
   import store from '../../store'
-  import { Title, RoundButton } from '../../ui'
+  import { Title, RoundButton, Loading } from '../../ui'
   import GalleryCharacter from './galleryCharacter.svelte'
   import GalleryPixel from './galleryPixel.svelte'
   import MobileBack from './mobileBack.svelte'
@@ -8,10 +8,12 @@
 
   const { item, itemType } = $props()
 
-  const database = store.state.database.character
-  const database2 = store.state.database.story_character
+  const loadDB = store.database('character', 'story_character')
 
   const emotionList = $derived.by(()=>{
+    if (!loadDB.finish){ return null }
+    const database = loadDB.db.character
+    const database2 = loadDB.db.story_character
     let id = null
     let hasPixel = false
     if (itemType === 'character'){
@@ -44,6 +46,9 @@
 
 </script>
 
+{#if !emotionList}
+  <div class="content"><Loading /></div>
+{:else}
 <div class="content">
   <GalleryCharacter emotionList={emotionList} />
   {#snippet image(title, image)}
@@ -71,6 +76,7 @@
   {/if}
   <MobileBack />
 </div>
+{/if}
 
 <style>
   .image{

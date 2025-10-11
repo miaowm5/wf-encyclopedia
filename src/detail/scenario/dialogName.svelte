@@ -3,19 +3,18 @@
 
   const { character } = $props()
 
-  const database = store.state.database.story_character
+  const loadDB = store.database('story_character')
+
   const name = $derived.by(()=>{
-    if (!database[character]){ return character }
-    return database[character][0]
-  })
-  const color = $derived.by(()=>{
-    if (!database[character]){ return '#7c8574' }
-    return `#${database[character][1].slice(2)}`
+    if (!loadDB.finish){ return [character, '#7c8574'] }
+    const database = loadDB.db.story_character
+    if (!database[character]){ return [character, '#7c8574'] }
+    return [database[character][0], `#${database[character][1].slice(2)}`]
   })
 </script>
 
-<div class="dialogName" style:background-color={color}>
-  {name}
+<div class="dialogName" style:background-color={name[1]}>
+  {name[0]}
 </div>
 
 <style>

@@ -16,11 +16,13 @@
     tab = 'info',
   } = $props()
 
-  const database = store.state.database.story_character
+  const loadDB = store.database('story_character')
 
   document.title = name + ' | ' + store.i18n('main.sitename')
 
   let bannerImage = $derived.by(()=>{
+    if (!loadDB.finish){ return null }
+    const database = loadDB.db.story_character
     if (!database[banner]){ return null }
     let emotion = Object.keys(database[banner][3])
     if (emotion.length === 0){ return null }

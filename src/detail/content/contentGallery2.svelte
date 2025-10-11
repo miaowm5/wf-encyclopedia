@@ -1,16 +1,14 @@
 <script>
   import store from '../../store'
   import { RoundButton, Loading } from '../../ui'
-  import loadData from './loadEquipment.svelte.js'
   import MobileBack from './mobileBack.svelte'
 
   const { item } = $props()
-
-  const database = $derived.by(()=>{ return store.state.database.equipment })
-  const loadState = loadData()
+  const database = store.database('equipment')
 
   const data = $derived.by(()=>{
-    if (!loadState.finish){ return null }
+    if (!database.finish){ return null }
+    const database = database.db['equipment']
     if (!database){ return null }
     let chapter = item[0][12]
     let result = database[100000 + (chapter - 0)]
@@ -27,9 +25,9 @@
     <img src={url} alt={data ? data[0] : `${item[0][17]}`} />
     <RoundButton icon="full_size" onclick={()=>window.open(url)} />
   </div>
-  {#if !loadState.finish}
-    {#if loadState.error.length > 0}
-      <p>{loadState.error[0]}</p>
+  {#if !database.finish}
+    {#if database.error.length > 0}
+      <p>{database.error[0]}</p>
     {:else}
       <Loading />
     {/if}

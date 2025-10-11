@@ -17,17 +17,6 @@ const initState = {
     data: null,
     closeable: true,
   },
-  database: {
-    encyclopedia: null,
-    character: null,
-    character_text: null,
-    character_speech: null,
-    character_speech_text: null,
-    story_character: null,
-    character_quest: null,
-    normal_quest: null,
-    equipment: null,
-  },
   customTag: customTag.load()
 }
 

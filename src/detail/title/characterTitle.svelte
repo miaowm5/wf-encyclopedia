@@ -4,16 +4,19 @@
 
   const { data, tab } = $props()
 
-  const database2 = store.state.database.character_text
-  const database3 = store.state.database.character
+  const loadDB = store.database('character', 'character_text')
 
   const character = $derived.by(()=>{
+    if (!loadDB.finish){ return [] }
+    const database2 = loadDB.db.character_text
     const character = database2[data[0][5]]
     document.title = character[0] + ' | ' + store.i18n('main.sitename')
     return character
   })
 
   const characterData = $derived.by(()=>{
+    if (!loadDB.finish){ return null }
+    const database3 = loadDB.db.character
     return database3[data[0][5]]
   })
 

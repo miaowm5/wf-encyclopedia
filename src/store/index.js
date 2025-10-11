@@ -2,11 +2,9 @@
 import route from './initRoute'
 import state from './initState.svelte.js'
 import customTag from './customTag.js'
+import dbLoader from './db.svelte.js'
 import i18n from './i18n.json'
 
-const setDatabase = (db, data)=>{
-  state.database[db] = data
-}
 const setScenario = (scenario)=>{
   if (scenario){
     let path = scenario.path
@@ -120,7 +118,6 @@ const store = {
   get state(){ return state },
   route,
   i18n: getI18n,
-  setDatabase,
   setScenario,
   setListHide,
   changeTab,
@@ -129,6 +126,7 @@ const store = {
   setAllFilter,
   setDialog,
   tag: customTag.init(state),
+  database: dbLoader(state),
 }
 
 export default store

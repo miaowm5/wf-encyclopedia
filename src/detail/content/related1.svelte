@@ -5,12 +5,14 @@
 
   const { data } = $props()
 
-  const database = store.state.database.encyclopedia
-  const database2 = store.state.database.character_text
-  const database3 = store.state.database.character
+  const loadDB = store.database('encyclopedia', 'character_text', 'character')
 
   const list = $derived.by(()=>{
+    if (!loadDB.finish){ return [] }
     let result = []
+    const database = loadDB.db.encyclopedia
+    const database2 = loadDB.db.character_text
+    const database3 = loadDB.db.character
     data.forEach((id)=>{
       const item = database[id]
       if (!item){ return }

@@ -5,12 +5,13 @@
 
   const { data } = $props()
 
-  const database = store.state.database.encyclopedia
+  const loadDB = store.database('encyclopedia')
 
   const list = $derived.by(()=>{
+    if (!loadDB.finish){ return [] }
     let result = []
     data.forEach((id)=>{
-      const item = database[id]
+      const item = loadDB.db.encyclopedia[id]
       if (!item){ return }
       if (['0','1','2'].includes(item[0][4])){ return }
       result.push({name: item[0][17], id})

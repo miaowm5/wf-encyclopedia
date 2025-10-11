@@ -4,16 +4,17 @@
   import Content from './content/index.svelte'
   import Scenario from './scenario/index.svelte'
 
-  const database = store.state.database.encyclopedia
-  const database2 = store.state.database.character
+  const loadDB = store.database('encyclopedia', 'character')
 
   const item = $derived.by(()=>{
     const id = store.state.item
     if (!store.state.item){ return null }
-    const data = database[id]
+    if (!loadDB.finish){ return null }
+    const data = loadDB.db.encyclopedia[id]
     return data
   })
   const itemType = $derived.by(()=>{
+    if (!item){ return 'normal' }
     if (item[0][4] === '0' || item[0][4] === '1'){ return 'character' }
     if (item[0][4] === '2'){ return 'npc' }
     if (item[0][4] === '3' || item[0][4] === '4' || item[0][4] === '5'){ return 'story' }
@@ -21,7 +22,8 @@
   })
   const character = $derived.by(()=>{
     if (itemType !== 'character'){ return null }
-    return database2[item[0][5]]
+    if (!loadDB.finish){ return null }
+    return loadDB.db.character[item[0][5]]
   })
 
   const tab = $derived.by(()=>{

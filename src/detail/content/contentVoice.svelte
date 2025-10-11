@@ -4,18 +4,18 @@
   import { spriteSheet } from '../../common'
   import { Title, Loading } from '../../ui'
   import MobileBack from './mobileBack.svelte'
-  import loadData from './loadVoice.svelte.js'
   import loadVoice from './loadVoiceAudio.svelte.js'
 
   const { item } = $props()
 
-  const loadState = loadData()
+  const loadDB = store.database('character_speech', 'character_speech_text')
+
   const data = $derived.by(()=>{
-    if (!loadState.finish){ return null }
-    if (loadState.error.length > 0){ return null }
-    if (!store.state.database.character_speech){ return null }
-    const database = store.state.database.character_speech
-    const database2 = store.state.database.character_speech_text
+    if (!loadDB.finish){ return null }
+    if (loadDB.error.length > 0){ return null }
+    if (!loadDB.db.character_speech){ return null }
+    const database = loadDB.db.character_speech
+    const database2 = loadDB.db.character_speech_text || {}
     const info = database[item[0][5]]
     const text = database2[item[0][6]] || {}
     if (!info){ return null }
@@ -59,9 +59,9 @@
 {/snippet}
 
 <div class="content">
-  {#if !loadState.finish}
-    {#if loadState.error.length > 0}
-      <p>{loadState.error[0]}</p>
+  {#if !loadDB.finish}
+    {#if loadDB.error.length > 0}
+      <p>{loadDB.error[0]}</p>
     {:else}
       <Loading />
     {/if}

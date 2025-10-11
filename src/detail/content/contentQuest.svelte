@@ -2,17 +2,19 @@
   import store from '../../store'
   import { Loading } from '../../ui'
   import MobileBack from './mobileBack.svelte'
-  import loadData from './loadQuest.svelte.js'
 
   const { item, itemType } = $props()
 
-  const loadState = loadData(itemType)
+  const loadDB = $derived.by(()=>{
+    return store.database(itemType === 'story' ? 'normal_quest' : 'character_quest')
+  })
+
   const data = $derived.by(()=>{
-    if (!loadState.finish){ return null }
-    if (loadState.error.length > 0){ return null }
+    if (!loadDB.finish){ return null }
+    if (loadDB.error.length > 0){ return null }
     if (itemType === 'story'){
-      if (!store.state.database.normal_quest){ return null }
-      const database = store.state.database.normal_quest
+      if (!loadDB.db['normal_quest']){ return null }
+      const database = loadDB.db['normal_quest']
       let storyType = item[0][4]
       if (storyType === '3'){
         return database.main_quest[item[0][12]]
@@ -30,17 +32,17 @@
       }
       return null
     }else{
-      if (!store.state.database.character_quest){ return null }
-      const database = store.state.database.character_quest
+      if (!loadDB.db['character_quest']){ return null }
+      const database = loadDB.db['character_quest']
       return database[item[0][5]]
     }
   })
 </script>
 
 <div class="content">
-  {#if !loadState.finish}
-    {#if loadState.error.length > 0}
-      <p>{loadState.error[0]}</p>
+  {#if !loadDB.finish}
+    {#if loadDB.error.length > 0}
+      <p>{loadDB.error[0]}</p>
     {:else}
       <Loading />
     {/if}

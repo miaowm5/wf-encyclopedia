@@ -1,12 +1,12 @@
 <script>
   import './reset.css'
   import { Loading } from './ui'
-  import loadData from './loadData.svelte.js'
+  import store from './store'
   import List from './list/index.svelte'
   import Dialog from './dialog/index.svelte'
   import Detail from './detail/index.svelte'
 
-  const loadState = loadData()
+  const loadState = store.database('encyclopedia', 'character', 'character_text', 'story_character')
 
 </script>
 
