@@ -3,6 +3,7 @@ import customTag from "./customTag"
 
 const initState = {
   item: null,
+  extra: null,
   scenario: null,
   ui: {
     listCategory: null,

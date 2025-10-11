@@ -27,6 +27,10 @@ const config = {
       return result
     }
   },
+  extra_quest: {
+    path: 'quest/extra_quest',
+    handler: (data)=>{ return data }
+  },
   character_quest: {
     path: 'quest/character_quest',
     handler: (data)=>{

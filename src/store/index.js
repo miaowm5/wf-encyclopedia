@@ -74,9 +74,10 @@ const getI18n = (path)=>{
 
 const updateRoute = ((data)=>{
   if (data.page === 'item'){
-    if (state.item !== data.item){
+    if (state.item !== data.item || state.extra !== data.extra){
       state.ui.mobileListHide = true
       state.item = data.item
+      state.extra = data.extra
     }
     state.scenario = null
   }else if (data.page === 'home'){

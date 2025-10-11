@@ -15,6 +15,9 @@
   })
   const itemType = $derived.by(()=>{
     if (!item){ return 'normal' }
+    if (store.state.extra === 'character'){ return 'character' }
+    if (store.state.extra === 'adv-quest'){ return 'story' }
+    if (store.state.extra === 'single-quest'){ return 'story' }
     if (item[0][4] === '0' || item[0][4] === '1'){ return 'character' }
     if (item[0][4] === '2'){ return 'npc' }
     if (item[0][4] === '3' || item[0][4] === '4' || item[0][4] === '5'){ return 'story' }
@@ -60,8 +63,8 @@
   {/if}
   {#if item}{#key store.state.item}
     <span class={[store.state.scenario && 'hide', 'body']}>
-      <Title item={item} itemType={itemType} tab={tab} />
-      <Content item={item} itemType={itemType} tab={tab} />
+      <Title item={item} itemType={itemType} tab={tab} extra={store.state.extra} />
+      <Content item={item} itemType={itemType} tab={tab} extra={store.state.extra} />
     </span>
   {/key}{/if}
 </div>
