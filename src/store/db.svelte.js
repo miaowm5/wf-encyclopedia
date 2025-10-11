@@ -131,9 +131,13 @@ const init = (state)=>{
       let loadConfig = config[name]
       if (cache[name]){ addProgress() }
       else{
-        wrapApi(`${import.meta.env.VITE_CDN3}/orderedmap/${loadConfig.path}.json`, {
+        const baseUrl = {
+          cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
+          jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
+        }[state.dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
+        wrapApi(`${baseUrl}${loadConfig.path}.json`, {
           success: (data)=>{
-            cache[name] = loadConfig.handler(data)
+            cache[name] = loadConfig.handler(data, state.dataRegion)
             addProgress()
           },
           fail: (err)=>{

@@ -69,7 +69,9 @@ const getI18n = (path)=>{
     result = result[key]
   })
   if (!result){ return path }
-  return result[0]
+  if (state.config.language === 'en'){ return result[1] || path }
+  if (state.config.language === 'jp'){ return result[2] || path }
+  return result[0] || path
 }
 
 const updateRoute = ((data)=>{

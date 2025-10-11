@@ -18,6 +18,10 @@ const initState = {
     data: null,
     closeable: true,
   },
+  config: {
+    language: 'cn',
+    dataRegion: 'cn',
+  },
   customTag: customTag.load()
 }
 
