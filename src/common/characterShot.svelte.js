@@ -1,6 +1,6 @@
 import spriteSheet from './spriteSheet.svelte.js'
 
-const wrap = (back, front, effect=[])=>{
+const wrap = (back, front, effect=[], cache)=>{
 
   const emptyCanvas = ()=>{
     const canvas = document.createElement("canvas")
@@ -11,15 +11,15 @@ const wrap = (back, front, effect=[])=>{
 
   const backCanvas = $derived.by(()=>{
     if (!back){ return emptyCanvas() }
-    return spriteSheet('character/story', back)
+    return spriteSheet('character/story', back, cache)
   })
   const frontCanvas = $derived.by(()=>{
     if (!front){ return emptyCanvas() }
-    return spriteSheet('character/story', front)
+    return spriteSheet('character/story', front, cache)
   })
   const effectCanvas = $derived.by(()=>{
     return effect.map((eff)=>{
-      return spriteSheet('character/story', eff)
+      return spriteSheet('character/story', eff, cache)
     })
   })
 

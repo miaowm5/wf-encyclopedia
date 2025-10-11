@@ -47,15 +47,14 @@ const loadImage = async (spritesheet, file, cdn)=>{
 
 let canvasQueueStatus = 'idle'
 let canvasQueue = []
-const cacheCanvas = {}
 const createImageQueue = ()=>{
   if (canvasQueue.length === 0){
     canvasQueueStatus = 'idle'
     return
   }
   const task = canvasQueue.splice(0, 20)
-  task.forEach(([image, spriteConfig, key, callback])=>{
-    if (cacheCanvas[key]){ callback(cacheCanvas[key]); return }
+  task.forEach(([image, spriteConfig, key, callback, cache])=>{
+    if (cache && cache.get(key)){ callback(cache.get(key)); return }
     let srcCanvas = document.createElement("canvas")
     let ctx = srcCanvas.getContext("2d")
     srcCanvas.width = spriteConfig.frame.w
@@ -84,16 +83,16 @@ const createImageQueue = ()=>{
     dstCanvas.width = spriteConfig.sourceSize.w
     dstCanvas.height = spriteConfig.sourceSize.h
     dstCtx.drawImage(srcCanvas, spriteConfig.spriteSourceSize.x, spriteConfig.spriteSourceSize.y)
-    cacheCanvas[key] = dstCanvas
+    if (cache){ cache.set(key, dstCanvas) }
     callback(dstCanvas)
   })
   requestAnimationFrame(createImageQueue)
 }
-const createCanvas = async (image, spriteConfig, key)=>{
-  if (cacheCanvas[key]){ return cacheCanvas[key] }
+const createCanvas = async (image, spriteConfig, key, cache)=>{
+  if (cache && cache.get(key)){ return cache.get(key) }
   const canvas = await new Promise((resolve)=>{
     const callback = (canvas)=>{ resolve(canvas) }
-    canvasQueue.push([image, spriteConfig, key, callback])
+    canvasQueue.push([image, spriteConfig, key, callback, cache])
     if (canvasQueueStatus === 'idle'){
       canvasQueueStatus = 'pending'
       requestAnimationFrame(createImageQueue)
@@ -102,7 +101,7 @@ const createCanvas = async (image, spriteConfig, key)=>{
   return canvas
 }
 
-const wrap = (spritesheet, file = null, cdnType='cdn')=>{
+const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
   const cdn = {
     "cdn": import.meta.env.VITE_CDN,
     "cdn2": import.meta.env.VITE_CDN2,
@@ -123,7 +122,7 @@ const wrap = (spritesheet, file = null, cdnType='cdn')=>{
     const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`, cdn)
     if (!image){ return }
     if (cancelFunc){ return }
-    const finalCanvas = await createCanvas(image, spriteConfig, `${cdn}/${spritesheet}/${file}`)
+    const finalCanvas = await createCanvas(image, spriteConfig, `${cdn}${spritesheet}/${file}`, cache)
     if (cancelFunc){ return }
     canvas = finalCanvas
     src = finalCanvas.toDataURL("image/png")

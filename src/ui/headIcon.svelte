@@ -2,6 +2,7 @@
   import { spriteSheet } from '../common'
   import TextImage from './textImage.svelte'
   import LazyLoad from './lazyLoad.svelte'
+  import headIconCache from './headIconCache.js'
 
   let {
     file,
@@ -28,11 +29,11 @@
       '1': 'rarity_one',
     }[rarity]
     if (!file){ return null }
-    return spriteSheet('res/icon', file)
+    return spriteSheet('res/icon', file, 'cdn', headIconCache)
   })
   const spriteRarityFrame = $derived.by(()=>{
     if (!rarity || !lazyLoadStatus){ return null }
-    return spriteSheet('res/icon', `rarity_background${rarity}`)
+    return spriteSheet('res/icon', `rarity_background${rarity}`, 'cdn', headIconCache)
   })
   const spriteElement = $derived.by(()=>{
     if (!element || !lazyLoadStatus){ return null }
@@ -45,14 +46,14 @@
       '5': 'element_black_medium',
     }[element]
     if (!file){ return null }
-    return spriteSheet('res/icon', file)
+    return spriteSheet('res/icon', file, 'cdn', headIconCache)
   })
   const spriteElementFrame = $derived.by(()=>{
     if (!lazyLoadStatus){ return null }
     if (!element){
-      return spriteSheet('res/icon', 'character_face_empty_frame')
+      return spriteSheet('res/icon', 'character_face_empty_frame', 'cdn', headIconCache)
     }
-    return spriteSheet('res/icon', 'character_face_frame')
+    return spriteSheet('res/icon', 'character_face_frame', 'cdn', headIconCache)
   })
   const finalHead = $derived.by(()=>{
     if (!lazyLoadStatus){ return null }
@@ -101,7 +102,7 @@
       width={212}
       height={212}
       style={{ color: 'white', background: '#000000', size: '36px' }}
-      lazyLoad={lazyLoad}
+      lazyLoad={false}
     />
   {/if}
   {#if showName}
@@ -110,7 +111,7 @@
       width={212}
       height={40}
       style={{ color: 'white', background: '#333333', size: '28px' }}
-      lazyLoad={lazyLoad}
+      lazyLoad={false}
     />
   {/if}
 </div>

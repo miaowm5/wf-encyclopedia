@@ -25,6 +25,12 @@
     })
   })
 
+  const cacheMap = {}
+  const cache = {
+    get: (key)=>{ return cacheMap[key] },
+    set: (key, canvas)=>{ cacheMap[key] = canvas },
+  }
+
   const bannerImage = $derived.by(()=>{
     if (!emoData){ return null }
     let effect = []
@@ -36,7 +42,7 @@
     })
     return characterShot(emoData.data.back,
       selectEffect.includes('noface') ? null : emoData.data.front,
-      effect
+      effect, cache
     )
   })
 
