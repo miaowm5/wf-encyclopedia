@@ -11,15 +11,15 @@ const wrap = (back, front, effect=[], cache)=>{
 
   const backCanvas = $derived.by(()=>{
     if (!back){ return emptyCanvas() }
-    return spriteSheet('character/story', back, cache)
+    return spriteSheet('character/story', back, 'cdn', cache)
   })
   const frontCanvas = $derived.by(()=>{
     if (!front){ return emptyCanvas() }
-    return spriteSheet('character/story', front, cache)
+    return spriteSheet('character/story', front, 'cdn', cache)
   })
   const effectCanvas = $derived.by(()=>{
     return effect.map((eff)=>{
-      return spriteSheet('character/story', eff, cache)
+      return spriteSheet('character/story', eff, 'cdn', cache)
     })
   })
 
