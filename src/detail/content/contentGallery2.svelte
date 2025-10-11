@@ -4,16 +4,16 @@
   import MobileBack from './mobileBack.svelte'
 
   const { item } = $props()
-  const database = store.database('equipment')
+  const loadDB = store.database('equipment')
 
   const data = $derived.by(()=>{
-    if (!database.finish){ return null }
-    const database = database.db['equipment']
+    if (!loadDB.finish){ return null }
+    const database = loadDB.db.equipment
     if (!database){ return null }
     let chapter = item[0][12]
     let result = database[100000 + (chapter - 0)]
     if (!result){ return null }
-    return [result[0][1], result[0][5]]
+    return [result[1], result[5]]
   })
 
   const url = import.meta.env.VITE_CDN + `orb/chapter${item[0][12]}.png`
@@ -25,9 +25,9 @@
     <img src={url} alt={data ? data[0] : `${item[0][17]}`} />
     <RoundButton icon="full_size" onclick={()=>window.open(url)} />
   </div>
-  {#if !database.finish}
-    {#if database.error.length > 0}
-      <p>{database.error[0]}</p>
+  {#if !loadDB.finish}
+    {#if loadDB.error.length > 0}
+      <p>{loadDB.error[0]}</p>
     {:else}
       <Loading />
     {/if}

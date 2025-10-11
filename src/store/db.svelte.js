@@ -6,7 +6,11 @@ const cache = {}
 const config = {
   equipment: {
     path: 'item/equipment',
-    handler: (data)=>{ return data }
+    handler: (data)=>{
+      const pureData = {}
+      Object.keys(data).forEach((key)=>{ pureData[key] = data[key][0] })
+      return pureData
+    }
   },
   normal_quest: {
     path: 'quest/normal_quest',
