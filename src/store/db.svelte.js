@@ -29,7 +29,11 @@ const config = {
   },
   extra_quest: {
     path: 'quest/extra_quest',
-    handler: (data)=>{ return data }
+    handler: (data)=>{
+      const pureData = {}
+      Object.keys(data).forEach((key)=>{ pureData[key] = data[key][0] })
+      return pureData
+    }
   },
   character_quest: {
     path: 'quest/character_quest',
