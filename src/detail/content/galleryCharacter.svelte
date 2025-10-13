@@ -97,6 +97,7 @@
     background-color: #232223;
     position: relative;
     max-height: 690px;
+    line-height: 0;
   }
   .img{
     max-width: 100%;
@@ -129,5 +130,8 @@
     padding: .3em 1.5em;
     border-top: 1px solid white;
     border-radius: 10px;
+  }
+  @media (max-width: 500px) {
+    .image1{ height: auto; }
   }
 </style>

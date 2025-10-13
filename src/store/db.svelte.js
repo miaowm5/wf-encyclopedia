@@ -73,7 +73,7 @@ const config = {
     handler: (data)=>{
       const pureData = {}
       Object.keys(data).forEach((key)=>{
-        const item = data[key]
+        const item = Object.keys(data[key]).map((index)=>data[key][index][0])
         const result = {
           type: 'normal',
           releated: [],
@@ -111,13 +111,12 @@ const config = {
           }
           else if (item[0][4] === '5'){ result.subType = 'prologue' }
           result.banner = item[0][16]
+          result.eventID = item[0][1]
         }
         result.releated = item[0][19] ? item[0][19].split(',') : []
         result.desc = []
-        Object.keys(item).forEach((index)=>{
-          let value = data[key][index][0]
-          let desc = value[20].split('\n')
-          result.desc.push(desc)
+        item.forEach((block)=>{
+          result.desc.push(block[20].split('\n'))
         })
         pureData[key] = result
       })

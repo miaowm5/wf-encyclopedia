@@ -10,7 +10,7 @@
   const loadDB = store.database('extra_quest')
 
   const showList = $derived.by(()=>{
-    return list.filter((data)=>data.item[4] === '3' || data.item[4] === '4' || data.item[4] === '5')
+    return list.filter((data)=>data.item.type === 'story')
   })
   const extraList = $derived.by(()=>{
     return []

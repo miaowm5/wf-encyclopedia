@@ -14,12 +14,12 @@
     const database2 = loadDB.db.character_text
     const database3 = loadDB.db.character
     return Object.keys(database).map((id)=>{
-      const item = database[id][0]
+      const item = database[id]
       let extra = {}
-      let name = [item[17]]
-      if (item[4] === '0' || item[4] === '1'){
-        extra = database3[item[5]]
-        name = [database2[item[5]][0], database2[item[5]][3]]
+      let name = [item.title]
+      if (item.type === 'character'){
+        extra = database3[item.characterID]
+        name = [database2[item.characterID][0], database2[item.characterID][3]]
       }
       return { id, name, item, extra }
     })
