@@ -1,5 +1,6 @@
 <script>
   import { spriteSheet } from '../common'
+  import iconCache from './spritesheetCache.js'
 
   let {
     icon,
@@ -10,7 +11,7 @@
   } = $props()
 
   const spriteIcon = $derived.by(()=>{
-    return spriteSheet('res/icon', icon)
+    return spriteSheet('res/icon', icon, 'cdn', iconCache)
   })
 </script>
 

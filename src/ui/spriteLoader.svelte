@@ -1,6 +1,7 @@
 <script>
   import { spriteSheet } from '../common'
   import LazyLoad from './lazyLoad.svelte'
+  import spritesheetCache from './spritesheetCache.js'
 
   let {
     spritesheet,
@@ -9,13 +10,14 @@
     children,
     lazyLoad = true,
     cdn = 'cdn',
+    cache = false,
   } = $props()
 
   let lazyLoadStatus = $state(false)
 
   const sprite = $derived.by(()=>{
     if (!lazyLoadStatus){ return null }
-    return spriteSheet(spritesheet, file, cdn)
+    return spriteSheet(spritesheet, file, cdn, cache ? spritesheetCache : null)
   })
 </script>
 

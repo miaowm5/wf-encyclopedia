@@ -2,7 +2,7 @@
   import { spriteSheet } from '../common'
   import TextImage from './textImage.svelte'
   import LazyLoad from './lazyLoad.svelte'
-  import headIconCache from './headIconCache.js'
+  import headIconCache from './spritesheetCache.js'
 
   let {
     file,

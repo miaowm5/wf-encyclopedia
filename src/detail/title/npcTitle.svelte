@@ -80,7 +80,7 @@
     {#if title !== '(None)'}<p>
       {#if elementImage}
         <span class="element">
-          <SpriteLoader spritesheet="res/icon" file={elementImage} alt={element} />
+          <SpriteLoader spritesheet="res/icon" file={elementImage} alt={element} cache={true} />
         </span>
       {/if}
       {title}
@@ -91,7 +91,7 @@
         {#each raceText as item}
           <span class="race">
             {item[0]}
-            <SpriteLoader spritesheet="res/icon" file={item[1]} alt={item[0]} />
+            <SpriteLoader spritesheet="res/icon" file={item[1]} alt={item[0]} cache={true} />
           </span>
         {/each}
       </p>
