@@ -174,31 +174,30 @@ const init = (state)=>{
     const addProgress = ()=>{
       progress += 1
       if (progress >= db.length){
-        db.forEach((name)=>{ database[name] = cache[name] })
+        db.forEach((name)=>{ if (name){ database[name] = cache[name] } })
         if (error.length === 0){ finish = true }
       }
     }
 
     db.forEach((name)=>{
+      if (!name){ return addProgress() }
+      if (cache[name]){ return addProgress() }
       let loadConfig = config[name]
-      if (cache[name]){ addProgress() }
-      else{
-        const baseUrl = {
-          cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
-          jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
-        }[state.dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
-        wrapApi(`${baseUrl}${loadConfig.path}.json`, {
-          success: (data)=>{
-            cache[name] = loadConfig.handler(data, state.dataRegion)
-            addProgress()
-          },
-          fail: (err)=>{
-            console.error(err)
-            error.push(`${name} load failed`)
-          },
-          cors: true
-        }, true)
-      }
+      const baseUrl = {
+        cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
+        jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
+      }[state.dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
+      wrapApi(`${baseUrl}${loadConfig.path}.json`, {
+        success: (data)=>{
+          cache[name] = loadConfig.handler(data, state.dataRegion)
+          addProgress()
+        },
+        fail: (err)=>{
+          console.error(err)
+          error.push(`${name} load failed`)
+        },
+        cors: true
+      }, true)
     })
 
     return {
