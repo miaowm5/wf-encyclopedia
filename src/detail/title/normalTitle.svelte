@@ -25,5 +25,7 @@
   }
   .header>p{
     margin-top: 1em;
+    padding: 0 .5em;
+    text-align: center;
   }
 </style>

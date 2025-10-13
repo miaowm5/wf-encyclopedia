@@ -20,8 +20,8 @@
     itemType={itemType}
     tab={tab}
   />
-{:else if itemType === 'story' && !extra}
-  <BannerTitle data={item.banner} title={item.title} tab={tab} gallery={item.subType === 'main'} />
+{:else if itemType === 'story'}
+  <BannerTitle data={item.banner} title={item.title} tab={tab} gallery={item.subType === 'main'} extra={extra} />
 {:else}
   <NormalTitle title={item.title} />
 {/if}

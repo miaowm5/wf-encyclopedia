@@ -1,14 +1,17 @@
 <script>
   import store from '../../store'
   import { RoundButton } from '../../ui'
-  const { data, title, tab, gallery = false } = $props()
+  const { data, title, tab, gallery = false, extra } = $props()
   const url = $derived.by(()=>{
-    return data.replace('encyclopedia/', import.meta.env.VITE_CDN) + '.png'
+    const cdn = import.meta.env.VITE_CDN
+    if (extra){ return cdn + 'ui/keyword_details_keyword_background.png' }
+    return data.replace('encyclopedia/', cdn) + '.png'
   })
   document.title = title + ' | ' + store.i18n('main.sitename')
 </script>
 
 <div class="header" style:background-image={`url(${url})`}>
+  {#if extra}<p class="title">{title}</p>{/if}
   <div class="buttonGroup">
     {#snippet tabButton(type, icon)}
       <RoundButton
@@ -41,5 +44,12 @@
     z-index: 10;
     display: flex;
     gap: 0 .2em;
+  }
+  .title{
+    margin-top: 2.5em;
+    padding: 0 .5em;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
   }
 </style>

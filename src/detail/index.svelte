@@ -1,26 +1,62 @@
 <script>
   import store from '../store'
+  import { Loading } from '../ui'
   import Title from './title/index.svelte'
   import Content from './content/index.svelte'
   import Scenario from './scenario/index.svelte'
 
-  const loadDB = store.database('encyclopedia', 'character')
+  const loadDB = $derived.by(()=>{
+    const list = ['encyclopedia', 'character']
+    if (store.state.extra && store.state.extra !== 'character'){
+      list.push('normal_quest')
+      list.push('extra_quest')
+    }
+    return store.database(...list)
+  })
 
   const item = $derived.by(()=>{
     const id = store.state.item
-    if (!store.state.item){ return null }
+    if (!id){ return null }
     if (!loadDB.finish){ return null }
+    let extraType = store.state.extra
+    if (extraType === 'character'){ return null }
+    else if (extraType){
+      const extraQuest = loadDB.db['extra_quest']
+      const normalQuest = loadDB.db['normal_quest']
+      const result = {
+        type: 'story',
+        releated: [],
+        desc: [],
+        title: '',
+      }
+      let questItem = null
+      let storyItem = null
+      if (extraType === 'adv-quest'){
+        questItem = extraQuest['advent_event_quest'][id]
+        storyItem = normalQuest['event/advent_event_quest'][id]
+        result.subType = 'event-quest'
+      }else if (extraType === 'single-quest'){
+        questItem = extraQuest['story_event_single_quest'][id]
+        storyItem = normalQuest['event/story_event_single_quest'][id]
+        result.subType = 'event-single'
+      }
+      if (!questItem){ return null }
+      result.title = questItem[2]
+      result.storyID = id
+      result.banner = questItem[4]
+      result.eventID = `event_${questItem[0]}`
+      if (storyItem){ result.desc = [[storyItem[0].desc.split('\n')]] }
+      else{ result.desc = [[result.title.split('\n')]] }
+      return result
+    }
     const data = loadDB.db.encyclopedia[id]
     return data
-  })
-  const character = $derived.by(()=>{
-    if (!item || item.type !== 'character'){ return null }
-    if (!loadDB.finish){ return null }
-    return loadDB.db.character[item.characterID]
   })
 
   const tab = $derived.by(()=>{
     if (!item){ return stateTab }
+    let character = null
+    if (item.type === 'character'){ character = loadDB.db.character[item.characterID] }
     const stateTab = store.state.ui.detailTab
     if (stateTab === 'gallery'){
       if (item.type === 'story'){
@@ -51,6 +87,8 @@
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   {#if store.state.scenario}
     <Scenario scenario={store.state.scenario} />
+  {:else}
+    <Loading finish={loadDB.finish} error={loadDB.error} />
   {/if}
   {#if item}{#key store.state.item}
     <span class={[store.state.scenario && 'hide', 'body']}>
