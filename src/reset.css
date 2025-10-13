@@ -42,8 +42,18 @@ table {
   border-spacing: 0;
 }
 
-*{
+*, ::before, ::after {
   box-sizing: border-box;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 body{
   line-height: 1.5;
