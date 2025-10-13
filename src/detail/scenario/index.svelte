@@ -10,6 +10,7 @@
   const scenarioData = $derived.by(()=>{
     return loadScenario(scenario.path)
   })
+  const loadDB = store.database('story_character')
 
   const backSprite = spriteSheet('res/icon', 'return')
 </script>
@@ -19,7 +20,7 @@
   <img src={backSprite.src} alt={store.i18n("detail.content.storyBack")}>
   {store.i18n("detail.content.storyBack")}
 </button>
-{#if scenarioData.data}
+{#if scenarioData.data && loadDB.finish}
 <div class="list">
   {#each scenarioData.data as item}
     {#if item.command === "dialog"}
