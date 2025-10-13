@@ -9,7 +9,7 @@
   const character = $derived.by(()=>{
     if (!loadDB.finish){ return [] }
     const database2 = loadDB.db.character_text
-    const character = database2[data[0][5]]
+    const character = database2[data.characterID]
     document.title = character[0] + ' | ' + store.i18n('main.sitename')
     return character
   })
@@ -17,7 +17,7 @@
   const characterData = $derived.by(()=>{
     if (!loadDB.finish){ return null }
     const database3 = loadDB.db.character
-    return database3[data[0][5]]
+    return database3[data.characterID]
   })
 
   const bannerID = $derived.by(()=>{

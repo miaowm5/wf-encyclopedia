@@ -15,26 +15,23 @@
     if (itemType === 'story'){
       if (!loadDB.db['normal_quest']){ return null }
       const database = loadDB.db['normal_quest']
-      let storyType = item[0][4]
-      if (storyType === '3'){
-        return database.main_quest[item[0][12]]
-      }else if (storyType === '4'){
-        let storyType2 = item[0][13]
-        if (storyType2 === '6'){
-          return database['event/world_story_event_quest'][item[0][14]]
-        }else if (storyType2 === '2'){
-          return database['event/story_event_single_quest'][item[0][14]]
-        }else if (storyType2 === '0'){
-          return database['event/advent_event_quest'][item[0][14]]
-        }
-      }else if (storyType === '5'){
+      let storyType = item.subType
+      if (storyType === 'main'){
+        return database.main_quest[item.storyID]
+      }else if (storyType === 'event-world'){
+        return database['event/world_story_event_quest'][item.storyID]
+      }else if (storyType === 'event-single'){
+        return database['event/story_event_single_quest'][item.storyID]
+      }else if (storyType === 'event-quest'){
+        return database['event/advent_event_quest'][item.storyID]
+      }else if (storyType === 'prologue'){
         return database.main_quest[0]
       }
       return null
     }else{
       if (!loadDB.db['character_quest']){ return null }
       const database = loadDB.db['character_quest']
-      return database[item[0][5]]
+      return database[item.characterID]
     }
   })
 </script>

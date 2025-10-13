@@ -73,14 +73,53 @@ const config = {
     handler: (data)=>{
       const pureData = {}
       Object.keys(data).forEach((key)=>{
-        pureData[key] = []
-        Object.keys(data[key]).forEach((index)=>{
+        const item = data[key]
+        const result = {
+          type: 'normal',
+          releated: [],
+          desc: [],
+          title: item[0][17],
+        }
+        if (item[0][4] === '0' || item[0][4] === '1'){
+          result.type = 'character'
+          result.characterID = item[0][5]
+          result.storyID = item[0][6]
+        }
+        else if (item[0][4] === '2'){
+          result.type = 'npc'
+          result.storyID = item[0][6]
+          result.headID = item[0][7]
+          result.cv = item[0][9]
+          result.race = item[0][10]
+          result.gender = item[0][11]
+        }
+        else if (item[0][4] === '3' || item[0][4] === '4' || item[0][4] === '5'){
+          result.type = 'story'
+          if (item[0][4] === '3'){
+            result.subType = 'main'
+            result.storyID = item[0][12]
+          }else if (item[0][4] === '4'){
+            let storyType2 = item[0][13]
+            if (storyType2 === '6'){
+              result.subType = 'event-world'
+            }else if (storyType2 === '2'){
+              result.subType = 'event-single'
+            }else if (storyType2 === '0'){
+              result.subType = 'event-quest'
+            }
+            result.storyID = item[0][14]
+          }
+          else if (item[0][4] === '5'){ result.subType = 'prologue' }
+          result.banner = item[0][16]
+        }
+        result.releated = item[0][19] ? item[0][19].split(',') : []
+        result.desc = []
+        Object.keys(item).forEach((index)=>{
           let value = data[key][index][0]
-          value[19] = value[19].split(',')
-          value[20] = value[20].split('\n')
-          pureData[key][index - 1] = value
+          let desc = value[20].split('\n')
+          result.desc.push(desc)
         })
-        pureData[key] = pureData[key].filter((item)=>item)
+        pureData[key] = result
       })
       return pureData
     }

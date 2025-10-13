@@ -12,16 +12,16 @@
   <CharacterTitle data={item} itemType={itemType} tab={tab} />
 {:else if itemType === 'npc'}
   <NpcTitle
-    name={item[0][17]}
-    race={item[0][10]}
-    gender={item[0][11]}
-    cv={item[0][9]}
-    banner={item[0][6]}
+    name={item.title}
+    race={item.race}
+    gender={item.gender}
+    cv={item.cv}
+    banner={item.storyID}
     itemType={itemType}
     tab={tab}
   />
 {:else if itemType === 'story' && !extra}
-  <BannerTitle data={item[0][16]} title={item[0][17]} tab={tab} gallery={item[0][4] === '3'} />
+  <BannerTitle data={item.banner} title={item.title} tab={tab} gallery={item.subType === 'main'} />
 {:else}
-  <NormalTitle title={item[0][17]} />
+  <NormalTitle title={item.title} />
 {/if}

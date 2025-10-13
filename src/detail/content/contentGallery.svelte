@@ -17,10 +17,10 @@
     let id = null
     let hasPixel = false
     if (itemType === 'character'){
-      id = database[item[0][5]][0]
-      if (database[item[0][5]][2] === '5' || database[item[0][5]][2] === '4'){ hasPixel = true }
+      id = database[item.characterID][0]
+      if (database[item.characterID][2] === '5' || database[item.characterID][2] === '4'){ hasPixel = true }
     }else if (itemType === 'npc'){
-      id = item[0][6]
+      id = item.storyID
     }
     if (!id){ return null }
     if (!database2[id]){ return { id } }

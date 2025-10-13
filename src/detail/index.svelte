@@ -13,44 +13,35 @@
     const data = loadDB.db.encyclopedia[id]
     return data
   })
-  const itemType = $derived.by(()=>{
-    if (!item){ return 'normal' }
-    if (store.state.extra === 'character'){ return 'character' }
-    if (store.state.extra === 'adv-quest'){ return 'story' }
-    if (store.state.extra === 'single-quest'){ return 'story' }
-    if (item[0][4] === '0' || item[0][4] === '1'){ return 'character' }
-    if (item[0][4] === '2'){ return 'npc' }
-    if (item[0][4] === '3' || item[0][4] === '4' || item[0][4] === '5'){ return 'story' }
-    return 'normal'
-  })
   const character = $derived.by(()=>{
-    if (itemType !== 'character'){ return null }
+    if (!item || item.type !== 'character'){ return null }
     if (!loadDB.finish){ return null }
-    return loadDB.db.character[item[0][5]]
+    return loadDB.db.character[item.characterID]
   })
 
   const tab = $derived.by(()=>{
+    if (!item){ return stateTab }
     const stateTab = store.state.ui.detailTab
     if (stateTab === 'gallery'){
-      if (itemType === 'story'){
-        if (item[0][4] !== '3'){ return 'info' }
-      }else if (itemType !== 'character' && itemType !== 'npc'){
+      if (item.type === 'story'){
+        if (item.subType !== 'main'){ return 'info' }
+      }else if (item.type !== 'character' && item.type !== 'npc'){
         return 'info'
       }
     }
     if (stateTab === 'story'){
-      if (itemType === 'character'){
+      if (item.type === 'character'){
         if (!character){ return 'info' }
         const rarity = character[2]
         if (rarity !== '3' && rarity !== '4' && rarity !== '5'){
           return 'info'
         }
-      }else if (itemType !== 'story'){
+      }else if (item.type !== 'story'){
         return 'info'
       }
     }
     if (stateTab === 'voice'){
-      if (itemType !== 'character'){ return 'info' }
+      if (item.type !== 'character'){ return 'info' }
     }
     return stateTab
   })
@@ -63,8 +54,8 @@
   {/if}
   {#if item}{#key store.state.item}
     <span class={[store.state.scenario && 'hide', 'body']}>
-      <Title item={item} itemType={itemType} tab={tab} extra={store.state.extra} />
-      <Content item={item} itemType={itemType} tab={tab} extra={store.state.extra} />
+      <Title item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
+      <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
     </span>
   {/key}{/if}
 </div>

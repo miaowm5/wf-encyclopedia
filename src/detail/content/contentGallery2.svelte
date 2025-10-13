@@ -10,19 +10,19 @@
     if (!loadDB.finish){ return null }
     const database = loadDB.db.equipment
     if (!database){ return null }
-    let chapter = item[0][12]
+    let chapter = item.storyID
     let result = database[100000 + (chapter - 0)]
     if (!result){ return null }
     return [result[1], result[5]]
   })
 
-  const url = import.meta.env.VITE_CDN + `orb/chapter${item[0][12]}.png`
+  const url = import.meta.env.VITE_CDN + `orb/chapter${item.storyID}.png`
 
 </script>
 
 <div class="content">
   <div class="image">
-    <img src={url} alt={data ? data[0] : `${item[0][17]}`} />
+    <img src={url} alt={data ? data[0] : `${item.title}`} />
     <RoundButton icon="full_size" onclick={()=>window.open(url)} />
   </div>
   {#if !loadDB.finish}

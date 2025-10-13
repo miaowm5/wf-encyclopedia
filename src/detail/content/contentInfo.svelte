@@ -12,14 +12,14 @@
 <div class="content">
   <section>
     <Title>{store.i18n("detail.content.title1")}</Title>
-    {#each item as block}
+    {#each item.desc as block}
       <div class="item">
-        {#each block[20] as line}<p>{line}</p>{/each}
+        {#each block as line}<p>{line}</p>{/each}
       </div>
     {/each}
   </section>
-  <section><Related1 data={item[0][19]} /></section>
-  <section><Related2 data={item[0][19]} /></section>
+  <section><Related1 data={item.releated} /></section>
+  <section><Related2 data={item.releated} /></section>
   <MobileBack />
 </div>
 

@@ -13,8 +13,8 @@
     data.forEach((id)=>{
       const item = loadDB.db.encyclopedia[id]
       if (!item){ return }
-      if (['0','1','2'].includes(item[0][4])){ return }
-      result.push({name: item[0][17], id})
+      if (item.type === 'character' || item.type === 'npc'){ return }
+      result.push({name: item.title, id})
     })
     return result
   })

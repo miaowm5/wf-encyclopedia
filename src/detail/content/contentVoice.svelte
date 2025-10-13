@@ -16,8 +16,8 @@
     if (!loadDB.db.character_speech){ return null }
     const database = loadDB.db.character_speech
     const database2 = loadDB.db.character_speech_text || {}
-    const info = database[item[0][5]]
-    const text = database2[item[0][6]] || {}
+    const info = database[item.characterID]
+    const text = database2[item.storyID] || {}
     if (!info){ return null }
     return {
       home: info.filter((item)=>item[0] === '0'),
@@ -30,7 +30,7 @@
   let voicePlayerItem = null
   let voicePlayer = $derived.by(()=>{
     if (voicePlayerItem){ voicePlayerItem.destory() }
-    let newPlayer = loadVoice(item[0][6])
+    let newPlayer = loadVoice(item.storyID)
     voicePlayerItem = newPlayer
     return newPlayer
   })
