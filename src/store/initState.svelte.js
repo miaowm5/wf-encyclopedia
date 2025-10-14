@@ -1,6 +1,14 @@
 
 import customTag from "./customTag"
 
+let config = {}
+let configData = {}
+
+try{ configData = JSON.parse(localStorage.getItem('config') || `{}`) }
+catch(e){ configData = {} }
+config.dataRegion = configData.dataRegion || 'cn'
+config.language = configData.language || 'cn'
+
 const initState = {
   item: null,
   extra: null,
@@ -12,16 +20,14 @@ const initState = {
     allListFilter: '',
     detailTab: 'info',
     mobileListHide: false,
+    configOpen: false,
   },
   dialog: {
     type: null,
     data: null,
     closeable: true,
   },
-  config: {
-    language: 'cn',
-    dataRegion: 'cn',
-  },
+  config,
   customTag: customTag.load()
 }
 

@@ -7,6 +7,7 @@
     "category2": ["世界名鉴", "World Encyclopedia", "世界名鑑"],
     "category3": ["全部关键词", "All Keywords", "全キーワード"],
     "categoryBack": ["返回", "Back", "戻る"],
+    "categoryConfig": ["设置", "Config", "設定"],
     "allSearchHint": ["关键字", "Keyword", "キーワード"],
     "characterFilterButton": ["筛选", "Filter", "フィルター"]
   },
@@ -79,7 +80,7 @@
       "title7": ["其他", "Other", "その他"],
       "title8": ["立绘1", "Illustration 1", "立ち絵1"],
       "title9": ["立绘2", "Illustration 2", "立ち絵2"],
-      "title10": ["像素动画"],
+      "title10": ["像素动画", "Pixel Animation", "ドットアニメーション"],
       "back": ["返回一览", "Back to List", "一覧に戻る"],
       "related1": ["关联角色", "Related Character", "関連キャラクター"],
       "related2": ["关联关键词", "Related Keyword", "関連キーワード"],
@@ -105,7 +106,15 @@
       "galleyPixel9": ["上一帧", "Previous Frame", "前のフレーム"],
       "galleyCharacter1": ["上一个", "Previous", "前へ"],
       "galleyCharacter2": ["下一个", "Next", "次へ"],
-      "storyBack": ["返回", "Back", "一覧に戻る"]
+      "storyBack": ["返回", "Back", "戻る"],
+      "configBack": ["返回", "Back", "戻る"],
+      "config1" : ["数据源", "Data Source", "データソース"],
+      "config1Value1" : ["国服", "CN Server", "中国版"],
+      "config1Value2" : ["日服", "JP Server", "日本版"],
+      "config2" : ["界面语言", "Interface Language", "言語設定"],
+      "config2Value1" : ["中文", "Chinese", "中国語"],
+      "config2Value2" : ["日文", "Japanese", "日本語"],
+      "config2Value3" : ["英文", "English", "英語"]
     }
   }
 }

@@ -28,6 +28,7 @@
   const category = $derived(store.state.ui.listCategory)
 
   const backSprite = spriteSheet('res/icon', 'return')
+  const configSprite = spriteSheet('res/icon', 'option_small')
 </script>
 
 <div class={`main ${store.state.ui.mobileListHide ? 'mobileHide' : ''}`}>
@@ -56,6 +57,12 @@
     {@const text = store.i18n("list.categoryBack")}
     <button onclick={()=>store.route.push('/', true)} class="back">
       <img src={backSprite.src} alt={text}>
+      {text}
+    </button>
+  {:else if !store.state.ui.configOpen}
+    {@const text = store.i18n("list.categoryConfig")}
+    <button onclick={()=>store.route.push('/config', true)} class="back">
+      <img src={configSprite.src} alt={text}>
       {text}
     </button>
   {/if}

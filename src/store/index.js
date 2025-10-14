@@ -73,6 +73,11 @@ const getI18n = (path)=>{
   if (state.config.language === 'jp'){ return result[2] || path }
   return result[0] || path
 }
+const changeConfig = (key, value)=>{
+  if (state.config[key] === value){ return }
+  state.config[key] = value
+  localStorage.setItem('config', JSON.stringify(state.config))
+}
 
 const updateRoute = ((data)=>{
   if (data.page === 'item'){
@@ -82,12 +87,14 @@ const updateRoute = ((data)=>{
       state.extra = data.extra
     }
     state.scenario = null
+    state.ui.configOpen = false
   }else if (data.page === 'home'){
     state.item = null
     state.scenario = null
     state.ui.mobileListHide = false
     document.title = getI18n('main.sitename')
     state.ui.listCategory = data.category
+    state.ui.configOpen = false
   }else if (data.page === 'scenario'){
     if (state.scenario){ return }
     let url = {
@@ -112,6 +119,13 @@ const updateRoute = ((data)=>{
     url += '/scenario'
     state.scenario = { path: url }
     state.ui.mobileListHide = true
+    state.ui.configOpen = false
+  }else if (data.page === 'config'){
+    state.item = null
+    state.scenario = null
+    state.ui.mobileListHide = true
+    state.ui.configOpen = true
+    document.title = getI18n('main.sitename')
   }
 })
 route.onUpdate(updateRoute)
@@ -128,6 +142,7 @@ const store = {
   changeFilter,
   setAllFilter,
   setDialog,
+  changeConfig,
   tag: customTag.init(state),
   database: dbLoader(state),
 }

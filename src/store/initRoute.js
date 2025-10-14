@@ -18,6 +18,8 @@ const routeData = (route)=>{
     return { page: 'item', item: match('/ex-single-quest/:item').item, extra: 'single-quest' }
   }else if (match('/ex-character/:item')){
     return { page: 'item', item: match('/ex-character/:item').item, extra: 'character' }
+  }else if (match('/config')){
+    return { page: 'config' }
   }else if (match('/:item')){
     return { page: 'item', item: match('/:item').item, extra: null }
   }

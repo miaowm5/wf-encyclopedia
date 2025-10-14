@@ -4,9 +4,14 @@
   import Title from './title/index.svelte'
   import Content from './content/index.svelte'
   import Scenario from './scenario/index.svelte'
+  import Config from './config/index.svelte'
 
   const loadDB = $derived.by(()=>{
-    const list = ['encyclopedia', 'character']
+    const list = []
+    if (store.state.item){
+      list.push('encyclopedia')
+      list.push('character')
+    }
     if (store.state.extra){
       if (store.state.extra === 'character'){
         list.push('character_text')
@@ -110,15 +115,19 @@
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   {#if store.state.scenario}
     <Scenario scenario={store.state.scenario} />
-  {:else}
-    <Loading finish={loadDB.finish} error={loadDB.error} />
+  {:else if store.state.ui.configOpen}
+    <Config />
+  {:else if store.state.item}{#key store.state.item}
+    <Loading finish={loadDB.finish} error={loadDB.error}>
+      {#if item}
+        <span class={[store.state.scenario && 'hide', 'body']}>
+          <Title item={item} itemType={item.type} tab={tab === 'voice-none' ? 'voice' : tab} extra={store.state.extra} />
+          <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
+        </span>
+      {/if}
+    </Loading>{/key}
   {/if}
-  {#if item}{#key store.state.item}
-    <span class={[store.state.scenario && 'hide', 'body']}>
-      <Title item={item} itemType={item.type} tab={tab === 'voice-none' ? 'voice' : tab} extra={store.state.extra} />
-      <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
-    </span>
-  {/key}{/if}
+
 </div>
 
 <style>

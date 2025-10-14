@@ -180,30 +180,46 @@ const init = (state)=>{
     const addProgress = ()=>{
       progress += 1
       if (progress >= db.length){
-        db.forEach((name)=>{ if (name){ database[name] = cache[name] } })
+        db.forEach((name)=>{
+          if (name){
+            const cacheKey = `${state.config.dataRegion}-${name}`
+            database[name] = cache[cacheKey]
+          }
+        })
         if (error.length === 0){ finish = true }
       }
     }
 
-    db.forEach((name)=>{
-      if (!name){ return addProgress() }
-      if (cache[name]){ return addProgress() }
-      let loadConfig = config[name]
-      const baseUrl = {
-        cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
-        jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
-      }[state.config.dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
-      wrapApi(`${baseUrl}${loadConfig.path}.json`, {
-        success: (data)=>{
-          cache[name] = loadConfig.handler(data, state.config.dataRegion)
-          addProgress()
-        },
-        fail: (err)=>{
-          console.error(err)
-          error.push(`${name} load failed`)
-        },
-        cors: true
-      }, true)
+    const loadData = ()=>{
+      db.forEach((name)=>{
+        if (!name){ return addProgress() }
+        const cacheKey = `${state.config.dataRegion}-${name}`
+        if (cache[cacheKey]){ return addProgress() }
+        let loadConfig = config[name]
+        const baseUrl = {
+          cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
+          jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
+        }[state.config.dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
+        wrapApi(`${baseUrl}${loadConfig.path}.json`, {
+          success: (data)=>{
+            cache[cacheKey] = loadConfig.handler(data, state.config.dataRegion)
+            addProgress()
+          },
+          fail: (err)=>{
+            console.error(err)
+            error.push(`${name} load failed`)
+          },
+          cors: true
+        }, true)
+      })
+    }
+    loadData()
+
+    let currentRegion = state.config.dataRegion
+    $effect(()=>{
+      if (currentRegion === state.config.dataRegion){ return }
+      loadData()
+      currentRegion = state.config.dataRegion
     })
 
     return {
