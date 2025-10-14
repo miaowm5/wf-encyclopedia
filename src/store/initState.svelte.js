@@ -6,8 +6,13 @@ let configData = {}
 
 try{ configData = JSON.parse(localStorage.getItem('config') || `{}`) }
 catch(e){ configData = {} }
-config.dataRegion = configData.dataRegion || 'cn'
-config.language = configData.language || 'cn'
+let defaultLang = 'cn'
+const lang = navigator.language || navigator.userLanguage
+if (lang.startsWith('ja')) { defaultLang = 'jp' }
+else if (lang.startsWith('en')){ defaultLang = 'en' }
+
+config.dataRegion = configData.dataRegion || defaultLang
+config.language = configData.language || defaultLang
 
 const initState = {
   item: null,
