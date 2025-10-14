@@ -94,6 +94,13 @@
     }
     if (stateTab === 'voice'){
       if (item.type !== 'character'){ return 'info' }
+      const rarity = character[2]
+      if (rarity !== '3' && rarity !== '4' && rarity !== '5'){
+        const cid = character[0]
+        if (cid !== 'towa_vtuber' && cid !== 'towa_namakubi'){
+          return 'voice-none'
+        }
+      }
     }
     return stateTab
   })
@@ -108,7 +115,7 @@
   {/if}
   {#if item}{#key store.state.item}
     <span class={[store.state.scenario && 'hide', 'body']}>
-      <Title item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
+      <Title item={item} itemType={item.type} tab={tab === 'voice-none' ? 'voice' : tab} extra={store.state.extra} />
       <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
     </span>
   {/key}{/if}

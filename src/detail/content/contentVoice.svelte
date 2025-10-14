@@ -6,7 +6,7 @@
   import MobileBack from './mobileBack.svelte'
   import loadVoice from './loadVoiceAudio.svelte.js'
 
-  const { item } = $props()
+  const { item, noVoice } = $props()
 
   const loadDB = store.database('character_speech', 'character_speech_text')
 
@@ -73,18 +73,20 @@
     {#each data.home as item}
       {@render voice(item[3], item[4])}
     {/each}
-    <Title>{store.i18n("detail.content.title7")}</Title>
-    {@render voice(store.i18n("detail.content.voice1"), 'battle/skill_ready', true)}
-    {@render voice(store.i18n("detail.content.voice2"), 'battle/skill_0', true)}
-    {@render voice(store.i18n("detail.content.voice3"), 'battle/skill_1', true)}
-    {@render voice(store.i18n("detail.content.voice4"), 'battle/battle_start_0', true)}
-    {@render voice(store.i18n("detail.content.voice5"), 'battle/battle_start_1', true)}
-    {@render voice(store.i18n("detail.content.voice6"), 'battle/win_0', true)}
-    {@render voice(store.i18n("detail.content.voice7"), 'battle/win_1', true)}
-    {@render voice(store.i18n("detail.content.voice8"), 'battle/power_flip_0', true)}
-    {@render voice(store.i18n("detail.content.voice9"), 'battle/power_flip_1', true)}
-    {@render voice(store.i18n("detail.content.voice10"), 'battle/outhole_0', true)}
-    {@render voice(store.i18n("detail.content.voice11"), 'battle/outhole_1', true)}
+    {#if !noVoice}
+      <Title>{store.i18n("detail.content.title7")}</Title>
+      {@render voice(store.i18n("detail.content.voice1"), 'battle/skill_ready', true)}
+      {@render voice(store.i18n("detail.content.voice2"), 'battle/skill_0', true)}
+      {@render voice(store.i18n("detail.content.voice3"), 'battle/skill_1', true)}
+      {@render voice(store.i18n("detail.content.voice4"), 'battle/battle_start_0', true)}
+      {@render voice(store.i18n("detail.content.voice5"), 'battle/battle_start_1', true)}
+      {@render voice(store.i18n("detail.content.voice6"), 'battle/win_0', true)}
+      {@render voice(store.i18n("detail.content.voice7"), 'battle/win_1', true)}
+      {@render voice(store.i18n("detail.content.voice8"), 'battle/power_flip_0', true)}
+      {@render voice(store.i18n("detail.content.voice9"), 'battle/power_flip_1', true)}
+      {@render voice(store.i18n("detail.content.voice10"), 'battle/outhole_0', true)}
+      {@render voice(store.i18n("detail.content.voice11"), 'battle/outhole_1', true)}
+    {/if}
   {/if}
   <MobileBack />
 </div>

@@ -19,6 +19,8 @@
   {/if}
 {:else if tab === 'voice'}
   <ContentVoice item={item} />
+{:else if tab === 'voice-none'}
+  <ContentVoice item={item} noVoice={true} />
 {:else if tab === 'story'}
   <ContentQuest item={item} itemType={itemType} />
 {/if}
