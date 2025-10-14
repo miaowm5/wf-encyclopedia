@@ -1,7 +1,7 @@
 
 import { api } from '../../common'
 
-const loadConfig = async (path)=>{
+const loadConfig = async (path, dataRegion)=>{
   let url = ``
   if (path.startsWith('story/character_story_quest/')){
     let character = path.split('/')[2]
@@ -21,7 +21,11 @@ const loadConfig = async (path)=>{
     url = `system_quest/${chapter}/scenario`
   }
   let promise = new Promise((resolve)=>{
-    api(`${import.meta.env.VITE_CDN3}orderedmap/story/${url}.json`, {
+    const baseUrl = {
+      cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
+      jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
+    }[dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
+    api(`${baseUrl}story/${url}.json`, {
       success: (data)=>{ resolve(data) },
       fail: (err)=>{ console.error(err), resolve(null) },
       cors: true,

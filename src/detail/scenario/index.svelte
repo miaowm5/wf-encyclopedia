@@ -8,7 +8,7 @@
   const { scenario } = $props()
 
   const scenarioData = $derived.by(()=>{
-    return loadScenario(scenario.path)
+    return loadScenario(scenario.path, store.state.config.dataRegion)
   })
   const loadDB = store.database('story_character')
 

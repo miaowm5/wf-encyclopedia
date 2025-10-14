@@ -70,10 +70,11 @@ const config = {
   },
   encyclopedia: {
     path: 'encyclopedia/encyclopedia',
-    handler: (data)=>{
+    handler: (data, region)=>{
       const pureData = {}
       Object.keys(data).forEach((key)=>{
-        const item = Object.keys(data[key]).map((index)=>data[key][index][0])
+        let item = Object.keys(data[key]).map((index)=>data[key][index][0])
+        if (region === 'jp'){ item = item.map((v)=>[...v.slice(0, 3), '', ...v.slice(3)]) }
         const result = {
           type: 'normal',
           releated: [],
@@ -133,9 +134,15 @@ const config = {
   },
   character_text: {
     path: 'character/character_text',
-    handler: (data)=>{
+    handler: (data, region)=>{
       const pureData = {}
-      Object.keys(data).forEach((key)=>{ pureData[key] = data[key][0] })
+      Object.keys(data).forEach((key)=>{
+        pureData[key] = data[key][0]
+        if (region === 'jp'){
+          let v = pureData[key]
+          pureData[key] = [...v.slice(0, 9), '', '', ...v.slice(9)]
+        }
+      })
       return pureData
     }
   },
@@ -185,10 +192,10 @@ const init = (state)=>{
       const baseUrl = {
         cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
         jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
-      }[state.dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
+      }[state.config.dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
       wrapApi(`${baseUrl}${loadConfig.path}.json`, {
         success: (data)=>{
-          cache[name] = loadConfig.handler(data, state.dataRegion)
+          cache[name] = loadConfig.handler(data, state.config.dataRegion)
           addProgress()
         },
         fail: (err)=>{

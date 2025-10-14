@@ -3,14 +3,14 @@ import { onDestroy } from 'svelte'
 import parse from './parseData'
 import loadConfig from './loadData'
 
-const main = (path)=>{
+const main = (path, dataRegion)=>{
   let cancelFunc = false
   let data = $state(null)
   onDestroy(()=>{ cancelFunc = true })
 
   const load = async ()=>{
     if (!path){ return }
-    const config = await loadConfig(path)
+    const config = await loadConfig(path, dataRegion)
     if (cancelFunc){ return }
     if (!config){ return }
     if (!config[path]){ return }
