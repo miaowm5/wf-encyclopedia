@@ -22,7 +22,7 @@
         let url = ''
         if (type === 'advent_event_quest'){ url = 'ex-adv-quest' }
         else if (type === 'story_event_single_quest'){ url = 'ex-single-quest' }
-        list.push({ id, name: [event[2]], item: {eventID: `event_${event[0]}`}, extra: { url } })
+        list.push({ id: `${url}/${id}`, name: [event[2]], item: {eventID: `event_${event[0]}`}, extra: {} })
       })
     })
     return list
@@ -41,7 +41,7 @@
     {/key}{/each}
     {#if loadDB.finish}
       {#each extraList as data}{#key data.id}
-        <Nav href={`/${data.extra.url}/${data.id}`} route={store.route}>
+        <Nav href={`/${data.id}`} route={store.route}>
           <StoryItem data={data} />
         </Nav>
       {/key}{/each}

@@ -3,9 +3,31 @@
   import store from '../store'
   import { HeadIcon, RoundButton } from '../ui'
   import ListBanner from './listBanner.svelte'
-  const { list, select } = $props()
+  import extalCharacter from './extraCharacter.json'
+
+  const { list } = $props()
+
+  const loadDB = store.database('character_text', 'character')
+
   const showList = $derived.by(()=>{
+    if (!loadDB.finish){ return [] }
     let result = list.filter((data)=>data.item.type === 'character' || data.item.type === 'npc')
+    const characterTextDB = loadDB.db['character_text']
+    const characterDB = loadDB.db['character']
+    extalCharacter.forEach((id)=>{
+      const extra = characterDB[id]
+      const name = [characterTextDB[id][0], characterTextDB[id][3]]
+      const item = {
+        type: 'character',
+        releated: [],
+        desc: [],
+        title: name[0],
+        characterID: id,
+        extra,
+        storyID: extra[8],
+      }
+      result.push({ id: `ex-character/${id}`, name, item, extra })
+    })
     const filter = store.state.ui.listFilter
     Object.keys(filter).forEach((type)=>{
       let filterInfo = filter[type]

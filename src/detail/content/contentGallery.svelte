@@ -38,7 +38,7 @@
     Object.keys(database2[id][3]).forEach((name)=>{
       const isEffect = rule.some((prefix)=>name.startsWith(prefix))
       if (isEffect){ effect.push(name); return }
-      list.push(name)
+      if (name){ list.push(name) }
     })
     effect.push('noface')
     return { id, list, effect, data: database2[id][3], fullshot, hasPixel }
@@ -56,7 +56,9 @@
   </div>
 {:else}
 <div class="content">
-  <GalleryCharacter emotionList={emotionList} />
+  {#if emotionList && emotionList.list.length > 0}
+    <GalleryCharacter emotionList={emotionList} />
+  {/if}
   {#snippet image(title, image)}
     {@const url = import.meta.env.VITE_CDN2 + `fullshot/${image}.png`}
     <Title>{title}</Title>

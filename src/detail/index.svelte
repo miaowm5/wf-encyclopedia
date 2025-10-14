@@ -7,9 +7,13 @@
 
   const loadDB = $derived.by(()=>{
     const list = ['encyclopedia', 'character']
-    if (store.state.extra && store.state.extra !== 'character'){
-      list.push('normal_quest')
-      list.push('extra_quest')
+    if (store.state.extra){
+      if (store.state.extra === 'character'){
+        list.push('character_text')
+      }else{
+        list.push('normal_quest')
+        list.push('extra_quest')
+      }
     }
     return store.database(...list)
   })
@@ -19,8 +23,20 @@
     if (!id){ return null }
     if (!loadDB.finish){ return null }
     let extraType = store.state.extra
-    if (extraType === 'character'){ return null }
-    else if (extraType){
+    if (extraType === 'character'){
+      const character = loadDB.db['character'][id]
+      const characterText = loadDB.db['character_text'][id]
+      if (!character){ return null }
+      const result = {
+        type: 'character',
+        releated: [],
+        desc: [[characterText[2].split('\n')]],
+        title: characterText[0],
+        characterID: id,
+        storyID: character[8],
+      }
+      return result
+    }else if (extraType){
       const extraQuest = loadDB.db['extra_quest']
       const normalQuest = loadDB.db['normal_quest']
       const result = {
