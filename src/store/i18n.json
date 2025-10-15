@@ -70,6 +70,24 @@
       "race9": ["水棲", "Aquatic", "水棲"],
       "race10": ["植物", "Plant", "植物"]
     },
+    "config": {
+      "configBack": ["返回", "Back", "戻る"],
+      "config1" : ["数据源", "Data Source", "データソース"],
+      "config1Value1" : ["国服", "CN Server", "中国版"],
+      "config1Value2" : ["日服", "JP Server", "日本版"],
+      "config2" : ["界面语言", "Interface Language", "言語設定"],
+      "config2Value1" : ["中文", "中文", "中文"],
+      "config2Value2" : ["日本語", "日本語", "日本語"],
+      "config2Value3" : ["English", "English", "English"],
+      "config3" : ["关于本站", "About this site", "このサイトについて"],
+      "config3Value" : [
+        "本站是基于个人兴趣搭建的在线星见图鉴查看网站，与官方没有任何关系。\n本站的代码完全开源在 Github 上，欢迎您协助进行代码优化、翻译改善或是反馈遇到的问题。",
+        "This site is a fan-made online Star Encyclopedia created purely out of personal interest and is not affiliated with the official project.\nThe source code is fully open on Github — contributions for code optimization, improving translations, or reporting issues are welcome.",
+        "本サイトは個人の趣味で作られたオンラインの星見図鑑であり、公式とは一切関係ありません。\nソースコードはGithubでオープンソースとして公開しています。コードの最適化、多言語翻訳の改善、問題報告などのご協力を歓迎します。"
+      ],
+      "config3Value1" : ["项目主页", "Source Code", "ソースコード"],
+      "config3Value2" : ["问题反馈", "Feedback", "フィードバック"]
+    },
     "content":{
       "title1": ["情报", "Info", "情報"],
       "title2": ["表情", "Expression", "表情"],
@@ -106,15 +124,7 @@
       "galleyPixel9": ["上一帧", "Previous Frame", "前のフレーム"],
       "galleyCharacter1": ["上一个", "Previous", "前へ"],
       "galleyCharacter2": ["下一个", "Next", "次へ"],
-      "storyBack": ["返回", "Back", "戻る"],
-      "configBack": ["返回", "Back", "戻る"],
-      "config1" : ["数据源", "Data Source", "データソース"],
-      "config1Value1" : ["国服", "CN Server", "中国版"],
-      "config1Value2" : ["日服", "JP Server", "日本版"],
-      "config2" : ["界面语言", "Interface Language", "言語設定"],
-      "config2Value1" : ["中文", "Chinese", "中国語"],
-      "config2Value2" : ["日文", "Japanese", "日本語"],
-      "config2Value3" : ["英文", "English", "英語"]
+      "storyBack": ["返回", "Back", "戻る"]
     }
   }
 }
