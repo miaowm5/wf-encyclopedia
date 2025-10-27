@@ -9,7 +9,7 @@
 </script>
 
 {#if error.length > 0}
-  <p>{error[0]}</p>
+  {#each error as e}<p>{e}</p>{/each}
 {:else if finish}
   {@render children?.()}
 {:else}
