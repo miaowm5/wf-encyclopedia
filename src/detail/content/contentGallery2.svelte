@@ -25,13 +25,8 @@
     <img src={url} alt={data ? data[0] : `${item.title}`} />
     <RoundButton icon="full_size" onclick={()=>window.open(url)} />
   </div>
-  {#if !loadDB.finish}
-    {#if loadDB.error.length > 0}
-      <p>{loadDB.error[0]}</p>
-    {:else}
-      <Loading />
-    {/if}
-  {:else if data}
+  <Loading finish={loadDB.finish} error={loadDB.error} />
+  {#if loadDB.finish && data}
     <div class="dialog">
       <div class="dialogName">{data[0]}</div>
       <div class="dialogContent"><p>{data[1]}</p></div>

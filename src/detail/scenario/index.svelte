@@ -20,7 +20,7 @@
   <img src={backSprite.src} alt={store.i18n("detail.content.storyBack")}>
   {store.i18n("detail.content.storyBack")}
 </button>
-{#if scenarioData.data && loadDB.finish}
+<Loading finish={scenarioData.data && loadDB.finish}>
 <div class="list">
   {#each scenarioData.data as item}
     {#if item.command === "dialog"}
@@ -41,9 +41,7 @@
     {/if}
   {/each}
 </div>
-{:else}
-  <Loading />
-{/if}
+</Loading>
 </div>
 
 <style>

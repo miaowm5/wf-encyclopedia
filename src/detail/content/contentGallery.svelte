@@ -46,16 +46,8 @@
 
 </script>
 
-{#if !loadDB.finish}
-  <div class="content">
-    {#if loadDB.error.length > 0}
-      <p>{loadDB.error[0]}</p>
-    {:else}
-      <Loading />
-    {/if}
-  </div>
-{:else}
 <div class="content">
+<Loading finish={loadDB.finish} error={loadDB.error}>
   {#if emotionList && emotionList.list.length > 0}
     <GalleryCharacter emotionList={emotionList} />
   {/if}
@@ -83,8 +75,8 @@
     <GalleryPixel emotionList={emotionList} />
   {/if}
   <MobileBack />
+</Loading>
 </div>
-{/if}
 
 <style>
   .image{
