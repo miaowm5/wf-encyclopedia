@@ -175,7 +175,7 @@ const init = (state)=>{
     let finish = $state(false)
     let error = $state([])
     let database = $state({})
-    let progress = 0
+    let progress = $state(0)
 
     const addProgress = ()=>{
       progress += 1
@@ -226,6 +226,10 @@ const init = (state)=>{
       get db(){ return database },
       get error(){ return error },
       get finish(){ return finish },
+      get progress(){
+        if (db.length === 0){ return 100 }
+        return Math.min(progress / db.length * 100, 100)
+      }
     }
   }
   return load
