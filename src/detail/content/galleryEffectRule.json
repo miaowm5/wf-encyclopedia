@@ -1,15 +1,17 @@
 {
-  "_common": [
-    "shame",
-    "sweat",
-    "cheek",
-    "blood",
-    "tear",
-    "item",
-    "effect",
-    "sunglass",
-    "megane"
-  ],
+  "_common": {
+    "include": [
+      "shame",
+      "sweat",
+      "cheek",
+      "blood",
+      "tear",
+      "item",
+      "effect",
+      "sunglass",
+      "megane"
+    ]
+  },
   "elf_princess": { "exclude": ["tear"] },
   "wirfled_playable":{ "include": ["visor"] },
   "desert_commander":{ "include": ["earring"] },
@@ -22,6 +24,121 @@
   "gentle_barten": { "include": ["shy"] },
   "nikaido_saki": { "include": ["interrobang"] },
   "blindfold_agent":{ "include": ["laugh"] },
+  "mermaid":{
+    "effectGroup": {
+      "shame": {
+        "include": [
+          "normal_base_0_b",
+          "angry_base_0_b",
+          "angry_b_base_0_b",
+          "normal_b_base_0_b",
+          "normal_c_base_0_b",
+          "joy_base_0_b",
+          "joy_b_base_0_b",
+          "sad_base_0_b",
+          "sad_b_base_0_b",
+          "sad_c_base_0_b",
+          "sad_d_base_0_b",
+          "smile_base_0_b",
+          "smile_b_base_0_b",
+          "surprise_base_0_b",
+          "surprise_b_base_0_b"
+        ]
+      },
+      "sweat": {
+        "include": [
+          "normal_base_0_b",
+          "angry_base_0_b",
+          "angry_b_base_0_b",
+          "normal_b_base_0_b",
+          "normal_c_base_0_b",
+          "joy_base_0_b",
+          "joy_b_base_0_b",
+          "sad_base_0_b",
+          "sad_b_base_0_b",
+          "sad_c_base_0_b",
+          "sad_d_base_0_b",
+          "smile_base_0_b",
+          "smile_b_base_0_b",
+          "surprise_base_0_b",
+          "surprise_b_base_0_b"
+        ]
+      }
+    }
+  },
+  "conjurer_girl": {
+    "effectGroup": {
+      "shame": {"only": ["normal"]},
+      "shame_joy": {"only": ["joy"]},
+      "shame_joy_b": {"only": ["joy_b"]},
+      "shame_lovely": {"only": ["lovely"]},
+      "shame_sad": {"only": ["sad"]},
+      "shame_serious": {"only": ["serious"]},
+      "shame_smile": {"only": ["smile"]},
+      "shame_surprise": {"only": ["surprise"]},
+      "shame_surprise_b": {"only": ["surprise_b"]}
+    }
+  },
+  "mob_ester": {
+    "include": ["sweat_b"],
+    "exclude": ["sweat"]
+  },
+  "mirror_witch": {
+    "effectGroup": {
+      "tear_cry": {"only": ["cry"]},
+      "shame_cry": {"only": ["cry"]},
+      "shame": {"exclude": ["cry"]},
+      "tear_cry_base_0_b": {"only": ["cry_base_0_b"]},
+      "shame_cry_base_0_b": {"only": ["cry_base_0_b"]},
+      "shame_base_0_b": {"exclude": ["cry_base_0_b"]}
+    }
+  },
+  "high_priestess":{
+    "effectGroup": {
+      "shame": {
+        "include": [
+          "normal_base_b",
+          "anger_base_b",
+          "anger_b_base_b",
+          "consent_base_b",
+          "consent_b_base_b",
+          "discontent_base_b",
+          "joy_base_b",
+          "sad_base_b",
+          "smile_base_b",
+          "surprise_base_b",
+          "think_base_b",
+          "tired_base_b",
+          "anger_c_base_b",
+          "sad_b_base_b",
+          "serious_b_base_b",
+          "serious_base_b",
+          "surprise_b_base_b"
+        ]
+      },
+      "sweat": {
+        "include": [
+          "normal_base_b",
+          "anger_base_b",
+          "anger_b_base_b",
+          "consent_base_b",
+          "consent_b_base_b",
+          "discontent_base_b",
+          "joy_base_b",
+          "sad_base_b",
+          "smile_base_b",
+          "surprise_base_b",
+          "think_base_b",
+          "tired_base_b",
+          "anger_c_base_b",
+          "sad_b_base_b",
+          "serious_b_base_b",
+          "serious_base_b",
+          "surprise_b_base_b"
+        ]
+      }
+    }
+  },
   "world_trader": { "fullshot": 2 },
   "stella": { "fullshot": 1 },
   "light": { "fullshot": 1 },

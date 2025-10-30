@@ -27,13 +27,15 @@
     const list = []
     const effect = []
     let fullshot = 0
-    let rule = galleryEffectRule._common
+    let effectGroup = {}
+    let rule = galleryEffectRule._common.include
     if (galleryEffectRule[id]){
       const include = galleryEffectRule[id].include || []
       const exclude = galleryEffectRule[id].exclude || []
       rule = rule.concat(...include)
       rule = rule.filter((name)=>!exclude.includes(name))
       if (galleryEffectRule[id].fullshot){ fullshot = galleryEffectRule[id].fullshot }
+      if (galleryEffectRule[id].effectGroup){ effectGroup = galleryEffectRule[id].effectGroup }
     }
     Object.keys(database2[id][3]).forEach((name)=>{
       const isEffect = rule.some((prefix)=>name.startsWith(prefix))
@@ -41,7 +43,9 @@
       if (name){ list.push(name) }
     })
     effect.push('noface')
-    return { id, list, effect, data: database2[id][3], fullshot, hasPixel }
+    // console.log(id)
+    // console.log(list.join('\n'))
+    return { id, list, effect, effectGroup, data: database2[id][3], fullshot, hasPixel }
   })
 
 </script>

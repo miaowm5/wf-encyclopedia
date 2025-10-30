@@ -15,13 +15,23 @@
     return { name: emoName, data: emoData }
   })
 
+  const checkUseable = (name)=>{
+    if (!emoData){ return false }
+    let item = emotionList.data[name]
+    const result = item.back === emoData.data.back
+    const specialEffect = emotionList.effectGroup[name]
+    if (!specialEffect){ return result }
+    if (specialEffect.only){ return specialEffect.only.includes(emoData.name) }
+    if (!result && specialEffect.include){ return specialEffect.include.includes(emoData.name) }
+    if (result && specialEffect.exclude){ return !specialEffect.exclude.includes(emoData.name) }
+    return result
+  }
+
   const useAbleEffect = $derived.by(()=>{
-    if (!emotionList || !emotionList.list){ return [] }
+    if (!emoData){ return [] }
     return emotionList.effect.filter((name)=>{
       if (name === 'noface'){ return Boolean(emoData.data.front) }
-      let item = emotionList.data[name]
-      if (item.back !== emoData.data.back){ return false }
-      return true
+      return checkUseable(name)
     })
   })
 
@@ -37,7 +47,7 @@
     selectEffect.forEach((name)=>{
       if (name === 'noface'){ return }
       let item = emotionList.data[name]
-      if (item.back !== emoData.data.back){ return }
+      if (!checkUseable(name)){ return }
       effect.push(item.front)
     })
     return characterShot(emoData.data.back,
