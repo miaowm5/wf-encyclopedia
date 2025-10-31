@@ -144,6 +144,9 @@
     "extraCharacter": ["stella_ny21", "stella_smr20", "stella_student"],
     "fullshot": 1
   },
+  "alk":{ "extraCharacter": ["alk_smr20","alk_smr21","alk_student","alk_dying"] },
+  "alk_3halfanv":{ "extraCharacter": ["alk_devil"] },
+  "white_tiger":{ "extraCharacter": ["white_tiger_smr20","white_tiger_story"] },
   "light": { "fullshot": 1 },
   "light_origin": { "fullshot": 1 },
   "tutorial_priest": { "fullshot": 1 },

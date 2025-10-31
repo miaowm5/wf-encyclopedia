@@ -40,11 +40,11 @@
       if (effectRule.effectGroup){ effectGroup = effectRule.effectGroup }
       if (effectRule.extraCharacter){
         emotionData = { ...emotionData }
-        effectRule.extraCharacter.forEach((exID)=>{
+        effectRule.extraCharacter.forEach((exID, index)=>{
           if (!database2[exID]){ return }
           let exEmoList = database2[exID][3]
           Object.keys(exEmoList).forEach((name)=>{
-            emotionData[`${name}_${exID}`] = exEmoList[name]
+            emotionData[`${name}_ex${index + 1}`] = exEmoList[name]
           })
         })
       }
