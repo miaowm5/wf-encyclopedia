@@ -1,5 +1,6 @@
 
-import { wrapApi } from '../common'
+import { onDestroy } from "svelte"
+import { api } from '../common'
 
 const cache = {}
 
@@ -170,12 +171,36 @@ const config = {
   },
 }
 
+const promiseCache = {}
+const loadDB = async (cacheKey, url, handler, success, fail)=>{
+  if (cache[cacheKey]){ success(); return }
+  let promise = promiseCache[url]
+  if (!promise){
+    promise = new Promise((resolve, reject)=>{
+      api(url, {
+        success: (data)=>{
+          cache[cacheKey] = handler(data)
+          resolve()
+        },
+        fail: (err)=>{ console.error(err); reject(err) },
+        after: ()=>{ promiseCache[url] = undefined },
+        cors: true
+      })
+    })
+    promiseCache[url] = promise
+  }
+  try{ await promise }catch(e){ fail(e); return }
+  success()
+}
+
 const init = (state)=>{
   const load = (...db)=>{
     let finish = $state(false)
     let error = $state([])
     let database = $state({})
-    let progress = 0
+    let progress = $state(0)
+    let cancelFunc = false
+    onDestroy(()=>{ cancelFunc = true })
 
     const addProgress = ()=>{
       progress += 1
@@ -190,27 +215,22 @@ const init = (state)=>{
       }
     }
 
-    const loadData = ()=>{
+    const loadData = async ()=>{
       db.forEach((name)=>{
         if (!name){ return addProgress() }
-        const cacheKey = `${state.config.dataRegion}-${name}`
-        if (cache[cacheKey]){ return addProgress() }
         let loadConfig = config[name]
+        const cdn = import.meta.env.VITE_CDN3
         const baseUrl = {
-          cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
-          jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
-        }[state.config.dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
-        wrapApi(`${baseUrl}${loadConfig.path}.json`, {
-          success: (data)=>{
-            cache[cacheKey] = loadConfig.handler(data, state.config.dataRegion)
-            addProgress()
-          },
-          fail: (err)=>{
-            console.error(err)
-            error.push(`${name} load failed`)
-          },
-          cors: true
-        }, true)
+          cn: `${cdn}/orderedmap/`,
+          jp: `${cdn}/orderedmap2/`
+        }[state.config.dataRegion] || `${cdn}/orderedmap/`
+        loadDB(
+          `${state.config.dataRegion}-${name}`,
+          `${baseUrl}${loadConfig.path}.json`,
+          (data)=>{ return loadConfig.handler(data, state.config.dataRegion) },
+          ()=>{ if (!cancelFunc){ addProgress() } },
+          ()=>{ if (!cancelFunc){ error.push(`${name} load failed`) } },
+        )
       })
     }
     loadData()
@@ -226,6 +246,10 @@ const init = (state)=>{
       get db(){ return database },
       get error(){ return error },
       get finish(){ return finish },
+      get progress(){
+        if (db.length === 0){ return 100 }
+        return Math.min(progress / db.length * 100, 100)
+      }
     }
   }
   return load

@@ -59,13 +59,8 @@
 {/snippet}
 
 <div class="content">
-  {#if !loadDB.finish}
-    {#if loadDB.error.length > 0}
-      <p>{loadDB.error[0]}</p>
-    {:else}
-      <Loading />
-    {/if}
-  {:else if data}
+  <Loading finish={loadDB.finish} error={loadDB.error} />
+  {#if loadDB.finish && data}
     <Title>{store.i18n("detail.content.title5")}</Title>
     {@render voice(data.join[3], data.join[4])}
     {@render voice(data.evolution[3], data.evolution[4])}

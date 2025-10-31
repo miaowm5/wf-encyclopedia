@@ -37,13 +37,8 @@
 </script>
 
 <div class="content">
-  {#if !loadDB.finish}
-    {#if loadDB.error.length > 0}
-      <p>{loadDB.error[0]}</p>
-    {:else}
-      <Loading />
-    {/if}
-  {:else if data}
+  <Loading finish={loadDB.finish} error={loadDB.error} />
+  {#if loadDB.finish && data}
     {#each data as story}
       <button class="story" onclick={()=>{
         store.setScenario({
