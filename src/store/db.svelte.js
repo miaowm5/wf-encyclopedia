@@ -216,6 +216,10 @@ const init = (state)=>{
     }
 
     const loadData = async ()=>{
+      finish = false
+      error = []
+      database = {}
+      progress = 0
       db.forEach((name)=>{
         if (!name){ return addProgress() }
         let loadConfig = config[name]
