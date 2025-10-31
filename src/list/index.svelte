@@ -1,6 +1,7 @@
 <script>
   import store from '../store'
   import { spriteSheet } from '../common'
+  import { Loading } from '../ui'
   import IndexButton from './indexButton.svelte'
   import CharacterList from './characterList.svelte'
   import StoryList from './storyList.svelte'
@@ -46,12 +47,16 @@
         <IndexButton onclick={()=>store.route.push('/all', true)} id="all_keyword" text={store.i18n("list.category3")} />
       </div>
     </div>
-  {:else if category === 'character'}
-    <CharacterList list={list} select={store.state.item} />
-  {:else if category === 'story'}
-    <StoryList list={list} select={store.state.item} />
-  {:else if category === 'all'}
-    <AllList list={list} select={store.state.item} />
+  {:else}
+    <Loading finish={loadDB.finish} error={loadDB.error}>
+      {#if category === 'character'}
+        <CharacterList list={list} select={store.state.item} />
+      {:else if category === 'story'}
+        <StoryList list={list} select={store.state.item} />
+      {:else if category === 'all'}
+        <AllList list={list} select={store.state.item} />
+      {/if}
+    </Loading>
   {/if}
   {#if category !== null}
     {@const text = store.i18n("list.categoryBack")}

@@ -1,27 +1,16 @@
 <script>
   import './reset.css'
-  import { Loading } from './ui'
-  import store from './store'
   import List from './list/index.svelte'
   import Dialog from './dialog/index.svelte'
   import Detail from './detail/index.svelte'
-
-  const loadState = store.database('encyclopedia', 'character', 'character_text')
-
 </script>
 
 <div class="main">
-  {#if loadState.finish}
-    <div class="content">
-      <List />
-      <Detail />
-    </div>
-    <Dialog />
-  {:else if loadState.error.length > 0}
-    <p>Error loading data: {loadState.error.join(', ')}</p>
-  {:else}
-    <Loading />
-  {/if}
+  <div class="content">
+    <List />
+    <Detail />
+  </div>
+  <Dialog />
 </div>
 
 <style>

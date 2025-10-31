@@ -39,14 +39,12 @@
         <StoryItem data={data} />
       </Nav>
     {/key}{/each}
-    {#if loadDB.finish}
+    <Loading finish={loadDB.finish} error={loadDB.error}>
       {#each extraList as data}{#key data.id}
         <Nav href={`/${data.id}`} route={store.route}>
           <StoryItem data={data} />
         </Nav>
       {/key}{/each}
-    {:else}
-      <Loading />
-    {/if}
+    </Loading>
   {/snippet}
 </ListBanner>
