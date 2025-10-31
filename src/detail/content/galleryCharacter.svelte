@@ -135,6 +135,8 @@
   .nav>p{
     flex: 1;
     text-align: center;
+    overflow: hidden;
+    word-break: break-all;
   }
   .nav>button{
     padding: .3em 1.5em;

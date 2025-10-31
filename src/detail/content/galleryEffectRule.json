@@ -140,7 +140,10 @@
     }
   },
   "world_trader": { "fullshot": 2 },
-  "stella": { "fullshot": 1 },
+  "stella": {
+    "extraCharacter": ["stella_ny21", "stella_smr20", "stella_student"],
+    "fullshot": 1
+  },
   "light": { "fullshot": 1 },
   "light_origin": { "fullshot": 1 },
   "tutorial_priest": { "fullshot": 1 },

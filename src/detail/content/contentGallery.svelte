@@ -29,15 +29,27 @@
     let fullshot = 0
     let effectGroup = {}
     let rule = galleryEffectRule._common.include
+    let emotionData = database2[id][3]
     if (galleryEffectRule[id]){
-      const include = galleryEffectRule[id].include || []
-      const exclude = galleryEffectRule[id].exclude || []
+      let effectRule = galleryEffectRule[id]
+      const include = effectRule.include || []
+      const exclude = effectRule.exclude || []
       rule = rule.concat(...include)
       rule = rule.filter((name)=>!exclude.includes(name))
-      if (galleryEffectRule[id].fullshot){ fullshot = galleryEffectRule[id].fullshot }
-      if (galleryEffectRule[id].effectGroup){ effectGroup = galleryEffectRule[id].effectGroup }
+      if (effectRule.fullshot){ fullshot = effectRule.fullshot }
+      if (effectRule.effectGroup){ effectGroup = effectRule.effectGroup }
+      if (effectRule.extraCharacter){
+        emotionData = { ...emotionData }
+        effectRule.extraCharacter.forEach((exID)=>{
+          if (!database2[exID]){ return }
+          let exEmoList = database2[exID][3]
+          Object.keys(exEmoList).forEach((name)=>{
+            emotionData[`${name}_${exID}`] = exEmoList[name]
+          })
+        })
+      }
     }
-    Object.keys(database2[id][3]).forEach((name)=>{
+    Object.keys(emotionData).forEach((name)=>{
       const isEffect = rule.some((prefix)=>name.startsWith(prefix))
       if (isEffect){ effect.push(name); return }
       if (name){ list.push(name) }
@@ -45,7 +57,7 @@
     effect.push('noface')
     // console.log(id)
     // console.log(list.join('\n'))
-    return { id, list, effect, effectGroup, data: database2[id][3], fullshot, hasPixel }
+    return { id, list, effect, effectGroup, data: emotionData, fullshot, hasPixel }
   })
 
 </script>
