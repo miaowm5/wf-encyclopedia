@@ -25,13 +25,12 @@
     <img src={url} alt={data ? data[0] : `${item.title}`} />
     <RoundButton icon="full_size" onclick={()=>window.open(url)} />
   </div>
-  <Loading finish={loadDB.finish} error={loadDB.error} />
-  {#if loadDB.finish && data}
+  <Loading finish={loadDB.finish && data} error={loadDB.error}>
     <div class="dialog">
       <div class="dialogName">{data[0]}</div>
       <div class="dialogContent"><p>{data[1]}</p></div>
     </div>
-  {/if}
+  </Loading>
   <MobileBack />
 </div>
 
