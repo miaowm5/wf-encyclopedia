@@ -15,12 +15,13 @@
     return { name: emoName, data: emoData }
   })
 
-  const checkUseable = (name)=>{
+  const checkUseable = (name, showCheck=true)=>{
     if (!emoData){ return false }
     let item = emotionList.data[name]
     const result = item.back === emoData.data.back
     const specialEffect = emotionList.effectGroup[name]
     if (!specialEffect){ return result }
+    if (showCheck && specialEffect.fixEffect){ return false }
     if (specialEffect.only){ return specialEffect.only.includes(emoData.name) }
     if (!result && specialEffect.include){ return specialEffect.include.includes(emoData.name) }
     if (result && specialEffect.exclude){ return !specialEffect.exclude.includes(emoData.name) }
@@ -49,6 +50,12 @@
       let item = emotionList.data[name]
       if (!checkUseable(name)){ return }
       effect.push(item.front)
+    })
+    const specialEffect = Object.keys(emotionList.effectGroup)
+    specialEffect.forEach((name)=>{
+      if (!emotionList.effectGroup[name].fixEffect){ return }
+      if (!checkUseable(name, false)){ return }
+      effect.push(emotionList.data[name].front)
     })
     return characterShot(emoData.data.back,
       selectEffect.includes('noface') ? null : emoData.data.front,
