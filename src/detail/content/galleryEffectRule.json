@@ -93,6 +93,37 @@
       "shame_base_0_b": {"exclude": ["cry_base_0_b"]}
     }
   },
+  "cyber_battergirl": {
+    "effectGroup": {
+      "shame": { "exclude": ["serious","think","anger","anger_b","smile_b","surprise"] },
+      "shame_serious_think_anger_anger_b": { "only": ["serious","think","anger","anger_b"] },
+      "shame_smile_b": { "only": ["smile_b"] },
+      "shame_surprise": { "only": ["surprise"] }
+    }
+  },
+  "minamoto_sakura":{
+    "effectGroup": {
+      "shame": {
+        "include": ["amazed_costume","anger_costume","confused_costume","consent_costume","normal_costume","joy_costume","sad_costume","serious_costume","surprise_costume","surprise_b_costume","think_costume"]
+      },
+      "sweat": {
+        "include": ["amazed_costume","anger_costume","confused_costume","consent_costume","normal_costume","joy_costume","sad_costume","serious_costume","surprise_costume","surprise_b_costume","think_costume"]
+      }
+    }
+  },
+  "konno_junko": {
+    "include": ["disguise_costume_b"],
+    "effectGroup": {
+      "disguise_costume_b": { "fixEffect": true }
+    }
+  },
+  "fox_oracle": {
+    "effectGroup": {
+      "shame": { "include": ["normal","angry","angry_b","angry_c","joy","joy_b","normal_b","sad","sad_b","smile","smile_b","smile_c","smile_d","surprise"] },
+      "shame_b": { "include": ["normal","angry","angry_b","angry_c","joy","joy_b","normal_b","sad","sad_b","smile","smile_b","smile_c","smile_d","surprise"] },
+      "sweat": { "include": ["normal","angry","angry_b","angry_c","joy","joy_b","normal_b","sad","sad_b","smile","smile_b","smile_c","smile_d","surprise"] }
+    }
+  },
   "high_priestess":{
     "effectGroup": {
       "shame": {
