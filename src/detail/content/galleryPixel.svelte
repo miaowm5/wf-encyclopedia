@@ -1,6 +1,6 @@
 <script>
   import store from '../../store'
-  import { Title, RoundButton } from '../../ui'
+  import { Title, RoundButton, Loading } from '../../ui'
   import loadPixel from './loadPixel.svelte'
 
   const { emotionList } = $props()
@@ -12,24 +12,23 @@
 
 </script>
 
+{#if pixel}
 <Title>{store.i18n("detail.content.title10")}</Title>
+<Loading finish={pixel.src}>
 <div class="image"
-  style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}
->
-  {#if pixel && pixel.src}
-    <div class="wrapper" style:height={`${pixel.config.height * pixel.scaleRate + 40}px`}>
-      <img src={pixel.src} alt="pixel" />
-    </div>
-    <div class="speed">
-      <RoundButton title={store.i18n("detail.content.galleyPixel3")} onclick={()=>pixel.speed(20)} active={pixel.speedRate === 20} />
-      <RoundButton title={store.i18n("detail.content.galleyPixel4")} onclick={()=>pixel.speed(10)} active={pixel.speedRate === 10} />
-      <RoundButton title={store.i18n("detail.content.galleyPixel5")} onclick={()=>pixel.speed(35)} active={pixel.speedRate === 35} />
-    </div>
-    <div class="scale">
-      <RoundButton title={store.i18n("detail.content.galleyPixel1")} onclick={()=>pixel.scale(2)} active={pixel.scaleRate === 2} />
-      <RoundButton title={store.i18n("detail.content.galleyPixel2")} onclick={()=>pixel.scale(4)} active={pixel.scaleRate === 4} />
-    </div>
-  {/if}
+  style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
+  <div class="wrapper" style:height={`${pixel.config.height * pixel.scaleRate + 40}px`}>
+    <img src={pixel.src} alt="pixel" />
+  </div>
+  <div class="speed">
+    <RoundButton title={store.i18n("detail.content.galleyPixel3")} onclick={()=>pixel.speed(20)} active={pixel.speedRate === 20} />
+    <RoundButton title={store.i18n("detail.content.galleyPixel4")} onclick={()=>pixel.speed(10)} active={pixel.speedRate === 10} />
+    <RoundButton title={store.i18n("detail.content.galleyPixel5")} onclick={()=>pixel.speed(35)} active={pixel.speedRate === 35} />
+  </div>
+  <div class="scale">
+    <RoundButton title={store.i18n("detail.content.galleyPixel1")} onclick={()=>pixel.scale(2)} active={pixel.scaleRate === 2} />
+    <RoundButton title={store.i18n("detail.content.galleyPixel2")} onclick={()=>pixel.scale(4)} active={pixel.scaleRate === 4} />
+  </div>
 </div>
 <div class="frameBtnGroup">
   <button class="frameBtn" onclick={()=>{ pixel.changeFrame(-1) }}>{store.i18n("detail.content.galleyPixel9")}</button>
@@ -42,16 +41,16 @@
   </div>
   <button class="frameBtn" onclick={()=>{ pixel.changeFrame(1) }}>{store.i18n("detail.content.galleyPixel8")}</button>
 </div>
-{#if pixel && pixel.list}
-  <div class="actionList">
-    {#each pixel.list as action}
-      <button
-        class={['action', pixel.config.name === action && 'active']}
-        onclick={()=>pixel.action(action)}>
-        {action}
-      </button>
-    {/each}
-  </div>
+<div class="actionList">
+  {#each pixel.list as action}
+    <button
+      class={['action', pixel.config.name === action && 'active']}
+      onclick={()=>pixel.action(action)}>
+      {action}
+    </button>
+  {/each}
+</div>
+</Loading>
 {/if}
 
 <style>
