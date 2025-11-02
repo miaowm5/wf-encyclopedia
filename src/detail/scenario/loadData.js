@@ -18,13 +18,13 @@ const loadConfig = async (path, dataRegion)=>{
     url = `advent_event/${chapter}`
   }else if (path.startsWith('story/system_quest/')){
     let chapter = path.split('/')[2]
-    url = `system_quest/${chapter}/scenario`
+    url = `system_quest/${chapter}`
   }
   let promise = new Promise((resolve)=>{
     const baseUrl = {
-      cn: `${import.meta.env.VITE_CDN3}/orderedmap/`,
-      jp: `${import.meta.env.VITE_CDN3}/orderedmap2/`
-    }[dataRegion] || `${import.meta.env.VITE_CDN3}/orderedmap/`
+      cn: `${import.meta.env.VITE_CDN3}orderedmap/`,
+      jp: `${import.meta.env.VITE_CDN3}orderedmap2/`
+    }[dataRegion] || `${import.meta.env.VITE_CDN3}orderedmap/`
     api(`${baseUrl}story/${url}.json`, {
       success: (data)=>{ resolve(data) },
       fail: (err)=>{ console.error(err), resolve(null) },

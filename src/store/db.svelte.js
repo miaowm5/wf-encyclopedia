@@ -225,9 +225,9 @@ const init = (state)=>{
         let loadConfig = config[name]
         const cdn = import.meta.env.VITE_CDN3
         const baseUrl = {
-          cn: `${cdn}/orderedmap/`,
-          jp: `${cdn}/orderedmap2/`
-        }[state.config.dataRegion] || `${cdn}/orderedmap/`
+          cn: `${cdn}orderedmap/`,
+          jp: `${cdn}orderedmap2/`
+        }[state.config.dataRegion] || `${cdn}orderedmap/`
         loadDB(
           `${state.config.dataRegion}-${name}`,
           `${baseUrl}${loadConfig.path}.json`,
