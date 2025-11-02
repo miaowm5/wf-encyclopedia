@@ -117,16 +117,18 @@
     <Scenario scenario={store.state.scenario} />
   {:else if store.state.ui.configOpen}
     <Config />
-  {:else if store.state.item}{#key store.state.item}
-    <Loading finish={loadDB.finish} error={loadDB.error}>
-      {#if item}
-        <span class={[store.state.scenario && 'hide', 'body']}>
+  {/if}
+  {#if store.state.item}{#key store.state.item}
+    {@const floatOpen = store.state.scenario || store.state.ui.configOpen}
+    <span class={[floatOpen && 'hide', 'body']}>
+      <Loading finish={loadDB.finish} error={loadDB.error}>
+        {#if item}
           <Title item={item} itemType={item.type} tab={tab === 'voice-none' ? 'voice' : tab} extra={store.state.extra} />
           <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
-        </span>
-      {/if}
-    </Loading>{/key}
-  {/if}
+        {/if}
+      </Loading>
+    </span>
+  {/key}{/if}
 
 </div>
 
