@@ -14,7 +14,7 @@
   {@render children?.()}
 {:else}
   <div class="container">
-    <img class="loading" src={`${import.meta.env.VITE_CDN}loading.gif`} width="30" height="32" alt="loading">
+    <img class="loading" src={`${import.meta.env.VITE_CDN2}loading.gif`} width="30" height="32" alt="loading">
     <p>Loading...</p>
   </div>
 {/if}

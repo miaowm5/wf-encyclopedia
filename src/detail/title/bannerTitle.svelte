@@ -3,14 +3,18 @@
   import { RoundButton } from '../../ui'
   const { data, title, tab, gallery = false, extra } = $props()
   const url = $derived.by(()=>{
-    const cdn = import.meta.env.VITE_CDN
-    if (extra){ return cdn + 'ui/keyword_details_keyword_background.png' }
-    return data.replace('encyclopedia/', cdn) + '.png'
+    if (extra){ return import.meta.env.VITE_CDN + 'ui/keyword_details_keyword_background' }
+    return data.replace('encyclopedia/header_background',
+      import.meta.env.VITE_CDN2 + {
+        cn: `header_background`,
+        jp: 'header_background_jp'
+      }[store.state.config.dataRegion] || `header_background`
+    )
   })
   document.title = title + ' | ' + store.i18n('main.sitename')
 </script>
 
-<div class="header" style:background-image={`url(${url})`}>
+<div class="header" style:background-image={`url(${url}.png)`}>
   {#if extra}<p class="title">{title}</p>{/if}
   <div class="buttonGroup">
     {#snippet tabButton(type, icon)}

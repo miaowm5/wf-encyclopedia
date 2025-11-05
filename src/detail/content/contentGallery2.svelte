@@ -16,13 +16,13 @@
     return [result[1], result[5]]
   })
 
-  const url = import.meta.env.VITE_CDN + `orb/chapter${item.storyID}.png`
+  const url = import.meta.env.VITE_CDN2 + `orb/chapter${item.storyID}.png`
 
 </script>
 
 <div class="content">
   <div class="image">
-    <img src={url} alt={data ? data[0] : `${item.title}`} />
+    <img src={url} alt={data ? data[0] : `${item.title}`} width="1080" height="1920" />
     <RoundButton icon="full_size" onclick={()=>window.open(url)} />
   </div>
   <Loading finish={loadDB.finish && data} error={loadDB.error}>
@@ -49,8 +49,10 @@
   }
   .image img{
     max-width: 100%;
+    height: auto;
     border-radius: 1em;
     overflow: hidden;
+    background-color: #444444;
   }
   .image :global button{
     position: absolute;

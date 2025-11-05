@@ -7,7 +7,7 @@ const promiseCache = {}
 
 const loadConfig = async ()=>{
   if (configCache){ return configCache }
-  const url = `${import.meta.env.VITE_CDN}character/pixel.json`
+  const url = `${import.meta.env.VITE_CDN2}/pixel.json`
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
@@ -106,9 +106,9 @@ const main = (character, hasSpecial = true)=>{
 
   let image = $derived.by(()=>{
     if (!hasSpecial){ return null }
-    return spriteSheet('character/pixel_special', character)
+    return spriteSheet('pixel_special', character, 'cdn2')
   })
-  let image2 = $derived.by(()=>{ return spriteSheet('character/pixel_normal', character) })
+  let image2 = $derived.by(()=>{ return spriteSheet('pixel_normal', character, 'cdn2') })
   const load = async ()=>{
     if (!character){ return }
     const config = await loadConfig()
