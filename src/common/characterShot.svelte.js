@@ -1,13 +1,13 @@
 import spriteSheet from './spriteSheet.svelte.js'
 
-const wrap = (back, front, effect=[], cache)=>{
+const emptyCanvas = ()=>{
+  const canvas = document.createElement("canvas")
+  canvas.width = 1
+  canvas.height = 1
+  return { get canvas(){ return canvas } }
+}
 
-  const emptyCanvas = ()=>{
-    const canvas = document.createElement("canvas")
-    canvas.width = 1
-    canvas.height = 1
-    return { get canvas(){ return canvas } }
-  }
+const wrap = (back, front, effect=[], cache)=>{
 
   const backCanvas = $derived.by(()=>{
     if (!back){ return emptyCanvas() }
