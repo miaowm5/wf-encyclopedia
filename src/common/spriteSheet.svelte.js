@@ -106,6 +106,7 @@ const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
     "cdn": import.meta.env.VITE_CDN,
     "cdn2": import.meta.env.VITE_CDN2,
     "cdn3": import.meta.env.VITE_CDN3,
+    "cdn4": import.meta.env.VITE_CDN4,
   }[cdnType] || import.meta.env.VITE_CDN
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
