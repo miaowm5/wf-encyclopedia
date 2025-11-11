@@ -1,5 +1,6 @@
 
 import customTag from "./customTag"
+import { getValue as jukeboxGetValue } from './jukebox'
 
 let config = {}
 let configData = {}
@@ -26,11 +27,18 @@ const initState = {
     detailTab: 'info',
     mobileListHide: false,
     configOpen: false,
+    jukeboxOpen: window.location.search === '?jukebox',
   },
   dialog: {
     type: null,
     data: null,
     closeable: true,
+  },
+  jukebox: {
+    current: '',
+    playing: false,
+    loop: false,
+    playList: jukeboxGetValue(),
   },
   config,
   customTag: customTag.load()

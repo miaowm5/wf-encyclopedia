@@ -54,7 +54,7 @@ const main = (character)=>{
       let duration = playing[2]
       let value = Math.max(0, Math.min(100, ((current * 1000 - offset) / duration ) * 100))
       if (value < 100){ seek = value }
-      updateSeekTimer = requestAnimationFrame(updateSeek, 10)
+      updateSeekTimer = requestAnimationFrame(updateSeek)
     }else{
       seek = 0
     }

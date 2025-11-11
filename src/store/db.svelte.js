@@ -66,7 +66,8 @@ const config = {
     handler: (data)=>{ return data }
   },
   character_speech_text: {
-    path: 'character/voiceLine',
+    path: `${import.meta.env.VITE_CDN3}common/voiceLine`,
+    absolutePath: true,
     handler: (data)=>{ return data }
   },
   encyclopedia: {
@@ -169,6 +170,11 @@ const config = {
       return pureData
     }
   },
+  music_list: {
+    path: `${import.meta.env.VITE_CDN4}filelist`,
+    absolutePath: true,
+    handler: (data)=>{ return data }
+  }
 }
 
 const promiseCache = {}
@@ -228,9 +234,10 @@ const init = (state)=>{
           cn: `${cdn}orderedmap/`,
           jp: `${cdn}orderedmap2/`
         }[state.config.dataRegion] || `${cdn}orderedmap/`
+        let url = loadConfig.absolutePath ? loadConfig.path : `${baseUrl}${loadConfig.path}`
         loadDB(
           `${state.config.dataRegion}-${name}`,
-          `${baseUrl}${loadConfig.path}.json`,
+          `${url}.json`,
           (data)=>{ return loadConfig.handler(data, state.config.dataRegion) },
           ()=>{ if (!cancelFunc){ addProgress() } },
           ()=>{ if (!cancelFunc){ error.push(`${name} load failed`) } },

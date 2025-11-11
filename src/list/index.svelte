@@ -6,6 +6,7 @@
   import CharacterList from './characterList.svelte'
   import StoryList from './storyList.svelte'
   import AllList from './allList.svelte'
+  import MusicPlayer from './musicPlayer/index.svelte'
 
   const loadDB = store.database('encyclopedia', 'character_text', 'character')
 
@@ -71,6 +72,7 @@
       {text}
     </button>
   {/if}
+  {#if store.state.ui.jukeboxOpen}<MusicPlayer />{/if}
 </div>
 
 <style>
