@@ -14,11 +14,13 @@
 <div class="main">
   <p>{current || playlist[0] || ''}</p>
   <span class="progress" style:width={`${player.seek}%`}></span>
+  <button onclick={()=>{ player.lastSong() }}>上一首</button>
   {#if store.state.jukebox.playing}
     <button onclick={()=>{ store.jukebox.pause() }}>暂停</button>
   {:else}
     <button onclick={()=>{ store.jukebox.play() }}>播放</button>
   {/if}
+  <button onclick={()=>{ player.nextSong() }}>下一首</button>
 
   <div>
     <p>播放列表({playlist.length})</p>
