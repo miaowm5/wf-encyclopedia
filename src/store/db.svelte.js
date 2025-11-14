@@ -173,7 +173,36 @@ const config = {
   music_list: {
     path: `${import.meta.env.VITE_CDN4}filelist`,
     absolutePath: true,
-    handler: (data)=>{ return data }
+    handler: (data)=>{
+      let result = {
+        character_unique: {},
+        event: {},
+        world: {},
+        common: [],
+      }
+      data.forEach((name)=>{
+        if (!name.endsWith('.mp3')){ return }
+        let parts = name.split('/')
+        let file = parts.pop()
+        let resultList = result[parts[0]]
+        if (parts[0] === 'character_unique' || parts[0] === 'event'){
+          if (!resultList[parts[1]]){ resultList[parts[1]] = [] }
+          resultList = resultList[parts[1]]
+        }else if (parts[0].startsWith('world')){
+          resultList = result['world']
+          if (!resultList[parts[0]]){ resultList[parts[0]] = [] }
+          resultList = resultList[parts[0]]
+        }else{
+          if (!result[parts[0]]){ result[parts[0]] = [] }
+          resultList = result[parts[0]]
+        }
+        resultList.push({
+          name: file.slice(0, file.length - 4),
+          path: parts.join('/')
+        })
+      })
+      return result
+    }
   }
 }
 
