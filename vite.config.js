@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     svelte(),
     VitePWA({
-      registerType: 'prompt',
+      registerType: 'autoUpdate',
       devOptions: { enabled: true },
       workbox: {
         runtimeCaching: [
