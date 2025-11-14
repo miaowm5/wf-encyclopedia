@@ -27,7 +27,7 @@ const initState = {
     detailTab: 'info',
     mobileListHide: false,
     configOpen: false,
-    jukeboxOpen: window.location.search === '?jukebox',
+    jukeboxOpen: false,
   },
   dialog: {
     type: null,

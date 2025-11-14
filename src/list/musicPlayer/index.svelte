@@ -1,81 +1,27 @@
 <script>
   import store from '../../store'
   import playerLogic from './player.svelte.js'
-  import { Loading } from '../../ui'
+  import FullPlayer from './fullPlayer.svelte'
+  import MiniPlayer from './miniPlayer.svelte'
 
   const player = playerLogic()
   const current = $derived(store.state.jukebox.current)
   const playlist = $derived(store.state.jukebox.playList)
-
-  const loadDB = store.database('music_list')
-
+  const songName = $derived.by(()=>{
+    let name = current || playlist[0] || ''
+    if (!name){ return ['',''] }
+    let parts = name.split('/')
+    let file = parts.pop()
+    return [file.slice(0, file.length - 4), parts.join('/')]
+  })
 </script>
 
-<div class="main">
-  <p>{current || playlist[0] || ''}</p>
-  <span class="progress" style:width={`${player.seek}%`}></span>
-  <button onclick={()=>{ player.lastSong() }}>上一首</button>
-  {#if store.state.jukebox.playing}
-    <button onclick={()=>{ store.jukebox.pause() }}>暂停</button>
-  {:else}
-    <button onclick={()=>{ store.jukebox.play() }}>播放</button>
-  {/if}
-  <button onclick={()=>{ player.nextSong() }}>下一首</button>
+{#if window.location.search === '?jukebox'}
 
-  <div>
-    <p>播放列表({playlist.length})</p>
-    {#each playlist as title, index}
-      <div>
-        <span>{title}</span>
-        {#if current === title}
-          <span>（正在播放）</span>
-        {:else}
-          <button onclick={()=>{ store.jukebox.play(title) }}>播放</button>
-        {/if}
-        <button onclick={()=>{ store.jukebox.remove(title) }}>移除</button>
-      </div>
-    {/each}
-  </div>
+{#if store.state.ui.jukeboxOpen}
+  <FullPlayer player={player} songName={songName} />
+{:else}
+  <MiniPlayer songName={songName} />
+{/if}
 
-  <Loading finish={loadDB.finish} error={loadDB.error}>
-    <br><br>
-      <button onclick={()=>{
-        store.jukebox.add(loadDB.db['music_list'])
-      }}>全部添加到列表</button>
-    <br><br>
-    <div class="music-player">
-      {#each loadDB.db['music_list'] as title}
-        {#if !playlist.includes(title)}
-          <div class="music-item">
-            <p class="music-title">{title}</p>
-            <button onclick={()=>{
-              store.jukebox.add([title])
-              store.jukebox.play(title)
-            }}>
-              添加并播放
-            </button>
-          </div>
-        {/if}
-      {/each}
-    </div>
-  </Loading>
-</div>
-
-<style>
-  .main{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: auto;
-    background: white;
-    padding: 1em;
-  }
-  .progress{
-    display: block;
-    width: 100%;
-    height: 1em;
-    background: #ffcf8f;
-  }
-</style>
+{/if}

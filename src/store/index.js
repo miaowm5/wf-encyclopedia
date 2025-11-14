@@ -56,6 +56,9 @@ const changeSearch = (search)=>{
 const changeFilter = (filter)=>{
   state.ui.listFilter = filter
 }
+const triggerJukebox = (show)=>{
+  state.ui.jukeboxOpen = show
+}
 const setAllFilter = (text)=>{
   state.ui.allListFilter = text
 }
@@ -141,6 +144,7 @@ const store = {
   changeTab,
   changeSearch,
   changeFilter,
+  triggerJukebox,
   setAllFilter,
   setDialog,
   changeConfig,

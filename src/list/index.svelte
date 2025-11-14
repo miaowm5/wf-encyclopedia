@@ -34,51 +34,61 @@
 </script>
 
 <div class={`main ${store.state.ui.mobileListHide ? 'mobileHide' : ''}`}>
-  {#if category === null}
-    <div class="titleButton">
-      <div
-        style:background-image={`url(${import.meta.env.VITE_CDN}ui/top_background.png)`}>
+  <div class="content">
+    {#if category === null}
+      <div class="titleButton">
         <div
-          style:background-image={`url(${import.meta.env.VITE_CDN}ui/encyclopedia_title.png)`}>
+          style:background-image={`url(${import.meta.env.VITE_CDN}ui/top_background.png)`}>
+          <div
+            style:background-image={`url(${import.meta.env.VITE_CDN}ui/encyclopedia_title.png)`}>
+          </div>
+        </div>
+        <div>
+          <IndexButton onclick={()=>store.route.push('/character', true)} id="character_archive" text={store.i18n("list.category1")} />
+          <IndexButton onclick={()=>store.route.push('/story', true)} id="world_archive" text={store.i18n("list.category2")} />
+          <IndexButton onclick={()=>store.route.push('/all', true)} id="all_keyword" text={store.i18n("list.category3")} />
         </div>
       </div>
-      <div>
-        <IndexButton onclick={()=>store.route.push('/character', true)} id="character_archive" text={store.i18n("list.category1")} />
-        <IndexButton onclick={()=>store.route.push('/story', true)} id="world_archive" text={store.i18n("list.category2")} />
-        <IndexButton onclick={()=>store.route.push('/all', true)} id="all_keyword" text={store.i18n("list.category3")} />
-      </div>
-    </div>
-  {:else}
-    <Loading finish={loadDB.finish} error={loadDB.error}>
-      {#if category === 'character'}
-        <CharacterList list={list} select={store.state.item} />
-      {:else if category === 'story'}
-        <StoryList list={list} select={store.state.item} />
-      {:else if category === 'all'}
-        <AllList list={list} select={store.state.item} />
-      {/if}
-    </Loading>
-  {/if}
-  {#if category !== null}
-    {@const text = store.i18n("list.categoryBack")}
-    <button onclick={()=>store.route.push('/', true)} class="back">
-      <img src={backSprite.src} alt={text}>
-      {text}
-    </button>
-  {:else if !store.state.ui.configOpen}
-    {@const text = store.i18n("list.categoryConfig")}
-    <button onclick={()=>store.route.push('/config', true)} class="back">
-      <img src={configSprite.src} alt={text}>
-      {text}
-    </button>
-  {/if}
-  {#if store.state.ui.jukeboxOpen}<MusicPlayer />{/if}
+    {:else}
+      <Loading finish={loadDB.finish} error={loadDB.error}>
+        {#if category === 'character'}
+          <CharacterList list={list} select={store.state.item} />
+        {:else if category === 'story'}
+          <StoryList list={list} select={store.state.item} />
+        {:else if category === 'all'}
+          <AllList list={list} select={store.state.item} />
+        {/if}
+      </Loading>
+    {/if}
+    {#if category !== null}
+      {@const text = store.i18n("list.categoryBack")}
+      <button onclick={()=>store.route.push('/', true)} class="back">
+        <img src={backSprite.src} alt={text}>
+        {text}
+      </button>
+    {:else if !store.state.ui.configOpen}
+      {@const text = store.i18n("list.categoryConfig")}
+      <button onclick={()=>store.route.push('/config', true)} class="back">
+        <img src={configSprite.src} alt={text}>
+        {text}
+      </button>
+    {/if}
+  </div>
+  <MusicPlayer />
 </div>
 
 <style>
   .main{
     flex: 2;
     max-width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .content{
+    flex: 1;
+    position: relative;
+    overflow: hidden;
   }
   .back{
     position: absolute;
