@@ -16,7 +16,6 @@
       if (store.state.extra === 'character'){
         list.push('character_text')
       }else{
-        list.push('normal_quest')
         list.push('extra_quest')
       }
     }
@@ -43,7 +42,6 @@
       return result
     }else if (extraType){
       const extraQuest = loadDB.db['extra_quest']
-      const normalQuest = loadDB.db['normal_quest']
       const result = {
         type: 'story',
         releated: [],
@@ -51,14 +49,11 @@
         title: '',
       }
       let questItem = null
-      let storyItem = null
       if (extraType === 'adv-quest'){
         questItem = extraQuest['advent_event_quest'][id]
-        storyItem = normalQuest['event/advent_event_quest'][id]
         result.subType = 'event-quest'
       }else if (extraType === 'single-quest'){
         questItem = extraQuest['story_event_single_quest'][id]
-        storyItem = normalQuest['event/story_event_single_quest'][id]
         result.subType = 'event-single'
       }
       if (!questItem){ return null }
@@ -66,8 +61,7 @@
       result.storyID = id
       result.banner = questItem[4]
       result.eventID = `event_${questItem[0]}`
-      if (storyItem){ result.desc = [[storyItem[0].desc.split('\n')]] }
-      else{ result.desc = [[result.title.split('\n')]] }
+      result.desc = [[result.title]]
       return result
     }
     const data = loadDB.db.encyclopedia[id]
@@ -105,6 +99,9 @@
         if (cid !== 'towa_vtuber' && cid !== 'towa_namakubi'){
           return 'voice-none'
         }
+    if (stateTab === 'info'){
+      if (item.type === 'story' && store.state.extra){
+        return 'story'
       }
     }
     return stateTab
