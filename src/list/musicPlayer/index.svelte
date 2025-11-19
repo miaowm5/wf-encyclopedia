@@ -16,12 +16,8 @@
   })
 </script>
 
-{#if window.location.search === '?jukebox'}
-
 {#if store.state.ui.jukeboxOpen}
   <FullPlayer player={player} songName={songName} />
 {:else}
   <MiniPlayer songName={songName} />
-{/if}
-
 {/if}

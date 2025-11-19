@@ -32,7 +32,7 @@ const init = (state)=>{
   }
   const remove = (list)=>{
     state.jukebox.playList = state.jukebox.playList.filter((file)=>{
-      return !list.includes(file)
+      return list !== file
     })
     saveToStorage()
   }
@@ -51,9 +51,12 @@ const init = (state)=>{
     state.jukebox.playing = false
     if (clean){ state.jukebox.current = '' }
   }
+  const setLoop = (value)=>{
+    state.jukebox.loop = value
+  }
 
   return {
-    add, remove, clean, play, pause
+    add, remove, clean, play, pause, setLoop
   }
 }
 
