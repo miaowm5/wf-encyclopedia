@@ -3,8 +3,10 @@
   import store from '../../store'
   import { spriteSheet } from '../../common'
   import { Title, Loading } from '../../ui'
+  import MusicItem from './musicItem.svelte'
   import MobileBack from './mobileBack.svelte'
   import loadVoice from './loadVoiceAudio.svelte.js'
+  import { character } from './contentBgmRule.json'
 
   const { item, noVoice } = $props()
 
@@ -28,7 +30,8 @@
   const musicData = $derived.by(()=>{
     if (!loadMusicDB.finish){ return null }
     const database = loadMusicDB.db.music_list
-    return database['character_unique'][item.storyID] || null
+    const musicID = character[item.storyID] || item.storyID
+    return database['character_unique'][musicID] || null
   })
 
   let voicePlayerItem = null
@@ -90,13 +93,7 @@
     <Loading finish={loadMusicDB.finish} error={loadMusicDB.error}>
       {#if musicData}
         <Title>{store.i18n("detail.content.title11")}</Title>
-        {#each musicData as item}
-          {@const fullPath = `${item.path}/${item.name}.mp3`}
-          <button class="voice" onclick={()=>{ store.jukebox.add(fullPath); store.jukebox.play(fullPath) }}>
-            <div class="text"><p>{item.name}</p></div>
-            <p class="comment">{item.path}</p>
-          </button>
-        {/each}
+        {#each musicData as item}<MusicItem item={item} />{/each}
       {/if}
     </Loading>
   </Loading>

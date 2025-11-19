@@ -185,9 +185,17 @@ const config = {
         let parts = name.split('/')
         let file = parts.pop()
         let resultList = result[parts[0]]
-        if (parts[0] === 'character_unique' || parts[0] === 'event'){
+        if (parts[0] === 'character_unique'){
           if (!resultList[parts[1]]){ resultList[parts[1]] = [] }
           resultList = resultList[parts[1]]
+        }else if (parts[0] === 'event'){
+          if (parts[1] === 'advent_event'){
+            if (!resultList[parts[2]]){ resultList[parts[2]] = [] }
+            resultList = resultList[parts[2]]
+          }else{
+            if (!resultList[parts[1]]){ resultList[parts[1]] = [] }
+            resultList = resultList[parts[1]]
+          }
         }else if (parts[0].startsWith('world')){
           resultList = result['world']
           if (!resultList[parts[0]]){ resultList[parts[0]] = [] }

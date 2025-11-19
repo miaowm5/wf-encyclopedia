@@ -3,6 +3,7 @@
   import ContentGallery from './contentGallery.svelte'
   import ContentGallery2 from './contentGallery2.svelte'
   import ContentVoice from './contentVoice.svelte'
+  import ContentMusic from './contentMusic.svelte'
   import ContentQuest from './contentQuest.svelte'
 
   const { tab, item, itemType } = $props()
@@ -18,7 +19,11 @@
     <ContentGallery item={item} itemType={itemType} />
   {/if}
 {:else if tab === 'voice'}
-  <ContentVoice item={item} />
+  {#if itemType === 'story'}
+    <ContentMusic item={item} />
+  {:else}
+    <ContentVoice item={item} />
+  {/if}
 {:else if tab === 'voice-none'}
   <ContentVoice item={item} noVoice={true} />
 {:else if tab === 'story'}

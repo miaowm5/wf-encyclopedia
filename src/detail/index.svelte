@@ -92,13 +92,18 @@
       }
     }
     if (stateTab === 'voice'){
-      if (item.type !== 'character'){ return 'info' }
-      const rarity = character[2]
-      if (rarity !== '3' && rarity !== '4' && rarity !== '5'){
-        const cid = character[0]
-        if (cid !== 'towa_vtuber' && cid !== 'towa_namakubi'){
-          return 'voice-none'
+      if (item.type === 'character'){
+        const rarity = character[2]
+        if (rarity !== '3' && rarity !== '4' && rarity !== '5'){
+          const cid = character[0]
+          if (cid !== 'towa_vtuber' && cid !== 'towa_namakubi'){
+            return 'voice-none'
+          }
         }
+      }else if (item.type !== 'story'){
+        return 'info'
+      }
+    }
     if (stateTab === 'info'){
       if (item.type === 'story' && store.state.extra){
         return 'story'

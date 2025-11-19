@@ -28,6 +28,7 @@
     {#if !extra}{@render tabButton('info', 'encyclopedia')}{/if}
     {@render tabButton('story', 'character_story_mini')}
     {#if gallery}{@render tabButton('gallery', 'user_account_center')}{/if}
+    {@render tabButton('voice', 'voice_volume3')}
   </div>
 </div>
 
