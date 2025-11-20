@@ -1,6 +1,5 @@
 <script>
   import LazyLoad from './lazyLoad.svelte'
-  import canvasBlob from './canvasBlob.svelte.js'
 
   let { src, alt, children, lazyLoad = true } = $props()
 
@@ -20,7 +19,7 @@
       canvas.width = img.naturalWidth
       canvas.height = img.naturalHeight
       ctx.drawImage(img, 0, 0)
-      realSrc = canvas
+      realSrc = canvas.toDataURL("image/png")
     }
     return ()=>{ destory = true }
   }
@@ -31,11 +30,10 @@
     if (!lazyLoadStatus){ return }
     clearFunc = load(src)
   })
-  const finalSrc = $derived(canvasBlob(realSrc, null))
 </script>
 
-{#if finalSrc.src}
-  <img src={finalSrc.src} alt={alt ? alt : src}>
+{#if realSrc}
+  <img src={realSrc} alt={alt ? alt : src}>
 {:else}
   <LazyLoad lazy={lazyLoad} load={()=>lazyLoadStatus = true}>
     {@render children?.()}

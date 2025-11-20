@@ -3,7 +3,6 @@
   import TextImage from './textImage.svelte'
   import LazyLoad from './lazyLoad.svelte'
   import headIconCache from './spritesheetCache.js'
-  import canvasBlob from './canvasBlob.svelte.js'
 
   let {
     file,
@@ -82,9 +81,8 @@
     if (spriteRarity?.canvas){
       ctx.drawImage(spriteRarity.canvas, 4, 180)
     }
-    return canvas
+    return canvas.toDataURL("image/png")
   })
-  const finalHeadSrc = $derived(canvasBlob(finalHead, null))
 </script>
 
 {#if !lazyLoadStatus}
@@ -96,8 +94,8 @@
 {:else}
 <div class="main"
   style:background-image={`url(${import.meta.env.VITE_CDN}ui/party_thumbnail_tile_bg_old.png)`}>
-  {#if finalHeadSrc.src}
-    <img src={finalHeadSrc.src} alt={name}>
+  {#if finalHead}
+    <img src={finalHead} alt={name}>
   {:else}
     <TextImage
       text={name}
