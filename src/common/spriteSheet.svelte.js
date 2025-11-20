@@ -109,7 +109,10 @@ const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
     "cdn4": import.meta.env.VITE_CDN4,
   }[cdnType] || import.meta.env.VITE_CDN
   let cancelFunc = false
-  onDestroy(()=>{ cancelFunc = true })
+  onDestroy(()=>{
+    cancelFunc = true
+    URL.revokeObjectURL(src)
+  })
 
   let src = $state(empty)
   let canvas = $state(null)
@@ -126,7 +129,10 @@ const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
     const finalCanvas = await createCanvas(image, spriteConfig, `${cdn}${spritesheet}/${file}`, cache)
     if (cancelFunc){ return }
     canvas = finalCanvas
-    src = finalCanvas.toDataURL("image/png")
+    finalCanvas.toBlob((blob)=>{
+      if (cancelFunc){ return }
+      src = URL.createObjectURL(blob)
+    })
   }
   load()
   return {
