@@ -1,8 +1,10 @@
 <script>
   import { spriteSheet } from '../common'
+  import iconCache from './spritesheetCache.js'
+
   let { children } = $props()
-  const left = spriteSheet('res/icon', 'wf_ui_flipper_border_left')
-  const right = spriteSheet('res/icon', 'wf_ui_flipper_border')
+  const left = spriteSheet('res/icon', 'wf_ui_flipper_border_left', 'cdn', iconCache)
+  const right = spriteSheet('res/icon', 'wf_ui_flipper_border', 'cdn', iconCache)
 </script>
 
 <div class="title">
