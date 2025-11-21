@@ -126,6 +126,18 @@
       "galleyCharacter1": ["上一个", "Prev", "前へ"],
       "galleyCharacter2": ["下一个", "Next", "次へ"],
       "storyBack": ["返回", "Back", "戻る"]
+    },
+    "music": {
+      "play": ["播放", "Play", "再生"],
+      "pause": ["暂停", "Pause", "一時停止"],
+      "playlist": ["播放列表", "Playlist", "プレイリスト"],
+      "playing": ["播放中", "Playing", "再生中"],
+      "addList": ["添加到播放列表", "Add to playlist", "プレイリストに追加"],
+      "removeList": ["移除播放列表", "Remove from playlist", "プレイリストから削除"],
+      "next": ["下一曲", "Next", "次へ"],
+      "last": ["上一曲", "Previous", "前へ"],
+      "loop1": ["列表循环", "Loop (list)", "リストループ"],
+      "loop2": ["单曲循环", "Loop (single)", "シングルループ"]
     }
   }
 }
