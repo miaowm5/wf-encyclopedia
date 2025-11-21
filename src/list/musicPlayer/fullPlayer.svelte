@@ -2,52 +2,21 @@
   import store from '../../store'
   import { spriteSheet } from '../../common'
   import Item from './playlistItem.svelte'
+  import Player from './player.svelte'
 
   const { player, songName } = $props()
 
   const current = $derived(store.state.jukebox.current)
   const playlist = $derived(store.state.jukebox.playList)
-
   const backSprite = spriteSheet('res/icon', 'return')
-
-  const changeSeek = (e)=>{
-    if (!songName[0]){ return }
-    const rect = e.srcElement.getBoundingClientRect()
-    const clickX = e.clientX - rect.left
-    const percentage = clickX / rect.width
-    player.setSeek(percentage)
-    if (!store.state.jukebox.playing){ store.jukebox.play() }
-  }
 </script>
 
 <div class="main">
   <button class="back" onclick={()=>{ store.triggerJukebox(false) }}>
-    <img src={backSprite.src} alt={store.i18n("返回")}>
-    {store.i18n("返回")}
+    <img src={backSprite.src} alt={store.i18n("detail.music.back")}>
+    {store.i18n("detail.music.back")}
   </button>
-  <div class="player">
-    <p>{songName[0]}</p>
-    <p>{songName[1]}</p>
-    <!-- svelte-ignore a11y_no_static_element_interactions -->
-    <!-- svelte-ignore a11y_click_events_have_key_events -->
-    <div onclick={changeSeek} class="progress">
-      <span class="progress" style:width={`${player.seek}%`}></span>
-    </div>
-    {#if songName[0]}
-      <button onclick={()=>{ player.lastSong() }}>上一首</button>
-      {#if store.state.jukebox.playing}
-        <button onclick={()=>{ store.jukebox.pause() }}>暂停</button>
-      {:else}
-        <button onclick={()=>{ store.jukebox.play() }}>播放</button>
-      {/if}
-      <button onclick={()=>{ player.nextSong() }}>下一首</button>
-      {#if store.state.jukebox.loop}
-        <button onclick={()=>{ store.jukebox.setLoop(false) }}>当前：单曲循环</button>
-      {:else}
-        <button onclick={()=>{ store.jukebox.setLoop(true) }}>当前：列表循环</button>
-      {/if}
-    {/if}
-  </div>
+  {#if songName[0]}<Player player={player} songName={songName} />{/if}
   <div class="playlist">
     <p>播放列表({playlist.length})</p>
     {#each playlist as title}
@@ -87,16 +56,6 @@
   .back :global img{
     height: 1.5em;
     margin-bottom: -.4em;
-  }
-  .progress{
-    height: 1em;
-    width: 100%;
-    position: relative;
-  }
-  .progress>span{
-    display: block;
-    width: 100%;
-    background: #ffcf8f;
   }
   .playlist{
     flex: 1;
