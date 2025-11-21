@@ -41,6 +41,11 @@
         <button onclick={()=>{ store.jukebox.play() }}>播放</button>
       {/if}
       <button onclick={()=>{ player.nextSong() }}>下一首</button>
+      {#if store.state.jukebox.loop}
+        <button onclick={()=>{ store.jukebox.setLoop(false) }}>当前：单曲循环</button>
+      {:else}
+        <button onclick={()=>{ store.jukebox.setLoop(true) }}>当前：列表循环</button>
+      {/if}
     {/if}
   </div>
   <div class="playlist">
