@@ -10,6 +10,14 @@
 
   const backSprite = spriteSheet('res/icon', 'return')
 
+  const changeSeek = (e)=>{
+    if (!songName[0]){ return }
+    const rect = e.srcElement.getBoundingClientRect()
+    const clickX = e.clientX - rect.left
+    const percentage = clickX / rect.width
+    player.setSeek(percentage)
+    if (!store.state.jukebox.playing){ store.jukebox.play() }
+  }
 </script>
 
 <div class="main">
@@ -20,8 +28,11 @@
   <div class="player">
     <p>{songName[0]}</p>
     <p>{songName[1]}</p>
-
-    <span class="progress" style:width={`${player.seek}%`}></span>
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <div onclick={changeSeek} class="progress">
+      <span class="progress" style:width={`${player.seek}%`}></span>
+    </div>
     {#if songName[0]}
       <button onclick={()=>{ player.lastSong() }}>上一首</button>
       {#if store.state.jukebox.playing}
@@ -73,9 +84,13 @@
     margin-bottom: -.4em;
   }
   .progress{
+    height: 1em;
+    width: 100%;
+    position: relative;
+  }
+  .progress>span{
     display: block;
     width: 100%;
-    height: 1em;
     background: #ffcf8f;
   }
   .playlist{

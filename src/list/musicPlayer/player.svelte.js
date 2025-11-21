@@ -71,6 +71,13 @@ const playerLogic = (playList)=>{
     if (updateSeekTimer){ cancelAnimationFrame(updateSeekTimer) }
     if (register){ updateSeek() }
   }
+  let initSeek = 0
+  const changeSeek = (value)=>{
+    if (!sound){ initSeek = value; return }
+    const duration = sound.duration()
+    sound.seek(Math.max(0, Math.min(duration, value * duration)))
+    initSeek = 0
+  }
 
   let cancelFunc = false
   let sound = null
@@ -100,6 +107,7 @@ const playerLogic = (playList)=>{
         }, 1)
       })
       if (playing){ sound.play() }
+      if (initSeek){ changeSeek(initSeek) }
     })
   })
   $effect(()=>{
@@ -117,7 +125,8 @@ const playerLogic = (playList)=>{
     cancelFunc = true
   })
   return {
-    get seek(){ return seek }
+    get seek(){ return seek },
+    setSeek(value){ changeSeek(value) },
   }
 }
 
@@ -129,6 +138,7 @@ const main = ()=>{
     nextSong: playList.nextSong,
     lastSong: playList.lastSong,
     get seek(){ return player.seek },
+    setSeek(value){ player.setSeek(value) },
   }
 }
 
