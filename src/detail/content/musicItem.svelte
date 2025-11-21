@@ -1,5 +1,6 @@
 <script>
   import store from '../../store'
+  import { spriteSheet } from '../../common'
 
   const { item } = $props()
 
@@ -12,18 +13,32 @@
     return store.state.jukebox.playList.some((i)=>i === fullPath)
   })
 
+  const playMarker = spriteSheet('res/icon', 'voice_volume3')
+  const addListMarker = spriteSheet('res/icon', 'voice_volume3')
+
 </script>
 
 <div class="voice">
   <div class="text"><p>{item.name}</p></div>
   <p class="comment">{item.path}</p>
+</div>
+<div class="btnGroup">
   {#if isPlaying}
-    <span>playing</span>
+    <div class="btn playing"><span>
+      <img src={playMarker.src} alt={store.i18n('detail.music.playing')}>
+      <span>{store.i18n('detail.music.playing')}</span>
+    </span></div>
   {:else}
-    <button onclick={()=>{ store.jukebox.play(fullPath) }}>play</button>
+    <button class="btn" onclick={()=>{ store.jukebox.play(fullPath) }}><span>
+      <img src={playMarker.src} alt={store.i18n('detail.music.play')}>
+      <span>{store.i18n('detail.music.play')}</span>
+    </span></button>
   {/if}
   {#if !isOnPlaylist}
-    <button onclick={()=>{ store.jukebox.add(fullPath); store.jukebox.play(fullPath) }}>add to playlist</button>
+    <button class="btn" onclick={()=>{ store.jukebox.add(fullPath); store.jukebox.play(fullPath) }}><span>
+      <img src={addListMarker.src} alt={store.i18n('detail.music.addList')}>
+      <span>{store.i18n('detail.music.addList')}</span>
+    </span></button>
   {/if}
 </div>
 
@@ -32,7 +47,6 @@
     display: inline-block;
     border: none;
     background: white;
-    margin-bottom: 1em;
     text-align: left;
     padding: 1em 1.5em 1em 1em;
     border-radius: .3em;
@@ -50,5 +64,35 @@
   .voice>.comment{
     color: #888;
     font-size: .9em;
+  }
+  .btnGroup{
+    margin-bottom: 1em;
+    margin-top: .3em;
+  }
+  .btnGroup>*:not(:last-child){
+    margin-right: .3em;
+  }
+  .btn{
+    background: #fafafa;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-size: 1em;
+    color: #444444;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: .3em;
+    padding: 0 .5em;
+  }
+  .btn.playing{
+    background-color: #ffcf8f;
+  }
+  .btn>span{
+    display: flex;
+    align-items: center;
+  }
+  .btn>span>img{
+    height: 2em;
+    width: 2em;
   }
 </style>
