@@ -91,7 +91,10 @@ const playerLogic = (playList)=>{
     seek = 0
     if (!currentPlay){ return }
     loadHowl(currentPlay, (howler)=>{
-      if (cancelFunc){ return }
+      if (cancelFunc){
+        if (howler){ howler.unload() }
+        return
+      }
       if (!howler){ return }
       sound = howler
       sound.on('play', ()=>{ registerSeek(true) })

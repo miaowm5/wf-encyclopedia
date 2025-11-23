@@ -89,7 +89,10 @@ const main = (character)=>{
       return
     }
     sound = await loadHowl(`${character}.ogg?${config.timestamp || ''}`, voiceData)
-    if (cancelFunc){ return }
+    if (cancelFunc){
+      if (sound){ sound.unload() }
+      return
+    }
     if (!sound){ playing = null; loadOver = true; return }
     sound.on('end', ()=>{ playing = null; seek = 0 })
     sound.on('stop', ()=>{ playing = null; seek = 0 })
