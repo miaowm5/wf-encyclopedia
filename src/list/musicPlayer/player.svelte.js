@@ -88,6 +88,7 @@ const playerLogic = (playList)=>{
     if (sound){ sound.unload() }
     sound = null
     currentPlay = current
+    seek = 0
     if (!currentPlay){ return }
     loadHowl(currentPlay, (howler)=>{
       if (cancelFunc){ return }
