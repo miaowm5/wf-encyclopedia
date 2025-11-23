@@ -3,9 +3,9 @@
   import { spriteSheet } from '../../common'
   const { songName } = $props()
 
-  const playMarker = spriteSheet('res/icon', 'voice_volume3')
-  const pauseMarker = spriteSheet('res/icon', 'option_small')
-  const listMarker = spriteSheet('res/icon', 'voice_volume3')
+  const playMarker = spriteSheet('res/icon', 'music_play')
+  const pauseMarker = spriteSheet('res/icon', 'music_pause')
+  const listMarker = spriteSheet('res/icon', 'sort')
 </script>
 
 <div class="main">

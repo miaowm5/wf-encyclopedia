@@ -13,8 +13,9 @@
     return store.state.jukebox.playList.some((i)=>i === fullPath)
   })
 
-  const playMarker = spriteSheet('res/icon', 'voice_volume3')
-  const addListMarker = spriteSheet('res/icon', 'voice_volume3')
+  const playMarker = spriteSheet('res/icon', 'music_play')
+  const addListMarker = spriteSheet('res/icon', 'music_add')
+  const removeListMarker = spriteSheet('res/icon', 'music_remove')
 
 </script>
 
@@ -35,9 +36,14 @@
     </span></button>
   {/if}
   {#if !isOnPlaylist}
-    <button class="btn" onclick={()=>{ store.jukebox.add(fullPath); store.jukebox.play(fullPath) }}><span>
+    <button class="btn" onclick={()=>{ store.jukebox.add([fullPath]) }}><span>
       <img src={addListMarker.src} alt={store.i18n('detail.music.addList')}>
       <span>{store.i18n('detail.music.addList')}</span>
+    </span></button>
+  {:else}
+    <button class="btn playing" onclick={()=>{ store.jukebox.remove(fullPath) }}><span>
+      <img src={removeListMarker.src} alt={store.i18n('detail.music.removeList')}>
+      <span>{store.i18n('detail.music.removeList')}</span>
     </span></button>
   {/if}
 </div>

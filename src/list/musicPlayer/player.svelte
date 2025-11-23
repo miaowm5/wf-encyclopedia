@@ -13,12 +13,12 @@
     if (!store.state.jukebox.playing){ store.jukebox.play() }
   }
 
-  const playSprite = spriteSheet('res/icon', 'voice_volume3')
-  const pauseSprite = spriteSheet('res/icon', 'option_small')
-  const loop1Sprite = spriteSheet('res/icon', 'voice_volume3')
-  const loop2Sprite = spriteSheet('res/icon', 'option_small')
-  const nextSprite = spriteSheet('res/icon', 'voice_volume3')
-  const lastSprite = spriteSheet('res/icon', 'voice_volume3')
+  const playSprite = spriteSheet('res/icon', 'music_play')
+  const pauseSprite = spriteSheet('res/icon', 'music_pause')
+  const loop1Sprite = spriteSheet('res/icon', 'music_loop1')
+  const loop2Sprite = spriteSheet('res/icon', 'music_loop2')
+  const nextSprite = spriteSheet('res/icon', 'music_next')
+  const lastSprite = spriteSheet('res/icon', 'music_last')
 </script>
 
 <div>
@@ -50,11 +50,11 @@
     </button>
     {#if store.state.jukebox.loop}
       <button class="image" onclick={()=>{ store.jukebox.setLoop(false) }}>
-        <img src={loop1Sprite.src} alt={store.i18n("detail.music.loop2")}>
+        <img src={loop2Sprite.src} alt={store.i18n("detail.music.loop2")}>
       </button>
     {:else}
       <button class="image" onclick={()=>{ store.jukebox.setLoop(true) }}>
-        <img src={loop2Sprite.src} alt={store.i18n("detail.music.loop1")}>
+        <img src={loop1Sprite.src} alt={store.i18n("detail.music.loop1")}>
       </button>
     {/if}
   </div>
@@ -111,6 +111,16 @@
   .controller button img{
     width: 100%;
     height: 100%;
+  }
+  button.round img{
+    width: 70%;
+    height: 70%;
+    margin-top: 15%;
+  }
+  button.round.center img{
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
   }
   .image{
     background: none;

@@ -24,15 +24,15 @@ const init = (state)=>{
     if (e.key === 'jukebox'){ state.jukebox.playList = getValue(false) }
   })
 
-  const add = (list)=>{
+  const add = (list = [])=>{
     state.jukebox.playList = state.jukebox.playList
       .filter((file)=>!list.includes(file))
       .concat(list)
     saveToStorage()
   }
-  const remove = (list)=>{
+  const remove = (target = '')=>{
     state.jukebox.playList = state.jukebox.playList.filter((file)=>{
-      return list !== file
+      return target !== file
     })
     saveToStorage()
   }
