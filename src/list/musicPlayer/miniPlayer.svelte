@@ -33,6 +33,7 @@
 
 <style>
   .main{
+    font-size: .8em;
     display: flex;
     padding: .5em 0;
     background-color: #fafafa;
@@ -75,5 +76,11 @@
   }
   .main>button:nth-child(2){
     border-left: 1px solid #ddd;
+  }
+  @media (max-width: 600px) {
+    .main{ font-size: .9em; }
+  }
+  @media (max-width: 400px) {
+    .main{ font-size: 1em; }
   }
 </style>
