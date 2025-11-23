@@ -17,7 +17,6 @@ const getValue = (init = true)=>{
 
 const init = (state)=>{
   const saveToStorage = ()=>{
-    return
     localStorage.setItem(storageKey, JSON.stringify(state.jukebox.playList))
   }
   window.addEventListener('storage', (e)=>{
