@@ -9,6 +9,7 @@
   const current = $derived(store.state.jukebox.current)
   const playlist = $derived(store.state.jukebox.playList)
   const backSprite = spriteSheet('res/icon', 'return')
+  const playListSprite = spriteSheet('res/icon', 'sort')
 </script>
 
 <div class="main">
@@ -18,14 +19,19 @@
   </button>
   {#if songName[0]}<Player player={player} songName={songName} />{/if}
   <div class="playlist">
-    <p>播放列表({playlist.length})</p>
-    {#each playlist as title}
-      <Item
-        title={title} active={current === title}
-        play={store.jukebox.play}
-        remove={store.jukebox.remove}
-      />
-    {/each}
+    <p class="title">
+      <span><img class="icon" src={playListSprite.src} alt={store.i18n("detail.music.playlist")}></span>
+      <span>{store.i18n("detail.music.playlist")}({playlist.length})</span>
+    </p>
+    <div class="list">
+      {#each playlist as title}
+        <Item
+          title={title} active={current === title}
+          play={store.jukebox.play}
+          remove={store.jukebox.remove}
+        />
+      {/each}
+    </div>
   </div>
 </div>
 
@@ -59,5 +65,25 @@
   }
   .playlist{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .playlist .title{
+    display: flex;
+    align-items: center;
+    padding: .5em 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  .playlist .title>span:nth-child(1){
+    line-height: 0;
+  }
+  .playlist .title>span>img{
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .playlist .list{
+    flex: 1;
+    overflow-y: auto;
   }
 </style>
