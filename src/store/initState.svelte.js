@@ -37,7 +37,7 @@ const initState = {
   jukebox: {
     current: '',
     playing: false,
-    loop: false,
+    loop: true,
     playList: jukeboxGetValue(),
   },
   config,

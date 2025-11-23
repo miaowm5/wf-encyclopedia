@@ -3,19 +3,20 @@
   import store from '../../store'
   import { spriteSheet } from '../../common'
   import { Title, Loading } from '../../ui'
+  import MusicItem from './musicItem.svelte'
   import MobileBack from './mobileBack.svelte'
   import loadVoice from './loadVoiceAudio.svelte.js'
+  import { character } from './contentBgmRule.json'
 
   const { item, noVoice } = $props()
 
   const loadDB = store.database('character_speech', 'character_speech_text')
+  const loadMusicDB = store.database('music_list')
 
   const data = $derived.by(()=>{
     if (!loadDB.finish){ return null }
-    if (loadDB.error.length > 0){ return null }
-    if (!loadDB.db.character_speech){ return null }
     const database = loadDB.db.character_speech
-    const database2 = loadDB.db.character_speech_text || {}
+    const database2 = loadDB.db.character_speech_text
     const info = database[item.characterID]
     const text = database2[item.storyID] || {}
     if (!info){ return null }
@@ -25,6 +26,12 @@
       evolution: info.filter((item)=>item[0] === '1')[0],
       text,
     }
+  })
+  const musicData = $derived.by(()=>{
+    if (!loadMusicDB.finish){ return null }
+    const database = loadMusicDB.db.music_list
+    const musicID = character[item.storyID] || item.storyID
+    return database['character_unique'][musicID] || null
   })
 
   let voicePlayerItem = null
@@ -59,30 +66,37 @@
 {/snippet}
 
 <div class="content">
-  <Loading finish={loadDB.finish} error={loadDB.error} />
-  {#if loadDB.finish && data}
-    <Title>{store.i18n("detail.content.title5")}</Title>
-    {@render voice(data.join[3], data.join[4])}
-    {@render voice(data.evolution[3], data.evolution[4])}
-    <Title>{store.i18n("detail.content.title6")}</Title>
-    {#each data.home as item}
-      {@render voice(item[3], item[4])}
-    {/each}
-    {#if !noVoice}
-      <Title>{store.i18n("detail.content.title7")}</Title>
-      {@render voice(store.i18n("detail.content.voice1"), 'battle/skill_ready', true)}
-      {@render voice(store.i18n("detail.content.voice2"), 'battle/skill_0', true)}
-      {@render voice(store.i18n("detail.content.voice3"), 'battle/skill_1', true)}
-      {@render voice(store.i18n("detail.content.voice4"), 'battle/battle_start_0', true)}
-      {@render voice(store.i18n("detail.content.voice5"), 'battle/battle_start_1', true)}
-      {@render voice(store.i18n("detail.content.voice6"), 'battle/win_0', true)}
-      {@render voice(store.i18n("detail.content.voice7"), 'battle/win_1', true)}
-      {@render voice(store.i18n("detail.content.voice8"), 'battle/power_flip_0', true)}
-      {@render voice(store.i18n("detail.content.voice9"), 'battle/power_flip_1', true)}
-      {@render voice(store.i18n("detail.content.voice10"), 'battle/outhole_0', true)}
-      {@render voice(store.i18n("detail.content.voice11"), 'battle/outhole_1', true)}
+  <Loading finish={loadDB.finish} error={loadDB.error}>
+    {#if data}
+      <Title>{store.i18n("detail.content.title5")}</Title>
+      {@render voice(data.join[3], data.join[4])}
+      {@render voice(data.evolution[3], data.evolution[4])}
+      <Title>{store.i18n("detail.content.title6")}</Title>
+      {#each data.home as item}
+        {@render voice(item[3], item[4])}
+      {/each}
+      {#if !noVoice}
+        <Title>{store.i18n("detail.content.title7")}</Title>
+        {@render voice(store.i18n("detail.content.voice1"), 'battle/skill_ready', true)}
+        {@render voice(store.i18n("detail.content.voice2"), 'battle/skill_0', true)}
+        {@render voice(store.i18n("detail.content.voice3"), 'battle/skill_1', true)}
+        {@render voice(store.i18n("detail.content.voice4"), 'battle/battle_start_0', true)}
+        {@render voice(store.i18n("detail.content.voice5"), 'battle/battle_start_1', true)}
+        {@render voice(store.i18n("detail.content.voice6"), 'battle/win_0', true)}
+        {@render voice(store.i18n("detail.content.voice7"), 'battle/win_1', true)}
+        {@render voice(store.i18n("detail.content.voice8"), 'battle/power_flip_0', true)}
+        {@render voice(store.i18n("detail.content.voice9"), 'battle/power_flip_1', true)}
+        {@render voice(store.i18n("detail.content.voice10"), 'battle/outhole_0', true)}
+        {@render voice(store.i18n("detail.content.voice11"), 'battle/outhole_1', true)}
+      {/if}
     {/if}
-  {/if}
+    <Loading finish={loadMusicDB.finish} error={loadMusicDB.error}>
+      {#if musicData}
+        <Title>{store.i18n("detail.content.title11")}</Title>
+        {#each musicData as item}<MusicItem item={item} />{/each}
+      {/if}
+    </Loading>
+  </Loading>
   <MobileBack />
 </div>
 
