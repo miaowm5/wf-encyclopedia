@@ -31,6 +31,7 @@ const loadHowl = async (character, config)=>{
       src: [`${import.meta.env.VITE_CDN2}voice/${character}`],
       sprite: config
     })
+    if (sound.state() === 'loaded'){ resolve(sound) }
     sound.on('load', ()=>{ resolve(sound) })
     sound.on('loaderror', ()=>{ resolve(null) })
   })
