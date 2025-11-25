@@ -35,35 +35,35 @@
   </div>
   <div class="controller">
     {#if store.state.jukebox.random}
-      <button class="image" onclick={()=>{ store.jukebox.setRandom(false) }}>
+      <button class="image" onclick={()=>{ store.jukebox.setRandom(false) }} title={store.i18n("detail.music.random2")}>
         <img src={random1Sprite.src} alt={store.i18n("detail.music.random2")}>
       </button>
     {:else}
-      <button class="image" onclick={()=>{ store.jukebox.setRandom(true) }}>
+      <button class="image" onclick={()=>{ store.jukebox.setRandom(true) }} title={store.i18n("detail.music.random1")}>
         <img src={random2Sprite.src} alt={store.i18n("detail.music.random1")}>
       </button>
     {/if}
-    <button class="round" onclick={()=>{ player.lastSong() }}>
+    <button class="round" onclick={()=>{ player.lastSong() }} title={store.i18n("detail.music.last")}>
       <img src={lastSprite.src} alt={store.i18n("detail.music.last")}>
     </button>
     {#if store.state.jukebox.playing}
-      <button class="round center" onclick={()=>{ store.jukebox.pause() }}>
+      <button class="round center" onclick={()=>{ store.jukebox.pause() }} title={store.i18n("detail.music.pause")}>
         <img src={pauseSprite.src} alt={store.i18n("detail.music.pause")}>
       </button>
     {:else}
-      <button class="round center" onclick={()=>{ store.jukebox.play() }}>
+      <button class="round center" onclick={()=>{ store.jukebox.play() }} title={store.i18n("detail.music.play")}>
         <img src={playSprite.src} alt={store.i18n("detail.music.play")}>
       </button>
     {/if}
-    <button class="round" onclick={()=>{ player.nextSong() }}>
+    <button class="round" onclick={()=>{ player.nextSong() }} title={store.i18n("detail.music.next")}>
       <img src={nextSprite.src} alt={store.i18n("detail.music.next")}>
     </button>
     {#if store.state.jukebox.loop}
-      <button class="image" onclick={()=>{ store.jukebox.setLoop(false) }}>
+      <button class="image" onclick={()=>{ store.jukebox.setLoop(false) }} title={store.i18n("detail.music.loop2")}>
         <img src={loop2Sprite.src} alt={store.i18n("detail.music.loop2")}>
       </button>
     {:else}
-      <button class="image" onclick={()=>{ store.jukebox.setLoop(true) }}>
+      <button class="image" onclick={()=>{ store.jukebox.setLoop(true) }} title={store.i18n("detail.music.loop1")}>
         <img src={loop1Sprite.src} alt={store.i18n("detail.music.loop1")}>
       </button>
     {/if}

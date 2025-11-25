@@ -17,6 +17,7 @@
 
 <button
   aria-label={alt || title || icon}
+  title={alt || title || icon}
   class={[active && 'active']}
   onclick={onclick}>
   {#if icon}

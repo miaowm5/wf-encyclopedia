@@ -28,11 +28,12 @@
       <p>{songName[1]}</p>
     </div>
   </button>
-  <button class="trigger" onclick={()=>triggerList(title)}>
+  <button class="trigger" onclick={()=>triggerList(title)}
+    title={store.i18n(inlist ? "detail.music.removeList" : "detail.music.addList")}>
     {#if inlist}
       <img src={removeSprite.src} alt={store.i18n("detail.music.removeList")}>
     {:else}
-      <img src={addSprite.src} alt={store.i18n("detail.music.addList")}>
+      <img src={addSprite.src} alt={store.i18n("detail.music.addList")} class="add">
     {/if}
   </button>
 </div>
@@ -41,7 +42,6 @@
 <style>
   .main{
     display: flex;
-    margin: .5em 0;
   }
   .main button{
     background: none;
@@ -62,13 +62,14 @@
     display: flex;
     flex: 1;
     align-items: center;
+    padding: .7em 0;
   }
   .playmark{
     width: 1em;
     height: 1em;
     background-size: cover;
     background-position: center center;
-    margin: 0 .5em;
+    margin: 0 .5em 0 .7em;
   }
   .trigger{
     width: 3em;
@@ -77,5 +78,8 @@
   .trigger img{
     max-width: 100%;
     max-height: 100%;
+  }
+  .trigger .add{
+    opacity: .3;
   }
 </style>
