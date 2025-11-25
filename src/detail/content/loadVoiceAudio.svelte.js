@@ -1,7 +1,6 @@
 
-import { Howl } from 'howler'
 import { onDestroy } from 'svelte'
-import { api } from '../../common'
+import { api, loadHowler } from '../../common'
 
 let configCache = null
 const promiseCache = {}
@@ -25,22 +24,10 @@ const loadConfig = async ()=>{
   if (result){ configCache = result }
   return configCache
 }
-const loadHowl = async (character, config)=>{
-  let promise = new Promise((resolve)=>{
-    const sound = new Howl({
-      src: [`${import.meta.env.VITE_CDN2}voice/${character}`],
-      sprite: config
-    })
-    if (sound.state() === 'loaded'){ resolve(sound) }
-    sound.on('load', ()=>{ resolve(sound) })
-    sound.on('loaderror', ()=>{ resolve(null) })
-  })
-  const sound = await promise
-  return sound
-}
 
 const main = (character)=>{
   let sound = null
+  let howler = null
   let voiceData = null
   let cancelFunc = false
   let playing = $state(null)
@@ -61,7 +48,7 @@ const main = (character)=>{
     }
   }
   const cleanupSound = ()=>{
-    if (sound){ sound.unload() }
+    if (howler){ howler.destory() }
     if (updateSeekTimer){ cancelAnimationFrame(updateSeekTimer) }
     cancelFunc = true
   }
@@ -89,11 +76,11 @@ const main = (character)=>{
       loadOver = true
       return
     }
-    sound = await loadHowl(`${character}.ogg?${config.timestamp || ''}`, voiceData)
-    if (cancelFunc){
-      if (sound){ sound.unload() }
-      return
-    }
+    sound = await new Promise((resolve)=>{
+      const url = `${import.meta.env.VITE_CDN2}voice/${character}.ogg?${config.timestamp || ''}`
+      howler = loadHowler(url, resolve, voiceData)
+    })
+    if (cancelFunc){ return }
     if (!sound){ playing = null; loadOver = true; return }
     sound.on('end', ()=>{ playing = null; seek = 0 })
     sound.on('stop', ()=>{ playing = null; seek = 0 })

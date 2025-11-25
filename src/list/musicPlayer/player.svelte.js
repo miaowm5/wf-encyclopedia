@@ -1,5 +1,5 @@
 
-import { Howl } from 'howler'
+import { loadHowler } from '../../common'
 import { onDestroy } from 'svelte'
 import store from '../../store'
 
@@ -39,40 +39,6 @@ const playListLogic = ()=>{
   }
 }
 
-const loadHowl = async (path, callback)=>{
-  const src = `${import.meta.env.VITE_CDN4}${path}`
-  let promise = new Promise((resolve)=>{
-    const sound = new Howl({ src: [src] })
-    if (sound.state() === 'loaded'){ resolve(sound) }
-    else{
-      sound.on('load', ()=>{ resolve(sound) })
-      sound.on('loaderror', ()=>{ resolve(null) })
-    }
-  })
-  const sound = await promise
-  callback(sound)
-}
-const loadSoundLogic = (music, callback)=>{
-  let cancelFunc = false
-  let sound = null
-  const destory = ()=>{
-    if (sound){ sound.unload() }
-    cancelFunc = true
-  }
-  if (music){
-    loadHowl(music, (howler)=>{
-      if (cancelFunc){
-        if (howler){ howler.unload() }
-        return
-      }
-      if (!howler){ return }
-      callback(howler)
-      sound = howler
-    })
-  }
-  return { destory }
-}
-
 const playerLogic = (playList)=>{
 
   let current = $derived(store.state.jukebox.current)
@@ -106,23 +72,23 @@ const playerLogic = (playList)=>{
   let cancelFunc = false
   let sound = null
   let currentPlay = $state(null)
-  let loadSound = loadSoundLogic(null)
+  let howler = loadHowler(null)
   $effect(()=>{
     if (!playing){ return }
     if (currentPlay === current){ return }
-    loadSound.destory()
+    howler.destory()
     sound = null
     currentPlay = current
     seek = 0
     if (!currentPlay){ return }
-    loadSound = loadSoundLogic(current, (howler)=>{
-      if (cancelFunc){ return }
-      sound = howler
+    howler = loadHowler(`${import.meta.env.VITE_CDN4}${current}`, (howl)=>{
+      if (cancelFunc || !howl){ return }
+      sound = howl
       sound.on('play', ()=>{ registerSeek(true) })
       sound.on('pause', ()=>{ registerSeek(false) })
       sound.on('stop', ()=>{ registerSeek(false) })
       sound.on('end', ()=>{
-        loadSound.destory()
+        howler.destory()
         sound = null
         seek = 0
         registerSeek(false)
@@ -145,7 +111,7 @@ const playerLogic = (playList)=>{
     }
   })
   onDestroy(()=>{
-    loadSound.destory()
+    howler.destory()
     if (updateSeekTimer){ cancelAnimationFrame(updateSeekTimer) }
     cancelFunc = true
   })
