@@ -1,7 +1,7 @@
 <script>
-  import store from '../../store'
-  import { spriteSheet } from '../../common'
-  const { title, play, remove, active } = $props()
+  import store from '../store'
+  import { spriteSheet } from '../common'
+  const { title, play, triggerList, inlist, active } = $props()
 
   const songName = $derived.by(()=>{
     if (!title){ return ['',''] }
@@ -11,6 +11,7 @@
   })
 
   const removeSprite = spriteSheet('res/icon', 'music_remove')
+  const addSprite = spriteSheet('res/icon', 'music_add')
   const playSprite = spriteSheet('res/icon', 'music_play')
 </script>
 
@@ -27,8 +28,12 @@
       <p>{songName[1]}</p>
     </div>
   </button>
-  <button class="remove" onclick={()=>remove(title)}>
-    <img src={removeSprite.src} alt={store.i18n("detail.music.removeList")}>
+  <button class="trigger" onclick={()=>triggerList(title)}>
+    {#if inlist}
+      <img src={removeSprite.src} alt={store.i18n("detail.music.removeList")}>
+    {:else}
+      <img src={addSprite.src} alt={store.i18n("detail.music.addList")}>
+    {/if}
   </button>
 </div>
 {/if}
@@ -63,13 +68,13 @@
     height: 1em;
     background-size: cover;
     background-position: center center;
-    margin-right: .5em;
+    margin: 0 .5em;
   }
-  .remove{
+  .trigger{
     width: 3em;
     text-align: center;
   }
-  .remove img{
+  .trigger img{
     max-width: 100%;
     max-height: 100%;
   }

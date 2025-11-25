@@ -1,7 +1,7 @@
 <script>
   import store from '../../store'
   import { spriteSheet, OnBack } from '../../common'
-  import Item from './playlistItem.svelte'
+  import { MusicItem } from '../../ui'
   import Player from './player.svelte'
 
   const { player, songName } = $props()
@@ -26,10 +26,9 @@
     </p>
     <div class="list">
       <div>{#each playlist as title}
-        <Item
-          title={title} active={current === title}
-          play={store.jukebox.play}
-          remove={store.jukebox.remove}
+        <MusicItem
+          title={title} active={current === title} inlist={true}
+          play={store.jukebox.play} triggerList={store.jukebox.remove}
         />
       {/each}</div>
     </div>

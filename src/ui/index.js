@@ -6,6 +6,7 @@ import SpriteLoader from './spriteLoader.svelte'
 import HeadIcon from './headIcon.svelte'
 import RoundButton from './roundButton.svelte'
 import Loading from './loading.svelte'
+import MusicItem from './musicItem.svelte'
 
 export {
   Title,
@@ -15,4 +16,5 @@ export {
   HeadIcon,
   RoundButton,
   Loading,
+  MusicItem,
 }
