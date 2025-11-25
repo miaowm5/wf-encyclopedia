@@ -21,18 +21,17 @@
   </button>
   {#if songName[0]}<Player player={player} songName={songName} />{/if}
   <div class="playlist">
-    <p class="title">
-      <span><img class="icon" src={playListSprite.src} alt={store.i18n("detail.music.playlist")}></span>
-      <span>{store.i18n("detail.music.playlist")}({playlist.length})</span>
+    <p class="title" style:background-image={`url(${playListSprite.src})`}>
+      {store.i18n("detail.music.playlist")}({playlist.length})
     </p>
     <div class="list">
-      {#each playlist as title}
+      <div>{#each playlist as title}
         <Item
           title={title} active={current === title}
           play={store.jukebox.play}
           remove={store.jukebox.remove}
         />
-      {/each}
+      {/each}</div>
     </div>
   </div>
 </div>
@@ -77,18 +76,21 @@
     display: flex;
     align-items: center;
     padding: .5em 0;
-    border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-  }
-  .playlist .title>span:nth-child(1){
-    line-height: 0;
-  }
-  .playlist .title>span>img{
-    width: 1.5em;
-    height: 1.5em;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 1.5em 1.5em;
+    padding-left: 1.5em;
+    margin-top: -.5em;
   }
   .playlist .list{
     flex: 1;
     overflow-y: auto;
+    padding: 1em 1em 3em 1em
+  }
+  .playlist .list>div{
+    border-radius: 10px;
+    background-color: white;
+    padding: .5em 0;
   }
 </style>
