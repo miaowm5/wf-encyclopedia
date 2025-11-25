@@ -38,6 +38,7 @@ const initState = {
     current: '',
     playing: false,
     loop: true,
+    random: false,
     playList: jukeboxGetValue(),
   },
   config,

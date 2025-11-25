@@ -53,9 +53,12 @@ const init = (state)=>{
   const setLoop = (value)=>{
     state.jukebox.loop = value
   }
+  const setRandom = (value)=>{
+    state.jukebox.random = value
+  }
 
   return {
-    add, remove, clean, play, pause, setLoop
+    add, remove, clean, play, pause, setLoop, setRandom
   }
 }
 

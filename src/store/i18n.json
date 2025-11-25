@@ -138,6 +138,8 @@
       "last": ["上一曲", "Previous", "前へ"],
       "loop1": ["列表循环", "Loop (list)", "リストループ"],
       "loop2": ["单曲循环", "Loop (single)", "シングルループ"],
+      "random1": ["顺序播放", "Play in order", "順次再生"],
+      "random2": ["乱序播放", "Shuffle", "シャッフル"],
       "back": ["返回", "Back", "戻る"]
     }
   }

@@ -17,6 +17,8 @@
   const pauseSprite = spriteSheet('res/icon', 'music_pause')
   const loop1Sprite = spriteSheet('res/icon', 'music_loop1')
   const loop2Sprite = spriteSheet('res/icon', 'music_loop2')
+  const random1Sprite = spriteSheet('res/icon', 'music_loop1')
+  const random2Sprite = spriteSheet('res/icon', 'music_loop2')
   const nextSprite = spriteSheet('res/icon', 'music_next')
   const lastSprite = spriteSheet('res/icon', 'music_last')
 </script>
@@ -32,7 +34,15 @@
     <span class="progress" style:width={`${player.seek}%`}></span>
   </div>
   <div class="controller">
-    <div class="padding"></div>
+    {#if store.state.jukebox.random}
+      <button class="image" onclick={()=>{ store.jukebox.setRandom(false) }}>
+        <img src={random1Sprite.src} alt={store.i18n("detail.music.random2")}>
+      </button>
+    {:else}
+      <button class="image" onclick={()=>{ store.jukebox.setRandom(true) }}>
+        <img src={random2Sprite.src} alt={store.i18n("detail.music.random1")}>
+      </button>
+    {/if}
     <button class="round" onclick={()=>{ player.lastSong() }}>
       <img src={lastSprite.src} alt={store.i18n("detail.music.last")}>
     </button>
@@ -126,8 +136,5 @@
     background: none;
     border: none;
     box-shadow: none;
-  }
-  .padding{
-    width: 3em;
   }
 </style>
