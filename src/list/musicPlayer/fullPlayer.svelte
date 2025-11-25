@@ -1,6 +1,6 @@
 <script>
   import store from '../../store'
-  import { spriteSheet } from '../../common'
+  import { spriteSheet, OnBack } from '../../common'
   import Item from './playlistItem.svelte'
   import Player from './player.svelte'
 
@@ -10,12 +10,14 @@
   const playlist = $derived(store.state.jukebox.playList)
   const backSprite = spriteSheet('res/icon', 'return')
   const playListSprite = spriteSheet('res/icon', 'sort')
+
+  const close = ()=>{ store.triggerJukebox(false) }
 </script>
 
 <div class="main">
-  <button class="back" onclick={()=>{ store.triggerJukebox(false) }}>
-    <img src={backSprite.src} alt={store.i18n("detail.music.back")}>
-    {store.i18n("detail.music.back")}
+  <OnBack route={store.route} func={close} />
+  <button class="back" onclick={close}>
+    <span style:background-image={`url(${backSprite.src})`}>{store.i18n("detail.music.back")}</span>
   </button>
   {#if songName[0]}<Player player={player} songName={songName} />{/if}
   <div class="playlist">
@@ -59,9 +61,11 @@
     position: relative;
     line-height: 1.5em;
   }
-  .back :global img{
-    height: 1.5em;
-    margin-bottom: -.4em;
+  .back>span{
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 1.5em 1.5em;
+    padding-left: 1.8em;
   }
   .playlist{
     flex: 1;

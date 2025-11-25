@@ -17,8 +17,7 @@
 
 <div class="content">
 <button class="scenarioBack" onclick={()=>{ store.setScenario(null) }}>
-  <img src={backSprite.src} alt={store.i18n("detail.content.storyBack")}>
-  {store.i18n("detail.content.storyBack")}
+  <span style:background-image={`url(${backSprite.src})`}>{store.i18n("detail.content.storyBack")}</span>
 </button>
 <Loading finish={scenarioData.data && loadDB.finish}>
 <div class="list">
@@ -62,9 +61,11 @@
     position: relative;
     line-height: 1.5em;
   }
-  .scenarioBack :global img{
-    height: 1.5em;
-    margin-bottom: -.4em;
+  .scenarioBack>span{
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 1.5em 1.5em;
+    padding-left: 1.8em;
   }
   .list{
     flex: 1;
