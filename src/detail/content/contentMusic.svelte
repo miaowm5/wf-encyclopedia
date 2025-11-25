@@ -25,9 +25,9 @@
   <Loading finish={loadMusicDB.finish} error={loadMusicDB.error}>
     {#if musicData}
       <Title>{store.i18n("detail.content.title11")}</Title>
-      {#each musicData as item}
+      <div class="list">{#each musicData as item}
         <MusicItem item={item} />
-      {/each}
+      {/each}</div>
     {/if}
   </Loading>
   <MobileBack />
@@ -38,5 +38,10 @@
     flex: 1;
     padding: 0 1em 6em 1em;
     overflow: auto;
+  }
+  .list{
+    border-radius: .3em;
+    background-color: white;
+    padding: .5em 0;
   }
 </style>

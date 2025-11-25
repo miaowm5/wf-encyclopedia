@@ -42,7 +42,7 @@
     return newPlayer
   })
 
-  const voiceMarker = spriteSheet('res/icon', 'voice_volume3')
+  const voiceMarker = spriteSheet('res/icon', 'music_play')
 </script>
 
 {#snippet voice(text, audio, commentText=false)}
@@ -93,7 +93,7 @@
     <Loading finish={loadMusicDB.finish} error={loadMusicDB.error}>
       {#if musicData}
         <Title>{store.i18n("detail.content.title11")}</Title>
-        {#each musicData as item}<MusicItem item={item} />{/each}
+        <div class="musiclist">{#each musicData as item}<MusicItem item={item} />{/each}</div>
       {/if}
     </Loading>
   </Loading>
@@ -122,9 +122,9 @@
   .voice>.mark{
     position: absolute;
     right: 0;
-    top: 0;
-    width: 2em;
-    height: 2em;
+    top: .2em;
+    width: 1.5em;
+    height: 1.5em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -146,5 +146,10 @@
   .voice>.comment{
     color: #888;
     font-size: .9em;
+  }
+  .musiclist{
+    border-radius: .3em;
+    background-color: white;
+    padding: .5em 0;
   }
 </style>

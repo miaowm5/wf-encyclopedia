@@ -88,7 +88,7 @@
     padding: 1em 1em 3em 1em
   }
   .playlist .list>div{
-    border-radius: 10px;
+    border-radius: .3em;
     background-color: white;
     padding: .5em 0;
   }
