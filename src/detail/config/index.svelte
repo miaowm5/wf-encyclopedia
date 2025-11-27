@@ -21,6 +21,15 @@
     {store.i18n("detail.config.configBack")}
   </button>
   <div class="main">
+    <Title>{store.i18n("detail.config.config3")}</Title>
+    <div class="desc">{#each store.i18n("detail.config.config3Value").split('\n') as line}
+      <p>{line}</p>
+    {/each}</div>
+    <div class="link">
+      <a href="https://github.com/miaowm5/wf-encyclopedia" target="_blank">{store.i18n("detail.config.config3Value1")}</a>
+      <a href="https://github.com/miaowm5/wf-encyclopedia/issues" target="_blank">{store.i18n("detail.config.config3Value2")}</a>
+      <a href="http://worldflipper.jp/" target="_blank">ワールドフリッパー公式サイト</a>
+    </div>
     <Title>{store.i18n("detail.config.config1")}</Title>
     <div class="btns">
       {@render button(store.i18n("detail.config.config1Value1"), 'dataRegion', 'cn')}
@@ -31,15 +40,6 @@
       {@render button(store.i18n("detail.config.config2Value1"), 'language', 'cn')}
       {@render button(store.i18n("detail.config.config2Value2"), 'language', 'jp')}
       {@render button(store.i18n("detail.config.config2Value3"), 'language', 'en')}
-    </div>
-    <Title>{store.i18n("detail.config.config3")}</Title>
-    <div class="desc">{#each store.i18n("detail.config.config3Value").split('\n') as line}
-      <p>{line}</p>
-    {/each}</div>
-    <div class="link">
-      <a href="https://github.com/miaowm5/wf-encyclopedia" target="_blank">{store.i18n("detail.config.config3Value1")}</a>
-      <a href="https://github.com/miaowm5/wf-encyclopedia/issues" target="_blank">{store.i18n("detail.config.config3Value2")}</a>
-      <a href="http://worldflipper.jp/" target="_blank">ワールドフリッパー公式サイト</a>
     </div>
   </div>
 </div>
