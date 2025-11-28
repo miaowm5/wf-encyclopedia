@@ -85,8 +85,7 @@
         "This site is a fan-made online Star Encyclopedia created purely out of personal interest and is not affiliated with the official project.\nThe source code is fully open on Github — contributions for code optimization, improving translations, or reporting issues are welcome.",
         "本サイトは個人の趣味で作られたオンラインの星見図鑑であり、公式とは一切関係ありません。\nソースコードはGithubでオープンソースとして公開しています。コードの最適化、多言語翻訳の改善、問題報告などのご協力を歓迎します。"
       ],
-      "config3Value1" : ["项目主页", "Source Code", "ソースコード"],
-      "config3Value2" : ["问题反馈", "Feedback", "フィードバック"]
+      "config3Value1" : ["项目主页 & 问题反馈", "Source Code & Feedback", "ソースコード & フィードバック"]
     },
     "content":{
       "title1": ["情报", "Info", "情報"],
