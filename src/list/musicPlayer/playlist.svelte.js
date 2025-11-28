@@ -45,7 +45,6 @@ const playListLogic = ()=>{
       let index = list.indexOf(current)
       nextIndex = index < 0 ? 0 : (index + 1) % list.length
     }
-    console.log(nextIndex)
     store.jukebox.play(list[nextIndex])
   }
   return {
