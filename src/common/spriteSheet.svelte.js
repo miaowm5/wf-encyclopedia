@@ -13,7 +13,13 @@ const loadConfig = async (spritesheet, cdn)=>{
   if (!promise){
     promise = new Promise((resolve)=>{
       api(url, {
-        success: (data)=>{ resolve(data) },
+        success: (data)=>{
+          const pure = {}
+          Object.keys(data).forEach((key)=>{
+            pure[key.toLowerCase()] = data[key]
+          })
+          resolve(pure)
+        },
         fail: (err)=>{ console.error(err), resolve(null) },
         after: ()=>{ promiseCache[url] = undefined },
         cors: true
@@ -118,7 +124,7 @@ const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
     if (!file){ return }
     const sheetConfig = await loadConfig(spritesheet, cdn)
     if (cancelFunc){ return }
-    const spriteConfig = sheetConfig[file]
+    const spriteConfig = sheetConfig[file.toLowerCase()]
     if (!spriteConfig){ return }
     const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`, cdn)
     if (!image){ return }
