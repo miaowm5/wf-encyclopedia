@@ -17,7 +17,7 @@
   const pauseSprite = spriteSheet('res/icon', 'music_pause')
   const loop1Sprite = spriteSheet('res/icon', 'music_loop1')
   const loop2Sprite = spriteSheet('res/icon', 'music_loop2')
-  const random1Sprite = spriteSheet('res/icon', 'music_loop1')
+  const random1Sprite = spriteSheet('res/icon', 'music_random')
   const random2Sprite = spriteSheet('res/icon', 'sort')
   const nextSprite = spriteSheet('res/icon', 'music_next')
   const lastSprite = spriteSheet('res/icon', 'music_last')
