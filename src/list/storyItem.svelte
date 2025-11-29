@@ -1,10 +1,16 @@
 <script>
+  import store from '../store'
   import { SpriteLoader, TextImage } from '../ui'
   const { data } = $props()
+
+  const sheet = $derived.by(()=>{
+    if (store.state.config.dataRegion === 'jp'){ return 'res/banner_jp' }
+    return "res/banner"
+  })
 </script>
 
 <div class="item">
-  <SpriteLoader file={data.item.eventID} spritesheet="res/banner" alt={data.name[0]}>
+  <SpriteLoader file={data.item.eventID} spritesheet={sheet} alt={data.name[0]}>
     <TextImage text={data.name[0]} width={1000} height={184} />
   </SpriteLoader>
 </div>
