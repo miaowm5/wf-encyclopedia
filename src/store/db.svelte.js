@@ -190,8 +190,10 @@ const config = {
           resultList = resultList[parts[1]]
         }else if (parts[0] === 'event'){
           if (parts[1] === 'advent_event'){
-            if (!resultList[parts[2]]){ resultList[parts[2]] = [] }
-            resultList = resultList[parts[2]]
+            let key = parts[2]
+            if (!key){ key = 'advent_event' }
+            if (!resultList[key]){ resultList[key] = [] }
+            resultList = resultList[key]
           }else{
             if (!resultList[parts[1]]){ resultList[parts[1]] = [] }
             resultList = resultList[parts[1]]
