@@ -11,14 +11,16 @@
 
   const musicData = $derived.by(()=>{
     if (!loadMusicDB.finish){ return null }
-    const musicID = story[item.eventID] || item.eventID
+    const musicID = story[item.eventID] || [item.eventID]
     const database = loadMusicDB.db.music_list
     if (item.subType === 'main' || item.subType === "prologue"){
-      return database['world'][musicID] || null
+      return database['world'][musicID[0]] || null
     }
-    return database['event'][musicID] || null
+    let list = []
+    musicID.forEach((id)=>{ list = list.concat(database['event'][id] || []) })
+    if (list.length === 0){ return null }
+    return list
   })
-
 </script>
 
 <div class="content">
