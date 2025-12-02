@@ -20,6 +20,8 @@ const routeData = (route)=>{
     return { page: 'item', item: match('/ex-character/:item').item, extra: 'character' }
   }else if (match('/config')){
     return { page: 'config' }
+  }else if (match('/music')){
+    return { page: 'music' }
   }else if (match('/:item')){
     return { page: 'item', item: match('/:item').item, extra: null }
   }

@@ -55,13 +55,13 @@
     "event_vcollabo_towa": ["vcollabo_towa"]
   },
   "exstory": [
+    "advent_event",
     "advent_event_001",
     "advent_event_002",
     "advent_event_003",
     "advent_event_005",
     "advent_event_007",
     "advent_event_dark",
-    "advent_event",
     "advent_event_spirit_beast",
     "advent_steam_robot",
     "boss_battle_multi_pickup",
@@ -76,5 +76,12 @@
     "score_attack_event",
     "solo_timeattack",
     "tower_dungeon"
+  ],
+  "common": [
+    "common",
+    "main",
+    "stage_select",
+    "story",
+    "ambient"
   ]
 }

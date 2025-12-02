@@ -178,7 +178,7 @@ const config = {
         character_unique: {},
         event: {},
         world: {},
-        common: [],
+        common: {},
       }
       data.forEach((name)=>{
         if (!name.endsWith('.mp3')){ return }
@@ -202,6 +202,11 @@ const config = {
           resultList = result['world']
           if (!resultList[parts[0]]){ resultList[parts[0]] = [] }
           resultList = resultList[parts[0]]
+        }else if (parts[0] === 'common'){
+          let key = parts[1]
+          if (!key){ key = 'common' }
+          if (!resultList[key]){ resultList[key] = [] }
+          resultList = resultList[key]
         }else{
           if (!result[parts[0]]){ result[parts[0]] = [] }
           resultList = result[parts[0]]
