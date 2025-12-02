@@ -91,14 +91,14 @@ const updateRoute = ((data)=>{
       state.extra = data.extra
     }
     state.scenario = null
-    state.ui.configOpen = false
+    state.ui.page = 'item'
   }else if (data.page === 'home'){
     state.item = null
     state.scenario = null
     state.ui.mobileListHide = false
     document.title = getI18n('main.sitename')
     state.ui.listCategory = data.category
-    state.ui.configOpen = false
+    state.ui.page = 'home'
   }else if (data.page === 'scenario'){
     if (state.scenario){ return }
     let url = {
@@ -123,12 +123,18 @@ const updateRoute = ((data)=>{
     url += '/scenario'
     state.scenario = { path: url }
     state.ui.mobileListHide = true
-    state.ui.configOpen = false
+    state.ui.page = 'scenario'
   }else if (data.page === 'config'){
     state.item = null
     state.scenario = null
     state.ui.mobileListHide = true
-    state.ui.configOpen = true
+    state.ui.page = 'config'
+    document.title = getI18n('main.sitename')
+  }else if (data.page === 'music'){
+    state.item = null
+    state.scenario = null
+    state.ui.mobileListHide = true
+    state.ui.page = 'music'
     document.title = getI18n('main.sitename')
   }
 })

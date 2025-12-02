@@ -115,32 +115,30 @@
 </script>
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
-  {#if store.state.scenario}
+  {#if store.state.ui.page === 'scenario'}
     <Scenario scenario={store.state.scenario} />
-  {:else if store.state.ui.configOpen}
+  {:else if store.state.ui.page === 'config'}
     <Config />
+  {:else if store.state.ui.page === 'music'}
+    <div>TODO: music</div>
+  {:else if store.state.ui.page === 'item'}
+    {#if store.state.item}{#key store.state.item}
+      <span class="body">
+        <Loading finish={loadDB.finish} error={loadDB.error}>
+          {#if item}
+            <Title item={item} itemType={item.type} tab={tab === 'voice-none' ? 'voice' : tab} extra={store.state.extra} />
+            <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
+          {/if}
+        </Loading>
+      </span>
+    {/key}{/if}
   {/if}
-  {#if store.state.item}{#key store.state.item}
-    {@const floatOpen = store.state.scenario || store.state.ui.configOpen}
-    <span class={[floatOpen && 'hide', 'body']}>
-      <Loading finish={loadDB.finish} error={loadDB.error}>
-        {#if item}
-          <Title item={item} itemType={item.type} tab={tab === 'voice-none' ? 'voice' : tab} extra={store.state.extra} />
-          <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
-        {/if}
-      </Loading>
-    </span>
-  {/key}{/if}
-
 </div>
 
 <style>
   .main{
     flex: 3;
     position: relative;
-  }
-  .hide{
-    display: none;
   }
   .body{
     height: 100%;

@@ -20,13 +20,13 @@ const initState = {
   extra: null,
   scenario: null,
   ui: {
+    page: 'home',
     listCategory: null,
     listSearch: '',
     listFilter: {},
     allListFilter: '',
     detailTab: 'info',
     mobileListHide: false,
-    configOpen: false,
     jukeboxOpen: false,
   },
   dialog: {
