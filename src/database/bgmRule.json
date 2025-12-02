@@ -1,9 +1,14 @@
 {
   "character": {
-    "minamoto_sakura": "z_collabo_character",
-    "konno_junko": "z_collabo_character",
-    "hoshikawa_ririi": "z_collabo_character",
-    "nikaido_saki": "z_collabo_character"
+    "minamoto_sakura": ["z_collabo_character"],
+    "konno_junko": ["z_collabo_character"],
+    "hoshikawa_ririi": ["z_collabo_character"],
+    "nikaido_saki": ["z_collabo_character"],
+    "light_ballot23": ["light"],
+    "magical_bayonetter": ["magical_bayonetter_premaster"],
+    "neoviolin_musician_hw21": ["neoviolin_musician_hw21_noroop"],
+    "priest_prince_playable_encyclopedia": ["priest_prince_playable"],
+    "psychic_teleport_playable_encyclopedia": ["psychic_teleport_playable"]
   },
   "story": {
     "prologue": "world_0",

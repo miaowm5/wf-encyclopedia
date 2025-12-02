@@ -30,8 +30,14 @@
   const musicData = $derived.by(()=>{
     if (!loadMusicDB.finish){ return null }
     const database = loadMusicDB.db.music_list
-    const musicID = character[item.storyID] || item.storyID
-    return database['character_unique'][musicID] || null
+    let list = database['character_unique'][item.storyID] || []
+    if (character[item.storyID]){
+      character[item.storyID].forEach((exid)=>{
+        list = list.concat(database['character_unique'][exid] || [])
+      })
+    }
+    if (list.length === 0){ return null }
+    return list
   })
 
   let voicePlayerItem = null
