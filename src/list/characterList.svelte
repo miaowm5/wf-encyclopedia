@@ -3,7 +3,7 @@
   import store from '../store'
   import { HeadIcon, RoundButton } from '../ui'
   import ListBanner from './listBanner.svelte'
-  import extalCharacter from './extraCharacter.json'
+  import extalCharacter from '../database/extraCharacter.json'
 
   const { list } = $props()
 

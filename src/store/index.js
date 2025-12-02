@@ -4,7 +4,7 @@ import state from './initState.svelte.js'
 import customTag from './customTag.js'
 import dbLoader from './db.svelte.js'
 import jukebox from './jukebox'
-import i18n from './i18n.json'
+import i18n from '../database/i18n.json'
 
 const setScenario = (scenario)=>{
   if (scenario){

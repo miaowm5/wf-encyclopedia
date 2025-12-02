@@ -4,7 +4,7 @@
   import GalleryCharacter from './galleryCharacter.svelte'
   import GalleryPixel from './galleryPixel.svelte'
   import MobileBack from './mobileBack.svelte'
-  import galleryEffectRule from './galleryEffectRule.json'
+  import galleryEffectRule from '../../database/effectRule.json'
 
   const { item, itemType } = $props()
 

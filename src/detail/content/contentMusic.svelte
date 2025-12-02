@@ -3,7 +3,7 @@
   import { Title, Loading } from '../../ui'
   import MusicItem from './musicItem.svelte'
   import MobileBack from './mobileBack.svelte'
-  import { story } from './contentBgmRule.json'
+  import { story } from '../../database/bgmRule.json'
 
   const { item } = $props()
 

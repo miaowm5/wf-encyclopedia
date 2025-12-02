@@ -6,7 +6,7 @@
   import MusicItem from './musicItem.svelte'
   import MobileBack from './mobileBack.svelte'
   import loadVoice from './loadVoiceAudio.svelte.js'
-  import { character } from './contentBgmRule.json'
+  import { character } from '../../database/bgmRule.json'
 
   const { item, noVoice } = $props()
 
