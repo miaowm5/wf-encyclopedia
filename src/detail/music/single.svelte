@@ -16,7 +16,6 @@
     if (!path.name){ return album }
     let target = album.find((item)=>item.name === path.name)
     if (!target){ return null }
-    console.log([target])
     return [target]
   })
 </script>
