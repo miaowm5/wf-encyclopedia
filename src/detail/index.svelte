@@ -5,6 +5,7 @@
   import Content from './content/index.svelte'
   import Scenario from './scenario/index.svelte'
   import Config from './config/index.svelte'
+  import Music from './music/index.svelte'
 
   const loadDB = $derived.by(()=>{
     const list = []
@@ -120,7 +121,7 @@
   {:else if store.state.ui.page === 'config'}
     <Config />
   {:else if store.state.ui.page === 'music'}
-    <div>TODO: music</div>
+    <Music />
   {:else if store.state.ui.page === 'item'}
     {#if store.state.item}{#key store.state.item}
       <span class="body">
