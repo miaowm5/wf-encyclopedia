@@ -138,6 +138,7 @@ const updateRoute = ((data)=>{
     state.scenario = null
     state.ui.mobileListHide = true
     state.ui.page = 'music'
+    state.extra = data.extra
     document.title = getI18n('main.sitename')
   }
 })

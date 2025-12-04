@@ -1,18 +1,15 @@
 <script>
   import store from '../../store'
   import { spriteSheet } from '../../common'
-  import { Title, Loading, MusicItem } from '../../ui'
-  import bgmRule from '../../database/bgmRule.json'
+  import { Loading } from '../../ui'
+  import All from './all.svelte'
+  import Single from './single.svelte'
 
   const loadMusicDB = store.database('music_list')
 
-  const list = $derived.by(()=>{
+  const database = $derived.by(()=>{
     if (!loadMusicDB.finish){ return null }
-    const database = loadMusicDB.db['music_list']
-    let list = [[],[]]
-    bgmRule.common.forEach((id)=>{ list[0] = list[0].concat(database['common'][id]) })
-    bgmRule.exstory.forEach((id)=>{ list[1] = list[1].concat(database['event'][id]) })
-    return list
+    return loadMusicDB.db['music_list']
   })
   const backSprite = spriteSheet('res/icon', 'return')
 </script>
@@ -23,15 +20,10 @@
   </button>
   <Loading finish={loadMusicDB.finish} error={loadMusicDB.error}>
     <div class="main">
-      {#if list}
-        <Title>{store.i18n("detail.music.title1")}</Title>
-        <div class="list">{#each list[0] as item}
-          <MusicItem item={item} />
-        {/each}</div>
-        <Title>{store.i18n("detail.music.title2")}</Title>
-        <div class="list">{#each list[1] as item}
-          <MusicItem item={item} />
-        {/each}</div>
+      {#if store.state.extra}
+        <Single database={database} path={store.state.extra} />
+      {:else}
+        <All database={database} />
       {/if}
     </div>
   </Loading>
@@ -65,10 +57,5 @@
     padding: 0 1em 6em 1em;
     flex: 1;
     overflow: auto;
-  }
-  .list{
-    border-radius: .3em;
-    background-color: white;
-    padding: .5em 0;
   }
 </style>
