@@ -22,6 +22,8 @@ const routeData = (route)=>{
     return { page: 'config' }
   }else if (match('/music')){
     return { page: 'music', extra: null }
+  }else if (match('/music/:album')){
+    return { page: 'music', extra: match('/music/:album') }
   }else if (match('/music/:album/:name')){
     return { page: 'music', extra: match('/music/:album/:name') }
   }else if (match('/:item')){
