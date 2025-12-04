@@ -139,7 +139,10 @@
       "loop2": ["单曲循环", "Loop (single)", "シングルループ"],
       "random1": ["顺序播放", "Play in order", "順次再生"],
       "random2": ["乱序播放", "Shuffle", "シャッフル"],
-      "back": ["返回", "Back", "戻る"]
+      "back": ["返回", "Back", "戻る"],
+      "allButton": ["其他BGM", "Other BGM", "その他BGM"],
+      "title1": ["通用BGM", "Common BGM", "通常BGM"],
+      "title2": ["活动BGM", "Event BGM", "イベントBGM"]
     }
   }
 }

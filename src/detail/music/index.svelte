@@ -18,17 +18,17 @@
 </script>
 
 <div class="content">
-  <button class="musicBack" onclick={()=>{ store.setScenario(null) }}>
-    <span style:background-image={`url(${backSprite.src})`}>{store.i18n("detail.content.storyBack")}</span>
+  <button class="musicBack" onclick={()=>{ store.route.push('/story', true) }}>
+    <span style:background-image={`url(${backSprite.src})`}>{store.i18n("detail.music.back")}</span>
   </button>
   <Loading finish={loadMusicDB.finish} error={loadMusicDB.error}>
     <div class="main">
       {#if list}
-        <Title>{store.i18n("detail.music.common")}</Title>
+        <Title>{store.i18n("detail.music.title1")}</Title>
         <div class="list">{#each list[0] as item}
           <MusicItem item={item} />
         {/each}</div>
-        <Title>{store.i18n("detail.music.event")}</Title>
+        <Title>{store.i18n("detail.music.title2")}</Title>
         <div class="list">{#each list[1] as item}
           <MusicItem item={item} />
         {/each}</div>
