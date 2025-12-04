@@ -116,7 +116,7 @@
 
 <div class={`main ${store.state.ui.mobileListHide ? '' : 'mobileHide'}`}>
   {#if store.state.ui.page === 'scenario'}
-    <Scenario scenario={store.state.scenario} />
+    {#if store.state.scenario}<Scenario scenario={store.state.scenario} />{/if}
   {:else if store.state.ui.page === 'config'}
     <Config />
   {:else if store.state.ui.page === 'music'}

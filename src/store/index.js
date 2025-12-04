@@ -21,7 +21,10 @@ const setScenario = (scenario)=>{
     }else if (path.startsWith('story/system_quest/')){
       url = `system/${path.split('/')[2]}`
     }
-    if (url){ route.push(`/scenario/${url}`) }
+    if (url){
+      route.push(`/scenario/${url}`)
+      state.ui.page = 'scenario'
+    }
   }else{
     if (state.item){ history.go(-1) }
     else{

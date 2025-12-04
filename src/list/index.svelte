@@ -66,7 +66,7 @@
         <img src={backSprite.src} alt={text}>
         {text}
       </button>
-    {:else if !store.state.ui.page === 'config'}
+    {:else if store.state.ui.page !== 'config'}
       {@const text = store.i18n("list.categoryConfig")}
       <button onclick={()=>store.route.push('/config', true)} class="back">
         <img src={configSprite.src} alt={text}>
