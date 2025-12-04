@@ -26,10 +26,7 @@
     </p>
     <div class="list">{#if playlist.length > 0}
       <div>{#each playlist as title}
-        <MusicItem
-          title={title} active={current === title} inlist={true}
-          play={store.jukebox.play} triggerList={store.jukebox.remove}
-        />
+        <MusicItem title={title} />
       {/each}</div>
     {/if}</div>
   </div>

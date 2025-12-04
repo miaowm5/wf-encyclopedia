@@ -1,8 +1,7 @@
 <script>
   import store from '../../store'
   import { spriteSheet } from '../../common'
-  import { Title, Loading } from '../../ui'
-  import MusicItem from './musicItem.svelte'
+  import { Title, Loading, MusicItem } from '../../ui'
   import bgmRule from '../../database/bgmRule.json'
 
   const loadMusicDB = store.database('music_list')

@@ -1,23 +1,42 @@
 <script>
   import store from '../store'
   import { spriteSheet } from '../common'
-  const { title, play, triggerList, inlist, active } = $props()
+  const { title = '', item = null } = $props()
 
+  const fullPath = $derived.by(()=>{
+    if (item){ return `${item.path}/${item.name}.mp3` }
+    if (title){ return title }
+    return ''
+  })
   const songName = $derived.by(()=>{
-    if (!title){ return ['',''] }
-    let parts = title.split('/')
-    let file = parts.pop()
-    return [file.slice(0, file.length - 4), parts.join('/')]
+    if (item){ return [item.name, item.path] }
+    if (title){
+      let parts = title.split('/')
+      let file = parts.pop()
+      return [file.slice(0, file.length - 4), parts.join('/')]
+    }
+    return ['','']
   })
 
   const removeSprite = spriteSheet('res/icon', 'music_remove')
   const addSprite = spriteSheet('res/icon', 'music_add')
   const playSprite = spriteSheet('res/icon', 'music_play')
+
+  const active = $derived.by(()=>{
+    return store.state.jukebox.current === fullPath && store.state.jukebox.playing
+  })
+  const inlist = $derived.by(()=>{
+    return store.state.jukebox.playList.some((i)=>i === fullPath)
+  })
+  const triggerList = ()=>{
+    if (inlist){ store.jukebox.remove(fullPath) }
+    else{ store.jukebox.add([fullPath]) }
+  }
 </script>
 
 {#if songName[0]}
 <div class="main">
-  <button class="play" onclick={()=>play(title)}>
+  <button class="play" onclick={()=>store.jukebox.play(fullPath)}>
     {#if active}
       <div class="playmark" style:background-image={`url(${playSprite.src})`}></div>
     {:else}
@@ -28,7 +47,7 @@
       <p>{songName[1]}</p>
     </div>
   </button>
-  <button class="trigger" onclick={()=>triggerList(title)}
+  <button class="trigger" onclick={triggerList}
     title={store.i18n(inlist ? "detail.music.removeList" : "detail.music.addList")}>
     {#if inlist}
       <img src={removeSprite.src} alt={store.i18n("detail.music.removeList")}>

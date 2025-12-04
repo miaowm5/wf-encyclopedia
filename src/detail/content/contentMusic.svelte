@@ -1,7 +1,6 @@
 <script>
   import store from '../../store'
-  import { Title, Loading } from '../../ui'
-  import MusicItem from './musicItem.svelte'
+  import { Title, Loading, MusicItem } from '../../ui'
   import MobileBack from './mobileBack.svelte'
   import { story } from '../../database/bgmRule.json'
 
