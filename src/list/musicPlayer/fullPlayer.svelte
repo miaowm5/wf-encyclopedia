@@ -24,14 +24,14 @@
     <p class="title" style:background-image={`url(${playListSprite.src})`}>
       {store.i18n("detail.music.playlist")}({playlist.length})
     </p>
-    <div class="list">
+    <div class="list">{#if playlist.length > 0}
       <div>{#each playlist as title}
         <MusicItem
           title={title} active={current === title} inlist={true}
           play={store.jukebox.play} triggerList={store.jukebox.remove}
         />
       {/each}</div>
-    </div>
+    {/if}</div>
   </div>
 </div>
 
