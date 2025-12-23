@@ -1,9 +1,116 @@
 {
   "prologue": [
     "19 11 26 守若.jpg",
-    "launch illus.png"
+    "launch illus.png",
+    "19 11 27 Bahamut.jfif",
+    "19 11 27 Granblue.jfif",
+    "19 11 27 Priconne.jfif",
+    "19 11 27 Shadowverse.jfif"
   ],
   "main_chapter_3": ["Poster World 3.png"],
   "main_chapter_5": ["Poster World 5.png"],
-  "main_chapter_6": ["Poster World 6.png"]
+  "main_chapter_6": ["Poster World 6.png"],
+  "main_chapter_10": ["21 11 26.jpg"],
+  "main_chapter_12": ["23 05 15.jfif"],
+
+  "event_1stanv": [
+    "Event 1st Anni.png",
+    "1st Anni Group Ilustration.png",
+    "Anniv Countdown 5 Marnie.png",
+    "Anniv Countdown 4 Sonia.png",
+    "Anniv Countdown 4 Mia Dia.png",
+    "Anniv Countdown 3 Inaho.png",
+    "3rd Anni Edu.png",
+    "Anniv Countdown 2 Esterial.png",
+    "Anniv Countdown 1 Marina Amelia.png",
+    "Anniv Starview 1.png",
+    "Anniv Starview 2.png"
+  ],
+  "event_anv2": [
+    "21 12 06.jpg",
+    "21 11 25.jpg",
+    "21 12 20.jpg"
+  ],
+  "event_2halfanv": [
+    "22 06 01.jpg",
+    "22 05 21.jpg",
+    "22 05 23.jpg"
+  ],
+  "event_anv3": [
+    "22 11 27.jfif",
+    "22 11 24 Bahamut.jfif",
+    "22 11 25 Granblue.jfif"
+  ],
+  "event_anv3half": [
+    "23 05 31.jfif",
+    "23 05 14.jfif",
+    "23 05 30 bouquet.jfif",
+    "23 05 30.jfif"
+  ],
+  "event_newyear20": ["22 12 30.png"],
+  "event_cyberpunk01": ["Event Neon Skyline.png"],
+  "event_cyberpunk02": ["Event Hero Beginning.png"],
+  "event_fake_princess": ["Event Fake Princess.png"],
+  "event_summer2020": ["Event Summer 1.png"],
+  "event_summer2021": ["Event Summer 2.png"],
+  "event_summer_2022": ["22 08 03.jpg"],
+  "event_ev_yokai_emaki001": ["Event Yokai.png"],
+  "event_crown_beasts": ["Event Beast King.png"],
+  "event_desert_kingdom": ["22 01 11.jpg"],
+  "event_valentine22": ["22 02 14.jpg"],
+
+  "event_Gcollab": ["21 05 11 Granblue Collab 1.jpg"],
+  "event_advent_u_collabo_event": ["22 06 15.jpg"],
+  "event_advent_Rcollab_event": ["21 01 15 Rezero.png"],
+  "event_advent_Zcollab_event": ["20 09 14 zls.jpg"],
+  "event_advent_Scollab_event": ["21 05 15.jpg"],
+  "event_advent_k_collabo_event": ["22 06 29.jpg"],
+
+  "other1": [
+    "20 05 20.jfif",
+    "Half Anniv Neph.png",
+    "21 05 21.jpg",
+    "21 05 22.jpg",
+    "21 05 23.jpg",
+    "21 05 24.jpg",
+    "21 05 25.jpg",
+    "23 11 26 lottery.jfif",
+    "23 11 26.jfif"
+  ],
+  "other2": [
+    "21 08 28.jpg",
+    "23 08 31 山本四角 @s_k_k.jfif.jpg",
+    "april fools.jpg"
+  ],
+  "other3": [
+    "21 11 26 (2).jpg",
+    "21 12 17.jpg",
+    "21 12 31.jpg",
+    "22 01 14.jpg",
+    "22 01 28.jpg",
+    "22 02 11.jpg",
+    "22 02 25.jpg",
+    "22 03 11.jpg",
+    "22 03 25.jpg",
+    "22 04 08.jpg",
+    "22 04 22.jfif",
+    "22 05 06.jpg",
+    "22 05 20.jpg",
+    "22 06 03.jpg",
+    "22 06 17.jpg",
+    "22 07 01.jpg",
+    "22 07 15.jpg",
+    "22 07 29.jpg",
+    "22 12 09.jfif",
+    "22 12 23.jfif",
+    "23 01 06.jfif",
+    "23 01 20.jfif",
+    "23 02 03.jfif",
+    "23 02 17.jfif",
+    "23 03 10.jfif",
+    "23 03 24.jfif",
+    "23 04 07.jfif",
+    "23 04 21.jfif",
+    "23 05 04.jfif"
+  ]
 }
