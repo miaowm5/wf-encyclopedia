@@ -53,7 +53,7 @@
   .content{
     position: relative;
     flex: 1;
-    padding: 1em 1em 6em 1em;
+    padding: 0 1em 6em 1em;
     overflow: auto;
   }
   .image{
@@ -61,24 +61,37 @@
     margin: 0 auto;
     text-align: center;
     position: relative;
+    border-radius: 1em;
+    overflow: hidden;
   }
   .image img{
     max-width: 100%;
+    max-height: 100%;
     height: auto;
-    border-radius: 1em;
-    overflow: hidden;
+    width: auto;
     background-color: #444444;
+    display: block;
   }
   .image :global button{
     position: absolute;
     right: 1em;
     bottom: 1em;
   }
-  .image.orb{ width: 70%; }
+  .image.orb{
+    margin-top: 1em;
+    width: 70%;
+  }
   .image.gallery{
     max-height: 50vh;
     min-height: 4em;
     margin-bottom: 1em;
+    position: relative;
+    display: flex;
+    background-color: #444444;
+    justify-content: center;
+  }
+  .image.gallery img{
+    object-fit: cover;
   }
   .dialog{
     margin: .5em 0 1em;
