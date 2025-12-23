@@ -79,8 +79,8 @@
       if (item.type === 'story'){
         if (item.subType === 'main'){ return 'gallery' }
         if (extarGallery[item.eventID]){ return 'gallery' }
+        if (store.state.extra){ return 'story' }
         return 'info'
-
       }else if (item.type !== 'character' && item.type !== 'npc'){
         return 'info'
       }
