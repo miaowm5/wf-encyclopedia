@@ -1,6 +1,7 @@
 <script>
   import store from '../store'
   import { Loading } from '../ui'
+  import extarGallery from '../database/extraGallery.json'
   import Title from './title/index.svelte'
   import Content from './content/index.svelte'
   import Scenario from './scenario/index.svelte'
@@ -76,7 +77,10 @@
     const stateTab = store.state.ui.detailTab
     if (stateTab === 'gallery'){
       if (item.type === 'story'){
-        if (item.subType !== 'main'){ return 'info' }
+        if (item.subType === 'main'){ return 'gallery' }
+        if (extarGallery[item.eventID]){ return 'gallery' }
+        return 'info'
+
       }else if (item.type !== 'character' && item.type !== 'npc'){
         return 'info'
       }

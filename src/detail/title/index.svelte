@@ -1,4 +1,5 @@
 <script>
+  import extarGallery from '../../database/extraGallery.json'
   import BannerTitle from './bannerTitle.svelte'
   import NormalTitle from './normalTitle.svelte'
   import CharacterTitle from './characterTitle.svelte'
@@ -21,7 +22,8 @@
     tab={tab}
   />
 {:else if itemType === 'story'}
-  <BannerTitle data={item.banner} title={item.title} tab={tab} gallery={item.subType === 'main'} extra={extra} />
+  {@const hasGallery = item.subType === 'main' || extarGallery[item.eventID]}
+  <BannerTitle data={item.banner} title={item.title} tab={tab} gallery={hasGallery} extra={extra} />
 {:else}
   <NormalTitle title={item.title} />
 {/if}

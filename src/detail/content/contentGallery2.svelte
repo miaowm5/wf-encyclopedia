@@ -1,12 +1,14 @@
 <script>
   import store from '../../store'
-  import { RoundButton, Loading } from '../../ui'
+  import { RoundButton, Loading, Title } from '../../ui'
+  import extraGallery from '../../database/extraGallery.json'
   import MobileBack from './mobileBack.svelte'
 
   const { item } = $props()
   const loadDB = store.database('equipment')
 
   const data = $derived.by(()=>{
+    if (item.subType !== 'main'){ return null }
     if (!loadDB.finish){ return null }
     const database = loadDB.db.equipment
     if (!database){ return null }
@@ -16,21 +18,34 @@
     return [result[1], result[5]]
   })
 
-  const url = import.meta.env.VITE_CDN2 + `orb/chapter${item.storyID}.png`
+  const extarImage = extraGallery[item.eventID] || []
 
 </script>
 
 <div class="content">
-  <div class="image">
-    <img src={url} alt={data ? data[0] : `${item.title}`} width="1080" height="1920" />
-    <RoundButton icon="full_size" onclick={()=>window.open(url)} />
-  </div>
-  <Loading finish={loadDB.finish && data} error={loadDB.error}>
-    <div class="dialog">
-      <div class="dialogName">{data[0]}</div>
-      <div class="dialogContent"><p>{data[1]}</p></div>
+  {#if item.subType === 'main'}
+    {@const url = import.meta.env.VITE_CDN2 + `orb/chapter${item.storyID}.png`}
+    <div class="image orb">
+      <img src={url} alt={data ? data[0] : `${item.title}`} width="1080" height="1920" />
+      <RoundButton icon="full_size" onclick={()=>window.open(url)} />
     </div>
-  </Loading>
+    <Loading finish={loadDB.finish && data} error={loadDB.error}>
+      <div class="dialog">
+        <div class="dialogName">{data[0]}</div>
+        <div class="dialogContent"><p>{data[1]}</p></div>
+      </div>
+    </Loading>
+  {/if}
+  {#if extarImage.length > 0}
+    <Title>{store.i18n("detail.content.title12")}</Title>
+    {#each extarImage as image}
+      {@const url = import.meta.env.VITE_CDN2 + `gallery/${image}`}
+      <div class="image gallery">
+        <img src={url} alt={item.title} />
+        <RoundButton icon="full_size" onclick={()=>window.open(url)} />
+      </div>
+    {/each}
+  {/if}
   <MobileBack />
 </div>
 
@@ -42,7 +57,7 @@
     overflow: auto;
   }
   .image{
-    width: 70%;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -58,6 +73,12 @@
     position: absolute;
     right: 1em;
     bottom: 1em;
+  }
+  .image.orb{ width: 70%; }
+  .image.gallery{
+    max-height: 50vh;
+    min-height: 4em;
+    margin-bottom: 1em;
   }
   .dialog{
     margin: .5em 0 1em;
