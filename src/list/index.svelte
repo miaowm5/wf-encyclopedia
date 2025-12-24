@@ -44,9 +44,9 @@
           </div>
         </div>
         <div>
-          <IndexButton onclick={()=>store.route.push('/character', true)} id="character_archive" text={store.i18n("list.category1")} />
-          <IndexButton onclick={()=>store.route.push('/story', true)} id="world_archive" text={store.i18n("list.category2")} />
-          <IndexButton onclick={()=>store.route.push('/all', true)} id="all_keyword" text={store.i18n("list.category3")} />
+          <IndexButton onclick={()=>store.changeListCategory('character')} id="character_archive" text={store.i18n("list.category1")} />
+          <IndexButton onclick={()=>store.changeListCategory('story')} id="world_archive" text={store.i18n("list.category2")} />
+          <IndexButton onclick={()=>store.changeListCategory('all')} id="all_keyword" text={store.i18n("list.category3")} />
         </div>
       </div>
     {:else}
@@ -62,7 +62,7 @@
     {/if}
     {#if category !== null}
       {@const text = store.i18n("list.categoryBack")}
-      <button onclick={()=>store.route.push('/', true)} class="back">
+      <button onclick={()=>store.changeListCategory(null)} class="back">
         <img src={backSprite.src} alt={text}>
         {text}
       </button>

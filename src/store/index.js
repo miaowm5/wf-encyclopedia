@@ -50,6 +50,14 @@ const setListHide = (show)=>{
     }
   }
 }
+const changeListCategory = (category = null)=>{
+  if (!state.item){
+    if (category){ store.route.push(`/${category}`, true) }
+    else{ store.route.push('/', true) }
+  }else{
+    state.ui.listCategory = category
+  }
+}
 const changeTab = (tab)=>{
   state.ui.detailTab = tab
 }
@@ -151,6 +159,7 @@ const store = {
   i18n: getI18n,
   setScenario,
   setListHide,
+  changeListCategory,
   changeTab,
   changeSearch,
   changeFilter,
