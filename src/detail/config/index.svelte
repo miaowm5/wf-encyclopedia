@@ -5,6 +5,10 @@
 
   const backSprite = spriteSheet('res/icon', 'return')
 
+  const closeConfig = ()=>{
+    if (store.state.item){ history.go(-1) }
+    else{ store.route.push('/', true) }
+  }
 </script>
 
 {#snippet button(text, config, value)}
@@ -16,7 +20,7 @@
 {/snippet}
 
 <div class="content">
-  <button class="back" onclick={()=>{ store.route.push('/', true) }}>
+  <button class="back" onclick={closeConfig}>
     <img src={backSprite.src} alt={store.i18n("detail.config.configBack")}>
     {store.i18n("detail.config.configBack")}
   </button>

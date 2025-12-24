@@ -136,7 +136,6 @@ const updateRoute = ((data)=>{
     state.ui.mobileListHide = true
     state.ui.page = 'scenario'
   }else if (data.page === 'config'){
-    state.item = null
     state.scenario = null
     state.ui.mobileListHide = true
     state.ui.page = 'config'
