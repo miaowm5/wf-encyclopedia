@@ -126,18 +126,17 @@
     <Config />
   {:else if store.state.ui.page === 'music'}
     <Music />
-  {:else if store.state.ui.page === 'item'}
-    {#if store.state.item}{#key store.state.item}
-      <span class="body">
-        <Loading finish={loadDB.finish} error={loadDB.error}>
-          {#if item}
-            <Title item={item} itemType={item.type} tab={tab === 'voice-none' ? 'voice' : tab} extra={store.state.extra} />
-            <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
-          {/if}
-        </Loading>
-      </span>
-    {/key}{/if}
   {/if}
+  {#if store.state.item}{#key store.state.item}
+    <span class={[store.state.ui.page !== 'item' && 'hide', 'body']}>
+      <Loading finish={loadDB.finish} error={loadDB.error}>
+        {#if item}
+          <Title item={item} itemType={item.type} tab={tab === 'voice-none' ? 'voice' : tab} extra={store.state.extra} />
+          <Content item={item} itemType={item.type} tab={tab} extra={store.state.extra} />
+        {/if}
+      </Loading>
+    </span>
+  {/key}{/if}
 </div>
 
 <style>
@@ -150,6 +149,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+  .hide{
+    display: none;
   }
   @media (max-width: 800px) {
     .mobileHide{
