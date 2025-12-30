@@ -62,13 +62,14 @@
     {/if}
     {#if category !== null}
       {@const text = store.i18n("list.categoryBack")}
-      <button onclick={()=>store.changeListCategory(null)} class="back">
+      <button onclick={()=>store.changeListCategory(null)} class="floatButton back">
         <img src={backSprite.src} alt={text}>
         {text}
       </button>
-    {:else if store.state.ui.page !== 'config'}
+    {/if}
+    {#if store.state.ui.page !== 'config'}
       {@const text = store.i18n("list.categoryConfig")}
-      <button onclick={()=>store.route.push('/config', true)} class="back">
+      <button onclick={()=>store.route.push('/config', true)} class="floatButton config">
         <img src={configSprite.src} alt={text}>
         {text}
       </button>
@@ -90,10 +91,9 @@
     position: relative;
     overflow: hidden;
   }
-  .back{
+  .floatButton{
     position: absolute;
     bottom: 0;
-    left: 0;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
     padding: .5em 1.3em .4em;
@@ -102,9 +102,11 @@
     flex-direction: column;
     font-size: .8em;
   }
-  .back > img{
+  .floatButton > img{
     width: 2.5em;
   }
+  .floatButton.back{ left: 2px; }
+  .floatButton.config{ right: 2px; }
   .titleButton{
     height: 100%;
     display: flex;

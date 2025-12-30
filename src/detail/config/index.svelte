@@ -7,6 +7,7 @@
 
   const closeConfig = ()=>{
     if (store.state.item){ history.go(-1) }
+    else if (store.state.ui.listCategory){ history.go(-1) }
     else{ store.route.push('/', true) }
   }
 </script>
