@@ -1,6 +1,6 @@
 
 import RouteParser from 'route-parser'
-import apiFactory from 'm5api'
+import apiFactory from 'm5api/svelte'
 import { onMount } from "svelte"
 
 const m5api = apiFactory({
