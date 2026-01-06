@@ -1,7 +1,7 @@
 <script>
   const { back, title, banner, content } = $props()
-  const urlBack = `url(${import.meta.env.VITE_CDN}ui/${back}.png)`
-  const urlTitle = `url(${import.meta.env.VITE_CDN}ui/${title}.png)`
+  const urlBack = $derived(`url(${import.meta.env.VITE_CDN}ui/${back}.png)`)
+  const urlTitle = $derived(`url(${import.meta.env.VITE_CDN}ui/${title}.png)`)
 </script>
 
 <div class="main">

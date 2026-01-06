@@ -18,7 +18,7 @@
     return [result[1], result[5]]
   })
 
-  const extarImage = extraGallery[item.eventID] || []
+  const extarImage = $derived(extraGallery[item.eventID] || [])
 
 </script>
 

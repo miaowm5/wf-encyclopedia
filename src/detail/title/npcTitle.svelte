@@ -16,9 +16,9 @@
     tab = 'info',
   } = $props()
 
-  const loadDB = store.database('story_character')
+  const loadDB = store.database('story_character');
 
-  document.title = name + ' | ' + store.i18n('main.sitename')
+  (()=>{ document.title = name + ' | ' + store.i18n('main.sitename') })()
 
   let bannerImage = $derived.by(()=>{
     if (!loadDB.finish){ return null }

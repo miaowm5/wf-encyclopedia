@@ -4,7 +4,7 @@
   const { load: loadFunc, lazy, children } = $props()
 
   let node = $state(null)
-  let load = $state(!lazy)
+  let load = $state((()=>!lazy)())
   let observer = null
 
   const clear = ()=>{
@@ -12,7 +12,7 @@
     observer.disconnect()
     observer = null
   }
-  if (!lazy){ loadFunc() }
+  (()=>{ if (!lazy){ loadFunc() } })()
   onMount(()=>{
     if (!lazy){ return }
     observer = new IntersectionObserver((entries)=>{

@@ -10,8 +10,8 @@
         jp: 'header_background_jp'
       }[store.state.config.dataRegion] || `header_background`
     )
-  })
-  document.title = title + ' | ' + store.i18n('main.sitename')
+  });
+  (()=>{ document.title = title + ' | ' + store.i18n('main.sitename') })()
 </script>
 
 <div class="header" style:background-image={`url(${url}.png)`}>
