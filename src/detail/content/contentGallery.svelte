@@ -65,7 +65,9 @@
 <div class="content">
 <Loading finish={loadDB.finish} error={loadDB.error}>
   {#if emotionList && emotionList.list.length > 0}
-    <GalleryCharacter emotionList={emotionList} />
+    <svelte:boundary>
+      <GalleryCharacter emotionList={emotionList} />
+    </svelte:boundary>
   {/if}
   {#snippet image(title, image)}
     {@const url = import.meta.env.VITE_CDN2 + `fullshot/${image}.png`}
@@ -88,7 +90,9 @@
     {/if}
   {/if}
   {#if itemType === 'character'}
-    <GalleryPixel emotionList={emotionList} />
+    <svelte:boundary>
+      <GalleryPixel emotionList={emotionList} />
+    </svelte:boundary>
   {/if}
   <MobileBack />
 </Loading>
