@@ -23,13 +23,13 @@
       id = item.storyID
     }
     if (!id){ return null }
-    if (!database2[id]){ return { id } }
+    if (id !== 'stella_2anv' && !database2[id]){ return { id } }
     const list = []
     const effect = []
     let fullshot = 0
     let effectGroup = {}
     let rule = galleryEffectRule._common.include
-    let emotionData = database2[id][3]
+    let emotionData = database2[id === 'stella_2anv' ? 'stella' : id][3]
     if (galleryEffectRule[id]){
       let effectRule = galleryEffectRule[id]
       const include = effectRule.include || []

@@ -35,9 +35,22 @@ const createFrame = (frames, image, offset = 0)=>{
     ctx.drawImage(image.canvas,
       frame.x, frame.y, frame.w, frame.h, 0, 0, frame.w, frame.h,
     )
+    if (frame.r){
+      const dstCanvas = document.createElement('canvas')
+      const dstCtx = dstCanvas.getContext('2d')
+      dstCanvas.width = frame.h
+      dstCanvas.height = frame.w
+      dstCtx.imageSmoothingEnabled = false
+      dstCtx.save()
+      dstCtx.translate(0, dstCanvas.height)
+      dstCtx.rotate(-Math.PI / 2)
+      dstCtx.drawImage(canvas, 0, 0)
+      dstCtx.restore()
+      canvas = dstCanvas
+    }
     let name = frame.n + offset
-    let width = frame.w
-    let height = frame.h
+    let width = frame.r ? frame.h : frame.w
+    let height = frame.r ? frame.w : frame.h
     imageList.push([name, canvas, -frame.fx, -frame.fy, width, height])
   })
   return imageList
