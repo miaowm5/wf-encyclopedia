@@ -1,5 +1,6 @@
 
 import { onDestroy } from 'svelte'
+import GIF from "gif.js"
 import { api, spriteSheet } from '../../common'
 
 let configCache = null
@@ -68,9 +69,14 @@ const createTimeline = (config, imageList)=>{
   }
   let size = [256,256,0,0]
   let timeline = []
+  let timeline2 = []
   list.forEach((frame)=>{
     let name = frame[0]
-    while (timeline.length <= name - begin){ timeline.push(name) }
+    timeline2.push([name, 0])
+    while (timeline.length <= name - begin){
+      timeline.push(name)
+      timeline2[timeline2.length - 1][1] += 1
+    }
     let [x, y, width, height] = [frame[2], frame[3], frame[4], frame[5]]
     if (width !== 1 && height !== 1){
       if (x < size[0]){ size[0] = x }
@@ -93,7 +99,7 @@ const createTimeline = (config, imageList)=>{
   })
   return {
     movie: {
-      name: config.name, timeline, frame: timeline.length,
+      name: config.name, timeline, frame: timeline.length, timeline2,
       width: size[2], height: size[3],
     },
     frame: result
@@ -156,31 +162,35 @@ const main = (character, hasSpecial = true)=>{
   let currentFrame = 0
 
   let imageCache = {}
+  const getImageCache = (movie, id)=>{
+    if (imageCache[id]){ return imageCache[id] }
+    let origin = config.frame[id]
+    if (!origin){
+      console.log(config)
+      return null
+    }
+    const finalCanvas = document.createElement("canvas")
+    const finalCtx = finalCanvas.getContext("2d")
+    const dw = movie.width * scale
+    const dh = movie.height * scale
+    finalCanvas.width = dw
+    finalCanvas.height = dh
+    finalCtx.imageSmoothingEnabled = false
+    finalCtx.drawImage(origin,
+      0, 0, movie.width, movie.height,
+      0, 0, dw, dh
+    )
+    imageCache[id] = { canvas: finalCanvas }
+    return imageCache[id]
+  }
   const refreshImage = ()=>{
     const movie = config.movie[action]
     const id = movie.timeline[currentFrame]
-    if (!imageCache[id]){
-      let origin = config.frame[id]
-      if (!origin){
-        console.log(config)
-        return
-      }
-      const finalCanvas = document.createElement("canvas")
-      const finalCtx = finalCanvas.getContext("2d")
-      const dw = movie.width * scale
-      const dh = movie.height * scale
-      finalCanvas.width = dw
-      finalCanvas.height = dh
-      finalCtx.imageSmoothingEnabled = false
-      finalCtx.drawImage(origin,
-        0, 0, movie.width, movie.height,
-        0, 0, dw, dh
-      )
-      imageCache[id] = finalCanvas.toDataURL("image/png")
-    }
-    src = imageCache[id]
+    const image = getImageCache(movie, id)
+    if (!image){ return }
+    if (!image.src){ image.src = image.canvas.toDataURL("image/png") }
+    src = image.src
   }
-
   let timer = null
   const updateFrame = ()=>{
     timer = setTimeout(()=>{
@@ -194,10 +204,75 @@ const main = (character, hasSpecial = true)=>{
   }
   updateFrame()
 
+  let gifAbort = null
   onDestroy(()=>{
     cancelFunc = true
     clearTimeout(timer)
+    if (gifAbort){ gifAbort() }
   })
+
+  const downloadGif = ()=>{
+    if (!config){ return }
+    let movie = config.movie[action]
+    if (!movie){ return }
+    const width = movie.width * scale
+    const height = movie.height * scale
+    const gif = new GIF({
+      workers: 2,
+      quality: 10,
+      width,
+      height,
+      transparent: 0x00FF01,
+      workerScript: new URL(
+        "gif.js/dist/gif.worker.js",
+        import.meta.url
+      )
+    })
+    movie.timeline2.forEach(([id, duration])=>{
+      const image = getImageCache(movie, id)
+      if (!image){ return }
+      const normalCanvas = document.createElement('canvas')
+      normalCanvas.width = width
+      normalCanvas.height = height
+      const ctx = normalCanvas.getContext('2d', { willReadFrequently: true })
+      ctx.drawImage(image.canvas, 0, 0)
+      const imgData = ctx.getImageData(0, 0, width, height)
+      const data = imgData.data
+      const bgColor = [255, 255, 255]
+      for (let i = 0; i < data.length; i += 4){
+        let r = data[i]
+        let g = data[i + 1]
+        let b = data[i + 2]
+        let a = data[i + 3] / 255
+        if (a > 0 && a < 1) {
+          data[i]     = Math.round(r * a + bgColor[0] * (1 - a))
+          data[i + 1] = Math.round(g * a + bgColor[1] * (1 - a))
+          data[i + 2] = Math.round(b * a + bgColor[2] * (1 - a))
+          data[i + 3] = 255;
+        }else if (a === 0) {
+          data[i]     = 0
+          data[i + 1] = 255
+          data[i + 2] = 0
+          data[i + 3] = 255
+        }
+      }
+      ctx.putImageData(imgData, 0, 0)
+      gif.addFrame(normalCanvas, { delay: duration * speed })
+    })
+    gif.on('finished', function(blob) {
+      let url = URL.createObjectURL(blob)
+      const a = document.createElement("a")
+      a.href = url;
+      a.download = "pixel.gif"
+      document.body.appendChild(a)
+      a.click()
+      a.remove()
+      URL.revokeObjectURL(url)
+      gifAbort = null
+    })
+    gif.render()
+    gifAbort = ()=>{ gif.abort() }
+  }
 
   return {
     get src(){
@@ -253,6 +328,7 @@ const main = (character, hasSpecial = true)=>{
       }
       refreshImage()
     },
+    downloadGif,
   }
 }
 

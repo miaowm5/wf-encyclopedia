@@ -25,7 +25,7 @@ export default defineConfig({
     svelte(),
     VitePWA({
       registerType: 'autoUpdate',
-      devOptions: { enabled: true },
+      devOptions: { enabled: false },
       workbox: {
         runtimeCaching: [
           {
@@ -65,4 +65,5 @@ export default defineConfig({
     }),
   ],
   build: { emptyOutDir: true },
+  optimizeDeps: { include: ["gif.js"] },
 })
