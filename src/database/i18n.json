@@ -123,6 +123,7 @@
       "galleyPixel7": ["暂停", "Pause", "一時停止"],
       "galleyPixel8": ["下一帧", "Next", "次へ"],
       "galleyPixel9": ["上一帧", "Prev", "前へ"],
+      "galleyPixel10": ["下载", "DL", "DL"],
       "galleyCharacter1": ["上一个", "Prev", "前へ"],
       "galleyCharacter2": ["下一个", "Next", "次へ"],
       "storyBack": ["返回", "Back", "戻る"]

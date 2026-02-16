@@ -29,6 +29,9 @@
     <RoundButton title={store.i18n("detail.content.galleyPixel1")} onclick={()=>pixel.scale(2)} active={pixel.scaleRate === 2} />
     <RoundButton title={store.i18n("detail.content.galleyPixel2")} onclick={()=>pixel.scale(4)} active={pixel.scaleRate === 4} />
   </div>
+  <div class="download">
+    <RoundButton title={store.i18n("detail.content.galleyPixel10")} onclick={()=>pixel.downloadGif()} />
+  </div>
 </div>
 <div class="frameBtnGroup">
   <button class="frameBtn" onclick={()=>{ pixel.changeFrame(-1) }}>{store.i18n("detail.content.galleyPixel9")}</button>
@@ -80,6 +83,11 @@
   }
   .scale{ top: 4em }
   .speed{ top: 1em }
+  .download{
+    position: absolute;
+    right: .5em;
+    top: 1em;
+  }
   .frameBtnGroup{
     display: flex;
     width: 100%;

@@ -263,7 +263,7 @@ const main = (character, hasSpecial = true)=>{
       let url = URL.createObjectURL(blob)
       const a = document.createElement("a")
       a.href = url;
-      a.download = "pixel.gif"
+      a.download = `${character}-${action}.gif`
       document.body.appendChild(a)
       a.click()
       a.remove()
