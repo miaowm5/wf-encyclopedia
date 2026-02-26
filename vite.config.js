@@ -9,7 +9,10 @@ const cdnHosts = [
   'cdn.miaowm5.com',
 ]
 
-const buildPattern = (host, extPattern)=> new RegExp(`^https://${host}/.*\.(${extPattern})$`, 'i')
+const escapeRegex = (value) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+const buildPattern = (host, extPattern)=> new RegExp(`^https://${escapeRegex(host)}/.*\.(${extPattern})$`, 'i')
 
 const mediaCacheOption = {
   handler: 'CacheFirst',
