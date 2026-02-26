@@ -2,20 +2,33 @@ import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { VitePWA } from 'vite-plugin-pwa'
 
-const cacheOption = {
+const cdnHosts = [
+  'worldflipper-cdn.miaowm5.com',
+  'worldflipper-cdn2.miaowm5.com',
+  'worldflipper-cdn3.miaowm5.com',
+  'cdn.miaowm5.com',
+]
+
+const escapeRegex = (value) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+const buildPattern = (host, extPattern)=> new RegExp(`^https://${escapeRegex(host)}/.*\\.(${extPattern})$`, 'i')
+
+const mediaCacheOption = {
   handler: 'CacheFirst',
   options: {
     cacheName: 'cdn',
-    expiration: { maxAgeSeconds: 60 * 60 * 24 * 30 },
-    cacheableResponse: { statuses: [0, 200], },
+    expiration: { maxAgeSeconds: 60 * 60 * 24 * 30, },
+    cacheableResponse: { statuses: [0, 200] },
   },
 }
-const cacheOption2 = {
+
+const jsonCacheOption = {
   handler: 'StaleWhileRevalidate',
   options: {
     cacheName: 'cdn',
-    expiration: { maxAgeSeconds: 60 * 60 * 24 * 30 },
-    cacheableResponse: { statuses: [0, 200], },
+    expiration: { maxAgeSeconds: 60 * 60 * 24 * 30, },
+    cacheableResponse: { statuses: [0, 200] },
   },
 }
 
@@ -27,43 +40,33 @@ export default defineConfig({
       registerType: 'autoUpdate',
       devOptions: { enabled: false },
       workbox: {
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
         runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/worldflipper-cdn\.miaowm5\.com\/.*\.(png|jpe?g|gif|webp|bmp|svg|mp3|wav|ogg|m4a|flac)$/i,
-            ...cacheOption,
-          },
-          {
-            urlPattern: /^https:\/\/worldflipper-cdn2\.miaowm5\.com\/.*\.(png|jpe?g|gif|webp|bmp|svg|mp3|wav|ogg|m4a|flac)$/i,
-            ...cacheOption,
-          },
-          {
-            urlPattern: /^https:\/\/worldflipper-cdn3\.miaowm5\.com\/.*\.(png|jpe?g|gif|webp|bmp|svg|mp3|wav|ogg|m4a|flac)$/i,
-            ...cacheOption,
-          },
-          {
-            urlPattern: /^https:\/\/cdn\.miaowm5\.com\/.*\.(png|jpe?g|gif|webp|bmp|svg|mp3|wav|ogg|m4a|flac)$/i,
-            ...cacheOption,
-          },
-          {
-            urlPattern: /^https:\/\/worldflipper-cdn\.miaowm5\.com\/.*\.(json)$/i,
-            ...cacheOption2,
-          },
-          {
-            urlPattern: /^https:\/\/worldflipper-cdn2\.miaowm5\.com\/.*\.(json)$/i,
-            ...cacheOption2,
-          },
-          {
-            urlPattern: /^https:\/\/worldflipper-cdn3\.miaowm5\.com\/.*\.(json)$/i,
-            ...cacheOption2,
-          },
-          {
-            urlPattern: /^https:\/\/cdn\.miaowm5\.com\/.*\.(json)$/i,
-            ...cacheOption2,
-          },
+          ...cdnHosts.map((host)=>({
+            urlPattern: buildPattern(host, 'png|jpe?g|gif|webp|bmp|svg|mp3|wav|ogg|m4a|flac'),
+            ...mediaCacheOption,
+          })),
+          ...cdnHosts.map((host)=>({
+            urlPattern: buildPattern(host, 'json'),
+            ...jsonCacheOption,
+          })),
         ],
+      },
+      manifest: {
+        name: 'WF Encyclopedia',
+        short_name: 'WF Wiki',
+        description: 'World Flipper Encyclopedia',
+        lang: 'zh-CN',
+        start_url: '/',
+        scope: '/',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#ffcf8f',
       },
     }),
   ],
   build: { emptyOutDir: true },
-  optimizeDeps: { include: ["gif.js"] },
+  optimizeDeps: { include: ['gif.js'] },
 })

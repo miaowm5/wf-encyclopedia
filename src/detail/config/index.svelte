@@ -31,8 +31,8 @@
       <p>{line}</p>
     {/each}</div>
     <div class="link">
-      <a href="https://github.com/miaowm5/wf-encyclopedia/issues" target="_blank">{store.i18n("detail.config.config3Value1")}</a>
-      <a href="http://worldflipper.jp/" target="_blank">ワールドフリッパー公式サイト</a>
+      <a href="https://github.com/miaowm5/wf-encyclopedia/issues" target="_blank" rel="noopener noreferrer">{store.i18n("detail.config.config3Value1")}</a>
+      <a href="https://worldflipper.jp/" target="_blank" rel="noopener noreferrer">ワールドフリッパー公式サイト</a>
     </div>
     <Title>{store.i18n("detail.config.config1")}</Title>
     <div class="btns">
