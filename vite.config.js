@@ -17,24 +17,17 @@ const buildPattern = (host, extPattern)=> new RegExp(`^https://${escapeRegex(hos
 const mediaCacheOption = {
   handler: 'CacheFirst',
   options: {
-    cacheName: 'cdn-media',
-    expiration: {
-      maxAgeSeconds: 60 * 60 * 24 * 30,
-      maxEntries: 400,
-    },
+    cacheName: 'cdn',
+    expiration: { maxAgeSeconds: 60 * 60 * 24 * 30, },
     cacheableResponse: { statuses: [0, 200] },
   },
 }
 
 const jsonCacheOption = {
-  handler: 'NetworkFirst',
+  handler: 'StaleWhileRevalidate',
   options: {
-    cacheName: 'cdn-json',
-    networkTimeoutSeconds: 3,
-    expiration: {
-      maxAgeSeconds: 60 * 60 * 24 * 30,
-      maxEntries: 200,
-    },
+    cacheName: 'cdn',
+    expiration: { maxAgeSeconds: 60 * 60 * 24 * 30, },
     cacheableResponse: { statuses: [0, 200] },
   },
 }
