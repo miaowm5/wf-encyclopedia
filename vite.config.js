@@ -12,7 +12,7 @@ const cdnHosts = [
 const escapeRegex = (value) =>
   value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
-const buildPattern = (host, extPattern)=> new RegExp(`^https://${escapeRegex(host)}/.*\.(${extPattern})$`, 'i')
+const buildPattern = (host, extPattern)=> new RegExp(`^https://${escapeRegex(host)}/.*\\.(${extPattern})$`, 'i')
 
 const mediaCacheOption = {
   handler: 'CacheFirst',
