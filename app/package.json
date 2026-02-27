@@ -1,0 +1,13 @@
+{
+  "name": "wf-encyclopedia-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "buildFront": "cd .. && npx vite build --outDir ./app/resources",
+    "build": "npm run buildFront && npx neu update && npx neu build --release"
+  },
+  "devDependencies": {
+    "@neutralinojs/neu": "^11.7.0"
+  },
+  "dependencies": {}
+}
