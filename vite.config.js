@@ -64,6 +64,20 @@ export default defineConfig({
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#ffcf8f',
+        icons: [
+          {
+            src: "assets/appIcon.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "any"
+          },
+          {
+            src: "assets/appIcon512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable"
+          }
+        ]
       },
     }),
   ],
