@@ -12,7 +12,7 @@
 
 - `src/database/i18n.json`
 
-## 离线打包
+## 离线版打包
 
 ### 安装依赖
 
@@ -33,7 +33,7 @@ npm run buildApp
 
 ## 目录说明
 
-- `app/`：Neutralino 桌面端工程与打包配置。
-- `public/`：Vite 公共静态资源目录。
 - `src/`：前端源码目录（Svelte 组件、状态、数据库、UI）。
+- `public/`：Vite 公共静态资源目录。
 - `tool/`：资源处理脚本（剧情、语音、图集等）。
+- `app/`：Neutralino 桌面端工程与打包配置。

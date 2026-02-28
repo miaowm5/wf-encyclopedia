@@ -33,7 +33,7 @@ npm run buildApp
 
 ## Directories
 
-- `app/`: Neutralino desktop project and packaging config.
-- `public/`: Vite public static assets.
 - `src/`: Frontend source directory (Svelte components, state, database, UI).
+- `public/`: Vite public static assets.
 - `tool/`: Resource processing scripts (story, voice, spritesheet, etc.).
+- `app/`: Neutralino desktop project and packaging config.

@@ -33,10 +33,20 @@ const jsonCacheOption = {
 }
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [
-    svelte(),
-    VitePWA({
+export default defineConfig(({ mode })=>{
+  const config = {
+    plugins: [ svelte() ],
+    build: {
+      outDir: './dist',
+      emptyOutDir: true
+    },
+    optimizeDeps: { include: ['gif.js'] },
+  }
+  if (mode === 'app'){
+    config.build.outDir = './app/resources'
+  }
+  if (mode !== 'app'){
+    config.plugins.push(VitePWA({
       registerType: 'autoUpdate',
       devOptions: { enabled: false },
       workbox: {
@@ -55,9 +65,9 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: 'WF Encyclopedia',
-        short_name: 'WF Wiki',
-        description: 'World Flipper Encyclopedia',
+        name: '星見の図鑑',
+        short_name: '星見の図鑑',
+        description: '世界弹射物语 星见图鉴 | ワールドフリッパー 星見の図鑑 | World Flipper Stargazing Encyclopedia',
         lang: 'zh-CN',
         start_url: '/',
         scope: '/',
@@ -79,8 +89,7 @@ export default defineConfig({
           }
         ]
       },
-    }),
-  ],
-  build: { emptyOutDir: true },
-  optimizeDeps: { include: ['gif.js'] },
+    }))
+  }
+  return config
 })
