@@ -6,7 +6,7 @@ const cdnHosts = [
   'worldflipper-cdn.miaowm5.com',
   'worldflipper-cdn2.miaowm5.com',
   'worldflipper-cdn3.miaowm5.com',
-  'cdn.miaowm5.com',
+  'worldflipper-cdn4.miaowm5.com',
 ]
 
 const escapeRegex = (value) =>
