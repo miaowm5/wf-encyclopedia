@@ -2,3 +2,4 @@ bin
 resources
 /node_modules/
 cdn/*.zip
+.tmp/

@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "unzipCdn": "for f in ./cdn/*.zip; do unzip -o \"$f\" -d ./resources/cdn; done",
+    "cleanDir": "rm -rf ./dist && rm -rf ./resources/cdn && rm -rf ./.tmp",
+    "unzipCdn": "node unzip-cdn.cjs",
     "buildApp": "npx neu update && npx neu build --release",
-    "build": "npm run unzipCdn && npm run buildApp"
+    "build": "npm run cleanDir && npm run unzipCdn && npm run buildApp"
   },
   "devDependencies": {
-    "@neutralinojs/neu": "^11.7.0"
-  },
-  "dependencies": {}
+    "@neutralinojs/neu": "^11.7.0",
+    "adm-zip": "^0.5.16"
+  }
 }
