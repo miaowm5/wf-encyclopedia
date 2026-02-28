@@ -6,6 +6,7 @@
     "start": "npm run dev",
     "dev": "vite",
     "build": "vite build --outDir ./dist",
+    "buildApp": "npx vite build --outDir ./app/resources --mode app && npm run build --prefix app",
     "preview": "vite preview"
   },
   "devDependencies": {
