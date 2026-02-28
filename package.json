@@ -18,7 +18,7 @@
   "dependencies": {
     "gif.js": "^0.2.0",
     "howler": "^2.2.4",
-    "m5api": "https://cdn.miaowm5.com/npm/m5api-4.0.0.tgz",
+    "m5api": "https://cdn.miaowm5.com/npm/m5api-4.3.0.tgz",
     "route-parser": "^0.0.5"
   }
 }
