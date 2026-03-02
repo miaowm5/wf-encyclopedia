@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -94,6 +96,36 @@ export default defineConfig(({ mode })=>{
         ]
       },
     }))
+    config.plugins.push({
+      name: 'copy-app-file',
+      closeBundle: async () => {
+        fs.mkdirSync('dist/app/', { recursive: true });
+        fs.writeFileSync('dist/app/manifest.json',JSON.stringify({
+          applicationId: "com.miaowm5.worldflipper",
+          version: `${new Date().getTime()}`,
+          resourcesURL: "https://worldflipper.miaowm5.com/app/resources.neu",
+          data: {},
+        }))
+        const filesToCopy = [
+          ['app/dist/StarEncyclopedia/resources.neu', 'dist/app/resources.neu'],
+          ['app/dist/StarEncyclopedia-release.zip', 'dist/app/StarEncyclopedia-release.zip'],
+        ];
+        filesToCopy.forEach(([srcRelative, destRelative]) => {
+          const srcPath = path.resolve(__dirname, srcRelative);
+          const destPath = path.resolve(__dirname, destRelative);
+          try {
+            if (fs.existsSync(srcPath)) {
+              fs.copyFileSync(srcPath, destPath);
+              console.log(`File copied: ${srcRelative} -> ${destRelative}`);
+            } else {
+              console.warn(`Source file not found, Skip: ${srcRelative}`);
+            }
+          } catch (err) {
+            console.error(`Error copying ${srcRelative}:`, err.message);
+          }
+        });
+      }
+    })
   }
   return config
 })
