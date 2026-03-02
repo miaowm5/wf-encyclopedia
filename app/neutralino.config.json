@@ -7,7 +7,13 @@
   "documentRoot": "/resources/",
   "url": "/",
   "enableServer": true,
-  "enableNativeAPI": false,
+  "enableNativeAPI": true,
+  "nativeAllowList": [
+    "server.*",
+    "window.*",
+    "app.*",
+    "filesystem.*"
+  ],
   "tokenSecurity": "one-time",
   "logging": { "enabled": false },
   "modes": {
@@ -33,6 +39,7 @@
   "cli": {
     "binaryName": "StarEncyclopedia",
     "resourcesPath": "/resources/",
+    "copyItems": ["/cdn"],
     "extensionsPath": "/extensions/",
     "clientLibrary": "/resources/assets/neutralino.js",
     "binaryVersion": "6.5.0",

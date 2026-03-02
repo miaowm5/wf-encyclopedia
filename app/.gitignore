@@ -1,5 +1,6 @@
 bin
 resources
 /node_modules/
-cdn/*.zip
+cdn/*
+!cdn/_put_cdn_file_here
 .tmp/

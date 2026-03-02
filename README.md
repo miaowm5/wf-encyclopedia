@@ -12,25 +12,6 @@
 
 - `src/database/i18n.json`
 
-## 离线版打包
-
-### 安装依赖
-
-```bash
-npm install
-npm install --prefix app
-```
-
-### 放置 CDN 文件
-
-离线打包必须将 CDN 压缩包文件（`.zip`）放到 `app/cdn/`。
-
-### 执行打包脚本
-
-```bash
-npm run buildApp
-```
-
 ## 目录说明
 
 - `src/`：前端源码目录（Svelte 组件、状态、数据库、UI）。

@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "cleanDir": "rm -rf ./dist && rm -rf ./resources/cdn && rm -rf ./.tmp",
-    "unzipCdn": "node unzip-cdn.cjs",
+    "cleanDir": "rm -rf ./dist && rm -rf ./.tmp",
     "buildApp": "npx neu update && npx neu build --release",
-    "build": "npm run cleanDir && npm run unzipCdn && npm run buildApp"
+    "build": "npm run cleanDir && npm run buildApp"
   },
   "devDependencies": {
-    "@neutralinojs/neu": "^11.7.0",
-    "adm-zip": "^0.5.16"
+    "@neutralinojs/neu": "^11.7.0"
   }
 }
