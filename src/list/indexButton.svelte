@@ -1,10 +1,11 @@
 <script>
+  import { cdn } from '../common'
   import { ImageLoader, TextImage } from '../ui'
   const {id, text, onclick} = $props()
 </script>
 
 <button onclick={onclick} aria-label={text}>
-  <ImageLoader src={`${import.meta.env.VITE_CDN}ui/${id}_btn.png`} alt={text}>
+  <ImageLoader src={`${cdn('cdn')}ui/${id}_btn.png`} alt={text}>
     <TextImage text={text} width={992} height={352} />
   </ImageLoader>
 </button>

@@ -1,6 +1,6 @@
 
 import { onDestroy } from 'svelte'
-import { loadHowler } from '../../common'
+import { loadHowler, cdn } from '../../common'
 import playListLogic from './playlist.svelte'
 import store from '../../store'
 
@@ -46,7 +46,7 @@ const playerLogic = (playList)=>{
     currentPlay = current
     seek = 0
     if (!currentPlay){ return }
-    howler = loadHowler(`${import.meta.env.VITE_CDN4}${current}`, (howl)=>{
+    howler = loadHowler(cdn('cdn4', current), (howl)=>{
       if (cancelFunc || !howl){ return }
       sound = howl
       sound.on('play', ()=>{ registerSeek(true) })

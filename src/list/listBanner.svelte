@@ -1,7 +1,8 @@
 <script>
+  import { cdn } from '../common'
   const { back, title, banner, content } = $props()
-  const urlBack = $derived(`url(${import.meta.env.VITE_CDN}ui/${back}.png)`)
-  const urlTitle = $derived(`url(${import.meta.env.VITE_CDN}ui/${title}.png)`)
+  const urlBack = $derived(`url(${cdn('cdn')}ui/${back}.png)`)
+  const urlTitle = $derived(`url(${cdn('cdn')}ui/${title}.png)`)
 </script>
 
 <div class="main">

@@ -1,9 +1,10 @@
 <script>
+  import { cdn } from '../../common'
   import store from '../../store'
   const { title } = $props();
 
   (()=>{document.title = title + ' | ' + store.i18n('main.sitename')})()
-  const background = import.meta.env.VITE_CDN + 'ui/keyword_details_keyword_background.png'
+  const background = cdn('cdn', 'ui/keyword_details_keyword_background.png')
 
 </script>
 

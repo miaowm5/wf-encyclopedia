@@ -1,6 +1,6 @@
 <script>
   import store from '../store'
-  import { spriteSheet } from '../common'
+  import { spriteSheet, cdn } from '../common'
   import { Loading } from '../ui'
   import IndexButton from './indexButton.svelte'
   import CharacterList from './characterList.svelte'
@@ -38,9 +38,9 @@
     {#if category === null}
       <div class="titleButton">
         <div
-          style:background-image={`url(${import.meta.env.VITE_CDN}ui/top_background.png)`}>
+          style:background-image={`url(${cdn('cdn')}ui/top_background.png)`}>
           <div
-            style:background-image={`url(${import.meta.env.VITE_CDN}ui/encyclopedia_title.png)`}>
+            style:background-image={`url(${cdn('cdn')}ui/encyclopedia_title.png)`}>
           </div>
         </div>
         <div>

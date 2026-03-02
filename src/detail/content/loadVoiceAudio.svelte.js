@@ -1,13 +1,13 @@
 
 import { onDestroy } from 'svelte'
-import { api, loadHowler } from '../../common'
+import { api, loadHowler, cdn } from '../../common'
 
 let configCache = null
 const promiseCache = {}
 
 const loadConfig = async ()=>{
   if (configCache){ return configCache }
-  const url = `${import.meta.env.VITE_CDN2}voice.json`
+  const url = cdn('cdn2', 'voice.json')
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
@@ -77,7 +77,7 @@ const main = (character)=>{
       return
     }
     sound = await new Promise((resolve)=>{
-      const url = `${import.meta.env.VITE_CDN2}voice/${character}.ogg?${config.timestamp || ''}`
+      const url = `${cdn('cdn2')}voice/${character}.ogg?${config.timestamp || ''}`
       howler = loadHowler(url, resolve, voiceData)
     })
     if (cancelFunc){ return }

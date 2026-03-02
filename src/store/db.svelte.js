@@ -1,6 +1,6 @@
 
 import { onDestroy } from "svelte"
-import { api } from '../common'
+import { api, cdn } from '../common'
 
 const cache = {}
 
@@ -66,7 +66,7 @@ const config = {
     handler: (data)=>{ return data }
   },
   character_speech_text: {
-    path: `${import.meta.env.VITE_CDN3}common/voiceLine`,
+    path: cdn('cdn3', 'common/voiceLine'),
     absolutePath: true,
     handler: (data)=>{ return data }
   },
@@ -171,7 +171,7 @@ const config = {
     }
   },
   music_list: {
-    path: `${import.meta.env.VITE_CDN4}filelist`,
+    path: cdn('cdn4', 'filelist'),
     absolutePath: true,
     handler: (data)=>{
       let result = {
@@ -273,11 +273,10 @@ const init = (state)=>{
       db.forEach((name)=>{
         if (!name){ return addProgress() }
         let loadConfig = config[name]
-        const cdn = import.meta.env.VITE_CDN3
         const baseUrl = {
-          cn: `${cdn}orderedmap/`,
-          jp: `${cdn}orderedmap2/`
-        }[state.config.dataRegion] || `${cdn}orderedmap/`
+          cn: cdn('cdn3', 'orderedmap/'),
+          jp: cdn('cdn3', 'orderedmap2/')
+        }[state.config.dataRegion] || cdn('cdn3', 'orderedmap/')
         let url = loadConfig.absolutePath ? loadConfig.path : `${baseUrl}${loadConfig.path}`
         loadDB(
           `${state.config.dataRegion}-${name}`,
