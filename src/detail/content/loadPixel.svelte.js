@@ -1,14 +1,14 @@
 
 import { onDestroy } from 'svelte'
 import GIF from "gif.js"
-import { api, spriteSheet } from '../../common'
+import { api, spriteSheet, cdn } from '../../common'
 
 let configCache = null
 const promiseCache = {}
 
 const loadConfig = async ()=>{
   if (configCache){ return configCache }
-  const url = `${import.meta.env.VITE_CDN2}/pixel.json`
+  const url = cdn('cdn2', 'pixel.json')
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{

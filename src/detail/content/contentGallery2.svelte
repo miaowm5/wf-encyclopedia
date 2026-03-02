@@ -1,6 +1,7 @@
 <script>
   import store from '../../store'
   import { RoundButton, Loading, Title } from '../../ui'
+  import { cdn } from '../../common'
   import extraGallery from '../../database/extraGallery.json'
   import MobileBack from './mobileBack.svelte'
 
@@ -24,7 +25,7 @@
 
 <div class="content">
   {#if item.subType === 'main'}
-    {@const url = import.meta.env.VITE_CDN2 + `orb/chapter${item.storyID}.png`}
+    {@const url = cdn('cdn2', `orb/chapter${item.storyID}.png`)}.png`}
     <div class="image orb">
       <img src={url} alt={data ? data[0] : `${item.title}`} width="1080" height="1920" />
       <RoundButton icon="full_size" onclick={()=>window.open(url)} />
@@ -39,7 +40,7 @@
   {#if extarImage.length > 0}
     <Title>{store.i18n("detail.content.title12")}</Title>
     {#each extarImage as image}
-      {@const url = import.meta.env.VITE_CDN2 + `gallery/${image}`}
+      {@const url = cdn('cdn2', `gallery/${image}`)}
       <div class="image gallery">
         <img src={url} alt={item.title} />
         <RoundButton icon="full_size" onclick={()=>window.open(url)} />

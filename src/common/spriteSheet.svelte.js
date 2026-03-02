@@ -1,5 +1,6 @@
 import { onDestroy } from "svelte"
 import { api } from './m5api'
+import cdnUrl from './cdn'
 
 const cache = {}
 const cacheImage = {}
@@ -108,12 +109,7 @@ const createCanvas = async (image, spriteConfig, key, cache)=>{
 }
 
 const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
-  const cdn = {
-    "cdn": import.meta.env.VITE_CDN,
-    "cdn2": import.meta.env.VITE_CDN2,
-    "cdn3": import.meta.env.VITE_CDN3,
-    "cdn4": import.meta.env.VITE_CDN4,
-  }[cdnType] || import.meta.env.VITE_CDN
+  const cdn = cdnUrl(cdnType)
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
 

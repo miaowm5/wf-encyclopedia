@@ -1,5 +1,5 @@
 
-import { api } from '../../common'
+import { api, cdn } from '../../common'
 
 const loadConfig = async (path, dataRegion)=>{
   let url = ``
@@ -22,9 +22,9 @@ const loadConfig = async (path, dataRegion)=>{
   }
   let promise = new Promise((resolve)=>{
     const baseUrl = {
-      cn: `${import.meta.env.VITE_CDN3}orderedmap/`,
-      jp: `${import.meta.env.VITE_CDN3}orderedmap2/`
-    }[dataRegion] || `${import.meta.env.VITE_CDN3}orderedmap/`
+      cn: cdn('cdn3', 'orderedmap/'),
+      jp: cdn('cdn3', 'orderedmap/2')
+    }[dataRegion] || cdn('cdn3', 'orderedmap/')
     api(`${baseUrl}story/${url}.json`, {
       success: (data)=>{ resolve(data) },
       fail: (err)=>{ console.error(err), resolve(null) },

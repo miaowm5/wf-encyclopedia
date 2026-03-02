@@ -6,9 +6,10 @@ import Nav from './nav.svelte'
 import OnBack from './onBack.svelte'
 import characterShot from './characterShot.svelte.js'
 import textImage from './textImage.svelte.js'
+import cdn from './cdn.js'
 
 export {
-  api,
+  api, cdn,
   spriteSheet, characterShot, textImage,
   EventEmitter, Route, Nav, OnBack, loadHowler,
 }
