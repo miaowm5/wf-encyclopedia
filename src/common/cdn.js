@@ -1,4 +1,6 @@
 
+import { api } from './m5api'
+
 let cdn = import.meta.env.VITE_CDN
 let cdn2 = import.meta.env.VITE_CDN2
 let cdn3 = import.meta.env.VITE_CDN3
@@ -15,10 +17,20 @@ const main = (cdnType='cdn1', url = '')=>{
 }
 
 const appInit = async ()=>{
-  cdn = '/cdn/cdn/'
-  cdn2 = '/cdn/cdn1/'
-  cdn3 = '/cdn/cdn2/'
-  cdn4 = '/cdn/cdn3/'
+  const check = async (target, callback)=>{
+    await new Promise((success)=>{
+      api(`${target}/version.json`, {
+        success: (data)=>{ callback(target, data.version) },
+        after: ()=>{ success() },
+      })
+    })
+  }
+  await Promise.all([
+    check('/cdn/cdn/', (v)=>cdn = v),
+    check('/cdn/cdn1/', (v)=>cdn2 = v),
+    check('/cdn/cdn2/', (v)=>cdn3 = v),
+    check('/cdn/cdn3/', (v)=>cdn4 = v),
+  ])
 }
 
 export default main
