@@ -19,6 +19,7 @@ const initState = {
   item: null,
   extra: null,
   scenario: null,
+  mode: 'web',
   ui: {
     page: 'home',
     listCategory: null,
@@ -43,6 +44,16 @@ const initState = {
   },
   config,
   customTag: customTag.load()
+}
+
+if (__APP_MODE__){
+  initState.mode = 'app'
+}else{
+  let pwa = window.matchMedia('(display-mode: standalone)').matches ||
+    window.matchMedia('(display-mode: minimal-ui)').matches ||
+    (window.navigator.standalone) ||
+    document.referrer.includes('android-app://')
+  if (pwa){ initState.mode = 'pwa' }
 }
 
 let state = $state(initState)
