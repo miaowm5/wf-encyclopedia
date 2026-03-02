@@ -59,6 +59,7 @@ export default defineConfig(({ mode })=>{
         cleanupOutdatedCaches: true,
         clientsClaim: true,
         skipWaiting: true,
+        navigateFallbackDenylist: [/^\/app\//],
         runtimeCaching: [
           ...cdnHosts.map((host)=>({
             urlPattern: buildPattern(host, 'png|jpe?g|gif|webp|bmp|svg|mp3|wav|ogg|m4a|flac'),
