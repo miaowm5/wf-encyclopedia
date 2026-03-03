@@ -45,7 +45,7 @@
   {#each info.list as item, index}{@render appCDNInfo(item, info.useable[index])}{/each}
   {#if !info.allSet}
     <p>Download cdn file to enable offline function.</p>
-    <a class="btn" href="https://drive.google.com/drive/folders/10efVwEqhIKQWNRJBeJs1QxfrpWR7pDB7" target="_blank" rel="noopener noreferrer">Google Drive</a>
+    <button class="btn" onclick={()=>Neutralino.os.open('https://drive.google.com/drive/folders/10efVwEqhIKQWNRJBeJs1QxfrpWR7pDB7')}>Google Drive</button>
   {/if}
 {:else if mode === 'pwa'}
   <!-- skip -->
