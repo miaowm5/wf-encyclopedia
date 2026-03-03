@@ -93,11 +93,11 @@ const changeConfig = (key, value)=>{
   state.config[key] = value
   localStorage.setItem('config', JSON.stringify(state.config))
 }
-const setAppUpdater = (target)=>{
+const setAppUpdater = (target, force = false)=>{
   if (target){
     document.title = getI18n('main.sitename')
     state.ui.page = 'appUpdater'
-    state.extra = target
+    state.extra = { target, force }
   }else{
     updateRoute({ page: 'home', category: null })
   }

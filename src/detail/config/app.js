@@ -80,13 +80,20 @@ const generateTask = (local, remote)=>{
     let localVersion = local[file]
     let remoteVersion = remote[file]
     if (!remoteVersion){ remove.push(file) }
-    if (localVersion !== remoteVersion){ download.push(file) }
+    else if (localVersion !== remoteVersion){ download.push(file) }
   })
   Object.keys(remote).forEach((file)=>{
     let localVersion = local[file]
     if (!localVersion){ download.push(file) }
   })
   return { remove, download }
+}
+const triggerUpdaterFlag = async (cdn)=>{
+  if (cdn){
+    await Neutralino.filesystem.writeFile(`${NL_PATH}/cdn/task.json`, JSON.stringify({cdn}))
+  }else{
+    await removeFile('cdn/task.json')
+  }
 }
 
 export default {
@@ -97,4 +104,5 @@ export default {
   removeFile,
   downloadFile,
   generateTask,
+  triggerUpdaterFlag,
 }
