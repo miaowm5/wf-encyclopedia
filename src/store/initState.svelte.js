@@ -19,7 +19,7 @@ const initState = {
   item: null,
   extra: null,
   scenario: null,
-  mode: 'web',
+  mode: import.meta.env.VITE_APPMODE,
   ui: {
     page: 'home',
     listCategory: null,
@@ -46,9 +46,7 @@ const initState = {
   customTag: customTag.load()
 }
 
-if (__APP_MODE__){
-  initState.mode = 'app'
-}else{
+if (import.meta.env.VITE_APPMODE === 'web'){
   let pwa = window.matchMedia('(display-mode: standalone)').matches ||
     window.matchMedia('(display-mode: minimal-ui)').matches ||
     (window.navigator.standalone) ||

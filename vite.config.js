@@ -43,13 +43,10 @@ export default defineConfig(({ mode })=>{
       emptyOutDir: true
     },
     optimizeDeps: { include: ['gif.js'] },
-    define: {
-      '__APP_MODE__': 'false',
-    },
+    define: {},
   }
   if (mode === 'app'){
     config.build.outDir = './app/resources'
-    config.define['__APP_MODE__'] = 'true'
   }
   if (mode !== 'app'){
     config.plugins.push(VitePWA({
