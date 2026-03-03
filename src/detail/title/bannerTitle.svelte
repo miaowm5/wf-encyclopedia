@@ -6,7 +6,7 @@
   const url = $derived.by(()=>{
     if (extra){ return cdn('cdn', 'ui/keyword_details_keyword_background') }
     return data.replace('encyclopedia/header_background',
-      cdn('cdn2') + {
+      cdn('cdn') + {
         cn: `header_background`,
         jp: 'header_background_jp'
       }[store.state.config.dataRegion] || `header_background`
