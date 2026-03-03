@@ -1,15 +1,9 @@
 <script>
-  import { cdn } from '../../common'
+  import store from '../../store'
   import { Title } from '../../ui'
+  import appLogic from './app.js'
 
-  const getCDNInfo = ()=>{
-    const list = ['cdn', 'cdn2', 'cdn3', 'cdn4']
-    const useable = list.map((name)=>!cdn(name).startsWith('http'))
-    const allSet = useable.every(v=>v)
-    return { list, useable, allSet }
-  }
-
-  const info = getCDNInfo()
+  const info = appLogic.getCDNInfo()
 </script>
 
 {#snippet appCDNInfo(name, offline)}
@@ -20,6 +14,7 @@
     {:else}
       <p>use online data</p>
     {/if}
+    <button class="btn" onclick={()=>store.setAppUpdater(name)}>refresh data</button>
   </div>
 {/snippet}
 
