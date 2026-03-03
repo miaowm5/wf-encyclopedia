@@ -93,8 +93,18 @@ const changeConfig = (key, value)=>{
   state.config[key] = value
   localStorage.setItem('config', JSON.stringify(state.config))
 }
+const setAppUpdater = (target)=>{
+  if (target){
+    document.title = getI18n('main.sitename')
+    state.ui.page = 'appUpdater'
+    state.extra = target
+  }else{
+    updateRoute({ page: 'home', category: null })
+  }
+}
 
-const updateRoute = ((data)=>{
+const updateRoute = (data)=>{
+  if (state.ui.page === 'updater'){ return }
   if (data.page === 'item'){
     if (state.item !== data.item || state.extra !== data.extra){
       state.ui.mobileListHide = true
@@ -148,7 +158,7 @@ const updateRoute = ((data)=>{
     state.extra = data.extra
     document.title = getI18n('main.sitename')
   }
-})
+}
 route.onUpdate(updateRoute)
 updateRoute(route.current)
 
@@ -166,6 +176,7 @@ const store = {
   setAllFilter,
   setDialog,
   changeConfig,
+  setAppUpdater,
   tag: customTag.init(state),
   jukebox: jukebox(state),
   database: dbLoader(state),

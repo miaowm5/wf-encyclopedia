@@ -1,6 +1,4 @@
 
-import { api } from './m5api'
-
 let cdn = import.meta.env.VITE_CDN
 let cdn2 = import.meta.env.VITE_CDN2
 let cdn3 = import.meta.env.VITE_CDN3
@@ -18,12 +16,11 @@ const main = (cdnType='cdn1', url = '')=>{
 
 const appInit = async ()=>{
   const check = async (target, callback)=>{
-    await new Promise((success)=>{
-      api(`${target}/version.json`, {
-        success: (data)=>{ callback(target, data.version) },
-        after: ()=>{ success() },
-      })
-    })
+    try{
+      let stats = await Neutralino.filesystem.getStats(NL_PATH + target)
+      if (!stats.isDirectory){ throw new Error('CDN path error') }
+      callback(target)
+    }catch(e){}
   }
   await Promise.all([
     check('/cdn/cdn/', (v)=>cdn = v),
