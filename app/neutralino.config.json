@@ -12,6 +12,7 @@
     "server.*",
     "window.*",
     "app.*",
+    "os.*",
     "filesystem.*"
   ],
   "tokenSecurity": "one-time",
