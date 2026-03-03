@@ -54,7 +54,7 @@ const getVersionInfo = async (cdnType)=>{
 }
 const removeFile = async (file)=>{
   try{
-    await Neutralino.filesystem.remove(file)
+    await Neutralino.filesystem.remove(`${NL_PATH}/${file}`)
   }catch(e){
     console.error(e)
   }
