@@ -104,7 +104,7 @@ const setAppUpdater = (target, force = false)=>{
 }
 
 const updateRoute = (data)=>{
-  if (state.ui.page === 'updater'){ return }
+  if (state.ui.page === 'appUpdater'){ return }
   if (data.page === 'item'){
     if (state.item !== data.item || state.extra !== data.extra){
       state.ui.mobileListHide = true
