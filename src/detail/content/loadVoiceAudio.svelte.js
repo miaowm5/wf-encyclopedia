@@ -7,7 +7,7 @@ const promiseCache = {}
 
 const loadConfig = async ()=>{
   if (configCache){ return configCache }
-  const url = cdn('cdn2', 'voice.json')
+  const url = cdn('cdn', 'character/voice.json')
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
@@ -77,7 +77,7 @@ const main = (character)=>{
       return
     }
     sound = await new Promise((resolve)=>{
-      const url = `${cdn('cdn2')}voice/${character}.ogg?${config.timestamp || ''}`
+      const url = `${cdn('cdn')}character/voice/${character}.ogg?${config.timestamp || ''}`
       howler = loadHowler(url, resolve, voiceData)
     })
     if (cancelFunc){ return }
