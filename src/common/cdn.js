@@ -1,4 +1,7 @@
 
+import { api } from './m5api'
+import store from '../store'
+
 let cdn = import.meta.env.VITE_CDN
 let cdn2 = import.meta.env.VITE_CDN2
 let cdn3 = import.meta.env.VITE_CDN3
@@ -28,6 +31,12 @@ const appInit = async ()=>{
     check('/cdn/cdn3/', (v)=>cdn3 = v),
     check('/cdn/cdn4/', (v)=>cdn4 = v),
   ])
+  await new Promise((success)=>{
+    api('/cdn/task.json', {
+      success: (data)=>{ store.setAppUpdater(data.cdn, true) },
+      after: ()=>{ success() }
+    })
+  })
 }
 
 export default main
