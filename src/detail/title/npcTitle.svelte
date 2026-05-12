@@ -1,5 +1,5 @@
 <script>
-  import { characterShot } from '../../common'
+  import { characterShot, cdn } from '../../common'
   import store from '../../store'
   import { SpriteLoader, RoundButton } from '../../ui'
 
@@ -55,7 +55,7 @@
     return list
   })
 
-  const background = import.meta.env.VITE_CDN + 'ui/keyword_details_character_background.png'
+  const background = cdn('cdn', 'ui/keyword_details_character_background.png')
 
   const elementImage = $derived.by(()=>{
     if (element === '(None)'){ return null }
