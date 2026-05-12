@@ -1,6 +1,7 @@
 <script>
   import store from '../../store'
   import { Title, RoundButton, Loading } from '../../ui'
+  import { cdn } from '../../common'
   import GalleryCharacter from './galleryCharacter.svelte'
   import GalleryPixel from './galleryPixel.svelte'
   import MobileBack from './mobileBack.svelte'
@@ -68,10 +69,10 @@
     <GalleryCharacter emotionList={emotionList} />
   {/if}
   {#snippet image(title, image)}
-    {@const url = import.meta.env.VITE_CDN2 + `fullshot/${image}.png`}
+    {@const url = cdn('cdn2', `fullshot/${image}.png`)}
     <Title>{title}</Title>
     <div class="image"
-      style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
+      style:background-image={`url(${cdn('cdn', 'ui/party_thumbnail_tile_bg_old.png')})`}>
       <img src={url} alt={image} />
       <RoundButton icon="full_size" onclick={()=>window.open(url)} />
     </div>

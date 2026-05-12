@@ -1,5 +1,5 @@
 <script>
-  import { spriteSheet } from '../common'
+  import { spriteSheet, cdn } from '../common'
   import TextImage from './textImage.svelte'
   import LazyLoad from './lazyLoad.svelte'
   import headIconCache from './spritesheetCache.js'
@@ -93,7 +93,7 @@
   </LazyLoad>
 {:else}
 <div class="main"
-  style:background-image={`url(${import.meta.env.VITE_CDN}ui/party_thumbnail_tile_bg_old.png)`}>
+  style:background-image={`url(${cdn('cdn', 'ui/party_thumbnail_tile_bg_old.png')})`}>
   {#if finalHead}
     <img src={finalHead} alt={name}>
   {:else}

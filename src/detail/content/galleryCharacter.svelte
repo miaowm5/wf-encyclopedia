@@ -1,6 +1,6 @@
 <script>
   import store from '../../store'
-  import { characterShot } from '../../common'
+  import { characterShot, cdn } from '../../common'
   import { Title } from '../../ui'
 
   const { emotionList } = $props()
@@ -81,7 +81,7 @@
 {#if emoData}
   <Title>{store.i18n("detail.content.title2")}</Title>
   <div class="image1"
-    style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
+    style:background-image={`url(${cdn('cdn', 'ui/party_thumbnail_tile_bg_old.png')})`}>
     {#if bannerImage.src}
       <img src={bannerImage.src} alt={`${emotionList.id}-${emoData.name}`} class="img">
     {/if}

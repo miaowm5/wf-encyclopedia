@@ -1,5 +1,6 @@
 <script>
   import store from '../../store'
+  import { cdn } from '../../common'
   import { Title, RoundButton, Loading } from '../../ui'
   import loadPixel from './loadPixel.svelte'
 
@@ -16,7 +17,7 @@
 <Title>{store.i18n("detail.content.title10")}</Title>
 <Loading finish={pixel.src}>
 <div class="image"
-  style:background-image={`url(${import.meta.env.VITE_CDN + 'ui/party_thumbnail_tile_bg_old.png'})`}>
+  style:background-image={`url(${cdn('cdn', 'ui/party_thumbnail_tile_bg_old.png')})`}>
   <div class="wrapper" style:height={`${pixel.config.height * pixel.scaleRate + 40}px`}>
     <img src={pixel.src} alt="pixel" />
   </div>

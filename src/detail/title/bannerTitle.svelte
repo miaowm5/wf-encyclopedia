@@ -1,11 +1,12 @@
 <script>
+  import { cdn } from '../../common'
   import store from '../../store'
   import { RoundButton } from '../../ui'
   const { data, title, tab, gallery = false, extra } = $props()
   const url = $derived.by(()=>{
-    if (extra){ return import.meta.env.VITE_CDN + 'ui/keyword_details_keyword_background' }
+    if (extra){ return cdn('cdn', 'ui/keyword_details_keyword_background') }
     return data.replace('encyclopedia/header_background',
-      import.meta.env.VITE_CDN2 + {
+      cdn('cdn2') + {
         cn: `header_background`,
         jp: 'header_background_jp'
       }[store.state.config.dataRegion] || `header_background`
