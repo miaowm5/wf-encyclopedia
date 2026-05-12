@@ -23,7 +23,7 @@ const loadConfig = async (path, dataRegion)=>{
   let promise = new Promise((resolve)=>{
     const baseUrl = {
       cn: cdn('cdn3', 'orderedmap/'),
-      jp: cdn('cdn3', 'orderedmap/2')
+      jp: cdn('cdn3', 'orderedmap2/')
     }[dataRegion] || cdn('cdn3', 'orderedmap/')
     api(`${baseUrl}story/${url}.json`, {
       success: (data)=>{ resolve(data) },
