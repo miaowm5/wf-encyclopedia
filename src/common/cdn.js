@@ -27,9 +27,9 @@ const appInit = async ()=>{
   }
   await Promise.all([
     check('/cdn/cdn/', (v)=>cdn = v),
-    check('/cdn/cdn1/', (v)=>cdn2 = v),
-    check('/cdn/cdn2/', (v)=>cdn3 = v),
-    check('/cdn/cdn3/', (v)=>cdn4 = v),
+    check('/cdn/cdn2/', (v)=>cdn2 = v),
+    check('/cdn/cdn3/', (v)=>cdn3 = v),
+    check('/cdn/cdn4/', (v)=>cdn4 = v),
   ])
 }
 
