@@ -2,6 +2,7 @@
   import store from '../../store'
   import { spriteSheet } from '../../common'
   import { Title } from '../../ui'
+  import App from './app.svelte'
 
   const backSprite = spriteSheet('res/icon', 'return')
 
@@ -45,6 +46,7 @@
       {@render button(store.i18n("detail.config.config2Value2"), 'language', 'jp')}
       {@render button(store.i18n("detail.config.config2Value3"), 'language', 'en')}
     </div>
+    <App mode={store.state.mode} />
   </div>
 </div>
 
