@@ -17,7 +17,7 @@
   const device = getDeviceType()
 </script>
 
-{#if mode === 'web'}
+{#if mode === 'web' && false}
   {#if device === 'desktop'}
     <Title>PC Version</Title>
     <a class="btn" href="/app/StarEncyclopedia-release.zip" download="StarEncyclopedia.zip">Download</a>
