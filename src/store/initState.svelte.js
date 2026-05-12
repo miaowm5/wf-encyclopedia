@@ -19,6 +19,7 @@ const initState = {
   item: null,
   extra: null,
   scenario: null,
+  mode: import.meta.env.VITE_APPMODE,
   ui: {
     page: 'home',
     listCategory: null,
@@ -43,6 +44,14 @@ const initState = {
   },
   config,
   customTag: customTag.load()
+}
+
+if (import.meta.env.VITE_APPMODE === 'web'){
+  let pwa = window.matchMedia('(display-mode: standalone)').matches ||
+    window.matchMedia('(display-mode: minimal-ui)').matches ||
+    (window.navigator.standalone) ||
+    document.referrer.includes('android-app://')
+  if (pwa){ initState.mode = 'pwa' }
 }
 
 let state = $state(initState)
