@@ -25,7 +25,7 @@
 
 <div class="content">
   {#if item.subType === 'main'}
-    {@const url = cdn('cdn2', `orb/chapter${item.storyID}.png`)}.png`}
+    {@const url = cdn('cdn2', `orb/chapter${item.storyID}.png`)}
     <div class="image orb">
       <img src={url} alt={data ? data[0] : `${item.title}`} width="1080" height="1920" />
       <RoundButton icon="full_size" onclick={()=>window.open(url)} />
