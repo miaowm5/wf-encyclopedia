@@ -99,6 +99,7 @@ const setAppUpdater = (target, force = false)=>{
     state.ui.page = 'appUpdater'
     state.extra = { target, force }
   }else{
+    state.ui.page = 'home'
     updateRoute({ page: 'home', category: null })
   }
 }
