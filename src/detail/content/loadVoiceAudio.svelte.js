@@ -7,7 +7,7 @@ const promiseCache = {}
 
 const loadConfig = async ()=>{
   if (configCache){ return configCache }
-  const url = cdn('cdn', 'voice.json')
+  const url = cdn('cdn', 'character/voice.json')
   let promise = promiseCache[url]
   if (!promise){
     promise = new Promise((resolve)=>{
