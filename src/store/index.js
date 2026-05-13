@@ -182,7 +182,7 @@ const store = {
   changeConfig,
   setAppUpdater,
   tag: customTag.init(state),
-  jukebox: jukebox(state),
+  jukebox: jukebox(state, changeConfig),
   database: dbLoader(state),
 }
 
