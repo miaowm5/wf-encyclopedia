@@ -3,7 +3,7 @@
   import store from '../store'
   import { HeadIcon, RoundButton } from '../ui'
   import ListBanner from './listBanner.svelte'
-  import extalCharacter from '../database/extraCharacter.json'
+  import extraCharacter from '../database/extraCharacter.json'
 
   const { list } = $props()
 
@@ -14,7 +14,7 @@
     let result = list.filter((data)=>data.item.type === 'character' || data.item.type === 'npc')
     const characterTextDB = loadDB.db['character_text']
     const characterDB = loadDB.db['character']
-    extalCharacter.forEach((id)=>{
+    extraCharacter.forEach((id)=>{
       const extra = characterDB[id]
       const name = [characterTextDB[id][0], characterTextDB[id][3]]
       const item = {

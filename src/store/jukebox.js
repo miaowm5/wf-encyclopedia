@@ -15,7 +15,7 @@ const getValue = (init = true)=>{
   }
 }
 
-const init = (state)=>{
+const init = (state, changeConfig)=>{
   const saveToStorage = ()=>{
     localStorage.setItem(storageKey, JSON.stringify(state.jukebox.playList))
   }
@@ -52,9 +52,11 @@ const init = (state)=>{
   }
   const setLoop = (value)=>{
     state.jukebox.loop = value
+    changeConfig('jukeboxLoop', value)
   }
   const setRandom = (value)=>{
     state.jukebox.random = value
+    changeConfig('jukeboxRandom', value)
   }
 
   return {
