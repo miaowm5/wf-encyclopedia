@@ -174,7 +174,8 @@
     background-color: #ffcf8f;
   }
   .submit{
-    margin-top: 1em;
+    border-top: 2px solid #dedede;
+    padding-top: 1em;
     gap: .5em 1em;
     padding-bottom: .5em;
   }

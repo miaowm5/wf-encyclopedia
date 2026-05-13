@@ -1,4 +1,5 @@
 
+import { appInit } from '../common/cdn'
 import route from './initRoute'
 import state from './initState.svelte.js'
 import customTag from './customTag.js'
@@ -102,8 +103,10 @@ const setAppUpdater = (target, force = false)=>{
     state.ui.page = 'appUpdater'
     state.extra = { target, force }
   }else{
-    state.ui.page = 'home'
-    route.replace(`/config`, true)
+    appInit().then(()=>{
+      state.ui.page = 'home'
+      route.replace(`/config`, true)
+    })
   }
 }
 
