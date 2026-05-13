@@ -61,9 +61,6 @@ const changeListCategory = (category = null)=>{
 const changeTab = (tab)=>{
   state.ui.detailTab = tab
 }
-const changeSearch = (search)=>{
-  state.ui.listSearch = search
-}
 const changeFilter = (filter)=>{
   state.ui.listFilter = filter
 }
@@ -171,7 +168,6 @@ const store = {
   setListHide,
   changeListCategory,
   changeTab,
-  changeSearch,
   changeFilter,
   triggerJukebox,
   setAllFilter,

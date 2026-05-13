@@ -23,7 +23,6 @@ const initState = {
   ui: {
     page: 'home',
     listCategory: null,
-    listSearch: '',
     listFilter: {},
     allListFilter: '',
     detailTab: 'info',
