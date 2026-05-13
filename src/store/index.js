@@ -71,7 +71,13 @@ const setAllFilter = (text)=>{
   state.ui.allListFilter = text
 }
 const setDialog = (type, data = null, closeable = true)=>{
+  let current = state.dialog
   state.dialog = { type, data, closeable }
+  if (current.type && !current.closeable && !type){
+    // trigger when a non-closeable dialog is closed,
+    // update state with the URL (avoid the user using history back, which makes state not equal URL)
+    updateRoute(route.current)
+  }
 }
 const getI18n = (path)=>{
   const p = path.split('.')
@@ -97,12 +103,13 @@ const setAppUpdater = (target, force = false)=>{
     state.extra = { target, force }
   }else{
     state.ui.page = 'home'
-    updateRoute({ page: 'home', category: null })
+    route.replace(`/config`, true)
   }
 }
 
 const updateRoute = (data)=>{
   if (state.ui.page === 'appUpdater'){ return }
+  if (state.dialog.type && !state.dialog.closeable){ return }
   if (data.page === 'item'){
     if (state.item !== data.item || state.extra !== data.extra){
       state.ui.mobileListHide = true
