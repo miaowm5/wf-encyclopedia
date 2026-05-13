@@ -103,7 +103,7 @@ const setAppUpdater = (target, force = false)=>{
     state.ui.page = 'appUpdater'
     state.extra = { target, force }
   }else{
-    appInit.then(()=>{
+    appInit().then(()=>{
       state.ui.page = 'home'
       route.replace(`/config`, true)
     })
