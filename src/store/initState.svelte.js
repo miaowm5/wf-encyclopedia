@@ -1,19 +1,9 @@
 
 import customTag from "./customTag"
 import { getValue as jukeboxGetValue } from './jukebox'
+import initConfig from './initConfig'
 
-let config = {}
-let configData = {}
-
-try{ configData = JSON.parse(localStorage.getItem('config') || `{}`) }
-catch(e){ configData = {} }
-let defaultLang = 'cn'
-const lang = navigator.language || navigator.userLanguage
-if (lang.startsWith('ja')) { defaultLang = 'jp' }
-else if (lang.startsWith('en')){ defaultLang = 'en' }
-
-config.dataRegion = configData.dataRegion || defaultLang
-config.language = configData.language || defaultLang
+let config = initConfig()
 
 const initState = {
   item: null,
@@ -37,8 +27,8 @@ const initState = {
   jukebox: {
     current: '',
     playing: false,
-    loop: true,
-    random: false,
+    loop: config.jukeboxLoop,
+    random: config.jukeboxRandom,
     playList: jukeboxGetValue(),
   },
   config,
