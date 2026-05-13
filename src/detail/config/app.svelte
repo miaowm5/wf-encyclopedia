@@ -22,7 +22,7 @@
 {#each info.list as item, index}{@render appCDNInfo(item, info.useable[index])}{/each}
 {#if !info.allSet}
   <p>Download cdn file to enable offline function.</p>
-  <button class="btn" onclick={()=>Neutralino.os.open('http://worldflipper.miaowm5.com/app/driver')}>Google Drive</button>
+  <button class="btn" onclick={()=>Neutralino.os.open('https://worldflipper.miaowm5.com/app/driver')}>Google Drive</button>
 {/if}
 
 <style>
