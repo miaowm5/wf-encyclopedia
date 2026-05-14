@@ -6,21 +6,31 @@
   let node = $state(null)
   let load = $state((()=>!lazy)())
   let observer = null
+  let loadTimer = null
 
   const clear = ()=>{
+    if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
     if (!observer){ return }
     observer.disconnect()
     observer = null
   }
-  (()=>{ if (!lazy){ loadFunc() } })()
+  const executeLoad = ()=>{
+    load = true
+    loadFunc()
+    clear()
+  }
+  (()=>{ if (!lazy){ executeLoad() } })()
+
   onMount(()=>{
     if (!lazy){ return }
     observer = new IntersectionObserver((entries)=>{
       entries.forEach((entry)=>{
-        if (!entry.isIntersecting){ return }
-        load = true
-        loadFunc()
-        clear()
+        if (load){ return }
+        if (!entry.isIntersecting){
+          if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
+        }else if (!loadTimer){
+          loadTimer = setTimeout(()=>{ executeLoad() }, 200)
+        }
       })
     }, {
       root: null,
@@ -29,13 +39,14 @@
     return clear
   })
 
-  let lastNode = null
   $effect(()=>{
     if (!observer){ return }
     if (!node){ return }
     observer.observe(node)
-    if (lastNode){ observer.unobserve(lastNode) }
-    lastNode = node
+    return ()=>{
+      if (!observer){ return }
+      observer.unobserve(node)
+    }
   })
 </script>
 
