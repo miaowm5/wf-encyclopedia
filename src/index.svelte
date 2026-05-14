@@ -15,17 +15,17 @@
   }
 </script>
 
-{#if AppDownloader && store.state.ui.page === 'appUpdater'}
-  <AppDownloader />
-{:else}
-  <div class="main">
+<div class="main">
+  {#if AppDownloader && store.state.ui.page === 'appUpdater'}
+    <AppDownloader />
+  {:else}
     <div class="content">
       <List />
       <Detail />
     </div>
-    <Dialog />
-  </div>
-{/if}
+  {/if}
+  <Dialog />
+</div>
 
 <style>
   .main{
