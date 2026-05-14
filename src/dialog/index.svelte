@@ -1,6 +1,7 @@
 <script>
   import store from '../store'
   import { OnBack, cdn } from '../common'
+  import { MagicCircle } from '../ui'
   import FilterCharacter from './filterCharacter.svelte'
 
   const closeDialog = ()=>{
@@ -10,12 +11,11 @@
 </script>
 
 {#if store.state.dialog.type}
-  <div class="main"><div class="dialog" style:--magic-circle={`url('${cdn('cdn', 'ui/circle.png')}')`}>
-    <div>
-      {#if store.state.dialog.type === 'filterCharacter'}
-        <FilterCharacter />
-      {/if}
-    </div>
+  <div class="main"><div class="dialog">
+    {#if store.state.dialog.type === 'filterCharacter'}
+      <FilterCharacter />
+    {/if}
+    <MagicCircle dialog={true} />
   </div></div>
   {#if store.state.dialog.closeable}
     <OnBack route={store.route} func={closeDialog} />
@@ -49,32 +49,5 @@
     padding: 1em;
     z-index: 0;
     position: relative;
-    --magic-circle-pos: 60%;
-  }
-  .dialog>div{
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-  }
-  .dialog::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, var(--magic-circle-pos));
-    width: 70%;
-    aspect-ratio: 1 / 1;
-    height: auto;
-    background: var(--magic-circle) no-repeat center/contain;
-    animation: rotate-magic 25s linear infinite;
-    pointer-events: none;
-    opacity: 0.6;
-  }
-  @keyframes rotate-magic {
-    from { transform: translate(-50%, var(--magic-circle-pos)) rotate(0deg); }
-    to { transform: translate(-50%, var(--magic-circle-pos)) rotate(360deg); }
   }
 </style>

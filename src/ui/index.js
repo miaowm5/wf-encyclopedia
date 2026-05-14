@@ -7,6 +7,7 @@ import HeadIcon from './headIcon.svelte'
 import RoundButton from './roundButton.svelte'
 import Loading from './loading.svelte'
 import MusicItem from './musicItem.svelte'
+import MagicCircle from './magicCircle.svelte'
 
 export {
   Title,
@@ -17,4 +18,5 @@ export {
   RoundButton,
   Loading,
   MusicItem,
+  MagicCircle,
 }
