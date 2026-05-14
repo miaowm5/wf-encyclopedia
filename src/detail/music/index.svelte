@@ -1,7 +1,7 @@
 <script>
   import store from '../../store'
   import { spriteSheet } from '../../common'
-  import { Loading } from '../../ui'
+  import { Loading, MagicCircle } from '../../ui'
   import All from './all.svelte'
   import Single from './single.svelte'
 

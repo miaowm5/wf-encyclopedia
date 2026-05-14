@@ -40,7 +40,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: auto;
+    overflow: hidden;
     background: #eaeaea;
     display: flex;
     flex-direction: column;
