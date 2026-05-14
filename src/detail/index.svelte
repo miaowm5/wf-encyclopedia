@@ -169,7 +169,7 @@
     bottom: 0;
     left: 50%;
     transform: translate(-50%, var(--magic-circle-pos));
-    width: 70%;
+    width: 90%;
     aspect-ratio: 1 / 1;
     height: auto;
     background: var(--magic-circle) no-repeat center/contain;
