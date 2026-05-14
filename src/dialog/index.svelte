@@ -49,7 +49,7 @@
     padding: 1em;
     z-index: 0;
     position: relative;
-    --magic-circle-pos: 70%;
+    --magic-circle-pos: 60%;
   }
   .dialog>div{
     z-index: 1;
@@ -66,17 +66,15 @@
     left: 50%;
     transform: translate(-50%, var(--magic-circle-pos));
     width: 70%;
-    height: 70%;
+    aspect-ratio: 1 / 1;
+    height: auto;
     background: var(--magic-circle) no-repeat center/contain;
     animation: rotate-magic 25s linear infinite;
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.6;
   }
   @keyframes rotate-magic {
     from { transform: translate(-50%, var(--magic-circle-pos)) rotate(0deg); }
     to { transform: translate(-50%, var(--magic-circle-pos)) rotate(360deg); }
   }
-  @media (max-width: 550px){ .dialog { --magic-circle-pos: 65%; } }
-  @media (max-width: 450px){ .dialog { --magic-circle-pos: 60%; } }
-  @media (max-width: 350px){ .dialog { --magic-circle-pos: 55%; } }
 </style>

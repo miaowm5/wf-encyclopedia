@@ -153,7 +153,7 @@
     flex-direction: column;
     position: relative;
     z-index: 0;
-    --magic-circle-pos: 60%;
+    --magic-circle-pos: 50%;
   }
   .body>span{
     height: 100%;
@@ -170,7 +170,8 @@
     left: 50%;
     transform: translate(-50%, var(--magic-circle-pos));
     width: 70%;
-    height: 70%;
+    aspect-ratio: 1 / 1;
+    height: auto;
     background: var(--magic-circle) no-repeat center/contain;
     animation: rotate-magic 25s linear infinite;
     pointer-events: none;
@@ -179,8 +180,6 @@
     from { transform: translate(-50%, var(--magic-circle-pos)) rotate(0deg); }
     to { transform: translate(-50%, var(--magic-circle-pos)) rotate(360deg); }
   }
-  @media (max-width: 800px){ .body { --magic-circle-pos: 60%; } }
-  @media (max-width: 350px){ .body { --magic-circle-pos: 55%; } }
 
   .hide{
     display: none;
