@@ -1,13 +1,8 @@
 
 import CRC32 from 'crc-32'
 import { cdn, api } from '../../common'
+import { getInfo as getCDNInfo } from '../../common/cdn'
 
-const getCDNInfo = ()=>{
-  const list = ['cdn', 'cdn2', 'cdn3', 'cdn4']
-  const useable = list.map((name)=>!cdn(name).startsWith('http'))
-  const allSet = useable.every(v=>v)
-  return { list, useable, allSet }
-}
 const getLocalFile = async (dir, root='')=>{
   if (!root){ root = dir }
   let result = []
@@ -34,18 +29,10 @@ const calculateCRC32 = async (file)=>{
   const crcHex = (crcInt >>> 0).toString(16).padStart(8, '0')
   return crcHex
 }
-const getRemoteCDN = (cdnType)=>{
-  return {
-    "cdn": import.meta.env.VITE_CDN,
-    "cdn2": import.meta.env.VITE_CDN2,
-    "cdn3": import.meta.env.VITE_CDN3,
-    "cdn4": import.meta.env.VITE_CDN4,
-  }[cdnType] || import.meta.env.VITE_CDN
-}
 const getVersionInfo = async (cdnType)=>{
-  const target = getRemoteCDN(cdnType)
+  const target = cdn(cdnType, 'version.json', true)
   return await new Promise((success, fail)=>{
-    api(`${target}/version.json`, {
+    api(target, {
       cors: true,
       success: (data)=>{ success(data) },
       fail: (e)=>{ fail(e) },
@@ -60,7 +47,7 @@ const removeFile = async (file)=>{
   }
 }
 const downloadFile = async (cdnType, path)=>{
-  const url = getRemoteCDN(cdnType) + path
+  const url = cdn(cdnType, path, true)
   const response = await fetch(url)
   if (!response.ok){ throw new Error(`HTTP error! status: ${response.status}`) }
   const buffer = await response.arrayBuffer()
