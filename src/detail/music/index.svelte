@@ -27,6 +27,7 @@
       {/if}
     </div>
   </Loading>
+  <MagicCircle />
 </div>
 
 <style>
@@ -34,6 +35,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    z-index: 0;
   }
   .musicBack{
     display: inline-block;

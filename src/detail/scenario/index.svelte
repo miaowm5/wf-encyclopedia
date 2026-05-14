@@ -1,7 +1,7 @@
 <script>
   import store from '../../store'
   import { spriteSheet } from '../../common'
-  import { Loading } from '../../ui'
+  import { Loading, MagicCircle } from '../../ui'
   import loadScenario from './loadScenario.svelte'
   import Name from './dialogName.svelte'
 
@@ -41,6 +41,7 @@
   {/each}
 </div>
 </Loading>
+<MagicCircle />
 </div>
 
 <style>
@@ -48,6 +49,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    z-index: 0;
   }
   .scenarioBack{
     display: inline-block;
