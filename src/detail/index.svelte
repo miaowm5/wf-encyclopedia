@@ -1,6 +1,5 @@
 <script>
   import store from '../store'
-  import { cdn } from '../common'
   import { Loading, MagicCircle } from '../ui'
   import Title from './title/index.svelte'
   import Content from './content/index.svelte'
