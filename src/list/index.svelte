@@ -1,7 +1,7 @@
 <script>
   import store from '../store'
   import { spriteSheet, cdn } from '../common'
-  import { Loading } from '../ui'
+  import { Loading, MagicCircle } from '../ui'
   import IndexButton from './indexButton.svelte'
   import CharacterList from './characterList.svelte'
   import StoryList from './storyList.svelte'
@@ -74,6 +74,7 @@
         {text}
       </button>
     {/if}
+    <MagicCircle list={true} />
   </div>
   <MusicPlayer />
 </div>
@@ -90,6 +91,7 @@
     flex: 1;
     position: relative;
     overflow: hidden;
+    z-index: 0;
   }
   .floatButton{
     position: absolute;
