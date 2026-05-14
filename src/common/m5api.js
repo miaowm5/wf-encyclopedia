@@ -10,7 +10,8 @@ const m5api = apiFactory({
 const api = m5api.api
 const EventEmitter = m5api.EventEmitter
 const Route = m5api.Route
+const wrapApi = m5api.wrapApi
 
 export {
-  api, EventEmitter, Route,
+  api, wrapApi, EventEmitter, Route,
 }
