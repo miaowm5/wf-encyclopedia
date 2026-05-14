@@ -1,7 +1,7 @@
 <script>
   import store from '../../store'
   import { spriteSheet, OnBack } from '../../common'
-  import { MusicItem } from '../../ui'
+  import { MusicItem, MagicCircle } from '../../ui'
   import Player from './player.svelte'
 
   const { player, songName } = $props()
@@ -30,6 +30,7 @@
       {/each}</div>
     {/if}</div>
   </div>
+  <MagicCircle list={true} />
 </div>
 
 <style>
@@ -39,10 +40,11 @@
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: auto;
+    overflow: hidden;
     background: #eaeaea;
     display: flex;
     flex-direction: column;
+    z-index: 0;
   }
   .back{
     display: inline-block;

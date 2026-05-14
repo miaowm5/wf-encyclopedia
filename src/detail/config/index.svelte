@@ -2,7 +2,7 @@
   import { onMount } from 'svelte'
   import store from '../../store'
   import { spriteSheet } from '../../common'
-  import { Title } from '../../ui'
+  import { Title, MagicCircle } from '../../ui'
   import Site from './site.svelte'
 
   const backSprite = spriteSheet('res/icon', 'return')
@@ -61,6 +61,7 @@
       <Site mode={store.state.mode} />
     {/if}
   </div>
+  <MagicCircle />
 </div>
 
 <style>
@@ -68,6 +69,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    z-index: 0;
   }
   .back{
     display: inline-block;
