@@ -88,9 +88,9 @@ const getI18n = (path, format = [])=>{
     result = result[key]
   })
   if (!result){ return path }
-  if (state.config.language === 'en'){ return result[1] || path }
-  if (state.config.language === 'jp'){ return result[2] || path }
   let str = result[0] || path
+  if (state.config.language === 'en'){ str = result[1] || path }
+  if (state.config.language === 'jp'){ str = result[2] || path }
   if (format.length){
     format.forEach((f, i)=>{
       str = str.replace(`{${i+1}}`, f)
