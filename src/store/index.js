@@ -80,7 +80,7 @@ const setDialog = (type, data = null, closeable = true)=>{
     updateRoute(route.current)
   }
 }
-const getI18n = (path)=>{
+const getI18n = (path, format = [])=>{
   const p = path.split('.')
   let result = i18n
   p.forEach((key)=>{
@@ -90,7 +90,13 @@ const getI18n = (path)=>{
   if (!result){ return path }
   if (state.config.language === 'en'){ return result[1] || path }
   if (state.config.language === 'jp'){ return result[2] || path }
-  return result[0] || path
+  let str = result[0] || path
+  if (format.length){
+    format.forEach((f, i)=>{
+      str = str.replace(`{${i+1}}`, f)
+    })
+  }
+  return str
 }
 const changeConfig = (key, value)=>{
   if (state.config[key] === value){ return }

@@ -1,5 +1,5 @@
 
-import { api, EventEmitter, Route } from './m5api'
+import { api, wrapApi, EventEmitter, Route } from './m5api'
 import loadHowler from './loadHowler.js'
 import spriteSheet from './spriteSheet.svelte.js'
 import Nav from './nav.svelte'
@@ -9,7 +9,7 @@ import textImage from './textImage.svelte.js'
 import cdn from './cdn.js'
 
 export {
-  api, cdn,
+  api, wrapApi, cdn,
   spriteSheet, characterShot, textImage,
   EventEmitter, Route, Nav, OnBack, loadHowler,
 }

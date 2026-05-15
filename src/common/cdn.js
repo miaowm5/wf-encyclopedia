@@ -16,13 +16,13 @@ const initCDN = ()=>{
 
 initCDN()
 
-const main = (cdnType='cdn1', url = '')=>{
+const main = (cdnType='cdn1', url = '', forceRemote=false)=>{
   const target = {
-    "cdn": cdn,
-    "cdn2": cdn2,
-    "cdn3": cdn3,
-    "cdn4": cdn4,
-  }[cdnType] || cdn
+    "cdn": forceRemote ? import.meta.env.VITE_CDN : cdn,
+    "cdn2": forceRemote ? import.meta.env.VITE_CDN2 : cdn2,
+    "cdn3": forceRemote ? import.meta.env.VITE_CDN3 : cdn3,
+    "cdn4": forceRemote ? import.meta.env.VITE_CDN4 : cdn4,
+  }[cdnType] || (forceRemote ? import.meta.env.VITE_CDN : cdn)
   return `${target}${url}`
 }
 
@@ -49,5 +49,12 @@ const appInit = async ()=>{
   })
 }
 
+const getInfo = ()=>{
+  const list = ['cdn', 'cdn2', 'cdn3', 'cdn4']
+  const useable = list.map((name)=>!main(name).startsWith('http'))
+  const allSet = useable.every(v=>v)
+  return { list, useable, allSet }
+}
+
 export default main
-export { appInit }
+export { appInit, getInfo }
