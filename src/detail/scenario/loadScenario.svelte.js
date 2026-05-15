@@ -1,7 +1,6 @@
 
 import { wrapApi, cdn } from '../../common'
 import parse from './parseData'
-import loadConfig from './loadData'
 
 const getUrl = (path, dataRegion)=>{
   let url = ``
