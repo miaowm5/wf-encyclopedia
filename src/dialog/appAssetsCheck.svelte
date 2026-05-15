@@ -50,7 +50,7 @@
       let finalTask = appLogic.generateTask(result, task.remote)
       task.remove = finalTask.remove
       task.download = finalTask.download
-      status = 300
+      status = task.download.length > 0 || task.remove.length > 0 ? 300 : 301
       nextable = true
     }catch(e){
       console.error(e)
@@ -81,6 +81,10 @@
         status = 201
       })
     }
+    if (status === 301){
+      if (dialogData.force){ appLogic.triggerUpdaterFlag(null).catch((e)=>{ console.error(e) }) }
+      store.setDialog(null)
+    }
   }
   const cancelButton = ()=>{ store.setDialog(null) }
   (()=>{ if (!dialogData.force){ getVersion.execute() } })()
@@ -106,6 +110,8 @@
       <p>{info}</p>
     {:else if status === 300}
       <p>{store.i18n("dialog.app.text6", [task.remove.length, task.download.length])}</p>
+    {:else if status === 301}
+      <p>{store.i18n("dialog.app.text9")}</p>
     {/if}
   {/snippet}
   {#snippet submit()}

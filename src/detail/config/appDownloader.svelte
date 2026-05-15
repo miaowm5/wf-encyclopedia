@@ -3,13 +3,9 @@
   import appLogic from './app.js'
 
   let task = $state((()=>store.state.extra.target)())
-  let closeable = $state(false)
-  let nextable = $state(false)
   let info = $state('')
 
   const nextStep = async ()=>{
-    closeable = false
-    nextable = false
     for (let file of task.remove){
       info = `remove outdated file: ${file}`
       await appLogic.removeFile(`cdn/${target}/${file}`)
@@ -27,20 +23,15 @@
     if (downloadFail.length > 0){
       info = `task finish, fail download: ${downloadFail.length}, click to retry`
       task = { remove: [], download: downloadFail }
-      nextable = true
     }else{
       try{ await appLogic.triggerUpdaterFlag() }
       catch(e){ console.error(e) }
       info = `task finish, file update to latest now`
-      closeable = true
     }
   }
 </script>
 
-<p>hanlde {target}</p>
 <p>{info}</p>
-{#if nextable}<button class="btn" onclick={nextStep}>next</button>{/if}
-{#if closeable}<button class="btn" onclick={()=>store.setAppUpdater(null)}>back</button>{/if}
 
 {#snippet belt()}
   <!-- svelte-ignore a11y_missing_attribute -->

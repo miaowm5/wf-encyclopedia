@@ -45,7 +45,11 @@ const generateTask = (local, remote)=>{
   return { remove, download }
 }
 const triggerUpdaterFlag = async (cdn)=>{
-  await Neutralino.filesystem.writeFile(`${NL_PATH}/cdn/task.json`, JSON.stringify({cdn}))
+  if (cdn){
+    await Neutralino.filesystem.writeFile(`${NL_PATH}/cdn/task.json`, JSON.stringify({cdn}))
+  }else{
+    await removeFile('cdn/task.json')
+  }
 }
 
 export default {

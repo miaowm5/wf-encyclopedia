@@ -59,7 +59,10 @@
       "text6": ["即将开始更新，将删除 {1} 个文件，并下载 {2} 个文件。", "The update is about to start, {1} files will be deleted and {2} files will be downloaded.", "更新がまもなく開始されます。{1}個のファイルが削除され、{2}個のファイルがダウンロードされます。"],
       "button1": ["下一步", "Next", "次へ"],
       "button2": ["取消", "Cancel", "キャンセル"],
-      "button3": ["重试", "Retry", "再試行"]
+      "button3": ["重试", "Retry", "再試行"],
+      "text7": ["更新完成！", "Update complete!", "更新完了！"],
+      "text8": ["更新结束，{1} 个文件下载失败。", "Update finished with {1} files failed to download.", "更新終了、{1}個のファイルのダウンロードに失敗しました。"],
+      "text9": ["当前数据已是最新版本，无需更新。", "The current data is already up to date, no update needed.", "現在のデータはすでに最新のため、更新は必要ありません。"]
     }
   },
   "detail": {
