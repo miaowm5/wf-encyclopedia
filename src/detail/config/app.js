@@ -1,44 +1,7 @@
 
-import CRC32 from 'crc-32'
-import { cdn, api } from '../../common'
+import { cdn } from '../../common'
 import { getInfo as getCDNInfo } from '../../common/cdn'
 
-const getLocalFile = async (dir, root='')=>{
-  if (!root){ root = dir }
-  let result = []
-  try{
-    let entries = await Neutralino.filesystem.readDirectory(`${NL_PATH}/${dir}`)
-    for (const item of entries){
-      if (item.type === 'FILE'){
-        result.push(`${dir}${item.entry}`.slice(root.length))
-      }else{
-        let sub = await getLocalFile(`${dir}${item.entry}/`, root)
-        result = [...result, ...sub]
-      }
-    }
-  }catch(e){
-    if (e.code === 'NE_FS_NOPATHE'){ return [] }
-    throw e
-  }
-  return result
-}
-const calculateCRC32 = async (file)=>{
-  let data = await Neutralino.filesystem.readBinaryFile(`${NL_PATH}/${file}`)
-  let uint8View = new Uint8Array(data)
-  const crcInt = CRC32.buf(uint8View)
-  const crcHex = (crcInt >>> 0).toString(16).padStart(8, '0')
-  return crcHex
-}
-const getVersionInfo = async (cdnType)=>{
-  const target = cdn(cdnType, 'version.json', true)
-  return await new Promise((success, fail)=>{
-    api(target, {
-      cors: true,
-      success: (data)=>{ success(data) },
-      fail: (e)=>{ fail(e) },
-    })
-  })
-}
 const removeFile = async (file)=>{
   try{
     await Neutralino.filesystem.remove(`${NL_PATH}/${file}`)
@@ -60,36 +23,13 @@ const downloadFile = async (cdnType, path)=>{
   }
   await Neutralino.filesystem.writeBinaryFile(target, buffer)
 }
-const generateTask = (local, remote)=>{
-  const download = []
-  const remove = []
-  Object.keys(local).forEach((file)=>{
-    let localVersion = local[file]
-    let remoteVersion = remote[file]
-    if (!remoteVersion){ remove.push(file) }
-    else if (localVersion !== remoteVersion){ download.push(file) }
-  })
-  Object.keys(remote).forEach((file)=>{
-    let localVersion = local[file]
-    if (!localVersion){ download.push(file) }
-  })
-  return { remove, download }
-}
-const triggerUpdaterFlag = async (cdn)=>{
-  if (cdn){
-    await Neutralino.filesystem.writeFile(`${NL_PATH}/cdn/task.json`, JSON.stringify({cdn}))
-  }else{
-    await removeFile('cdn/task.json')
-  }
+const triggerUpdaterFlag = async ()=>{
+  await removeFile('cdn/task.json')
 }
 
 export default {
   getCDNInfo,
-  getLocalFile,
-  getVersionInfo,
-  calculateCRC32,
   removeFile,
   downloadFile,
-  generateTask,
   triggerUpdaterFlag,
 }
