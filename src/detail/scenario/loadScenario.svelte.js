@@ -30,8 +30,8 @@ const getUrl = (path, dataRegion)=>{
 
 const main = (pathFunc, dataRegionFunc)=>{
   let data = $state(null)
-  const path = $derive(pathFunc)
-  const dataRegion = $derive(dataRegionFunc)
+  const path = $derived.by(pathFunc)
+  const dataRegion = $derived.by(dataRegionFunc)
 
   const loadAPI = wrapApi('story.json', {
     before: ()=>{ data = null },
