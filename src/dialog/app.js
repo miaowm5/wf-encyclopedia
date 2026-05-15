@@ -48,7 +48,7 @@ const triggerUpdaterFlag = async (cdn)=>{
   if (cdn){
     await Neutralino.filesystem.writeFile(`${NL_PATH}/cdn/task.json`, JSON.stringify({cdn}))
   }else{
-    await removeFile('cdn/task.json')
+    await Neutralino.filesystem.remove(`${NL_PATH}/cdn/task.json`)
   }
 }
 
