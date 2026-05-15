@@ -69,8 +69,11 @@
   const okButton = ()=>{
     if (status === 1){ getVersion.execute() }
     if (status === 300){
-      task.target = dialogData.target
-      let data = JSON.parse(JSON.stringify(task))
+      let data = JSON.parse(JSON.stringify({
+        target: dialogData.target,
+        remove: task.remove,
+        download: task.download
+      }))
       appLogic.triggerUpdaterFlag(dialogData.target).then(()=>{
         store.setAppUpdater(data)
       }).catch((e)=>{

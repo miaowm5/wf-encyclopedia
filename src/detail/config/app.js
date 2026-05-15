@@ -23,13 +23,9 @@ const downloadFile = async (cdnType, path)=>{
   }
   await Neutralino.filesystem.writeBinaryFile(target, buffer)
 }
-const triggerUpdaterFlag = async ()=>{
-  await removeFile('cdn/task.json')
-}
 
 export default {
   getCDNInfo,
   removeFile,
   downloadFile,
-  triggerUpdaterFlag,
 }

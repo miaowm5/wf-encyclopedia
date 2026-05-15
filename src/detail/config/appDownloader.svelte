@@ -2,36 +2,58 @@
   import store from '../../store'
   import appLogic from './app.js'
 
-  let task = $state((()=>store.state.extra.target)())
+  let task = $derived(store.state.extra)
+  let status = $state(1)
   let info = $state('')
+  let progress = $state(0)
 
-  const nextStep = async ()=>{
+  const update = async ()=>{
+    status = 1
+    info = ''
     for (let file of task.remove){
-      info = `remove outdated file: ${file}`
-      await appLogic.removeFile(`cdn/${target}/${file}`)
+      info = file
+      await appLogic.removeFile(`cdn/${task.target}/${file}`)
     }
+    status = 2
     let downloadFail = []
+    progress = 0
     for (let file of task.download){
-      info = `download file: ${file}`
+      info = file
       try{
-        await appLogic.downloadFile(target, file)
+        await appLogic.downloadFile(task.target, file)
       }catch(e){
         console.error(e)
         downloadFail.push(file)
       }
+      progress += 1
     }
-    if (downloadFail.length > 0){
-      info = `task finish, fail download: ${downloadFail.length}, click to retry`
-      task = { remove: [], download: downloadFail }
-    }else{
-      try{ await appLogic.triggerUpdaterFlag() }
-      catch(e){ console.error(e) }
-      info = `task finish, file update to latest now`
-    }
+    status = 3
+    info = ''
+    store.setDialog('appAssetsResult', { target: task.target, remove: [], download: downloadFail } ,false)
   }
+
+  $effect(()=>{
+    if (task){ update() }
+  })
 </script>
 
-<p>{info}</p>
+<div>
+  progress: {(Math.min(100, (progress / (task.download.length || 1)) * 100)).toFixed(2)}%
+</div>
+
+{#if status === 1}
+  <h2>{store.i18n("detail.config.appText1")}</h2>
+  <p>{info}</p>
+{:else if status === 2}
+  <h2>{store.i18n("detail.config.appText2")}</h2>
+  <p>{info}</p>
+  {#if task.download.length > 50}
+    <p>{store.i18n("detail.config.appText3")}</p>
+    <button class="btn" onclick={()=>Neutralino.os.open('https://worldflipper.miaowm5.com/app/driver')}>
+      {store.i18n("detail.config.appText4")}
+    </button>
+  {/if}
+{/if}
 
 {#snippet belt()}
   <!-- svelte-ignore a11y_missing_attribute -->
@@ -55,13 +77,6 @@
 </div>
 
 <style>
-  .btn{
-    padding: .5em 2em;
-    border-top: 1px solid white;
-    border-radius: 10px;
-    margin-right: .5em;
-    margin-bottom: .5em
-  }
   .conveyor-belt {
     width: 100%;
     overflow: hidden;

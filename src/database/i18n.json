@@ -101,7 +101,11 @@
         "This site is a fan-made online Star Encyclopedia created purely out of personal interest and is not affiliated with the official project.\nThe source code is fully open on Github — contributions for code optimization, improving translations, or reporting issues are welcome.",
         "本サイトは個人の趣味で作られたオンラインの星見図鑑であり、公式とは一切関係ありません。\nソースコードはGithubでオープンソースとして公開しています。コードの最適化、多言語翻訳の改善、問題報告などのご協力を歓迎します。"
       ],
-      "config3Value1" : ["项目主页 & 问题反馈", "Source Code & Feedback", "ソースコード & フィードバック"]
+      "config3Value1" : ["项目主页 & 问题反馈", "Source Code & Feedback", "ソースコード & フィードバック"],
+      "appText1": ["正在移除过期文件", "Removing outdated files...", "古いファイルを削除中..."],
+      "appText2": ["正在下载更新文件", "Downloading update files...", "更新ファイルをダウンロード中..."],
+      "appText3": ["下载文件过多时，可以通过网盘预先下载打包好的资源文件。", "When there are many files to download, you can pre-download the packaged resource files through the cloud drive.", "ダウンロードするファイルが多い場合は、クラウドドライブを通じてパッケージ化されたリソースファイルを事前にダウンロードできます。"],
+      "appText4": ["网盘地址", "Cloud Drive Link", "クラウドドライブリンク"]
     },
     "content":{
       "title1": ["情报", "Info", "情報"],
