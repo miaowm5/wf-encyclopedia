@@ -90,7 +90,10 @@
     }
   }
   const cancelButton = ()=>{ store.setDialog(null) }
-  (()=>{ if (!dialogData.force){ getVersion.execute() } })()
+  (()=>{
+    if (!dialogData.force){ getVersion.execute() }
+    else{ nextable = true }
+  })()
 </script>
 
 <Frame>
