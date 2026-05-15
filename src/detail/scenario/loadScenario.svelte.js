@@ -41,7 +41,7 @@ const main = (pathFunc, dataRegionFunc)=>{
     },
     fail: (err)=>{ console.error(err) },
     cors: true,
-  }, true)
+  })
 
   $effect(()=>{
     if (!path){ return }
