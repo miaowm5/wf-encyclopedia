@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte"
 
-  const { load: loadFunc, lazy, children } = $props()
+  const { load: loadFunc, lazy, children, lazyTime = 0 } = $props()
 
   let node = $state(null)
   let load = $state((()=>!lazy)())
@@ -29,7 +29,11 @@
         if (!entry.isIntersecting){
           if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
         }else if (!loadTimer){
-          loadTimer = setTimeout(()=>{ executeLoad() }, 200)
+          if (lazyTime <= 0){
+            executeLoad()
+          }else{
+            loadTimer = setTimeout(()=>{ executeLoad() }, lazyTime)
+          }
         }
       })
     }, {

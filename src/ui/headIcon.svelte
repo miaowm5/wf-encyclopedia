@@ -86,7 +86,7 @@
 </script>
 
 {#if !lazyLoadStatus}
-  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}>
+  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }} lazyTime={200}>
     <img class="frame" alt={name}
       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       style:aspect-ratio={showName ? "212/252" : "1/1"} />
