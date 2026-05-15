@@ -75,8 +75,8 @@ const setDialog = (type, data = null, closeable = true)=>{
   let current = state.dialog
   state.dialog = { type, data, closeable }
   if (current.type && !current.closeable && !type){
-    // trigger when a non-closeable dialog is closed,
-    // update state with the URL (avoid the user using history back, which makes state not equal URL)
+    // trigger when a non-closeable dialog is closed, update route state.
+    // (avoid the user using history back, which makes state not equal URL)
     updateRoute(route.current)
   }
 }
@@ -103,11 +103,12 @@ const changeConfig = (key, value)=>{
   state.config[key] = value
   localStorage.setItem('config', JSON.stringify(state.config))
 }
-const setAppUpdater = (target, force = false)=>{
-  if (target){
+const setAppUpdater = (task)=>{
+  if (task){
     document.title = getI18n('main.sitename')
     state.ui.page = 'appUpdater'
-    state.extra = { target, force }
+    state.extra = task
+    setDialog(null)
   }else{
     appInit().then(()=>{
       state.ui.page = 'home'

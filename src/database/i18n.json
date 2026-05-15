@@ -48,6 +48,18 @@
       "race8": ["不死", "Undead", "不死"],
       "race9": ["水棲", "Aquatic", "水棲"],
       "race10": ["植物", "Plant", "植物"]
+    },
+    "app":{
+      "title1": ["准备更新{1}", "Preparing to update {1}", "{1}の更新を準備中"],
+      "text1": ["正在联网获取资源版本...", "Fetching resource version online...", "オンラインでリソースバージョンを取得中..."],
+      "text2": ["正在检查本地资源完整性...", "Checking local resource integrity...", "ローカルリソースの完全性を確認中..."],
+      "text3": ["无法获取资源版本，请检查网络连接。", "Failed to fetch resource version. Please check your network connection.", "リソースバージョンの取得に失敗しました。ネットワーク接続を確認してください。"],
+      "text4": ["检查本地资源时发生错误，请重试。", "An error occurred while checking local resources. Please try again.", "ローカルリソースの確認中にエラーが発生しました。もう一度お試しください。"],
+      "text5": ["此前的更新尚未结束，将重新开始。删除 cdn 目录下的 {1} 文件夹及 task.json 文件以放弃此次更新。", "The previous update has not been completed and will be restarted. Delete the {1} folder and task.json file in the cdn directory to abandon this update.", "前回の更新が完了していないため、再度開始します。今回の更新を放棄するには、cdnディレクトリ内の{1}フォルダとtask.jsonファイルを削除してください。"],
+      "text6": ["即将开始更新，将删除 {1} 个文件，并下载 {2} 个文件。", "The update is about to start, {1} files will be deleted and {2} files will be downloaded.", "更新がまもなく開始されます。{1}個のファイルが削除され、{2}個のファイルがダウンロードされます。"],
+      "button1": ["下一步", "Next", "次へ"],
+      "button2": ["取消", "Cancel", "キャンセル"],
+      "button3": ["重试", "Retry", "再試行"]
     }
   },
   "detail": {

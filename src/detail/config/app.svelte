@@ -14,7 +14,11 @@
     {:else}
       <p>use online data</p>
     {/if}
-    <button class="btn" onclick={()=>store.setAppUpdater(name)}>refresh data</button>
+    <button class="btn"
+      onclick={()=>store.setDialog('appAssetsCheck', { target: name, force: false }, true)}
+    >
+      refresh data
+    </button>
   </div>
 {/snippet}
 
