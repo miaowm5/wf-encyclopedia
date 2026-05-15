@@ -6,13 +6,18 @@
 
   const dialogData = $derived(store.state.dialog.data)
   let retry = $derived(dialogData.download.length > 0)
+  let info = $state('')
 
   const retryButton = ()=>{
     store.setAppUpdater(JSON.parse(JSON.stringify(dialogData)))
   }
   const okButton = ()=>{
-    appLogic.triggerUpdaterFlag(null).catch((e)=>{ console.error(e) })
-    store.setAppUpdater(null)
+    appLogic.triggerUpdaterFlag(null)
+      .then(()=>{ store.setAppUpdater(null) })
+      .catch((e)=>{
+        console.error(e)
+        info = e.message || e
+      })
   }
 </script>
 
@@ -25,6 +30,7 @@
       <p>{store.i18n("dialog.app.text8", [dialogData.download.length])}</p>
     {:else}
       <p>{store.i18n("dialog.app.text7")}</p>
+      <p>{info}</p>
     {/if}
   {/snippet}
   {#snippet submit()}
