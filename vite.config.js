@@ -47,6 +47,17 @@ export default defineConfig(({ mode })=>{
   }
   if (mode === 'app'){
     config.build.outDir = './app/resources'
+    config.plugins.push({
+      name: 'copy-app-file',
+      closeBundle: async () => {
+        fs.writeFileSync('./app/resources/app/manifest.json',JSON.stringify({
+          applicationId: "com.miaowm5.worldflipper",
+          version: `${new Date().getTime()}`,
+          resourcesURL: "https://worldflipper.miaowm5.com/app/resources.neu",
+          data: {},
+        }))
+      }
+    })
   }
   if (mode !== 'app'){
     config.plugins.push(VitePWA({
@@ -97,14 +108,8 @@ export default defineConfig(({ mode })=>{
     config.plugins.push({
       name: 'copy-app-file',
       closeBundle: async () => {
-        fs.mkdirSync('dist/app/', { recursive: true });
-        fs.writeFileSync('dist/app/manifest.json',JSON.stringify({
-          applicationId: "com.miaowm5.worldflipper",
-          version: `${new Date().getTime()}`,
-          resourcesURL: "https://worldflipper.miaowm5.com/app/resources.neu",
-          data: {},
-        }))
         const filesToCopy = [
+          ['app/resources/app/manifest.json', 'dist/app/manifest.json'],
           ['app/dist/StarEncyclopedia/resources.neu', 'dist/app/resources.neu'],
           ['app/dist/StarEncyclopedia-release.zip', 'dist/app/StarEncyclopedia-release.zip'],
         ];
