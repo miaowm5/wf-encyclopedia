@@ -112,6 +112,7 @@ const setAppUpdater = (task)=>{
   }else{
     appInit().then(()=>{
       state.ui.page = 'home'
+      setDialog(null)
       route.replace(`/config`, true)
     })
   }
