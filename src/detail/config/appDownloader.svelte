@@ -38,6 +38,8 @@
 </script>
 
 <div>
+
+<div>
   progress: {(Math.min(100, (progress / (task.download.length || 1)) * 100)).toFixed(2)}%
 </div>
 
@@ -76,11 +78,13 @@
   </div>
 </div>
 
+</div>
+
 <style>
   .conveyor-belt {
+    display: none;
     width: 100%;
     overflow: hidden;
-    background: #333;
     padding: 20px 0;
     border-bottom: 5px solid #555;
   }

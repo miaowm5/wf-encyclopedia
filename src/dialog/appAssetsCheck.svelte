@@ -52,7 +52,7 @@
       task.remove = finalTask.remove
       task.download = finalTask.download
       status = task.download.length > 0 || task.remove.length > 0 ? 300 : 301
-      nextable = true
+      nextable = status === 301 ? false : true
     }catch(e){
       console.error(e)
       if (!cancel){
@@ -102,24 +102,26 @@
     {store.i18n("dialog.app.title1", [dialogData.target])}
   {/snippet}
   {#snippet content()}
+  <div class="content">
     {#if status === 1}
       <p>{store.i18n("dialog.app.text5", [dialogData.target])}</p>
     {:else if status === 100}
       <p>{store.i18n("dialog.app.text1")}</p>
     {:else if status === 101}
       <p>{store.i18n("dialog.app.text3")}</p>
-      <p>{info}</p>
+      <p class="info">{info}</p>
     {:else if status === 200}
       <p>{store.i18n("dialog.app.text2")}</p>
-      <p>{info}</p>
+      <p class="info">{info}</p>
     {:else if status === 201}
       <p>{store.i18n("dialog.app.text4")}</p>
-      <p>{info}</p>
+      <p class="info">{info}</p>
     {:else if status === 300}
       <p>{store.i18n("dialog.app.text6", [task.remove.length, task.download.length])}</p>
     {:else if status === 301}
       <p>{store.i18n("dialog.app.text9")}</p>
     {/if}
+  </div>
   {/snippet}
   {#snippet submit()}
     {#if !dialogData.force}
@@ -134,4 +136,11 @@
 </Frame>
 
 <style>
+  .content{
+    margin-top: .5em;
+    min-height: 6em;
+  }
+  .content .info{
+    word-break: break-all;
+  }
 </style>

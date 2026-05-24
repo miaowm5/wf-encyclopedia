@@ -26,12 +26,14 @@
     {store.i18n("dialog.app.title1", [dialogData.target])}
   {/snippet}
   {#snippet content()}
-    {#if retry}
-      <p>{store.i18n("dialog.app.text8", [dialogData.download.length])}</p>
-    {:else}
-      <p>{store.i18n("dialog.app.text7")}</p>
-      <p>{info}</p>
-    {/if}
+    <div class="content">
+      {#if retry}
+        <p>{store.i18n("dialog.app.text8", [dialogData.download.length])}</p>
+      {:else}
+        <p>{store.i18n("dialog.app.text7")}</p>
+        <p class="info">{info}</p>
+      {/if}
+    </div>
   {/snippet}
   {#snippet submit()}
     {#if retry}
@@ -43,4 +45,11 @@
 </Frame>
 
 <style>
+  .content{
+    margin-top: .5em;
+    min-height: 6em;
+  }
+  .content .info{
+    word-break: break-all;
+  }
 </style>

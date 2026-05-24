@@ -17,7 +17,6 @@
 </button>
 
 <style>
-  /* [TODO] update style */
   button{
     padding: .5em 3em;
     color: white;
@@ -29,15 +28,11 @@
     background-color: #e93551;
     border: 2px solid #f04064;
   }
-  button.cancel:disabled{
-    background-color: #e93551;
-    border: 2px solid #f04064;
+  button.cancel:disabled, button.ok:disabled{
+    filter: grayscale(100);
+    cursor: not-allowed;
   }
   button.ok{
-    background-color: #2dc4b6;
-    border: 2px solid #38d0c6;
-  }
-  button.ok:disabled{
     background-color: #2dc4b6;
     border: 2px solid #38d0c6;
   }
