@@ -1,22 +1,14 @@
 <script>
-  import { onMount } from 'svelte'
   import './reset.css'
   import store from './store'
   import List from './list/index.svelte'
   import Dialog from './dialog/index.svelte'
   import Detail from './detail/index.svelte'
-
-  let AppDownloader = $state(null)
-  if (import.meta.env.VITE_APPMODE === 'app'){
-    onMount(async ()=>{
-      const m = await import('./detail/config/appDownloader.svelte')
-      AppDownloader = m.default
-    })
-  }
+  import AppDownloader from './detail/config/appDownloader.svelte'
 </script>
 
 <div class="main">
-  {#if AppDownloader && store.state.ui.page === 'appUpdater'}
+  {#if import.meta.env.VITE_APPMODE === 'app' && store.state.ui.page === 'appUpdater'}
     <AppDownloader />
   {:else}
     <div class="content">

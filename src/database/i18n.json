@@ -48,6 +48,22 @@
       "race8": ["不死", "Undead", "不死"],
       "race9": ["水棲", "Aquatic", "水棲"],
       "race10": ["植物", "Plant", "植物"]
+    },
+    "app":{
+      "title1": ["准备更新{1}", "Preparing to update {1}", "{1}の更新を準備中"],
+      "text1": ["正在联网获取资源版本...", "Fetching resource version online...", "オンラインでリソースバージョンを取得中..."],
+      "text2": ["正在检查本地资源完整性...", "Checking local resource integrity...", "ローカルリソースの完全性を確認中..."],
+      "text3": ["无法获取资源版本，请检查网络连接。", "Failed to fetch resource version. Please check your network connection.", "リソースバージョンの取得に失敗しました。ネットワーク接続を確認してください。"],
+      "text4": ["检查本地资源时发生错误，请重试。", "An error occurred while checking local resources. Please try again.", "ローカルリソースの確認中にエラーが発生しました。もう一度お試しください。"],
+      "text5": ["此前的更新尚未结束，将重新开始。删除 cdn 目录下的 {1} 文件夹及 task.json 文件以放弃此次更新。", "The previous update has not been completed and will be restarted. Delete the {1} folder and task.json file in the cdn directory to abandon this update.", "前回の更新が完了していないため、再度開始します。今回の更新を放棄するには、cdnディレクトリ内の{1}フォルダとtask.jsonファイルを削除してください。"],
+      "text6": ["即将开始更新，将删除 {1} 个文件，并下载 {2} 个文件。", "The update is about to start, {1} files will be deleted and {2} files will be downloaded.", "更新がまもなく開始されます。{1}個のファイルが削除され、{2}個のファイルがダウンロードされます。"],
+      "button1": ["下一步", "Next", "次へ"],
+      "button2": ["取消", "Cancel", "キャンセル"],
+      "button3": ["重试", "Retry", "再試行"],
+      "button4": ["结束", "Finish", "終了"],
+      "text7": ["更新完成！", "Update complete!", "更新完了！"],
+      "text8": ["更新结束，{1} 个文件下载失败。", "Update finished with {1} files failed to download.", "更新終了、{1}個のファイルのダウンロードに失敗しました。"],
+      "text9": ["当前数据已是最新版本，无需更新。", "The current data is already up to date, no update needed.", "現在のデータはすでに最新のため、更新は必要ありません。"]
     }
   },
   "detail": {
@@ -85,7 +101,11 @@
         "This site is a fan-made online Star Encyclopedia created purely out of personal interest and is not affiliated with the official project.\nThe source code is fully open on Github — contributions for code optimization, improving translations, or reporting issues are welcome.",
         "本サイトは個人の趣味で作られたオンラインの星見図鑑であり、公式とは一切関係ありません。\nソースコードはGithubでオープンソースとして公開しています。コードの最適化、多言語翻訳の改善、問題報告などのご協力を歓迎します。"
       ],
-      "config3Value1" : ["项目主页 & 问题反馈", "Source Code & Feedback", "ソースコード & フィードバック"]
+      "config3Value1" : ["项目主页 & 问题反馈", "Source Code & Feedback", "ソースコード & フィードバック"],
+      "appText1": ["正在移除过期文件", "Removing outdated files...", "古いファイルを削除中..."],
+      "appText2": ["正在下载更新文件", "Downloading update files...", "更新ファイルをダウンロード中..."],
+      "appText3": ["下载文件过多时，可以通过网盘预先下载打包好的资源文件。", "When there are many files to download, you can pre-download the packaged resource files through the cloud drive.", "ダウンロードするファイルが多い場合は、クラウドドライブを通じてパッケージ化されたリソースファイルを事前にダウンロードできます。"],
+      "appText4": ["网盘地址", "Cloud Drive Link", "クラウドドライブリンク"]
     },
     "content":{
       "title1": ["情报", "Info", "情報"],

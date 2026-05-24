@@ -1,8 +1,10 @@
 <script>
   import store from '../store'
-  import { OnBack, cdn } from '../common'
+  import { OnBack } from '../common'
   import { MagicCircle } from '../ui'
   import FilterCharacter from './filterCharacter.svelte'
+  import AppAssetsCheck from './appAssetsCheck.svelte'
+  import AppAssetsResult from './appAssetsResult.svelte'
 
   const closeDialog = ()=>{
     store.setDialog(null)
@@ -14,6 +16,13 @@
   <div class="main"><div class="dialog">
     {#if store.state.dialog.type === 'filterCharacter'}
       <FilterCharacter />
+    {/if}
+    {#if import.meta.env.VITE_APPMODE === 'app'}
+      {#if store.state.dialog.type === 'appAssetsCheck'}
+        <AppAssetsCheck />
+      {:else if store.state.dialog.type === 'appAssetsResult'}
+        <AppAssetsResult />
+      {/if}
     {/if}
     <MagicCircle dialog={true} />
   </div></div>

@@ -1,9 +1,9 @@
 <script>
-  import { onMount } from 'svelte'
   import store from '../../store'
   import { spriteSheet } from '../../common'
   import { Title, MagicCircle } from '../../ui'
   import Site from './site.svelte'
+  import App from './app.svelte'
 
   const backSprite = spriteSheet('res/icon', 'return')
 
@@ -11,14 +11,6 @@
     if (store.state.item){ history.go(-1) }
     else if (store.state.ui.listCategory){ history.go(-1) }
     else{ store.route.push('/', true) }
-  }
-
-  let App = $state(null)
-  if (import.meta.env.VITE_APPMODE === 'app'){
-    onMount(async ()=>{
-      const m = await import('./app.svelte')
-      App = m.default
-    })
   }
 </script>
 
@@ -55,8 +47,8 @@
       {@render button(store.i18n("detail.config.config2Value2"), 'language', 'jp')}
       {@render button(store.i18n("detail.config.config2Value3"), 'language', 'en')}
     </div>
-    {#if store.state.mode === 'app'}
-      {#if App}<App />{/if}
+    {#if import.meta.env.VITE_APPMODE === 'app' && store.state.mode === 'app'}
+      <App />
     {:else}
       <Site mode={store.state.mode} />
     {/if}
