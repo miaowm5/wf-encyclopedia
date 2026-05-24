@@ -44,6 +44,7 @@ const appInit = async ()=>{
   await new Promise((success)=>{
     api('/cdn/task.json', {
       success: (data)=>{ store.setDialog('appAssetsCheck', { target: data.cdn, force: true }, false) },
+      fail: ()=>{},
       after: ()=>{ success() }
     })
   })

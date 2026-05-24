@@ -30,7 +30,8 @@
       status = 101
       info = e.message || e
       retry = true
-    }
+    },
+    cors: true,
   })
   const getLocalFile = async ()=>{
     info = ''
