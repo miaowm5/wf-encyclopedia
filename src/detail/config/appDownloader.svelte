@@ -43,7 +43,7 @@
     let cancel = false
     const ctx = canvas.getContext('2d')
     let offsetX = 0
-    const speed = 1.5
+    const speed = 1.3
     let loadedCount = 0
     function onImageLoad() {
       if (cancel){ return }
@@ -134,29 +134,29 @@
     width: 100%;
     height: 99%;
     max-width: 500px;
-    border: 6px solid #dad8db;
+    border: 5px solid #dad8db;
     border-radius: 5em;
     z-index: 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#eee9e6, #eaeaea 70%);
+    background: linear-gradient(#eee9e6, #eee9e6 10%, #eaeaea 60%, #eaeaea);
     display: flex;
     flex-direction: column;
   }
   .conveyor{
-    flex: 5;
+    flex: 65;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .info{
-    flex: 3;
+    flex: 35;
     text-align: center;
   }
   .conveyor-belt {
     width: 100%;
     height: 20%;
-    max-height: 6em;
+    max-height: 5em;
   }
   .conveyor-belt canvas {
     display: block;
@@ -180,6 +180,16 @@
     justify-content: center;
     align-items: center;
     font-size: 1.3em;
-    gap: 2em;
+    gap: 1em;
+  }
+  .btn{
+    padding: .5em 2em;
+    border-top: 1px solid white;
+    border-radius: 10px;
+    margin-right: .5em;
+    margin-bottom: .5em
+  }
+  .message>*{
+    margin-bottom: .5em;
   }
 </style>
