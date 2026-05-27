@@ -24,6 +24,15 @@ const main = (cdnType='cdn1', url = '', forceRemote=false)=>{
 
 const appInit = async ()=>{
   initCDN()
+  const updater = await new Promise((success)=>{
+    api('/cdn/task.json', {
+      success: (data)=>{
+        store.setDialog('appAssetsCheck', { target: data.cdn, force: true }, false)
+        success(data.cdn)
+      },
+      fail: ()=>{ success() },
+    })
+  })
   const check = async (target, callback)=>{
     try{
       let stats = await Neutralino.filesystem.getStats(NL_PATH + target)
@@ -31,22 +40,9 @@ const appInit = async ()=>{
       callback(target)
     }catch(e){}
   }
-  await Promise.all([
-    check('/cdn/cdn/', (v)=>cdnUse['cdn'] = v),
-    check('/cdn/cdn2/', (v)=>cdnUse['cdn2'] = v),
-    check('/cdn/cdn3/', (v)=>cdnUse['cdn3'] = v),
-    check('/cdn/cdn4/', (v)=>cdnUse['cdn4'] = v),
-  ])
-  await new Promise((success)=>{
-    api('/cdn/task.json', {
-      success: (data)=>{
-        initCDN()
-        store.setDialog('appAssetsCheck', { target: data.cdn, force: true }, false)
-      },
-      fail: ()=>{},
-      after: ()=>{ success() }
-    })
-  })
+  await Promise.all(Object.keys(cdnUse).filter(name=>name !== updater).map((name)=>{
+    return check(`/cdn/${name}/`, (v)=>cdnUse[name] = v)
+  }))
 }
 
 const getInfo = ()=>{
