@@ -132,5 +132,5 @@
     overflow: hidden;
     max-width: 212px;
   }
-  .main :global img{ width: 100% }
+  .main :global img, .main :global canvas{ width: 100% }
 </style>
