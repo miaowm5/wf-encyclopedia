@@ -9,6 +9,7 @@
     style = {},
   } = $props()
 
+  let load = $state(false)
   const draw = (canvas)=>{
     $effect(()=>{
       const {
@@ -31,11 +32,8 @@
   }
 </script>
 
-<LazyLoad lazy={lazyLoad}>
-  <canvas {width} {height} style:aspect-ratio={`${width}/${height}`} aria-label={text}></canvas>
-  {#snippet loaded()}
-    <canvas {width} {height} style:aspect-ratio={`${width}/${height}`} {@attach draw} aria-label={text}></canvas>
-  {/snippet}
+<LazyLoad lazy={lazyLoad} load={()=>load = true}>
+  <canvas {width} {height} style:aspect-ratio={`${width}/${height}`} {@attach load && draw} aria-label={text}></canvas>
 </LazyLoad>
 
 <style>
