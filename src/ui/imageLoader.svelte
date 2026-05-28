@@ -23,12 +23,10 @@
     }
     return ()=>{ destory = true }
   }
-  let clearFunc = null
 
   $effect(()=>{
-    if (clearFunc){ clearFunc() }
     if (!lazyLoadStatus){ return }
-    clearFunc = load(src)
+    return load(src)
   })
 </script>
 
