@@ -5,11 +5,10 @@ import spriteSheet from './spriteSheet.svelte.js'
 import Nav from './nav.svelte'
 import OnBack from './onBack.svelte'
 import characterShot from './characterShot.svelte.js'
-import textImage from './textImage.svelte.js'
 import cdn from './cdn.js'
 
 export {
   api, wrapApi, cdn,
-  spriteSheet, characterShot, textImage,
+  spriteSheet, characterShot,
   EventEmitter, Route, Nav, OnBack, loadHowler,
 }
