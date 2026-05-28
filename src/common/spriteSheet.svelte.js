@@ -120,7 +120,6 @@ const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
     if (cache && cache.get(srcKey)){ return cache.get(srcKey) }
     if (!canvas){ return empty }
     let src = canvas.toDataURL("image/png")
-    if (cache){ console.log(111) }
     if (cache){ cache.set(srcKey, src) }
     return src
   })
