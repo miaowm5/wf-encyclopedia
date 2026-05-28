@@ -55,9 +55,10 @@
     }
     return spriteSheet('res/icon', 'character_face_frame', 'cdn', headIconCache)
   })
-  const finalHead = $derived.by(()=>{
-    if (!lazyLoadStatus){ return null }
-    if (!spriteHead?.canvas){ return null }
+  let finalHead = $state(null)
+  $effect(()=>{
+    if (!lazyLoadStatus){ finalHead = null; return }
+    if (!spriteHead?.canvas){ finalHead = null; return }
     const canvas = document.createElement("canvas")
     const ctx = canvas.getContext("2d")
     canvas.width = 212
@@ -81,7 +82,17 @@
     if (spriteRarity?.canvas){
       ctx.drawImage(spriteRarity.canvas, 4, 180)
     }
-    return canvas.toDataURL("image/png")
+    let url = null
+    let cancel = false
+    canvas.toBlob((blob) => {
+      if (cancel){ return }
+      url = URL.createObjectURL(blob)
+      finalHead = url
+    })
+    return ()=>{
+      cancel = true
+      URL.revokeObjectURL(url)
+    }
   })
 </script>
 
