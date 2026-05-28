@@ -1,61 +1,41 @@
 <script>
-  import { onMount } from "svelte"
-
+  import observer from './lazyloadObserver.js'
   const { load: loadFunc, lazy, children, lazyTime = 0 } = $props()
 
-  let node = $state(null)
   let load = $state((()=>!lazy)())
-  let observer = null
   let loadTimer = null
 
   const clear = ()=>{
     if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
-    if (!observer){ return }
-    observer.disconnect()
-    observer = null
   }
   const executeLoad = ()=>{
     load = true
-    loadFunc()
+    if (loadFunc){ loadFunc() }
     clear()
   }
   (()=>{ if (!lazy){ executeLoad() } })()
 
-  onMount(()=>{
-    if (!lazy){ return }
-    observer = new IntersectionObserver((entries)=>{
-      entries.forEach((entry)=>{
-        if (load){ return }
-        if (!entry.isIntersecting){
-          if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
-        }else if (!loadTimer){
-          if (lazyTime <= 0){
-            executeLoad()
-          }else{
-            loadTimer = setTimeout(()=>{ executeLoad() }, lazyTime)
-          }
+  const regLazy = (node)=>{
+    observer.add(node, (isIntersecting)=>{
+      if (!isIntersecting){
+        if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
+      }else if (!loadTimer){
+        if (lazyTime <= 0){
+          executeLoad()
+        }else{
+          loadTimer = setTimeout(()=>{ executeLoad() }, lazyTime)
         }
-      })
-    }, {
-      root: null,
-      threshold: 0,
+      }
     })
-    return clear
-  })
-
-  $effect(()=>{
-    if (!observer){ return }
-    if (!node){ return }
-    observer.observe(node)
     return ()=>{
-      if (!observer){ return }
-      observer.unobserve(node)
+      observer.remove(node)
+      clear()
     }
-  })
+  }
 </script>
 
 {#if !load}
-  <span bind:this={node}>
+  <span {@attach regLazy}>
     {@render children?.()}
   </span>
 {:else}

@@ -58,7 +58,7 @@
     {#if !image}
       <p>{text}</p>
     {:else}
-      <SpriteLoader spritesheet="res/icon" file={image} alt={text} >
+      <SpriteLoader spritesheet="res/icon" file={image} alt={text} cache={true} >
         <p>{text}</p>
       </SpriteLoader>
     {/if}

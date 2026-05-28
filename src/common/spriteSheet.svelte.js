@@ -110,11 +110,20 @@ const createCanvas = async (image, spriteConfig, key, cache)=>{
 
 const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
   const cdn = cdnUrl(cdnType)
+  const key = `${cdn}${spritesheet}/${file}`
   let cancelFunc = false
   onDestroy(()=>{ cancelFunc = true })
 
-  let src = $state(empty)
-  let canvas = $state(null)
+  let canvas = $state(cache ? (cache.get(key) || null) : null)
+  let src = $derived.by(()=>{
+    const srcKey = `src.${key}`
+    if (cache && cache.get(srcKey)){ return cache.get(srcKey) }
+    if (!canvas){ return empty }
+    let src = canvas.toDataURL("image/png")
+    if (cache){ console.log(111) }
+    if (cache){ cache.set(srcKey, src) }
+    return src
+  })
 
   const load = async ()=>{
     if (!file){ return }
@@ -125,12 +134,11 @@ const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
     const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`, cdn)
     if (!image){ return }
     if (cancelFunc){ return }
-    const finalCanvas = await createCanvas(image, spriteConfig, `${cdn}${spritesheet}/${file}`, cache)
+    const finalCanvas = await createCanvas(image, spriteConfig, key, cache)
     if (cancelFunc){ return }
     canvas = finalCanvas
-    src = finalCanvas.toDataURL("image/png")
   }
-  load()
+  if (!canvas){ load() }
   return {
     get src(){ return src },
     get canvas(){ return canvas }

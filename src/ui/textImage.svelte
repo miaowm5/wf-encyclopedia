@@ -1,5 +1,4 @@
 <script>
-  import { textImage } from "../common"
   import LazyLoad from './lazyLoad.svelte'
 
   let {
@@ -10,22 +9,37 @@
     style = {},
   } = $props()
 
-  let lazyLoadStatus = $state(false)
-  const src = $derived.by(()=>{
-    if (!lazyLoadStatus){
-      return `data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7`
-    }
-    return textImage(text, width, height, style).toDataURL("image/png")
-  })
+  let load = $state(false)
+  const draw = (canvas)=>{
+    $effect(()=>{
+      const {
+        color = 'white',
+        background = '#000000',
+        size = '36px',
+      } = style
+      const ctx = canvas.getContext("2d")
+      ctx.clearRect(0, 0, width, height)
+      if (background){
+        ctx.fillStyle = background
+        ctx.fillRect(0, 0, width, height)
+      }
+      ctx.font = `${size} sans-serif`
+      ctx.fillStyle = color
+      ctx.textAlign = "center"
+      ctx.textBaseline = "middle"
+      ctx.fillText(text, width / 2, height / 2, width)
+    })
+  }
 </script>
 
-<LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}>
-  <img src={src} alt={text} width={width} style:aspect-ratio={`${width}/${height}`} />
+<LazyLoad lazy={lazyLoad} load={()=>load = true}>
+  <canvas {width} {height} style:aspect-ratio={`${width}/${height}`} {@attach load && draw} aria-label={text}></canvas>
 </LazyLoad>
 
 <style>
-  img{
+  canvas{
     max-width: 100%;
     max-height: 100%;
+    height: auto;
   }
 </style>
