@@ -113,5 +113,6 @@
   .item{
     display: inline-block;
     width: 19%;
+    line-height: 0;
   }
 </style>
