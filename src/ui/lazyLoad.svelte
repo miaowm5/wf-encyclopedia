@@ -1,4 +1,5 @@
 <script>
+  import observer from './lazyloadObserver.js'
   const { load: loadFunc, lazy, children, lazyTime = 0 } = $props()
 
   let load = $state((()=>!lazy)())
@@ -15,26 +16,19 @@
   (()=>{ if (!lazy){ executeLoad() } })()
 
   const regLazy = (node)=>{
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach((entry)=>{
-        if (!entry.isIntersecting){
-          if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
-        }else if (!loadTimer){
-          if (lazyTime <= 0){
-            executeLoad()
-          }else{
-            loadTimer = setTimeout(()=>{ executeLoad() }, lazyTime)
-          }
+    observer.add(node, (isIntersecting)=>{
+      if (!isIntersecting){
+        if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
+      }else if (!loadTimer){
+        if (lazyTime <= 0){
+          executeLoad()
+        }else{
+          loadTimer = setTimeout(()=>{ executeLoad() }, lazyTime)
         }
-      })
-    }, {
-      root: null,
-      threshold: 0,
+      }
     })
-    observer.observe(node)
     return ()=>{
-      observer.unobserve(node)
-      observer.disconnect()
+      observer.remove(node)
       clear()
     }
   }
