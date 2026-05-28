@@ -1,18 +1,11 @@
 <script>
-  import { onMount } from "svelte"
-
   const { load: loadFunc, lazy, children, loadChildren, lazyTime = 0 } = $props()
 
-  let node = $state(null)
   let load = $state((()=>!lazy)())
-  let observer = null
   let loadTimer = null
 
   const clear = ()=>{
     if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
-    if (!observer){ return }
-    observer.disconnect()
-    observer = null
   }
   const executeLoad = ()=>{
     load = true
@@ -21,11 +14,9 @@
   }
   (()=>{ if (!lazy){ executeLoad() } })()
 
-  onMount(()=>{
-    if (!lazy){ return }
-    observer = new IntersectionObserver((entries)=>{
+  const regLazy = (node)=>{
+    const observer = new IntersectionObserver((entries)=>{
       entries.forEach((entry)=>{
-        if (load){ return }
         if (!entry.isIntersecting){
           if (loadTimer){ clearTimeout(loadTimer); loadTimer = null }
         }else if (!loadTimer){
@@ -40,22 +31,17 @@
       root: null,
       threshold: 0,
     })
-    return clear
-  })
-
-  $effect(()=>{
-    if (!observer){ return }
-    if (!node){ return }
     observer.observe(node)
     return ()=>{
-      if (!observer){ return }
       observer.unobserve(node)
+      observer.disconnect()
+      clear()
     }
-  })
+  }
 </script>
 
 {#if !load}
-  <span bind:this={node}>
+  <span {@attach regLazy}>
     {@render children?.()}
   </span>
 {:else}
