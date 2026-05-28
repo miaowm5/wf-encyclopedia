@@ -33,7 +33,7 @@
 
 <LazyLoad lazy={lazyLoad}>
   <canvas {width} {height} style:aspect-ratio={`${width}/${height}`} aria-label={text}></canvas>
-  {#snippet loadChildren()}
+  {#snippet loaded()}
     <canvas {width} {height} style:aspect-ratio={`${width}/${height}`} {@attach draw} aria-label={text}></canvas>
   {/snippet}
 </LazyLoad>

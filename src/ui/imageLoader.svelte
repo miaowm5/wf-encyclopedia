@@ -7,7 +7,7 @@
 
 <LazyLoad lazy={lazyLoad}>
   {@render children?.()}
-  {#snippet loadChildren()}
+  {#snippet loaded()}
     {#if !loadOver}{@render children?.()}{/if}
     <img src={src} alt={alt ? alt : src} onload={()=>loadOver=true} class:loading={!loadOver}>
   {/snippet}

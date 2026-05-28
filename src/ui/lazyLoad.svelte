@@ -1,5 +1,5 @@
 <script>
-  const { load: loadFunc, lazy, children, loadChildren, lazyTime = 0 } = $props()
+  const { load: loadFunc, lazy, children, loaded, lazyTime = 0 } = $props()
 
   let load = $state((()=>!lazy)())
   let loadTimer = null
@@ -45,8 +45,8 @@
     {@render children?.()}
   </span>
 {:else}
-  {#if loadChildren}
-    {@render loadChildren()}
+  {#if loaded}
+    {@render loaded()}
   {:else}
     {@render children?.()}
   {/if}
