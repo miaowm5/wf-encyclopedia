@@ -39,14 +39,13 @@
     return list
   })
 
-  let voicePlayerItem = null
-  let voicePlayer = $derived.by(()=>{
-    if (voicePlayerItem){ voicePlayerItem.destroy() }
+  let voicePlayer = $state(null)
+  $effect(()=>{
     let voiceID = item.storyID
     if (voiceID === 'stella'){ voiceID = 'stella_2anv' } // need add more check when add npc voice
-    let newPlayer = loadVoice(voiceID)
-    voicePlayerItem = newPlayer
-    return newPlayer
+    let voicePlayerItem = loadVoice(voiceID)
+    voicePlayer = voicePlayerItem
+    return ()=>{ voicePlayerItem.destroy() }
   })
 
   const voiceMarker = spriteSheet('res/icon', 'music_play')
@@ -74,7 +73,7 @@
 
 <div class="content">
   <Loading finish={loadDB.finish} error={loadDB.error}>
-    {#if data}
+    {#if data && voicePlayer}
       <Title>{store.i18n("detail.content.title5")}</Title>
       {@render voice(data.join[3], data.join[4])}
       {@render voice(data.evolution[3], data.evolution[4])}
