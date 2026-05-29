@@ -38,17 +38,14 @@
     if (list.length === 0){ return null }
     return list
   })
-
-  let voicePlayerItem = null
-  let voicePlayer = $derived.by(()=>{
-    if (voicePlayerItem){ voicePlayerItem.destroy() }
+  let voicePlayer = $state(null)
+  $effect(()=>{
     let voiceID = item.storyID
     if (voiceID === 'stella'){ voiceID = 'stella_2anv' } // need add more check when add npc voice
     let newPlayer = loadVoice(voiceID)
-    voicePlayerItem = newPlayer
-    return newPlayer
+    voicePlayer = newPlayer
+    return ()=>{ newPlayer.destroy() }
   })
-
   const voiceMarker = spriteSheet('res/icon', 'music_play')
 </script>
 

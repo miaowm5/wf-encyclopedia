@@ -1,5 +1,4 @@
 
-import { onDestroy } from 'svelte'
 import { api, loadHowler, cdn } from '../../common'
 
 let configCache = null
@@ -52,7 +51,6 @@ const main = (character)=>{
     if (updateSeekTimer){ cancelAnimationFrame(updateSeekTimer) }
     cancelFunc = true
   }
-  onDestroy(cleanupSound)
 
   const play = (name)=>{
     if (!sound || !voiceData[name]){ return }
