@@ -13,17 +13,16 @@
     cache = false,
   } = $props()
 
-  let lazyLoadStatus = $state(false)
-
-  const sprite = $derived(
-    lazyLoadStatus ? spriteSheet(()=>spritesheet, ()=>file, ()=>cdn, cache ? spritesheetCache : null) : null
-  )
+  let sprite = $state(null)
+  const load = ()=>{
+    sprite = spriteSheet(()=>spritesheet, ()=>file, ()=>cdn, cache ? spritesheetCache : null)
+  }
 </script>
 
 {#if sprite && sprite.canvas}
   <img src={sprite.src} alt={alt ? alt : file}>
 {:else}
-  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}>
+  <LazyLoad lazy={lazyLoad} load={load}>
     {@render children?.()}
   </LazyLoad>
 {/if}
