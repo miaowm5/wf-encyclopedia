@@ -1,9 +1,9 @@
 import spriteSheet from './spriteSheet.svelte.js'
 
-const emptyCanvas = ()=>{
+const emptyCanvas = (width = 1, height = 1)=>{
   const canvas = document.createElement("canvas")
-  canvas.width = 1
-  canvas.height = 1
+  canvas.width = width
+  canvas.height = height
   return { get canvas(){ return canvas } }
 }
 
@@ -12,32 +12,29 @@ const wrap = (backParam, frontParam, effectParam=[], cache)=>{
   const front = $derived.by(()=>typeof frontParam === 'function' ? frontParam() : frontParam)
   const effect = $derived.by(()=>typeof effectParam === 'function' ? effectParam() : effectParam)
 
-  const backCanvas = $derived.by(()=>{
-    if (!back){ return emptyCanvas() }
-    return spriteSheet('character/story', back, 'cdn', cache)
-  })
-  const frontCanvas = $derived.by(()=>{
-    if (!front){ return emptyCanvas() }
-    return spriteSheet('character/story', front, 'cdn', cache)
-  })
+  const empty = emptyCanvas(1, 1)
+  const backExist = $derived(!back)
+  const frontExist = $derived(!front)
+  const backCanvas = $derived(backExist ? spriteSheet('character/story', ()=>back, 'cdn', cache) : empty)
+  const frontCanvas = $derived(frontExist ? spriteSheet('character/story', ()=>front, 'cdn', cache) : empty)
   const effectCanvas = $derived.by(()=>{
     return effect.map((eff)=>{
       return spriteSheet('character/story', eff, 'cdn', cache)
     })
   })
-
-  const src = $derived.by(()=>{
-    const canvas = document.createElement("canvas")
-    const ctx = canvas.getContext("2d")
-    canvas.width = 570
-    canvas.height = 690
+  const basic = emptyCanvas(570, 690)
+  const canvas = $derived.by(()=>{
     if (backCanvas.canvas && frontCanvas.canvas && effectCanvas.every(item => item.canvas !== null)){
+      const canvas = emptyCanvas(570, 690)
+      const ctx = canvas.getContext("2d")
       ctx.drawImage(backCanvas.canvas, 0, 0)
       ctx.drawImage(frontCanvas.canvas, 0, 0)
       effectCanvas.forEach((eff)=>{ ctx.drawImage(eff.canvas, 0, 0) })
+      return canvas
     }
-    return canvas.toDataURL("image/png")
+    return basic
   })
+  const src = $derived(canvas.toDataURL("image/png"))
 
   return { get src(){ return src } }
 }
