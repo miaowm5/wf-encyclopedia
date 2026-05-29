@@ -106,7 +106,10 @@ const createTimeline = (config, imageList)=>{
   }
 }
 
-const main = (character, hasSpecial = true)=>{
+const main = (characterParam, hasSpecialParam)=>{
+  const character = $derived.by(characterParam)
+  const hasSpecial = $derived.by(hasSpecialParam)
+
   let cancelFunc = false
   let pixelData = $state(null)
 
