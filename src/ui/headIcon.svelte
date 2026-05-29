@@ -111,12 +111,12 @@
     <TextImage
       text={name}
       width={212}
-      height={212}
+      height={showName ? 252 : 212}
       style={{ color: 'white', background: '#000000', size: '36px' }}
       lazyLoad={false}
     />
   {/if}
-  {#if showName}
+  {#if showName && finalHead}
     <TextImage
       text={name}
       width={212}
