@@ -14,8 +14,8 @@ const wrap = (backParam, frontParam, effectParam=[], cache)=>{
   const front = $derived.by(()=>typeof frontParam === 'function' ? frontParam() : frontParam)
   const effect = $derived.by(()=>typeof effectParam === 'function' ? effectParam() : effectParam)
 
-  const backExist = $derived(!back)
-  const frontExist = $derived(!front)
+  const backExist = $derived(Boolean(back))
+  const frontExist = $derived(Boolean(front))
   const backCanvas = $derived(backExist ? spriteSheet('character/story', ()=>back, 'cdn', cache) : empty)
   const frontCanvas = $derived(frontExist ? spriteSheet('character/story', ()=>front, 'cdn', cache) : empty)
   const effectCanvas = $derived.by(()=>{
