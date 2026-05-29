@@ -111,11 +111,11 @@ const wrap = (spritesheetParam, fileParam = null, cdnTypeParam='cdn', cache=null
   const spritesheet = $derived.by(()=>typeof spritesheetParam === 'function' ? spritesheetParam() : spritesheetParam)
   const file = $derived.by(()=>typeof fileParam === 'function' ? fileParam() : fileParam)
   const cdnType = $derived.by(()=>typeof cdnTypeParam === 'function' ? cdnTypeParam() : cdnTypeParam)
-  const cdn = $derived(cdnUrl(cdnType))
-  const key = $derived(`${cdn}${spritesheet}/${file}`)
+  const key = $derived(file ? `${cdnType}${spritesheet}/${file}` : null)
 
   let canvas = $state(null)
   const src = $derived.by(()=>{
+    if (!key){ return empty }
     const srcKey = `src.${key}`
     if (cache && cache.get(srcKey)){ return cache.get(srcKey) }
     if (!canvas){ return empty }
@@ -125,7 +125,7 @@ const wrap = (spritesheetParam, fileParam = null, cdnTypeParam='cdn', cache=null
   })
 
   const load = async (spritesheet, file, cdn, cache, key, isCancel)=>{
-    if (!file){ return }
+    if (!key){ return }
     const sheetConfig = await loadConfig(spritesheet, cdn)
     if (isCancel()){ return }
     const spriteConfig = sheetConfig[file.toLowerCase()]
@@ -142,7 +142,7 @@ const wrap = (spritesheetParam, fileParam = null, cdnTypeParam='cdn', cache=null
     let cancelFunc = false
     const isCancel = ()=>cancelFunc
     canvas = null
-    load(spritesheet, file, cdn, cache, key, isCancel)
+    load(spritesheet, file, cdnUrl(cdnType), cache, key, isCancel)
     return ()=>{ cancelFunc = true }
   })
 
