@@ -6,13 +6,14 @@ const emptyCanvas = (width = 1, height = 1)=>{
   canvas.height = height
   return { get canvas(){ return canvas } }
 }
+const empty = emptyCanvas(1, 1)
+const basic = emptyCanvas(570, 690)
 
 const wrap = (backParam, frontParam, effectParam=[], cache)=>{
   const back = $derived.by(()=>typeof backParam === 'function' ? backParam() : backParam)
   const front = $derived.by(()=>typeof frontParam === 'function' ? frontParam() : frontParam)
   const effect = $derived.by(()=>typeof effectParam === 'function' ? effectParam() : effectParam)
 
-  const empty = emptyCanvas(1, 1)
   const backExist = $derived(!back)
   const frontExist = $derived(!front)
   const backCanvas = $derived(backExist ? spriteSheet('character/story', ()=>back, 'cdn', cache) : empty)
@@ -22,7 +23,6 @@ const wrap = (backParam, frontParam, effectParam=[], cache)=>{
       return spriteSheet('character/story', eff, 'cdn', cache)
     })
   })
-  const basic = emptyCanvas(570, 690)
   const canvas = $derived.by(()=>{
     if (backCanvas.canvas && frontCanvas.canvas && effectCanvas.every(item => item.canvas !== null)){
       const canvas = emptyCanvas(570, 690)
