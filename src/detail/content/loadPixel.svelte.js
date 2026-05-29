@@ -110,11 +110,8 @@ const main = (character, hasSpecial = true)=>{
   let cancelFunc = false
   let pixelData = $state(null)
 
-  let image = $derived.by(()=>{
-    if (!hasSpecial){ return null }
-    return spriteSheet('pixel_special', character, 'cdn2')
-  })
-  let image2 = $derived.by(()=>{ return spriteSheet('pixel_normal', character, 'cdn2') })
+  let image = spriteSheet('pixel_special', ()=>hasSpecial ? character : null, 'cdn2')
+  let image2 = spriteSheet('pixel_normal', ()=>character, 'cdn2')
   const load = async ()=>{
     if (!character){ return }
     const config = await loadConfig()
