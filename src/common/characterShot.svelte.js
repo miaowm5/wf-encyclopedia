@@ -7,7 +7,10 @@ const emptyCanvas = ()=>{
   return { get canvas(){ return canvas } }
 }
 
-const wrap = (back, front, effect=[], cache)=>{
+const wrap = (backParam, frontParam, effectParam=[], cache)=>{
+  const back = $derived.by(()=>typeof backParam === 'function' ? backParam() : backParam)
+  const front = $derived.by(()=>typeof frontParam === 'function' ? frontParam() : frontParam)
+  const effect = $derived.by(()=>typeof effectParam === 'function' ? effectParam() : effectParam)
 
   const backCanvas = $derived.by(()=>{
     if (!back){ return emptyCanvas() }
