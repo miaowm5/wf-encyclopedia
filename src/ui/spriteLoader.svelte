@@ -15,10 +15,9 @@
 
   let lazyLoadStatus = $state(false)
 
-  const sprite = $derived.by(()=>{
-    if (!lazyLoadStatus){ return null }
-    return spriteSheet(spritesheet, file, cdn, cache ? spritesheetCache : null)
-  })
+  const sprite = $derived(
+    lazyLoadStatus ? spriteSheet(()=>spritesheet, ()=>file, ()=>cdn, cache ? spritesheetCache : null) : null
+  )
 </script>
 
 {#if sprite && sprite.canvas}
