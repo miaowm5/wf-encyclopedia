@@ -25,14 +25,14 @@ const wrap = (backParam, frontParam, effectParam=[], cache)=>{
   })
   const canvas = $derived.by(()=>{
     if (backCanvas.canvas && frontCanvas.canvas && effectCanvas.every(item => item.canvas !== null)){
-      const canvas = emptyCanvas(570, 690)
+      const canvas = emptyCanvas(570, 690).canvas
       const ctx = canvas.getContext("2d")
       ctx.drawImage(backCanvas.canvas, 0, 0)
       ctx.drawImage(frontCanvas.canvas, 0, 0)
       effectCanvas.forEach((eff)=>{ ctx.drawImage(eff.canvas, 0, 0) })
       return canvas
     }
-    return basic
+    return basic.canvas
   })
   const src = $derived(canvas.toDataURL("image/png"))
 
