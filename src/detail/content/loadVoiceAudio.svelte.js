@@ -48,7 +48,7 @@ const main = (character)=>{
     }
   }
   const cleanupSound = ()=>{
-    if (howler){ howler.destory() }
+    if (howler){ howler.destroy() }
     if (updateSeekTimer){ cancelAnimationFrame(updateSeekTimer) }
     cancelFunc = true
   }
@@ -96,7 +96,7 @@ const main = (character)=>{
       if (!loadOver){ playing = [name]; return }
       play(name)
     },
-    destory: cleanupSound,
+    destroy: cleanupSound,
   }
 }
 

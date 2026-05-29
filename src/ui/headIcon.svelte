@@ -87,11 +87,11 @@
   })
   $effect(()=>{
     return ()=>{
-      spriteHead?.destory()
-      spriteRarity?.destory()
-      spriteRarityFrame?.destory()
-      spriteElement?.destory()
-      spriteElementFrame?.destory()
+      spriteHead?.destroy()
+      spriteRarity?.destroy()
+      spriteRarityFrame?.destroy()
+      spriteElement?.destroy()
+      spriteElementFrame?.destroy()
     }
   })
 </script>

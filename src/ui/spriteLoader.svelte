@@ -17,7 +17,7 @@
   const load = ()=>{
     sprite = spriteSheetAsync(()=>spritesheet, ()=>file, ()=>cdn, cache ? spritesheetCache : null)
   }
-  $effect(()=>{ return ()=>sprite?.destory() })
+  $effect(()=>{ return ()=>sprite?.destroy() })
 </script>
 
 {#if sprite && sprite.canvas}

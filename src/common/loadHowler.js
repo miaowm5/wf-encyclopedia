@@ -18,7 +18,7 @@ const loadHowl = async (src, sprite)=>{
 const loadSound = (music, callback, sprite = undefined)=>{
   let cancelFunc = false
   let sound = null
-  const destory = ()=>{
+  const destroy = ()=>{
     if (sound){ sound.unload() }
     cancelFunc = true
   }
@@ -35,7 +35,7 @@ const loadSound = (music, callback, sprite = undefined)=>{
     }
     load()
   }
-  return { destory }
+  return { destroy }
 }
 
 export default loadSound

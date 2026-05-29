@@ -41,7 +41,7 @@ const playerLogic = (playList)=>{
   $effect(()=>{
     if (!playing){ return }
     if (currentPlay === current){ return }
-    howler.destory()
+    howler.destroy()
     sound = null
     currentPlay = current
     seek = 0
@@ -53,7 +53,7 @@ const playerLogic = (playList)=>{
       sound.on('pause', ()=>{ registerSeek(false) })
       sound.on('stop', ()=>{ registerSeek(false) })
       sound.on('end', ()=>{
-        howler.destory()
+        howler.destroy()
         sound = null
         seek = 0
         registerSeek(false)
@@ -76,7 +76,7 @@ const playerLogic = (playList)=>{
     }
   })
   onDestroy(()=>{
-    howler.destory()
+    howler.destroy()
     if (updateSeekTimer){ cancelAnimationFrame(updateSeekTimer) }
     cancelFunc = true
   })
