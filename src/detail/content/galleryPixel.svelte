@@ -6,14 +6,11 @@
 
   const { emotionList } = $props()
 
-  const pixel = $derived.by(()=>{
-    if (!emotionList.id){ return null }
-    return loadPixel(emotionList.id, emotionList.hasPixel)
-  })
+  const pixel = loadPixel(()=>emotionList.id, ()=>emotionList.hasPixel)
 
 </script>
 
-{#if pixel}
+{#if emotionList.id}
 <Title>{store.i18n("detail.content.title10")}</Title>
 <Loading finish={pixel.src}>
 <div class="image"

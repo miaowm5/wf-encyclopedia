@@ -1,5 +1,5 @@
 <script>
-  import { spriteSheet, cdn } from '../common'
+  import { spriteSheetAsync, cdn } from '../common'
   import TextImage from './textImage.svelte'
   import LazyLoad from './lazyLoad.svelte'
   import headIconCache from './spritesheetCache.js'
@@ -15,49 +15,40 @@
 
   let lazyLoadStatus = $state(false)
 
-  const spriteHead = $derived.by(()=>{
-    if (!lazyLoadStatus){ return null }
-    return spriteSheet('head', file, 'cdn2')
-  })
-  const spriteRarity = $derived.by(()=>{
-    if (!rarity || !lazyLoadStatus){ return null }
-    const file = {
-      '5': 'rarity_five',
-      '4': 'rarity_four',
-      '3': 'rarity_three',
-      '2': 'rarity_two',
-      '1': 'rarity_one',
-    }[rarity]
-    if (!file){ return null }
-    return spriteSheet('res/icon', file, 'cdn', headIconCache)
-  })
-  const spriteRarityFrame = $derived.by(()=>{
-    if (!rarity || !lazyLoadStatus){ return null }
-    return spriteSheet('res/icon', `rarity_background${rarity}`, 'cdn', headIconCache)
-  })
-  const spriteElement = $derived.by(()=>{
-    if (!element || !lazyLoadStatus){ return null }
-    const file = {
-      '0': 'element_red_medium',
-      '1': 'element_blue_medium',
-      '2': 'element_yellow_medium',
-      '3': 'element_green_medium',
-      '4': 'element_white_medium',
-      '5': 'element_black_medium',
-    }[element]
-    if (!file){ return null }
-    return spriteSheet('res/icon', file, 'cdn', headIconCache)
-  })
-  const spriteElementFrame = $derived.by(()=>{
-    if (!lazyLoadStatus){ return null }
-    if (!element){
-      return spriteSheet('res/icon', 'character_face_empty_frame', 'cdn', headIconCache)
-    }
-    return spriteSheet('res/icon', 'character_face_frame', 'cdn', headIconCache)
-  })
+  let spriteHead = $state(null)
+  let spriteRarity = $state(null)
+  let spriteRarityFrame = $state(null)
+  let spriteElement = $state(null)
+  let spriteElementFrame = $state(null)
+  const loadSprite = ()=>{
+    spriteHead = spriteSheetAsync('head', ()=>file, 'cdn2')
+    spriteRarity = spriteSheetAsync('res/icon', ()=>{
+      return {
+        '5': 'rarity_five',
+        '4': 'rarity_four',
+        '3': 'rarity_three',
+        '2': 'rarity_two',
+        '1': 'rarity_one',
+      }[rarity]
+    }, 'cdn', headIconCache)
+    spriteRarityFrame = spriteSheetAsync('res/icon', ()=>rarity ? `rarity_background${rarity}` : null, 'cdn', headIconCache)
+    spriteElement = spriteSheetAsync('res/icon', ()=> {
+      return {
+        '0': 'element_red_medium',
+        '1': 'element_blue_medium',
+        '2': 'element_yellow_medium',
+        '3': 'element_green_medium',
+        '4': 'element_white_medium',
+        '5': 'element_black_medium',
+      }[element]
+    }, 'cdn', headIconCache)
+    spriteElementFrame = spriteSheetAsync(
+      'res/icon', ()=>`character_face_${element ? 'frame' : 'empty_frame'}`,
+      'cdn', headIconCache,
+    )
+  }
   let finalHead = $state(null)
   $effect(()=>{
-    if (!lazyLoadStatus){ finalHead = null; return }
     if (!spriteHead?.canvas){ finalHead = null; return }
     const canvas = document.createElement("canvas")
     const ctx = canvas.getContext("2d")
@@ -94,10 +85,19 @@
       URL.revokeObjectURL(url)
     }
   })
+  $effect(()=>{
+    return ()=>{
+      spriteHead?.destroy()
+      spriteRarity?.destroy()
+      spriteRarityFrame?.destroy()
+      spriteElement?.destroy()
+      spriteElementFrame?.destroy()
+    }
+  })
 </script>
 
 {#if !lazyLoadStatus}
-  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }} lazyTime={200}>
+  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true; loadSprite() }} lazyTime={200}>
     <img class="frame" alt={name}
       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       style:aspect-ratio={showName ? "212/252" : "1/1"} />
@@ -111,12 +111,12 @@
     <TextImage
       text={name}
       width={212}
-      height={212}
+      height={showName ? 252 : 212}
       style={{ color: 'white', background: '#000000', size: '36px' }}
       lazyLoad={false}
     />
   {/if}
-  {#if showName}
+  {#if showName && finalHead}
     <TextImage
       text={name}
       width={212}

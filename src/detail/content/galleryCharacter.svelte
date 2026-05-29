@@ -14,9 +14,10 @@
     let emoData = emotionList.data[emoName]
     return { name: emoName, data: emoData }
   })
+  const emoDtaExist = $derived(Boolean(emoData))
 
   const checkUseable = (name, showCheck=true)=>{
-    if (!emoData){ return false }
+    if (!emoDtaExist){ return false }
     let item = emotionList.data[name]
     const result = item.back === emoData.data.back
     const specialEffect = emotionList.effectGroup[name]
@@ -29,7 +30,7 @@
   }
 
   const useAbleEffect = $derived.by(()=>{
-    if (!emoData){ return [] }
+    if (!emoDtaExist){ return [] }
     return emotionList.effect.filter((name)=>{
       if (name === 'noface'){ return Boolean(emoData.data.front) }
       return checkUseable(name)
@@ -42,26 +43,28 @@
     set: (key, canvas)=>{ cacheMap[key] = canvas },
   }
 
-  const bannerImage = $derived.by(()=>{
-    if (!emoData){ return null }
-    let effect = []
-    selectEffect.forEach((name)=>{
-      if (name === 'noface'){ return }
-      let item = emotionList.data[name]
-      if (!checkUseable(name)){ return }
-      effect.push(item.front)
-    })
-    const specialEffect = Object.keys(emotionList.effectGroup)
-    specialEffect.forEach((name)=>{
-      if (!emotionList.effectGroup[name].fixEffect){ return }
-      if (!checkUseable(name, false)){ return }
-      effect.push(emotionList.data[name].front)
-    })
-    return characterShot(emoData.data.back,
-      selectEffect.includes('noface') ? null : emoData.data.front,
-      effect, cache
-    )
-  })
+  const bannerImage = characterShot(
+    ()=>emoData.data.back,
+    ()=>selectEffect.includes('noface') ? null : emoData.data.front,
+    ()=>{
+      let effect = []
+      selectEffect.forEach((name)=>{
+        if (name === 'noface'){ return }
+        let item = emotionList.data[name]
+        if (!checkUseable(name)){ return }
+        effect.push(item.front)
+      })
+      const specialEffect = Object.keys(emotionList.effectGroup)
+      specialEffect.forEach((name)=>{
+        if (!emotionList.effectGroup[name].fixEffect){ return }
+        if (!checkUseable(name, false)){ return }
+        effect.push(emotionList.data[name].front)
+      })
+      return effect
+    },
+    cache,
+    ()=>emoDtaExist,
+  )
 
   const changeIndex = (offset)=>{
     index += offset

@@ -20,14 +20,13 @@
 
   (()=>{ document.title = name + ' | ' + store.i18n('main.sitename') })()
 
-  let bannerImage = $derived.by(()=>{
-    if (!loadDB.finish){ return null }
-    const database = loadDB.db.story_character
-    if (!database[banner]){ return null }
-    let emotion = Object.keys(database[banner][3])
-    if (emotion.length === 0){ return null }
-    return characterShot(database[banner][3][emotion[0]].back, database[banner][3][emotion[0]].front)
-  })
+  const database = $derived(loadDB.finish ? loadDB.db.story_character : null)
+  const emotion = $derived(database?.[banner]?.[3] ? Object.keys(database[banner][3]) : [])
+  const bannerImage = characterShot(
+    ()=>database[banner][3][emotion[0]].back,
+    ()=>database[banner][3][emotion[0]].front,
+    [], null, ()=>emotion.length > 0
+  )
 
   const genderText = $derived.by(()=>{
     if (gender === 'Female'){ return store.i18n("detail.title.sex1") }
@@ -80,7 +79,7 @@
     {#if title !== '(None)'}<p>
       {#if elementImage}
         <span class="element">
-          <SpriteLoader spritesheet="res/icon" file={elementImage} alt={element} cache={true} />
+          <SpriteLoader spritesheet="res/icon" file={elementImage} alt={element} cache={true} lazyLoad={false} />
         </span>
       {/if}
       {title}
@@ -91,7 +90,7 @@
         {#each raceText as item}
           <span class="race">
             {item[0]}
-            <SpriteLoader spritesheet="res/icon" file={item[1]} alt={item[0]} cache={true} />
+            <SpriteLoader spritesheet="res/icon" file={item[1]} alt={item[0]} cache={true} lazyLoad={false} />
           </span>
         {/each}
       </p>

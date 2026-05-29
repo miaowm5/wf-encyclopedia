@@ -1,5 +1,4 @@
 
-import { onDestroy } from 'svelte'
 import { api, loadHowler, cdn } from '../../common'
 
 let configCache = null
@@ -48,11 +47,10 @@ const main = (character)=>{
     }
   }
   const cleanupSound = ()=>{
-    if (howler){ howler.destory() }
+    if (howler){ howler.destroy() }
     if (updateSeekTimer){ cancelAnimationFrame(updateSeekTimer) }
     cancelFunc = true
   }
-  onDestroy(cleanupSound)
 
   const play = (name)=>{
     if (!sound || !voiceData[name]){ return }
@@ -96,7 +94,7 @@ const main = (character)=>{
       if (!loadOver){ playing = [name]; return }
       play(name)
     },
-    destory: cleanupSound,
+    destroy: cleanupSound,
   }
 }
 

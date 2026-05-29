@@ -1,4 +1,3 @@
-import { onDestroy } from "svelte"
 import { api } from './m5api'
 import cdnUrl from './cdn'
 
@@ -108,14 +107,15 @@ const createCanvas = async (image, spriteConfig, key, cache)=>{
   return canvas
 }
 
-const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
-  const cdn = cdnUrl(cdnType)
-  const key = `${cdn}${spritesheet}/${file}`
-  let cancelFunc = false
-  onDestroy(()=>{ cancelFunc = true })
+const wrap = (spritesheetParam, fileParam = null, cdnTypeParam='cdn', cache=null)=>{
+  const spritesheet = $derived.by(()=>typeof spritesheetParam === 'function' ? spritesheetParam() : spritesheetParam)
+  const file = $derived.by(()=>typeof fileParam === 'function' ? fileParam() : fileParam)
+  const cdnType = $derived.by(()=>typeof cdnTypeParam === 'function' ? cdnTypeParam() : cdnTypeParam)
+  const key = $derived(file ? `${cdnType}${spritesheet}/${file}` : null)
 
-  let canvas = $state(cache ? (cache.get(key) || null) : null)
-  let src = $derived.by(()=>{
+  let canvas = $state(null)
+  const src = $derived.by(()=>{
+    if (!key){ return empty }
     const srcKey = `src.${key}`
     if (cache && cache.get(srcKey)){ return cache.get(srcKey) }
     if (!canvas){ return empty }
@@ -124,24 +124,44 @@ const wrap = (spritesheet, file = null, cdnType='cdn', cache=null)=>{
     return src
   })
 
-  const load = async ()=>{
-    if (!file){ return }
+  const load = async (spritesheet, file, cdn, cache, key, isCancel)=>{
+    if (!key){ return }
     const sheetConfig = await loadConfig(spritesheet, cdn)
-    if (cancelFunc){ return }
+    if (isCancel()){ return }
     const spriteConfig = sheetConfig[file.toLowerCase()]
     if (!spriteConfig){ return }
     const image = await loadImage(spritesheet, `${spriteConfig.image}?${sheetConfig.timestamp || ''}`, cdn)
     if (!image){ return }
-    if (cancelFunc){ return }
+    if (isCancel()){ return }
     const finalCanvas = await createCanvas(image, spriteConfig, key, cache)
-    if (cancelFunc){ return }
+    if (isCancel()){ return }
     canvas = finalCanvas
   }
-  if (!canvas){ load() }
+  $effect(()=>{
+    if (cache && cache.get(key)){ canvas = cache.get(key); return }
+    let cancelFunc = false
+    const isCancel = ()=>cancelFunc
+    canvas = null
+    load(spritesheet, file, cdnUrl(cdnType), cache, key, isCancel)
+    return ()=>{ cancelFunc = true }
+  })
+
   return {
     get src(){ return src },
     get canvas(){ return canvas }
   }
 }
 
-export default wrap
+const wrapAsync = (spritesheetParam, fileParam = null, cdnTypeParam='cdn', cache=null)=>{
+  let sprite
+  const destroy = $effect.root(()=>{
+    sprite = wrap(spritesheetParam, fileParam, cdnTypeParam, cache)
+  })
+  return {
+    get src(){ return sprite ? sprite.src : empty },
+    get canvas(){ return sprite ? sprite.canvas : null },
+    destroy,
+  }
+}
+
+export { wrap, wrapAsync }

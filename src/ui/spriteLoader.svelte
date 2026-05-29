@@ -1,5 +1,5 @@
 <script>
-  import { spriteSheet } from '../common'
+  import { spriteSheetAsync } from '../common'
   import LazyLoad from './lazyLoad.svelte'
   import spritesheetCache from './spritesheetCache.js'
 
@@ -13,18 +13,17 @@
     cache = false,
   } = $props()
 
-  let lazyLoadStatus = $state(false)
-
-  const sprite = $derived.by(()=>{
-    if (!lazyLoadStatus){ return null }
-    return spriteSheet(spritesheet, file, cdn, cache ? spritesheetCache : null)
-  })
+  let sprite = $state(null)
+  const load = ()=>{
+    sprite = spriteSheetAsync(()=>spritesheet, ()=>file, ()=>cdn, cache ? spritesheetCache : null)
+  }
+  $effect(()=>{ return ()=>sprite?.destroy() })
 </script>
 
 {#if sprite && sprite.canvas}
   <img src={sprite.src} alt={alt ? alt : file}>
 {:else}
-  <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}>
+  <LazyLoad lazy={lazyLoad} load={load}>
     {@render children?.()}
   </LazyLoad>
 {/if}
