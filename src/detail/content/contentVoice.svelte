@@ -71,7 +71,7 @@
 
 <div class="content">
   <Loading finish={loadDB.finish} error={loadDB.error}>
-    {#if data}
+    {#if data && voicePlayer}
       <Title>{store.i18n("detail.content.title5")}</Title>
       {@render voice(data.join[3], data.join[4])}
       {@render voice(data.evolution[3], data.evolution[4])}
