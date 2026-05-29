@@ -41,7 +41,7 @@
 
   let voicePlayerItem = null
   let voicePlayer = $derived.by(()=>{
-    if (voicePlayerItem){ voicePlayerItem.destory() }
+    if (voicePlayerItem){ voicePlayerItem.destroy() }
     let voiceID = item.storyID
     if (voiceID === 'stella'){ voiceID = 'stella_2anv' } // need add more check when add npc voice
     let newPlayer = loadVoice(voiceID)
