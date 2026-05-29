@@ -1,5 +1,5 @@
 <script>
-  import { spriteSheet } from '../common'
+  import { spriteSheetAsync } from '../common'
   import LazyLoad from './lazyLoad.svelte'
   import spritesheetCache from './spritesheetCache.js'
 
@@ -15,8 +15,9 @@
 
   let sprite = $state(null)
   const load = ()=>{
-    sprite = spriteSheet(()=>spritesheet, ()=>file, ()=>cdn, cache ? spritesheetCache : null)
+    sprite = spriteSheetAsync(()=>spritesheet, ()=>file, ()=>cdn, cache ? spritesheetCache : null)
   }
+  $effect(()=>{ return ()=>sprite?.destory() })
 </script>
 
 {#if sprite && sprite.canvas}

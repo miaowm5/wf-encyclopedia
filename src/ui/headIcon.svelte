@@ -1,5 +1,5 @@
 <script>
-  import { spriteSheet, cdn } from '../common'
+  import { spriteSheetAsync, cdn } from '../common'
   import TextImage from './textImage.svelte'
   import LazyLoad from './lazyLoad.svelte'
   import headIconCache from './spritesheetCache.js'
@@ -21,8 +21,8 @@
   let spriteElement = $state(null)
   let spriteElementFrame = $state(null)
   const loadSprite = ()=>{
-    spriteHead = spriteSheet('head', ()=>file, 'cdn2')
-    spriteRarity = spriteSheet('res/icon', ()=>{
+    spriteHead = spriteSheetAsync('head', ()=>file, 'cdn2')
+    spriteRarity = spriteSheetAsync('res/icon', ()=>{
       return {
         '5': 'rarity_five',
         '4': 'rarity_four',
@@ -31,8 +31,8 @@
         '1': 'rarity_one',
       }[rarity]
     }, 'cdn', headIconCache)
-    spriteRarityFrame = spriteSheet('res/icon', ()=>rarity ? `rarity_background${rarity}` : null, 'cdn', headIconCache)
-    spriteElement = spriteSheet('res/icon', ()=> {
+    spriteRarityFrame = spriteSheetAsync('res/icon', ()=>rarity ? `rarity_background${rarity}` : null, 'cdn', headIconCache)
+    spriteElement = spriteSheetAsync('res/icon', ()=> {
       return {
         '0': 'element_red_medium',
         '1': 'element_blue_medium',
@@ -42,7 +42,7 @@
         '5': 'element_black_medium',
       }[element]
     }, 'cdn', headIconCache)
-    spriteElementFrame = spriteSheet(
+    spriteElementFrame = spriteSheetAsync(
       'res/icon', ()=>`character_face_${element ? 'frame' : 'empty_frame'}`,
       'cdn', headIconCache,
     )
@@ -83,6 +83,15 @@
     return ()=>{
       cancel = true
       URL.revokeObjectURL(url)
+    }
+  })
+  $effect(()=>{
+    return ()=>{
+      spriteHead?.destory()
+      spriteRarity?.destory()
+      spriteRarityFrame?.destory()
+      spriteElement?.destory()
+      spriteElementFrame?.destory()
     }
   })
 </script>

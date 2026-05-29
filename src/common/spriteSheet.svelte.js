@@ -152,4 +152,16 @@ const wrap = (spritesheetParam, fileParam = null, cdnTypeParam='cdn', cache=null
   }
 }
 
-export default wrap
+const wrapAsync = (spritesheetParam, fileParam = null, cdnTypeParam='cdn', cache=null)=>{
+  let sprite
+  const destroy = $effect.root(()=>{
+    sprite = wrap(spritesheetParam, fileParam, cdnTypeParam, cache)
+  })
+  return {
+    get src(){ return sprite ? sprite.src : empty },
+    get canvas(){ return sprite ? sprite.canvas : null },
+    destroy,
+  }
+}
+
+export { wrap, wrapAsync }
