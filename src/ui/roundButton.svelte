@@ -10,9 +10,7 @@
     alt,
   } = $props()
 
-  const spriteIcon = $derived.by(()=>{
-    return spriteSheet('res/icon', icon, 'cdn', iconCache)
-  })
+  const spriteIcon = spriteSheet('res/icon', ()=>icon, 'cdn', iconCache)
 </script>
 
 <button
