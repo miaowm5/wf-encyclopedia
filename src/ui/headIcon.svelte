@@ -123,11 +123,10 @@
 <div class="main"
   style:background-image={`url(${cdn('cdn', 'ui/party_thumbnail_tile_bg_old.png')})`}>
   {#if finalHead}
-    {#if finalHeadSrc}
-      <img src={finalHeadSrc} alt={name}>
-    {:else}
+    <div class="head">
       <canvas {@attach draw(finalHead)} aria-label={name}></canvas>
-    {/if}
+      {#if finalHeadSrc}<img src={finalHeadSrc} alt={name}>{/if}
+    </div>
   {:else}
     <TextImage
       text={name}
@@ -164,4 +163,18 @@
     max-width: 212px;
   }
   .main :global img, .main :global canvas{ width: 100% }
+  .head{
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+  .head img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+  }
 </style>
