@@ -1,4 +1,5 @@
 <script>
+  import store from '../../store'
   import { Title } from '../../ui'
 
   const { mode } = $props()
@@ -17,10 +18,12 @@
   const device = getDeviceType()
 </script>
 
-{#if mode === 'web' && false}
+{#if mode === 'web'}
   {#if device === 'desktop'}
-    <Title>PC Version</Title>
-    <a class="btn" href="/app/StarEncyclopedia-release.zip" download="StarEncyclopedia.zip">Download</a>
+    <Title>{store.i18n("detail.config.appTitle3")}</Title>
+    <a class="btn" href="/app/StarEncyclopedia-release.zip" download="StarEncyclopedia.zip">
+      {store.i18n("detail.config.appDownload")}
+    </a>
   {/if}
 {:else if mode === 'pwa'}
   <!-- skip -->
