@@ -63,7 +63,9 @@
       "button4": ["结束", "Finish", "終了"],
       "text7": ["更新完成！", "Update complete!", "更新完了！"],
       "text8": ["更新结束，{1} 个文件下载失败。", "Update finished with {1} files failed to download.", "更新終了、{1}個のファイルのダウンロードに失敗しました。"],
-      "text9": ["当前数据已是最新版本，无需更新。", "The current data is already up to date, no update needed.", "現在のデータはすでに最新のため、更新は必要ありません。"]
+      "text9": ["当前数据已是最新版本，无需更新。", "The current data is already up to date, no update needed.", "現在のデータはすでに最新のため、更新は必要ありません。"],
+      "text10": ["即将开始更新。", "The update is about to start.", "更新がまもなく開始されます。"],
+      "text11": ["正在下载最新版本...", "Downloading the latest version...", "最新バージョンをダウンロード中..."]
     }
   },
   "detail": {

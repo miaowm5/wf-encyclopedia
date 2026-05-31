@@ -5,6 +5,7 @@
   import FilterCharacter from './filterCharacter.svelte'
   import AppAssetsCheck from './appAssetsCheck.svelte'
   import AppAssetsResult from './appAssetsResult.svelte'
+  import AppSelfCheck from './appSelfCheck.svelte'
 
   const closeDialog = ()=>{
     store.setDialog(null)
@@ -22,6 +23,8 @@
         <AppAssetsCheck />
       {:else if store.state.dialog.type === 'appAssetsResult'}
         <AppAssetsResult />
+      {:else if store.state.dialog.type === 'appSelfCheck'}
+        <AppSelfCheck />
       {/if}
     {/if}
     <MagicCircle dialog={true} />

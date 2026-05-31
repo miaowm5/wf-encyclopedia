@@ -22,6 +22,10 @@
   </div>
 {/snippet}
 
+<Title>Self Update</Title>
+<button class="btn" onclick={()=>store.setDialog('appSelfCheck', null, true)}>
+  check update
+</button>
 <Title>CDN Status</Title>
 {#each info.list as item, index}{@render appCDNInfo(item, info.useable[index])}{/each}
 
