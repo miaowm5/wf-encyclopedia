@@ -8,25 +8,31 @@
 
 {#snippet appCDNInfo(name, offline)}
   <div>
-    <p>{name}</p>
     {#if offline}
-      <p>use local data</p>
+      <p>{store.i18n("detail.config.appText6", [name])}</p>
     {:else}
-      <p>use online data</p>
+      <p>{store.i18n("detail.config.appText5", [name])}</p>
     {/if}
     <button class="btn"
       onclick={()=>store.setDialog('appAssetsCheck', { target: name, force: false }, true)}
     >
-      refresh data
+      {#if offline}
+        {store.i18n("detail.config.appText8")}
+      {:else}
+        {store.i18n("detail.config.appText7")}
+      {/if}
     </button>
   </div>
 {/snippet}
 
-<Title>Self Update</Title>
+<Title>{store.i18n("detail.config.appTitle1")}</Title>
 <button class="btn" onclick={()=>store.setDialog('appSelfCheck', null, true)}>
-  check update
+  {store.i18n("detail.config.appText9")}
 </button>
-<Title>CDN Status</Title>
+<Title>{store.i18n("detail.config.appTitle2")}</Title>
+<div class="desc">{#each store.i18n("detail.config.appText10").split('\n') as line}
+  <p>{line}</p>
+{/each}</div>
 {#each info.list as item, index}{@render appCDNInfo(item, info.useable[index])}{/each}
 
 <style>
