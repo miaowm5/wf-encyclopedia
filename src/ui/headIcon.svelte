@@ -150,15 +150,16 @@
 
 <style>
   .main, .frame{
+    background-color: #232223;
     border-radius: 5px;
     line-height: 0;
   }
   .frame{
     width: 212px;
     max-width: 100%;
+    border: 1px solid #aaa;
   }
   .main{
-    background-color: #232223;
     overflow: hidden;
     max-width: 212px;
   }
