@@ -1,5 +1,7 @@
 <script>
+  import store from '../../store'
   import { Title } from '../../ui'
+  import Button from './common/button.svelte'
 
   const { mode } = $props()
 
@@ -17,21 +19,18 @@
   const device = getDeviceType()
 </script>
 
-{#if mode === 'web' && false}
+{#if mode === 'web'}
   {#if device === 'desktop'}
-    <Title>PC Version</Title>
-    <a class="btn" href="/app/StarEncyclopedia-release.zip" download="StarEncyclopedia.zip">Download</a>
+    <Title>{store.i18n("detail.config.appTitle3")}</Title>
+    <Button
+      link="/app/StarEncyclopedia-release.zip"
+      text={store.i18n("detail.config.appDownload")}
+      download="StarEncyclopedia.zip"
+    />
   {/if}
 {:else if mode === 'pwa'}
   <!-- skip -->
 {/if}
 
 <style>
-  .btn{
-    padding: .5em 2em;
-    border-top: 1px solid white;
-    border-radius: 10px;
-    margin-right: .5em;
-    margin-bottom: .5em
-  }
 </style>

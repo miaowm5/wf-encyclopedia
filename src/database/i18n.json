@@ -63,7 +63,9 @@
       "button4": ["结束", "Finish", "終了"],
       "text7": ["更新完成！", "Update complete!", "更新完了！"],
       "text8": ["更新结束，{1} 个文件下载失败。", "Update finished with {1} files failed to download.", "更新終了、{1}個のファイルのダウンロードに失敗しました。"],
-      "text9": ["当前数据已是最新版本，无需更新。", "The current data is already up to date, no update needed.", "現在のデータはすでに最新のため、更新は必要ありません。"]
+      "text9": ["当前数据已是最新版本，无需更新。", "The current data is already up to date, no update needed.", "現在のデータはすでに最新のため、更新は必要ありません。"],
+      "text10": ["即将开始更新。", "The update is about to start.", "更新がまもなく開始されます。"],
+      "text11": ["正在下载最新版本...", "Downloading the latest version...", "最新バージョンをダウンロード中..."]
     }
   },
   "detail": {
@@ -105,7 +107,21 @@
       "appText1": ["正在移除过期文件", "Removing outdated files...", "古いファイルを削除中..."],
       "appText2": ["正在下载更新文件", "Downloading update files...", "更新ファイルをダウンロード中..."],
       "appText3": ["下载文件过多时，可以通过网盘预先下载打包好的资源文件。", "When there are many files to download, you can pre-download the packaged resource files through the cloud drive.", "ダウンロードするファイルが多い場合は、クラウドドライブを通じてパッケージ化されたリソースファイルを事前にダウンロードできます。"],
-      "appText4": ["网盘地址", "Cloud Drive Link", "クラウドドライブリンク"]
+      "appText4": ["网盘地址", "Cloud Drive Link", "クラウドドライブリンク"],
+      "appText5": ["{1}：使用联网数据", "{1}: Use online data", "{1}：オンラインデータを使用"],
+      "appText6": ["{1}：可离线使用", "{1}: available offline", "{1}：オフライン利用可能"],
+      "appText7": ["下载数据包", "Download Data Package", "データパックをダウンロード"],
+      "appText8": ["检查更新", "Check for Updates", "アップデートを確認"],
+      "appText9": ["检查本体更新", "Check for App Updates", "アプリ本体のアップデートを確認"],
+      "appText10": [
+        "本体默认不包含媒体数据包，在获取数据包对应的资源时将连接网络。将数据包下载到本地后可支持对应数据的离线使用。",
+        "The app does not include the media data package by default and will connect to the network when retrieving resources for the package. Downloading the data package to your local device enables offline use of the corresponding data.",
+        "アプリ本体にはデフォルトでメディアデータパックが含まれておらず、パックに対応するリソースを取得する際にネットワークに接続します。データパックをローカルにダウンロードすることで、対応するデータのオフライン利用が可能になります。"
+      ],
+      "appTitle1": ["本体更新", "App Update", "アプリアップデート"],
+      "appTitle2": ["下载数据包", "Download Data Package", "データパックをダウンロード"],
+      "appTitle3": ["本地离线版", "Offline Version", "オフライン版"],
+      "appDownload": ["下载", "Download", "ダウンロード"]
     },
     "content":{
       "title1": ["情报", "Info", "情報"],

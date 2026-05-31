@@ -51,10 +51,21 @@ const triggerUpdaterFlag = async (cdn)=>{
     await Neutralino.filesystem.remove(`${NL_PATH}/cdn/task.json`)
   }
 }
+const getVersion = async ()=>{
+  const url = "https://worldflipper.miaowm5.com/app/manifest.json"
+  const manifest = await Neutralino.updater.checkForUpdates(url)
+  return manifest
+}
+const downloadVersion = async ()=>{
+  await Neutralino.updater.install()
+  await Neutralino.app.restartProcess()
+}
 
 export default {
   getLocalFile,
   calculateCRC32,
   generateTask,
   triggerUpdaterFlag,
+  getVersion,
+  downloadVersion,
 }

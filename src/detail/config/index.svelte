@@ -3,6 +3,8 @@
   import { spriteSheet } from '../../common'
   import { Title, MagicCircle } from '../../ui'
   import Site from './site.svelte'
+  import Desc from './common/desc.svelte'
+  import Button from './common/button.svelte'
   import App from './app.svelte'
 
   const backSprite = spriteSheet('res/icon', 'return')
@@ -29,12 +31,10 @@
   </button>
   <div class="main">
     <Title>{store.i18n("detail.config.config3")}</Title>
-    <div class="desc">{#each store.i18n("detail.config.config3Value").split('\n') as line}
-      <p>{line}</p>
-    {/each}</div>
+    <Desc text={store.i18n("detail.config.config3Value")} />
     <div class="link">
-      <a href="https://github.com/miaowm5/wf-encyclopedia/issues" target="_blank" rel="noopener noreferrer">{store.i18n("detail.config.config3Value1")}</a>
-      <a href="https://worldflipper.jp/" target="_blank" rel="noopener noreferrer">ワールドフリッパー公式サイト</a>
+      <Button text={store.i18n("detail.config.config3Value1")} link="https://github.com/miaowm5/wf-encyclopedia/issues" />
+      <Button text="ワールドフリッパー公式サイト" link="https://worldflipper.jp/" />
     </div>
     <Title>{store.i18n("detail.config.config1")}</Title>
     <div class="btns">
@@ -102,27 +102,5 @@
   .btn.active{
     border-top: none;
     background-color: #ffcf8f;
-  }
-  .desc{
-    display: block;
-    margin-bottom: .5em;
-    border-radius: 10px;
-    padding: 1em;
-    background-color: white;
-  }
-  .desc>p{
-    min-height: 1em;
-  }
-  .link > a{
-    background: #fafafa;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-    cursor: pointer;
-    color: #444444;
-    text-decoration: none;
-    display: block;
-    padding: .5em 1em;
-    border-top: 1px solid white;
-    border-radius: 10px;
-    margin-bottom: .5em
   }
 </style>

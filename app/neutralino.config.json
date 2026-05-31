@@ -13,7 +13,8 @@
     "window.*",
     "app.*",
     "os.*",
-    "filesystem.*"
+    "filesystem.*",
+    "updater.*"
   ],
   "tokenSecurity": "one-time",
   "logging": { "enabled": false },
