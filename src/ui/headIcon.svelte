@@ -89,7 +89,7 @@
       canvas.width = finalHead.width
       canvas.height = finalHead.height
       ctx.drawImage(finalHead, 0, 0)
-		}
+    }
   }
 </script>
 
