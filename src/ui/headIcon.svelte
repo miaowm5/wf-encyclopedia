@@ -91,6 +91,26 @@
       ctx.drawImage(finalHead, 0, 0)
     }
   }
+  let finalHeadSrc = $state(null)
+  $effect(()=>{
+    if (!finalHead){ return }
+    if (!spriteElementFrame?.canvas){ return }
+    if (element && !spriteElement?.canvas){ return }
+    if (rarity && !spriteRarityFrame?.canvas){ return }
+    if (rarity && !spriteRarity?.canvas){ return }
+    let url = null
+    let cancel = false
+    finalHead.toBlob((blob) => {
+      if (cancel){ return }
+      url = URL.createObjectURL(blob)
+      finalHeadSrc = url
+    })
+    return ()=>{
+      finalHeadSrc = null
+      cancel = true
+      URL.revokeObjectURL(url)
+    }
+  })
 </script>
 
 {#if !lazyLoadStatus}
@@ -103,7 +123,11 @@
 <div class="main"
   style:background-image={`url(${cdn('cdn', 'ui/party_thumbnail_tile_bg_old.png')})`}>
   {#if finalHead}
-    <canvas {@attach draw(finalHead)} aria-label={name}></canvas>
+    {#if finalHeadSrc}
+      <img src={finalHeadSrc} alt={name}>
+    {:else}
+      <canvas {@attach draw(finalHead)} aria-label={name}></canvas>
+    {/if}
   {:else}
     <TextImage
       text={name}
@@ -127,16 +151,15 @@
 
 <style>
   .main, .frame{
-    background-color: #232223;
     border-radius: 5px;
     line-height: 0;
   }
   .frame{
     width: 212px;
     max-width: 100%;
-    border: 1px solid #aaa;
   }
   .main{
+    background-color: #232223;
     overflow: hidden;
     max-width: 212px;
   }
