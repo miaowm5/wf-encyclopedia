@@ -157,7 +157,6 @@
   .frame{
     width: 212px;
     max-width: 100%;
-    border: 1px solid #aaa;
   }
   .main{
     background-color: #232223;
