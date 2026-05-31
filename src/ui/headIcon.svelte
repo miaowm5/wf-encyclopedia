@@ -13,7 +13,7 @@
     lazyLoad = true,
   } = $props()
 
-  let lazyLoadStatus = $state(false)
+  let lazyLoadStatus = $state((()=>!lazyLoad)())
 
   const spriteHead = $derived.by(()=>{
     if (!lazyLoadStatus){ return null }
