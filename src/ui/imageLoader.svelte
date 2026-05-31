@@ -3,7 +3,7 @@
 
   let { src, alt, children, lazyLoad = true } = $props()
   let loadOver = $state(false)
-  let loadStart = $state(false)
+  let loadStart = $state((()=>!lazyLoad)())
 </script>
 
 <LazyLoad lazy={lazyLoad} load={()=>loadStart = true}>

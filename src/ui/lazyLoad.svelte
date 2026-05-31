@@ -13,7 +13,8 @@
     if (loadFunc){ loadFunc() }
     clear()
   }
-  (()=>{ if (!lazy){ executeLoad() } })()
+
+  $effect(()=>{ if (!lazy){ executeLoad() } })
 
   const regLazy = (node)=>{
     observer.add(node, (isIntersecting)=>{

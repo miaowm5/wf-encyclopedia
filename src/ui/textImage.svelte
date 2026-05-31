@@ -9,7 +9,7 @@
     style = {},
   } = $props()
 
-  let load = $state(false)
+  let load = $state((()=>!lazyLoad)())
   const draw = (canvas)=>{
     $effect(()=>{
       const {

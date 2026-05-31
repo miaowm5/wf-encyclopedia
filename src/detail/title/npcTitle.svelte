@@ -135,7 +135,7 @@
     position: relative;
     text-shadow: 0 0 10px black;
   }
-  .element :global > img{
+  .element :global > canvas{
     height: 1.2em;
     margin-bottom: -.2em;
     margin-right: .2em;
@@ -144,7 +144,7 @@
     font-size: 2em;
     margin-bottom: .3em;
   }
-  .race :global >img{
+  .race :global > canvas{
     height: 1.2em;
     margin-bottom: -.2em;
   }

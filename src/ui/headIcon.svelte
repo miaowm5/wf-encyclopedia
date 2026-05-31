@@ -13,7 +13,7 @@
     lazyLoad = true,
   } = $props()
 
-  let lazyLoadStatus = $state(false)
+  let lazyLoadStatus = $state((()=>!lazyLoad)())
 
   const spriteHead = $derived.by(()=>{
     if (!lazyLoadStatus){ return null }
@@ -55,10 +55,9 @@
     }
     return spriteSheet('res/icon', 'character_face_frame', 'cdn', headIconCache)
   })
-  let finalHead = $state(null)
-  $effect(()=>{
-    if (!lazyLoadStatus){ finalHead = null; return }
-    if (!spriteHead?.canvas){ finalHead = null; return }
+  let finalHead = $derived.by(()=>{
+    if (!lazyLoadStatus){ return null }
+    if (!spriteHead?.canvas){ return null }
     const canvas = document.createElement("canvas")
     const ctx = canvas.getContext("2d")
     canvas.width = 212
@@ -82,18 +81,16 @@
     if (spriteRarity?.canvas){
       ctx.drawImage(spriteRarity.canvas, 4, 180)
     }
-    let url = null
-    let cancel = false
-    canvas.toBlob((blob) => {
-      if (cancel){ return }
-      url = URL.createObjectURL(blob)
-      finalHead = url
-    })
-    return ()=>{
-      cancel = true
-      URL.revokeObjectURL(url)
-    }
+    return canvas
   })
+  const draw = (finalHead)=>{
+    return (canvas)=>{
+      const ctx = canvas.getContext('2d')
+      canvas.width = finalHead.width
+      canvas.height = finalHead.height
+      ctx.drawImage(finalHead, 0, 0)
+    }
+  }
 </script>
 
 {#if !lazyLoadStatus}
@@ -106,7 +103,7 @@
 <div class="main"
   style:background-image={`url(${cdn('cdn', 'ui/party_thumbnail_tile_bg_old.png')})`}>
   {#if finalHead}
-    <img src={finalHead} alt={name}>
+    <canvas {@attach draw(finalHead)} aria-label={name}></canvas>
   {:else}
     <TextImage
       text={name}

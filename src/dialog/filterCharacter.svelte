@@ -163,7 +163,7 @@
   .choice>p{
     padding: 0 .5em;
   }
-  .choice :global > img{
+  .choice :global > canvas{
     height: 1em;
   }
   .choice.active{

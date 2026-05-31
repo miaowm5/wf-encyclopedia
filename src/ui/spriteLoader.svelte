@@ -19,10 +19,16 @@
     if (!lazyLoadStatus){ return null }
     return spriteSheet(spritesheet, file, cdn, cache ? spritesheetCache : null)
   })
+  const draw = (canvas)=>{
+    const ctx = canvas.getContext('2d')
+    canvas.width = sprite.canvas.width
+    canvas.height = sprite.canvas.height
+    ctx.drawImage(sprite.canvas, 0, 0)
+  }
 </script>
 
 {#if sprite && sprite.canvas}
-  <img src={sprite.src} alt={alt ? alt : file}>
+  <canvas {@attach draw} aria-label={alt ? alt : file}></canvas>
 {:else}
   <LazyLoad lazy={lazyLoad} load={()=>{ lazyLoadStatus = true }}>
     {@render children?.()}
@@ -30,7 +36,7 @@
 {/if}
 
 <style>
-  img{
+  canvas{
     max-width: 100%;
     max-height: 100%;
   }
