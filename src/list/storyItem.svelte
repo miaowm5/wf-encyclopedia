@@ -26,7 +26,7 @@
     margin-bottom: .5em;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
   }
-  .item :global > img, .item :global > canvas {
+  .item :global > canvas {
     width: 100%;
   }
 </style>
