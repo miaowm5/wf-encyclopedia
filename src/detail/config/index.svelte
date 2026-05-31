@@ -3,6 +3,7 @@
   import { spriteSheet } from '../../common'
   import { Title, MagicCircle } from '../../ui'
   import Site from './site.svelte'
+  import Desc from './common/desc.svelte'
   import App from './app.svelte'
 
   const backSprite = spriteSheet('res/icon', 'return')
@@ -29,9 +30,7 @@
   </button>
   <div class="main">
     <Title>{store.i18n("detail.config.config3")}</Title>
-    <div class="desc">{#each store.i18n("detail.config.config3Value").split('\n') as line}
-      <p>{line}</p>
-    {/each}</div>
+    <Desc text={store.i18n("detail.config.config3Value")} />
     <div class="link">
       <a href="https://github.com/miaowm5/wf-encyclopedia/issues" target="_blank" rel="noopener noreferrer">{store.i18n("detail.config.config3Value1")}</a>
       <a href="https://worldflipper.jp/" target="_blank" rel="noopener noreferrer">ワールドフリッパー公式サイト</a>
@@ -102,16 +101,6 @@
   .btn.active{
     border-top: none;
     background-color: #ffcf8f;
-  }
-  .desc{
-    display: block;
-    margin-bottom: .5em;
-    border-radius: 10px;
-    padding: 1em;
-    background-color: white;
-  }
-  .desc>p{
-    min-height: 1em;
   }
   .link > a{
     background: #fafafa;

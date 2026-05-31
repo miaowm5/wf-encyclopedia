@@ -1,18 +1,17 @@
 <script>
   import store from '../../store'
   import { Title } from '../../ui'
+  import Desc from './common/desc.svelte'
   import appLogic from './app.js'
 
   const info = appLogic.getCDNInfo()
 </script>
 
 {#snippet appCDNInfo(name, offline)}
-  <div>
-    {#if offline}
-      <p>{store.i18n("detail.config.appText6", [name])}</p>
-    {:else}
-      <p>{store.i18n("detail.config.appText5", [name])}</p>
-    {/if}
+  <div class="info">
+    <Desc text={
+      store.i18n(offline ? "detail.config.appText6" : "detail.config.appText5", [name])
+    } />
     <button class="btn"
       onclick={()=>store.setDialog('appAssetsCheck', { target: name, force: false }, true)}
     >
@@ -30,9 +29,7 @@
   {store.i18n("detail.config.appText9")}
 </button>
 <Title>{store.i18n("detail.config.appTitle2")}</Title>
-<div class="desc">{#each store.i18n("detail.config.appText10").split('\n') as line}
-  <p>{line}</p>
-{/each}</div>
+<Desc text={store.i18n("detail.config.appText10")} />
 {#each info.list as item, index}{@render appCDNInfo(item, info.useable[index])}{/each}
 
 <style>
@@ -40,7 +37,7 @@
     padding: .5em 2em;
     border-top: 1px solid white;
     border-radius: 10px;
-    margin-right: .5em;
-    margin-bottom: .5em
+  .info{
+    margin-top: 1em;
   }
 </style>

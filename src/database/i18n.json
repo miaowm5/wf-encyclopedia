@@ -118,7 +118,7 @@
         "The app does not include the media data package by default and will connect to the network when retrieving resources for the package. Downloading the data package to your local device enables offline use of the corresponding data.",
         "アプリ本体にはデフォルトでメディアデータパックが含まれておらず、パックに対応するリソースを取得する際にネットワークに接続します。データパックをローカルにダウンロードすることで、対応するデータのオフライン利用が可能になります。"
       ],
-      "appTitle1": ["本地更新", "App Update", "アプリアップデート"],
+      "appTitle1": ["本体更新", "App Update", "アプリアップデート"],
       "appTitle2": ["下载数据包", "Download Data Package", "データパックをダウンロード"],
       "appTitle3": ["本地离线版", "Offline Version", "オフライン版"],
       "appDownload": ["下载", "Download", "ダウンロード"]
