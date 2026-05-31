@@ -57,6 +57,7 @@
     status = 301
     nextable = false
     retry = false
+    cancelable = false
     try{
       await appLogic.downloadVersion()
     }catch(e){
@@ -64,6 +65,7 @@
       status = 302
       info = e.message || e
       retry = true
+      cancelable = true
     }
   }
   const retryButton = ()=>{
@@ -73,7 +75,6 @@
   }
   const okButton = ()=>{
     if (status === 300){
-      cancelable = false
       store.setDialog('appSelfCheck', null, false)
       updateSelf()
     }
