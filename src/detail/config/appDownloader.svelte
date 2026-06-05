@@ -135,7 +135,6 @@
     height: 99%;
     max-width: 500px;
     border: 5px solid #dad8db;
-    border-radius: 5em;
     z-index: 0;
     position: relative;
     overflow: hidden;
