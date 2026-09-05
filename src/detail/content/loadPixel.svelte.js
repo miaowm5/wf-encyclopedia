@@ -219,7 +219,7 @@ const main = (character, hasSpecial = true)=>{
     const height = movie.height * scale
     const gif = new GIF({
       workers: 2,
-      quality: 10,
+      quality: 0,
       width,
       height,
       transparent: 0x00FF01,
