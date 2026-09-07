@@ -18,10 +18,8 @@ const generateGif = (movie, scale, speed, getImageCache)=>{
     canvas.height = height
     const ctx = canvas.getContext('2d', { willReadFrequently: true })
     ctx.imageSmoothingEnabled = false
-    ctx.clearRect(0, 0, width, height)
     ctx.drawImage(image.canvas, 0, 0, width, height)
-    const imageData = ctx.getImageData(0, 0, width, height)
-    const data = imageData.data
+    const data = ctx.getImageData(0, 0, width, height).data
 
     for (let i = 0; i < data.length; i += 4) {
       let r = data[i]
@@ -34,15 +32,12 @@ const generateGif = (movie, scale, speed, getImageCache)=>{
         data[i + 2] = TRANSPARENT_COLOR[2]
         data[i + 3] = 255
       }else{
-        if (a > 0 && a < 1) {
-          data[i]     = Math.round(r * a + BG_COLOR[0] * (1 - a))
-          data[i + 1] = Math.round(g * a + BG_COLOR[1] * (1 - a))
-          data[i + 2] = Math.round(b * a + BG_COLOR[2] * (1 - a))
+        if (a < 1) {
+          r = data[i]     = Math.round(r * a + BG_COLOR[0] * (1 - a))
+          g = data[i + 1] = Math.round(g * a + BG_COLOR[1] * (1 - a))
+          b = data[i + 2] = Math.round(b * a + BG_COLOR[2] * (1 - a))
           data[i + 3] = 255
         }
-        r = data[i]
-        g = data[i + 1]
-        b = data[i + 2]
         const key = (r << 16) | (g << 8) | b
         if (!colorMap.has(key)){ colorMap.set(key, [r, g, b]) }
       }
@@ -55,7 +50,7 @@ const generateGif = (movie, scale, speed, getImageCache)=>{
   if (!tooManyColors) {
     palette = Array.from(colorMap.values())
     palette.push(TRANSPARENT_COLOR)
-  }else {
+  }else{
     let totalLength = 0
     for (const frame of frames) {
       const data = frame.data
@@ -112,6 +107,7 @@ const generateGif = (movie, scale, speed, getImageCache)=>{
     }
   }
   const gif = GIFEncoder()
+  const transparentIndex = palette.length - 1
 
   for (let frameIndex = 0; frameIndex < frames.length; frameIndex++) {
     const frame = frames[frameIndex]
@@ -126,12 +122,7 @@ const generateGif = (movie, scale, speed, getImageCache)=>{
         const b = data[i + 2]
         const key = (r << 16) | (g << 8) | b
         const paletteIndex = exactColorIndex.get(key)
-        if (paletteIndex === undefined) {
-          console.warn('[gifenc] color not found in exact palette:', r, g, b)
-          index[pixelIndex] = 0
-        } else {
-          index[pixelIndex] = paletteIndex
-        }
+        index[pixelIndex] = paletteIndex
         pixelIndex++
       }
     }else{
@@ -142,7 +133,7 @@ const generateGif = (movie, scale, speed, getImageCache)=>{
       delay: Math.max(1, Math.round(frame.duration * speed)),
       repeat: 0,
       transparent: true,
-      transparentIndex: palette.length - 1,
+      transparentIndex,
     }
     gif.writeFrame(index, width, height, options)
   }
