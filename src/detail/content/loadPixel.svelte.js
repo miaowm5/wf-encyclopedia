@@ -1,6 +1,6 @@
 
 import { onDestroy } from 'svelte'
-import GIF from "gif.js"
+import generateGif from './generateGif.js'
 import { api, spriteSheet, cdn } from '../../common'
 
 let configCache = null
@@ -215,51 +215,8 @@ const main = (character, hasSpecial = true)=>{
     if (!config){ return }
     let movie = config.movie[action]
     if (!movie){ return }
-    const width = movie.width * scale
-    const height = movie.height * scale
-    const gif = new GIF({
-      workers: 2,
-      quality: 0,
-      width,
-      height,
-      transparent: 0x00FF01,
-      workerScript: new URL(
-        "gif.js/dist/gif.worker.js",
-        import.meta.url
-      )
-    })
-    movie.timeline2.forEach(([id, duration])=>{
-      const image = getImageCache(movie, id)
-      if (!image){ return }
-      const normalCanvas = document.createElement('canvas')
-      normalCanvas.width = width
-      normalCanvas.height = height
-      const ctx = normalCanvas.getContext('2d', { willReadFrequently: true })
-      ctx.drawImage(image.canvas, 0, 0)
-      const imgData = ctx.getImageData(0, 0, width, height)
-      const data = imgData.data
-      const bgColor = [255, 255, 255]
-      for (let i = 0; i < data.length; i += 4){
-        let r = data[i]
-        let g = data[i + 1]
-        let b = data[i + 2]
-        let a = data[i + 3] / 255
-        if (a > 0 && a < 1) {
-          data[i]     = Math.round(r * a + bgColor[0] * (1 - a))
-          data[i + 1] = Math.round(g * a + bgColor[1] * (1 - a))
-          data[i + 2] = Math.round(b * a + bgColor[2] * (1 - a))
-          data[i + 3] = 255;
-        }else if (a === 0) {
-          data[i]     = 0
-          data[i + 1] = 255
-          data[i + 2] = 0
-          data[i + 3] = 255
-        }
-      }
-      ctx.putImageData(imgData, 0, 0)
-      gif.addFrame(normalCanvas, { delay: duration * speed })
-    })
-    gif.on('finished', function(blob) {
+    try{
+      const blob = generateGif(movie, scale, speed, getImageCache)
       let url = URL.createObjectURL(blob)
       const a = document.createElement("a")
       a.href = url;
@@ -267,11 +224,10 @@ const main = (character, hasSpecial = true)=>{
       document.body.appendChild(a)
       a.click()
       a.remove()
-      URL.revokeObjectURL(url)
-      gifAbort = null
-    })
-    gif.render()
-    gifAbort = ()=>{ gif.abort() }
+      setTimeout(()=>{ URL.revokeObjectURL(url) }, 1000)
+    }catch(e){
+      console.error(e)
+    }
   }
 
   return {
