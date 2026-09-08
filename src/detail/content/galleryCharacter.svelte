@@ -42,26 +42,28 @@
     set: (key, canvas)=>{ cacheMap[key] = canvas },
   }
 
-  const bannerImage = $derived.by(()=>{
-    if (!emoData){ return null }
-    let effect = []
-    selectEffect.forEach((name)=>{
-      if (name === 'noface'){ return }
-      let item = emotionList.data[name]
-      if (!checkUseable(name)){ return }
-      effect.push(item.front)
-    })
-    const specialEffect = Object.keys(emotionList.effectGroup)
-    specialEffect.forEach((name)=>{
-      if (!emotionList.effectGroup[name].fixEffect){ return }
-      if (!checkUseable(name, false)){ return }
-      effect.push(emotionList.data[name].front)
-    })
-    return characterShot(emoData.data.back,
-      selectEffect.includes('noface') ? null : emoData.data.front,
-      effect, cache
-    )
-  })
+  const bannerImage = characterShot(
+    ()=>emoData.data.back,
+    ()=>selectEffect.includes('noface') ? null : emoData.data.front,
+    ()=>{
+      let effect = []
+      selectEffect.forEach((name)=>{
+        if (name === 'noface'){ return }
+        let item = emotionList.data[name]
+        if (!checkUseable(name)){ return }
+        effect.push(item.front)
+      })
+      const specialEffect = Object.keys(emotionList.effectGroup)
+      specialEffect.forEach((name)=>{
+        if (!emotionList.effectGroup[name].fixEffect){ return }
+        if (!checkUseable(name, false)){ return }
+        effect.push(emotionList.data[name].front)
+      })
+      return effect
+    },
+    cache,
+    ()=>emoDtaExist,
+  )
 
   const changeIndex = (offset)=>{
     index += offset
